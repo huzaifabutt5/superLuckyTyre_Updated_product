@@ -27,7 +27,7 @@ export default function Navbar({ toggleSidebar }) {
 
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Search users, posts, or videos..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
