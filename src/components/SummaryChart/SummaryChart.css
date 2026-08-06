@@ -1,6 +1,8 @@
-.summary-card{
+.chart-wrapper{
 
     width:100%;
+
+    height:auto;
 
     background:#ffffff;
 
@@ -8,17 +10,13 @@
 
     padding:22px;
 
-    margin-top:20px;
-
     box-shadow:0 1px 6px rgba(0,0,0,.05);
 
     border:1px solid #ECECEC;
 
 }
 
-/* ========================= */
-
-.summary-header{
+.chart-header{
 
     display:flex;
 
@@ -30,9 +28,7 @@
 
 }
 
-/* ========================= */
-
-.summary-title{
+.chart-title{
 
     font-size:25px;
 
@@ -42,9 +38,7 @@
 
 }
 
-/* ========================= */
-
-.summary-actions{
+.chart-actions{
 
     display:flex;
 
@@ -53,8 +47,6 @@
     gap:10px;
 
 }
-
-/* ========================= */
 
 .year-btn{
 
@@ -84,19 +76,12 @@
 
 }
 
-.year-btn:hover{
-
-    border-color:#4A6CF7;
-
-}
 
 .year-icon{
 
     font-size:12px;
 
 }
-
-/* ========================= */
 
 .calendar-btn{
 
@@ -126,8 +111,46 @@
 
 }
 
-.calendar-btn:hover{
 
-    background:#3559E8;
+.recharts-tooltip-wrapper{
 
+    outline:none;
+
+}
+
+.custom-tooltip{
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    padding:12px 16px;
+    min-width:150px;
+}
+
+.tooltip-label{
+    font-size:13px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:8px;
+}
+
+.tooltip-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    color:#6B7280;
+    padding:2px 0;
+}
+
+.tooltip-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    flex-shrink:0;
+}
+
+.tooltip-value{
+    margin-left:auto;
+    font-weight:700;
+    color:#111827;
 }

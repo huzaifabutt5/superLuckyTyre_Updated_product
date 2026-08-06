@@ -1,60 +1,86 @@
+"use client";
+
 import "./Statscard.css";
 
+import {
+  FaShoppingCart,
+  FaShoppingBag,
+  FaWallet,
+  FaMoneyBillWave,
+  FaChartLine,
+} from "react-icons/fa";
 
+const cards = [
+  {
+    title: "Net Sale",
+    amount: "Rs. 53,659,748",
+    icon: <FaShoppingCart />,
+    bg: "#EEF4FF",
+    iconBg: "#D8E6FF",
+    iconColor: "#4A6CF7",
+  },
+  {
+    title: "Total COGS - Sale",
+    amount: "Rs. 53,659,748",
+    icon: <FaShoppingCart />,
+    bg: "#EEF4FF",
+    iconBg: "#D8E6FF",
+    iconColor: "#4A6CF7",
+  },
+  {
+    title: "Net Purchase",
+    amount: "Rs. 53,659,748",
+    icon: <FaShoppingCart />,
+    bg: "#F3ECFF",
+    iconBg: "#E6DAFF",
+    iconColor: "#8B5CF6",
+  },
+  {
+    title: "Overall Expenses",
+    amount: "Rs. 53,659,748",
+    icon: <FaShoppingCart />,
+    bg: "#FFF1E5",
+    iconBg: "#FFE0C2",
+    iconColor: "#F59E0B",
+  },
+  {
+    title: "Net Profit",
+    amount: "Rs. 53,659,748",
+    icon: <FaShoppingCart />,
+    bg: "#EAFBF1",
+    iconBg: "#D3F5E3",
+    iconColor: "#22C55E",
+  },
+];
 
-export default function StatsCard() {
-  const cards = [
-{
-      title: "Net Sale",
-      amount: "Rs. 90,875,363",
-      icon: "bi-cart",
-      color: "blue",
-      background: "linear-gradient(135deg, #4b79f5, #283eaf)",
-    },
-    {
-      title: "Total COG - Sale",
-      amount: "Rs. 62,418,509",
-      icon: "bi-cart",
-      color: "sky",
-      background: "linear-gradient(135deg, #00c6ff, #0072ff)",
-    },
-    {
-      title: "Net Purchase",
-      amount: "Rs. 45,732,186",
-      icon: "bi-cart",
-      color: "purple",
-    },
-    {
-      title: "Overall Expenses",
-      amount: "Rs. 18,294,675",
-      icon: "bi-cart",
-      color: "orange",
-    },
-    {
-      title: "Net Profit",
-      amount: "Rs. 27,156,482",
-      icon: "bi-cart",
-      color: "green",
-    },
-  ];
-
+export default function StatsCards() {
   return (
-    <div className="summary-grid">
+    <div className="stats-grid">
       {cards.map((card, index) => (
-        <div className={`summary-card ${card.color}`} key={index}>
+<div
+          className="stats-card"
+          key={index}
+          style={{ background: card.bg }}
+        >
+          <div className="stats-content">
+            <span className="stats-title">
+              {card.title}
+            </span>
 
-<div>
-            <p className="card-title">{card.title}</p>
-            <h5>
-              <span className="amount-currency">Rs:</span>
-              <span className="amount-value">{card.amount.replace("Rs. ", "").replace(/,/g, "")}</span>
-            </h5>
+            <h3 className="stats-value">
+              {card.amount}
+            </h3>
           </div>
 
-          <div className="icon-box">
-            <i className={`bi ${card.icon}`}></i>
+          <div
+            className="stats-icon"
+            style={{
+              background: card.iconBg,
+              color: card.iconColor,
+            }}
+          >
+            {card.icon}
           </div>
-
         </div>
       ))}
     </div>
