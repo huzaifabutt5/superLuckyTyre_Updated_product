@@ -1,0 +1,138 @@
+.summary-grid{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.summary-card{
+
+    background:#BFDCFF;
+    border-radius:10px;
+    padding:12px 16px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+
+    transition:.3s;
+    min-width:0;
+    overflow:hidden;
+}
+
+.card-title{
+
+    font-size:13px;
+ color:#4B5563;
+    margin-bottom:5px;
+
+}
+
+.summary-card h5{
+    color: #111827;
+    font-size:18px;
+    font-weight:700;
+    margin:0;
+    display:flex;
+    align-items:baseline;
+    flex-wrap:wrap;
+
+}
+
+.amount-currency{
+    font-size:13px;
+    font-weight:600;
+    color:#111827;
+    opacity:.5;
+}
+
+.amount-value{
+    font-size:18px;
+    font-weight:700;
+    color:#111827;
+    overflow-wrap:anywhere;
+}
+
+.icon-box{
+
+    width:45px;
+    height:45px;
+    flex-shrink:0;
+
+    border-radius:8px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+    margin-left:6px;
+
+}
+
+/* Card Colors */
+
+.blue{
+    border-left:4px solid #3b82f6;
+}
+.blue .icon-box{
+    background:#e7f0ff;
+    color:#3b82f6;
+}
+
+.sky{
+    border-left:4px solid #60a5fa;
+}
+.sky .icon-box{
+    background:#edf6ff;
+    color:#60a5fa;
+}
+
+.purple{
+    border-left:4px solid #8b5cf6;
+    background:#E0D4FA;
+}
+.purple .icon-box{
+    background:#f2ebff;
+    color:#8b5cf6;
+}
+
+.orange{
+    border-left:4px solid #f59e0b;
+    background: linear-gradient(270deg, #FFE4C2 0%, #FFE4C2 100%);
+}
+.orange .icon-box{
+    background:#fff3e0;
+    color:#f59e0b;
+}
+
+.green{
+    border-left:4px solid #22c55e;
+    background: linear-gradient(270deg, #E5FEEE 0%, #D2F9E0 100%);
+}
+.green .icon-box{
+    background:#e9fbe8;
+    color:#22c55e;
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+    .summary-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:768px){
+    .summary-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:576px){
+    .summary-grid{
+        grid-template-columns:1fr;
+    }
+}

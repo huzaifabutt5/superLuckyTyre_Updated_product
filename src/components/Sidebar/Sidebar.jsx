@@ -3,17 +3,20 @@
 import "./Sidebar.css";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { HiOutlineHome } from "react-icons/hi2";
 import {
-  FiGrid,
-  FiHome,
   FiSettings,
   FiLogOut,
 } from "react-icons/fi";
 
-export default function Sidebar() {
+export default function Sidebar({ sidebarOpen }) {
+  const pathname = usePathname();
+
+  const isActive = (path) =>
+    path === "/" ? pathname === "/" : pathname.startsWith(path);
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${sidebarOpen ? "show" : ""}`}>
 
       {/* =======================
           LOGO
@@ -42,7 +45,7 @@ export default function Sidebar() {
 
         {/* Dashboard */}
 
-        <Link href="/dashboard" className="menu-link active">
+<Link href="/" className={`menu-link ${isActive("/") ? "active" : ""}`}>
 
            <HiOutlineHome className="menu-icon" />
 
@@ -57,7 +60,7 @@ export default function Sidebar() {
           VENDOR MANAGEMENT
         </h5>
 
-        <Link href="/vendor" className="menu-link">
+<Link href="/vendor" className={`menu-link ${isActive("/vendor") ? "active" : ""}`}>
 
             <HiOutlineHome className="menu-icon" />
 
@@ -72,7 +75,7 @@ export default function Sidebar() {
           CUSTOMER MANAGEMENT
         </h5>
 
-        <Link href="/customer" className="menu-link">
+<Link href="/customer" className={`menu-link ${isActive("/customer") ? "active" : ""}`}>
 
              <HiOutlineHome className="menu-icon" />
 
@@ -87,7 +90,7 @@ export default function Sidebar() {
           PRODUCT MANAGEMENT
         </h5>
 
-        <Link href="/product" className="menu-link">
+<Link href="/product" className={`menu-link ${isActive("/product") ? "active" : ""}`}>
 
        <HiOutlineHome className="menu-icon" />
 
@@ -95,7 +98,7 @@ export default function Sidebar() {
 
         </Link>
 
-        <Link href="/stock" className="menu-link">
+<Link href="/stock" className={`menu-link ${isActive("/stock") ? "active" : ""}`}>
 
              <HiOutlineHome className="menu-icon" />
 
@@ -110,7 +113,7 @@ export default function Sidebar() {
           SALE / PURCHASE MANAGEMENT
         </h5>
 
-        <Link href="/sale" className="menu-link">
+<Link href="/sale" className={`menu-link ${isActive("/sale") ? "active" : ""}`}>
 
           <HiOutlineHome className="menu-icon"/>
 
@@ -118,7 +121,7 @@ export default function Sidebar() {
 
         </Link>
 
-        <Link href="/purchase" className="menu-link">
+<Link href="/purchase" className={`menu-link ${isActive("/purchase") ? "active" : ""}`}>
 
           <HiOutlineHome className="menu-icon"/>
 
@@ -126,7 +129,7 @@ export default function Sidebar() {
 
         </Link>
 
-        <Link href="/report" className="menu-link">
+<Link href="/report" className={`menu-link ${isActive("/report") ? "active" : ""}`}>
 
           <HiOutlineHome className="menu-icon"/>
 
@@ -141,7 +144,7 @@ export default function Sidebar() {
           PROFIT & LOSS MANAGEMENT
         </h5>
 
-        <Link href="/balance-sheet" className="menu-link">
+<Link href="/balance-sheet" className={`menu-link ${isActive("/balance-sheet") ? "active" : ""}`}>
 
           <HiOutlineHome className="menu-icon"/>
 
@@ -149,7 +152,7 @@ export default function Sidebar() {
 
         </Link>
 
-        <Link href="/pnl-report" className="menu-link">
+<Link href="/pnl-report" className={`menu-link ${isActive("/pnl-report") ? "active" : ""}`}>
 
           <HiOutlineHome className="menu-icon"/>
 
@@ -164,7 +167,7 @@ export default function Sidebar() {
           EXPENSE MANAGEMENT
         </h5>
 
-        <Link href="/expense" className="menu-link">
+<Link href="/expense" className={`menu-link ${isActive("/expense") ? "active" : ""}`}>
 
              <HiOutlineHome className="menu-icon" />
 
@@ -179,7 +182,7 @@ export default function Sidebar() {
           ROLE MANAGEMENT
         </h5>
 
-        <Link href="/role" className="menu-link">
+<Link href="/role" className={`menu-link ${isActive("/role") ? "active" : ""}`}>
 
              <HiOutlineHome className="menu-icon" />
 
@@ -195,13 +198,13 @@ export default function Sidebar() {
 
       <div className="sidebar-bottom">
 
-        <button className="setting-btn">
 
-          <FiSettings />
-
+       
+          <Link href="/accountsettings" className={`setting-btn ${isActive("/accountsettings") ? "active" : ""}`}>
+             <FiSettings />
           <span>Account Setting</span>
 
-        </button>
+        </Link>
 
         <button className="logout-btn">
 

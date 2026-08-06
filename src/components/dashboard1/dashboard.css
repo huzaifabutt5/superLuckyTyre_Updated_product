@@ -1,0 +1,16 @@
+.bottom-tables{
+    display:flex;
+    gap:20px;
+    width:100%;
+    margin-top:20px;
+}
+
+.bottom-tables > *{
+    flex:1;
+}
+
+@media(max-width:992px){
+    .bottom-tables{
+        flex-direction:column;
+    }
+}

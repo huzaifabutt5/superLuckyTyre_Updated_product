@@ -24,3 +24,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Side-by-side vendor & customer tables */
+.tables-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: start;
+}
+
+.tables-row > div {
+  min-width: 0;
+}
+
+@media (max-width: 992px) {
+  .tables-row {
+    grid-template-columns: 1fr;
+  }
+}
