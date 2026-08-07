@@ -37,14 +37,14 @@ const customers = [
 
 export default function CoustomerTable() {
   return (
-    <div className="customer-card">
+    <div className="top-customer-card">
 
-      <div className="customer-header">
+      <div className="top-customer-header">
         <h3>Top Customer</h3>
         <button>View All</button>
       </div>
 
-      <table className="customer-table">
+      <table className="top-customer-table">
 
         <thead>
           <tr>
@@ -71,3 +71,4 @@ export default function CoustomerTable() {
     </div>
   );
 }
+

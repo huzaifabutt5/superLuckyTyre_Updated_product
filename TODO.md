@@ -20,3 +20,7 @@
 - [x] Add active highlighting to sidebar links based on current route
 - [x] Create placeholder pages (vendor, customer, product, stock, sale, purchase, report, balance-sheet, pnl-report, expense, role)
 - [x] Test build (all 15 pages generated successfully)
+- [x] Fix "The default export is not a React Component in /customer/add-customer/page" runtime error (empty page.jsx)
+- [x] Create Add/Edit Customer page (form, localStorage add/edit/update)
+- [x] Wrap useSearchParams pages in Suspense boundaries (add-customer, view-customer)
+- [x] Test build (all 18 pages generated successfully, no errors)

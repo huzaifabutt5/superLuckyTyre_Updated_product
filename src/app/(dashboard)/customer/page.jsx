@@ -1,8 +1,16 @@
+"use client";
+
+import CustomerHeader from "@/components/Customer/CustomerHeader";
+import CustomerTable from "@/components/CustomerTable/CustomerTable";
+
 export default function CustomerPage() {
   return (
-    <div>
-      <h1>Manage Customer</h1>
-      <p>This page is under construction.</p>
-    </div>
+    <main className="customer-page">
+
+      <CustomerHeader />
+
+      <CustomerTable />
+
+    </main>
   );
 }

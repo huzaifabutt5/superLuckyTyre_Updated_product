@@ -3,6 +3,23 @@
     border-radius:12px;
     padding:18px;
     box-shadow:0 2px 10px rgba(0,0,0,.05);
+    overflow-x: auto;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Hide scrollbar on the card and all its children (Chrome/Safari/Edge) */
+.vendor-card::-webkit-scrollbar,
+.vendor-card *::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.vendor-card * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .vendor-header{
