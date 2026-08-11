@@ -1,0 +1,133 @@
+/* ================================
+   SUMMARY CARDS OUTER SECTION
+================================ */
+
+.stock-summary-cards {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 6px;
+
+  padding: 8px;
+
+  background: #ffffff;
+  border-radius: 6px;
+
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+
+/* ================================
+   INDIVIDUAL CARD
+================================ */
+
+.stock-summary-card {
+  width: 100%;
+  height: 45px;
+
+  box-sizing: border-box;
+
+  padding: 6px 8px;
+
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ================================
+   CARD TEXT
+================================ */
+
+.stock-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 0;
+}
+
+.stock-card-title {
+  font-size: 7px;
+  line-height: 10px;
+
+  font-weight: 400;
+
+  color: #333333;
+
+  white-space: nowrap;
+}
+
+.stock-card-value {
+  font-size: 9px;
+  line-height: 12px;
+
+  font-weight: 700;
+
+  color: #202838;
+
+  white-space: nowrap;
+}
+
+
+/* ================================
+   CARD ICON BOX
+================================ */
+
+.stock-card-icon {
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 10px;
+}
+
+
+/* ================================
+   CARD BACKGROUNDS
+================================ */
+
+.stock-card-blue {
+  background: #dceeff;
+}
+
+.stock-card-purple {
+  background: #e2d5ff;
+}
+
+.stock-card-orange {
+  background: #ffe4bd;
+}
+
+
+/* ================================
+   ICON COLORS
+================================ */
+
+.stock-card-blue .stock-card-icon {
+  background: #b9d9ff;
+  color: #4285f4;
+}
+
+.stock-card-purple .stock-card-icon {
+  background: #cfbaff;
+  color: #7040e8;
+}
+
+.stock-card-orange .stock-card-icon {
+  background: #ffd18f;
+  color: #ff9417;
+}

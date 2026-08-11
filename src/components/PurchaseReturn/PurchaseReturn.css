@@ -1,0 +1,561 @@
+/* =========================================
+   PURCHASE RETURN PAGE
+========================================= */
+
+.purchase-return-page {
+  width: 100%;
+  min-height: calc(100vh - 65px);
+
+  padding: 18px 20px 30px;
+
+  background: #f3f4f6;
+
+  box-sizing: border-box;
+
+  color: #293650;
+
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.return-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+
+.return-breadcrumb {
+  font-size: 8px;
+
+  color: #89919e;
+
+  margin-bottom: 7px;
+}
+
+
+.return-header h1 {
+  margin: 0;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: #293650;
+}
+
+
+/* =========================================
+   TOP RETURN PRODUCT BUTTON
+========================================= */
+
+.return-product-top-btn {
+  height: 34px;
+
+  padding: 0 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #f05a20;
+
+  color: white;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+
+.return-product-top-btn:hover {
+  background: #df4d16;
+}
+
+
+/* =========================================
+   WHITE SECTION
+========================================= */
+
+.return-section {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 6px;
+
+  margin-bottom: 10px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 12px;
+
+  border-bottom: 1px solid #e5e8ed;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  color: #303b4d;
+}
+
+
+/* =========================================
+   ORDER INFORMATION
+========================================= */
+
+.invoice-row {
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 7px;
+
+  padding: 10px 12px;
+}
+
+
+.invoice-input-box {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.invoice-input-box label {
+  font-size: 8px;
+
+  color: #4c5667;
+}
+
+
+.invoice-input-box label span {
+  color: #f05a20;
+
+  margin-left: 2px;
+}
+
+
+.invoice-input-box input {
+  width: 100%;
+
+  height: 32px;
+
+  padding: 0 10px;
+
+  border: 1px solid #dce1e8;
+
+  border-radius: 5px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  font-size: 9px;
+
+  color: #4d5869;
+
+  background: #ffffff;
+}
+
+
+.invoice-input-box input:focus {
+  border-color: #4b7df3;
+}
+
+
+.get-invoice-btn {
+  width: 82px;
+
+  height: 32px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #4b7df3;
+
+  color: white;
+
+  font-size: 8px;
+
+  cursor: pointer;
+}
+
+
+.get-invoice-btn:hover {
+  background: #3d6fe4;
+}
+
+
+/* =========================================
+   PRODUCT DETAIL
+========================================= */
+
+.return-product-list {
+  width: 100%;
+
+  background: #ffffff;
+}
+
+
+.return-product-row {
+  min-height: 58px;
+
+  padding: 8px 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+
+.return-product-row:last-child {
+  border-bottom: none;
+}
+
+
+/* LEFT PRODUCT */
+
+.return-product-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+  min-width: 0;
+}
+
+
+.return-product-name {
+  font-size: 9px;
+
+  font-weight: 500;
+
+  color: #3d4859;
+
+  line-height: 13px;
+}
+
+
+.return-product-size {
+  font-size: 7px;
+
+  color: #4b7df3;
+
+  line-height: 10px;
+}
+
+
+.return-product-quantity {
+  font-size: 7px;
+
+  font-style: italic;
+
+  color: #4d5868;
+
+  line-height: 10px;
+}
+
+
+/* RIGHT PRODUCT */
+
+.return-product-right {
+  min-width: 80px;
+
+  height: 42px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+
+/* GREEN CHECK */
+
+.product-return-icon {
+  width: 17px;
+
+  height: 17px;
+
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #55c98a;
+
+  cursor: pointer;
+
+  font-size: 13px;
+}
+
+
+.product-return-icon:hover {
+  color: #32b674;
+}
+
+
+.product-return-icon.returned {
+  color: #55c98a;
+}
+
+
+/* PRODUCT PRICE */
+
+.return-product-total {
+  font-size: 7px;
+
+  font-style: italic;
+
+  color: #4d5868;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   PAYMENT INFO
+========================================= */
+
+.payment-grid {
+  padding: 12px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+
+.payment-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.payment-field.full {
+  grid-column: 1 / -1;
+}
+
+
+.payment-field label {
+  font-size: 8px;
+
+  color: #4c5667;
+}
+
+
+.payment-field input {
+  width: 100%;
+
+  height: 32px;
+
+  padding: 0 10px;
+
+  border: 1px solid #dce1e8;
+
+  border-radius: 5px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  font-size: 8px;
+
+  color: #566174;
+
+  background: #ffffff;
+}
+
+
+.payment-field input:focus {
+  border-color: #4b7df3;
+}
+
+
+.payment-field input::placeholder {
+  color: #87909e;
+}
+
+
+/* =========================================
+   BOTTOM BUTTONS
+========================================= */
+
+.return-bottom-buttons {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 7px;
+
+  padding: 0 12px 10px;
+
+  box-sizing: border-box;
+}
+
+
+.cancel-return-btn,
+.return-only-btn,
+.return-payback-btn {
+  height: 29px;
+
+  padding: 0 17px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  font-size: 8px;
+
+  cursor: pointer;
+}
+
+
+.cancel-return-btn {
+  background: #f0f1f3;
+
+  color: #697280;
+}
+
+
+.cancel-return-btn:hover {
+  background: #e5e7ea;
+}
+
+
+.return-only-btn,
+.return-payback-btn {
+  background: #4b7df3;
+
+  color: white;
+}
+
+
+.return-only-btn:disabled,
+.return-payback-btn:disabled {
+  background: #d1d4d9;
+
+  color: #f7f7f7;
+
+  cursor: not-allowed;
+}
+
+
+.return-only-btn:not(:disabled):hover,
+.return-payback-btn:not(:disabled):hover {
+  background: #3d6fe4;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .return-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+
+  .invoice-row {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .get-invoice-btn {
+    width: 100%;
+  }
+
+
+  .payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .payment-field.full {
+    grid-column: auto;
+  }
+
+
+  .return-bottom-buttons {
+    justify-content: stretch;
+  }
+
+
+  .cancel-return-btn,
+  .return-only-btn,
+  .return-payback-btn {
+    flex: 1;
+
+    padding: 0 8px;
+  }
+
+}

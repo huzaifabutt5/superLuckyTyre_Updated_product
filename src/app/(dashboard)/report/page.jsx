@@ -1,8 +1,5 @@
-export default function ReportPage() {
-  return (
-    <div>
-      <h1>Reporting</h1>
-      <p>This page is under construction.</p>
-    </div>
-  );
+import Reporting from "@/components/Reporting/Reporting";
+
+export default function ReportingPage() {
+  return <Reporting />;
 }

@@ -1,0 +1,546 @@
+/* =====================================================
+   MAIN TABLE CARD
+===================================================== */
+
+.stock-table-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 7px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.stock-table-title {
+  height: 39px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.stock-table-title h2 {
+  margin: 0;
+  color: #202a38;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+.stock-table-controls {
+  height: 51px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   ENTRIES
+===================================================== */
+
+.entries-section {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  color: #66707c;
+  font-size: 9px;
+}
+
+.entries-section select {
+  width: 31px;
+  height: 26px;
+  
+  border: 1px solid #dfe3e8;
+  border-radius: 5px;
+  outline: none;
+  background: #ffffff;
+  color: #5d6773;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #5f6874;
+  font-size: 9px;
+}
+
+.search-input-wrapper {
+  width: 126px;
+  height: 26px;
+  padding: 0 7px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfe3e8;
+  border-radius: 5px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #4f5965;
+  font-size: 9px;
+}
+
+.search-input-wrapper input::placeholder {
+  color: #8c949e;
+}
+
+.search-input-wrapper svg {
+  flex-shrink: 0;
+  color: #9ba2aa;
+  font-size: 8px;
+}
+
+
+/* =====================================================
+   TABLE WRAPPER
+===================================================== */
+
+.main-table-wrapper {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MAIN TABLE
+===================================================== */
+
+.main-stock-table {
+  width: 100%;
+  border: 1px solid #e3e6ea;
+  border-radius: 5px;
+  border-spacing: 0;
+  border-collapse: separate;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.main-stock-table thead th {
+  height: 36px;
+  padding: 0 8px;
+  background: #f1f3f7;
+  color: #303a48;
+  font-size: 9px;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 1px solid #e2e5e9;
+  box-sizing: border-box;
+}
+
+.main-stock-table thead th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.main-stock-table thead th:last-child {
+  border-top-right-radius: 5px;
+}
+
+
+/* =====================================================
+   COLUMN WIDTHS
+===================================================== */
+
+.main-stock-table th:nth-child(1),
+.main-stock-table td:nth-child(1) {
+  width: 35px;
+}
+
+.main-stock-table th:nth-child(2) {
+  width: 38%;
+}
+
+.main-stock-table th:nth-child(3) {
+  width: 15%;
+}
+
+.main-stock-table th:nth-child(4) {
+  width: 14%;
+}
+
+.main-stock-table th:nth-child(5) {
+  width: 15%;
+}
+
+.main-stock-table th:nth-child(6) {
+  width: 14%;
+}
+
+
+/* =====================================================
+   TABLE BODY
+===================================================== */
+
+.main-stock-table tbody td {
+  height: 35px;
+  padding: 0 8px;
+  background: #ffffff;
+  color: #536070;
+  font-size: 9px;
+  text-align: center;
+  border-bottom: 1px solid #e8eaed;
+  box-sizing: border-box;
+}
+
+.main-stock-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =====================================================
+   PRODUCT NAME
+===================================================== */
+
+.main-stock-table th:nth-child(2),
+.main-stock-table td:nth-child(2) {
+  text-align: left;
+}
+
+.product-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+
+.product-name {
+  color: #536070;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 11px;
+}
+
+.product-size {
+  color: #3983ed;
+  font-size: 7px;
+  line-height: 8px;
+}
+
+
+/* =====================================================
+   ARROW BUTTON
+===================================================== */
+
+.expand-button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #505b68;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   OPEN ROW
+===================================================== */
+
+.product-row-open td {
+  background: #fafbfc;
+}
+
+
+/* =====================================================
+   BATCH BADGE
+===================================================== */
+
+.batch-count {
+  min-width: 48px;
+  height: 17px;
+  padding: 0 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #e3e7ec;
+  color: #68727e;
+  font-size: 7px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.stock-status {
+  min-width: 48px;
+  height: 17px;
+  padding: 0 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 7px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.status-in {
+  background: #e7efff;
+  color: #4987ec;
+}
+
+.status-low {
+  background: #ffe3d0;
+  color: #ff7520;
+}
+
+.status-out {
+  background: #eeeeee;
+  color: #a1a5aa;
+}
+
+
+/* =====================================================
+   NO PRODUCTS
+===================================================== */
+
+.no-products {
+  height: 80px !important;
+  color: #969da6 !important;
+  text-align: center !important;
+}
+
+
+/* =====================================================
+   EXPANDED BATCH ROW
+===================================================== */
+
+.batch-row td {
+  padding: 0 !important;
+  background: #f8f9fa !important;
+  border-bottom: 1px solid #e4e7ea !important;
+}
+
+
+/* =====================================================
+   BATCH CONTAINER
+===================================================== */
+
+.batch-container {
+  width: 100%;
+  padding: 8px 10px 10px;
+  box-sizing: border-box;
+}
+
+.batch-container h3 {
+  margin-right: 80%;
+  color: #343d49;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   BATCH TABLE
+===================================================== */
+
+.batch-table {
+  width: 100%;
+  border: 1px solid #e0e3e7;
+  border-collapse: collapse;
+  background: #ffffff;
+  table-layout: fixed;
+}
+
+
+/* =====================================================
+   BATCH HEADER
+===================================================== */
+
+.batch-table th {
+  height: 29px;
+  padding: 0 8px;
+  background: #f1f3f6;
+  color: #343d49;
+  font-size: 8px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid #e0e3e7;
+}
+
+
+/* =====================================================
+   BATCH BODY
+===================================================== */
+
+.batch-table td {
+  height: 29px;
+  padding: 0 8px;
+  background: #ffffff;
+  color: #626b77;
+  font-size: 8px;
+  text-align: left;
+  border-bottom: 1px solid #e9ebee;
+}
+
+.batch-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =====================================================
+   BATCH COLUMN WIDTHS
+===================================================== */
+
+.batch-table th:nth-child(1),
+.batch-table td:nth-child(1) {
+  width: 7%;
+}
+
+.batch-table th:nth-child(2),
+.batch-table td:nth-child(2) {
+  width: 13%;
+}
+
+.batch-table th:nth-child(3),
+.batch-table td:nth-child(3) {
+  width: 15%;
+}
+
+.batch-table th:nth-child(4),
+.batch-table td:nth-child(4) {
+  width: 18%;
+}
+
+.batch-table th:nth-child(5),
+.batch-table td:nth-child(5) {
+  width: 12%;
+}
+
+.batch-table th:nth-child(6),
+.batch-table td:nth-child(6) {
+  width: 17%;
+}
+
+.batch-table th:nth-child(7),
+.batch-table td:nth-child(7) {
+  width: 18%;
+}
+
+
+/* =====================================================
+   NO BATCHES
+===================================================== */
+
+.no-batches {
+  height: 45px !important;
+  text-align: center !important;
+  color: #969da6 !important;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.stock-table-footer {
+  min-height: 45px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.showing-text {
+  color: #626c78;
+  font-size: 9px;
+}
+
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pagination button {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 3px;
+  background: transparent;
+  color: #7c848e;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.pagination-number {
+  background: #f1f2f4 !important;
+  color: #596370 !important;
+}
+
+.pagination-number.active {
+  background: #4678ee !important;
+  color: #ffffff !important;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+  .main-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .main-stock-table {
+    min-width: 650px;
+  }
+}

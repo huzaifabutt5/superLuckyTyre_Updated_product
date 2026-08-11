@@ -83,7 +83,7 @@ export default function CustomerTable() {
     setCurrentPage(1);
   };
 
-  /* =========================
+/* =========================
      ACTIONS
   ========================= */
 
@@ -93,9 +93,9 @@ export default function CustomerTable() {
     );
   };
 
-  const handleEdit = (customer) => {
+  const handleEdit = () => {
     router.push(
-      `/customer/add-customer?edit=${customer.id}`
+      `/customer/add-customer`
     );
   };
 
