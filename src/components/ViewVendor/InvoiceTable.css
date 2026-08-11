@@ -1,0 +1,225 @@
+/* ==========================
+   Invoice Card
+========================== */
+
+.invoice-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 22px;
+  margin-top: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   Heading
+========================== */
+
+.invoice-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2d3345;
+  margin-bottom: 22px;
+}
+
+/* ==========================
+   Toolbar
+========================== */
+
+.invoice-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+/* Left Side */
+
+.entries-section{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.entries-section select{
+  width:48px;
+  height:38px;
+  border:1px solid #d9dce3;
+  border-radius:6px;
+  outline:none;
+  background:#fff;
+  padding:0 8px;
+  cursor:pointer;
+}
+
+.entries-section span{
+  font-size:14px;
+  color:#6b7280;
+}
+
+/* Right Side */
+
+.right-toolbar{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.search-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.search-box label{
+  font-size:14px;
+  color:#555;
+}
+
+.search-box input{
+  width:170px;
+  height:38px;
+  border:1px solid #d9dce3;
+  border-radius:6px;
+  padding:0 12px;
+  outline:none;
+  font-size:14px;
+}
+
+.search-box input::placeholder{
+  color:#a3a3a3;
+}
+
+/* Date Button */
+
+.date-btn{
+  height:38px;
+  background:#4c7dff;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  padding:0 18px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:500;
+}
+
+.date-btn:hover{
+  background:#3767f0;
+}
+
+/* ==========================
+   Table
+========================== */
+
+.table-wrapper{
+  width:100%;
+  overflow-x:auto;
+}
+
+.invoice-table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:950px;
+}
+
+.invoice-table thead{
+  background:#f5f7fb;
+}
+
+.invoice-table th{
+  padding:16px 14px;
+  text-align:left;
+  font-size:14px;
+  color:#2d3345;
+  font-weight:600;
+}
+
+.invoice-table td{
+  padding:18px 14px;
+  border-top:1px solid #edf0f5;
+  font-size:14px;
+  color:#626b7a;
+  white-space:nowrap;
+}
+
+.invoice-table tbody tr:hover{
+  background:#fafcff;
+}
+
+/* Purchase Badge */
+
+.purchase-badge{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:6px 18px;
+  border-radius:30px;
+  background:#e6f8ec;
+  color:#32a852;
+  font-size:13px;
+  font-weight:500;
+}
+
+/* ==========================
+   Rounded Table
+========================== */
+
+.invoice-table{
+  border:1px solid #edf0f5;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:992px){
+
+.invoice-toolbar{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.right-toolbar{
+width:100%;
+flex-wrap:wrap;
+}
+
+.search-box{
+width:100%;
+}
+
+.search-box input{
+width:100%;
+}
+
+.date-btn{
+width:100%;
+justify-content:center;
+}
+
+}
+
+@media(max-width:768px){
+
+.invoice-card{
+padding:15px;
+}
+
+.invoice-heading{
+font-size:20px;
+}
+
+.invoice-table th,
+.invoice-table td{
+padding:14px 10px;
+font-size:13px;
+}
+
+}

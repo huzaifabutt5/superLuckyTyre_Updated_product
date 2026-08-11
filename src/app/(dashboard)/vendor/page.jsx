@@ -1,8 +1,16 @@
+"use client";
+
+import VendorHeader from "@/components/Vendor/VendorHeader/VendorHeader";
+import VendorTable from "@/components/Vendor/VendorTable/VendorTable";
+
 export default function VendorPage() {
   return (
-    <div>
-      <h1>Manage Vendor</h1>
-      <p>This page is under construction.</p>
-    </div>
+    <main className="vendor-page">
+
+      <VendorHeader />
+
+      <VendorTable />
+
+    </main>
   );
 }

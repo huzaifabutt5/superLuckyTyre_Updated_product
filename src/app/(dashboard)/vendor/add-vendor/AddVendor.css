@@ -1,0 +1,366 @@
+/* =========================================
+   ADD VENDOR PAGE
+========================================= */
+
+.add-vendor-page {
+    width: 90%;
+    min-height: calc(100vh - 50px);
+
+    padding: 7px 12px 75px 12px;
+
+    box-sizing: border-box;
+
+    background: #f3f3f3;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.add-vendor-breadcrumb {
+    margin: 0 0 7px 1px;
+
+    font-size: 8px;
+    font-weight: 400;
+
+    color: #747b88;
+
+    line-height: 14px;
+}
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.add-vendor-title {
+    margin: 0 0 9px 1px;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    line-height: 22px;
+
+    color: #293149;
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.vendor-form-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-radius: 5px;
+
+    margin-bottom: 9px;
+
+    padding: 10px 0;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CARD HEADING
+========================================= */
+
+.vendor-form-heading {
+    height: 38px;
+
+    padding: 0 11px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #252c3d;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   FORM CONTENT
+========================================= */
+
+.vendor-form-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 9px;
+    row-gap: 8px;
+
+    padding: 10px 11px 11px 11px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   FORM FIELD
+========================================= */
+
+.form-field {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.form-field label {
+    margin-bottom: 4px;
+
+    color: #303847;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 11px;
+}
+
+
+.form-field label span {
+    color: #f04444;
+ font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    font-style: normal;
+}
+
+
+/* =========================================
+   INPUT + SELECT
+========================================= */
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    height: 35px;
+
+    padding: 0 10px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d9dde5;
+    border-radius: 4px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #555d6c;
+
+    font-family: inherit;
+
+    font-size: 10px;
+    font-weight: 400;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.form-field input::placeholder {
+    color: #8d94a1;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.form-field select {
+    color: #8d94a1;
+
+    cursor: pointer;
+}
+
+
+.form-field select option {
+    color: #555d6c;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.form-field input:focus,
+.form-field select:focus {
+    border-color: #4779f5;
+}
+
+
+/* =========================================
+   FULL WIDTH FIELD
+========================================= */
+
+.full-field {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================
+   ACCOUNT DETAIL
+========================================= */
+
+.account-detail-card {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   BOTTOM ACTION AREA
+========================================= */
+
+.vendor-form-actions {
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 7px 11px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 7px;
+
+    background: #ffffff;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   CANCEL BUTTON
+========================================= */
+
+.cancel-vendor-button {
+    height: 32px;
+
+    min-width: 89px;
+
+    padding: 0 13px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #f1f1f1;
+
+    color: #555c68;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+
+.cancel-vendor-button:hover {
+    background: #e5e5e5;
+}
+
+
+/* =========================================
+   ADD VENDOR BUTTON
+========================================= */
+
+.add-vendor-button {
+    height: 32px;
+
+    min-width: 90px;
+
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #4779f5;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+  
+}
+
+
+.add-vendor-button:hover {
+    background: #3569e8;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .vendor-form-content {
+        grid-template-columns: 1fr;
+    }
+
+    .full-field {
+        grid-column: auto;
+    }
+
+    .vendor-form-actions {
+        justify-content: flex-end;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .add-vendor-page {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .vendor-form-content {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .vendor-form-actions {
+        flex-wrap: wrap;
+    }
+
+}

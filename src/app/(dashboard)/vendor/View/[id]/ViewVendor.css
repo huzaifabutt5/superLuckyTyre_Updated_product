@@ -1,0 +1,1110 @@
+/* =========================================
+   VIEW VENDOR PAGE
+========================================= */
+
+.view-vendor-page {
+    width: 100%;
+    min-height: calc(100vh - 65px);
+
+    padding: 7px 12px 45px 12px;
+
+    box-sizing: border-box;
+
+    background: #f3f3f3;
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.view-vendor-breadcrumb {
+    margin: 0 0 7px 1px;
+
+    color: #747b88;
+
+    font-size: 8px;
+    font-weight: 400;
+
+    line-height: 14px;
+}
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.view-vendor-title {
+    margin: 0 0 9px 1px;
+
+    color: #293149;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    line-height: 22px;
+}
+
+
+/* =========================================
+   SUMMARY AREA
+========================================= */
+
+.vendor-summary-area {
+    width: 100%;
+
+    display: flex;
+    align-items: stretch;
+
+    gap: 8px;
+
+    margin-bottom: 9px;
+}
+
+
+/* =========================================
+   SUMMARY CARDS CONTAINER
+========================================= */
+
+.vendor-summary-cards {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   SUMMARY CARD
+========================================= */
+
+.vendor-summary-card {
+    height: 60px;
+
+    min-width: 0;
+
+    padding: 0 10px;
+
+    box-sizing: border-box;
+
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   PURCHASE CARD
+========================================= */
+
+.purchase-card {
+    background: #e2f2ff;
+}
+
+
+/* =========================================
+   RETURN CARD
+========================================= */
+
+.return-card {
+    background: #e8dcff;
+}
+
+
+/* =========================================
+   REMAINING CARD
+========================================= */
+
+.remaining-card {
+    background: #ffe7c7;
+}
+
+
+/* =========================================
+   SUMMARY CONTENT
+========================================= */
+
+.summary-card-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.summary-card-label {
+    margin-bottom: 3px;
+
+    color: #555d6d;
+
+    font-size: 8px;
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+
+.summary-card-content strong {
+    color: #303747;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   SUMMARY ICON
+========================================= */
+
+.summary-card-icon {
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 3px;
+
+    font-size: 14px;
+}
+
+
+.purchase-icon {
+    background: #c9e2ff;
+    color: #5595ff;
+}
+
+
+.return-icon {
+    background: #d6c2ff;
+    color: #7549e8;
+}
+
+
+.remaining-icon {
+    background: #ffd89f;
+    color: #ff991c;
+}
+
+
+/* =========================================
+   PAYMENT BUTTONS
+========================================= */
+
+.vendor-payment-buttons {
+    width: 92px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+}
+
+
+.get-payment-button,
+.pay-vendor-button {
+    width: 92px;
+    height: 28px;
+
+    border: none;
+    border-radius: 4px;
+
+    padding: 0 5px;
+
+    font-family: inherit;
+
+    font-size: 8px;
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+
+.get-payment-button {
+    background: #4779f5;
+
+    color: #ffffff;
+}
+
+
+.get-payment-button:hover {
+    background: #3569e8;
+}
+
+
+.pay-vendor-button {
+    background: #d9d9d9;
+
+    color: #9b9b9b;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   INVOICE CARD
+========================================= */
+
+.invoice-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   INVOICE HEADER
+========================================= */
+
+.invoice-card-header {
+    height: 31px;
+
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #293149;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INVOICE CONTROLS
+========================================= */
+
+.invoice-controls {
+    min-height: 44px;
+
+    padding: 8px 13px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================
+   ENTRIES
+========================================= */
+
+.invoice-entries {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #747b88;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+}
+
+
+.invoice-entries select {
+    width: 28px;
+    height: 25px;
+
+    padding: 0 3px;
+
+    border: 1px solid #d9dde5;
+    border-radius: 4px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #626a78;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.invoice-search {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #555d6d;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+}
+
+
+.invoice-search input {
+    width: 110px;
+    height: 25px;
+
+    padding: 0 8px;
+
+    border: 1px solid #d9dde5;
+    border-radius: 4px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    color: #555d6d;
+
+    font-size: 9px;
+}
+
+
+.invoice-search input::placeholder {
+    color: #969ca8;
+}
+
+
+.invoice-search input:focus {
+    border-color: #4779f5;
+}
+
+
+/* =========================================
+   DATE BUTTON
+========================================= */
+
+.date-filter-button {
+    height: 27px;
+
+    padding: 0 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #4779f5;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 8px;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+
+.date-filter-button svg {
+    font-size: 9px;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.invoice-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: thin;
+}
+
+
+/* Chrome / Edge / Safari scrollbar */
+
+.invoice-table-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+
+.invoice-table-wrapper::-webkit-scrollbar-track {
+    background: #f4f5f7;
+}
+
+
+.invoice-table-wrapper::-webkit-scrollbar-thumb {
+    background: #c7ccd5;
+
+    border-radius: 10px;
+}
+
+
+.invoice-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #aeb4bf;
+}
+
+
+/* =========================================
+   INVOICE TABLE
+========================================= */
+
+.invoice-table {
+    width: 100%;
+
+    min-width: 1450px;
+
+    border-collapse: collapse;
+
+    table-layout: auto;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.invoice-table thead th {
+    height: 34px;
+
+    padding: 0 10px;
+
+    background: #f7f8fa;
+
+    border-bottom: 1px solid #e5e7eb;
+
+   color: #111827;  
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.invoice-table tbody td {
+    height: 30px;
+
+    padding: 0 10px;
+
+    border-bottom: 1px solid #eeeeee;
+
+   color: #4B5563;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    white-space: nowrap;
+
+    vertical-align: middle;
+}
+
+
+/* =========================================
+   ROW HOVER
+========================================= */
+
+.invoice-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+
+.invoice-table tbody tr:hover {
+    background: #fafbfe;
+}
+
+
+/* =========================================
+   COLUMN WIDTHS
+========================================= */
+
+.invoice-table th:nth-child(1),
+.invoice-table td:nth-child(1) {
+    width: 38px;
+    min-width: 38px;
+
+    text-align: center;
+}
+
+
+.invoice-table th:nth-child(2),
+.invoice-table td:nth-child(2) {
+    min-width: 110px;
+}
+
+
+.invoice-table th:nth-child(3),
+.invoice-table td:nth-child(3) {
+    min-width: 125px;
+}
+
+
+.invoice-table th:nth-child(4),
+.invoice-table td:nth-child(4) {
+    min-width: 100px;
+}
+
+
+.invoice-table th:nth-child(5),
+.invoice-table td:nth-child(5) {
+    min-width: 145px;
+}
+
+
+.invoice-table th:nth-child(6),
+.invoice-table td:nth-child(6) {
+    min-width: 145px;
+}
+
+
+.invoice-table th:nth-child(7),
+.invoice-table td:nth-child(7) {
+    min-width: 150px;
+}
+
+
+.invoice-table th:nth-child(8),
+.invoice-table td:nth-child(8) {
+    min-width: 125px;
+}
+
+
+.invoice-table th:nth-child(9),
+.invoice-table td:nth-child(9) {
+    min-width: 115px;
+}
+
+
+.invoice-table th:nth-child(10),
+.invoice-table td:nth-child(10) {
+    min-width: 120px;
+}
+
+
+.invoice-table th:nth-child(11),
+.invoice-table td:nth-child(11) {
+    min-width: 100px;
+}
+
+
+/* =========================================
+   PURCHASE / RETURN BADGES
+========================================= */
+
+.transaction-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 66px;
+    height: 18px;
+
+    padding: 0 10px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+    font-weight: 500;
+}
+
+
+.purchase-badge {
+    background: #ddf3e7;
+
+    color: #42a66e;
+}
+
+
+.return-badge {
+    background: #ffecd6;
+
+    color: #ef9a39;
+}
+
+
+/* =========================================
+   INVOICE DOT
+========================================= */
+
+.invoice-dot {
+    margin-right: 4px;
+
+    color: #ff9419;
+
+    font-size: 7px;
+}
+
+
+/* =========================================
+   NEGATIVE AMOUNT
+========================================= */
+
+.negative-amount {
+    color: #ff5630 !important;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.invoice-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.invoice-action-button {
+    width: 22px;
+    height: 22px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 8px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+}
+
+
+.invoice-action-button:hover {
+    transform: translateY(-1px);
+
+    opacity: 0.85;
+}
+
+
+/* Green payment icon */
+
+.payment-action {
+    background: #dff5e9;
+
+    color: #4bb67b;
+}
+
+
+/* Blue view icon */
+
+.view-invoice-action {
+    background: #e3edff;
+
+    color: #4c83ed;
+}
+
+
+/* =========================================
+   NO INVOICE
+========================================= */
+
+.no-invoice {
+    height: 80px !important;
+
+    text-align: center !important;
+
+    color: #9aa0ac !important;
+}
+
+
+/* =========================================
+   TABLE FOOTER
+========================================= */
+
+.invoice-table-footer {
+    min-height: 42px;
+
+    padding: 7px 13px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+}
+
+
+/* =========================================
+   ENTRY INFORMATION
+========================================= */
+
+.invoice-entry-info {
+    color: #737a87;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.invoice-pagination {
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+}
+
+
+.invoice-pagination button {
+    width: 25px;
+    height: 25px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 4px;
+
+    background: transparent;
+
+    color: #747b88;
+
+    font-size: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+.invoice-pagination button:hover:not(:disabled) {
+    background: #f0f3fa;
+}
+
+
+.invoice-pagination .invoice-active-page {
+    background: #4779f5;
+
+    color: #ffffff;
+}
+
+
+.invoice-pagination button:disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .vendor-summary-area {
+        flex-direction: column;
+    }
+
+    .vendor-payment-buttons {
+        width: 100%;
+
+        flex-direction: row;
+    }
+
+    .get-payment-button,
+    .pay-vendor-button {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .vendor-summary-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .invoice-controls {
+        flex-wrap: wrap;
+    }
+
+    .invoice-search {
+        margin-left: 0;
+    }
+
+}
+/* =========================================
+   GET PAYMENT POPUP
+========================================= */
+
+.payment-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(31, 41, 55, 0.45);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+
+/* =========================================
+   POPUP BOX
+========================================= */
+
+.payment-modal {
+    width: 360px;
+
+    background: #ffffff;
+
+    border-radius: 6px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.payment-modal-header {
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    box-sizing: border-box;
+
+    color: #273047;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+.payment-modal-body {
+    padding: 12px 14px 4px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.payment-form-group {
+    margin-bottom: 11px;
+}
+
+.payment-form-group label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #30384b;
+
+    font-size: 9px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.payment-form-group input,
+.payment-form-group select,
+.payable-amount-box {
+    width: 100%;
+
+    height: 32px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dfe3e8;
+
+    border-radius: 4px;
+
+    padding: 0 10px;
+
+    background: #ffffff;
+
+    color: #596273;
+
+    font-size: 9px;
+
+    outline: none;
+}
+
+
+/* PAYABLE AMOUNT */
+
+.payable-amount-box {
+    display: flex;
+    align-items: center;
+
+    background: #f4f5f7;
+
+    color: #687181;
+}
+
+
+/* INPUT PLACEHOLDER */
+
+.payment-form-group input::placeholder {
+    color: #89919e;
+}
+
+
+/* SELECT */
+
+.payment-form-group select {
+    cursor: pointer;
+
+    color: #697181;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.payment-modal-footer {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 6px;
+
+    padding: 8px 14px 12px;
+
+    border-top: 1px solid #f0f0f0;
+}
+
+
+/* =========================================
+   CANCEL BUTTON
+========================================= */
+
+.payment-cancel-button {
+    width: 88px;
+    height: 30px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #eeeeee;
+
+    color: #69717e;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   GET PAYMENT BUTTON
+========================================= */
+
+.payment-submit-button {
+    width: 94px;
+    height: 30px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #4778ed;
+
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.payment-cancel-button:hover {
+    background: #e3e3e3;
+}
+
+.payment-submit-button:hover {
+    background: #3d6ee0;
+}

@@ -9,7 +9,7 @@ const invoiceData = [
     transactionId: "xcghfHY5cv953",
     payableAmount: "N/A",
     paidAmount: "PKR -150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 0",
     type: "payment",
   },
 
@@ -37,7 +37,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "PKR 150,000",
     paidAmount: "PKR 150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "purchase",
   },
 
@@ -51,7 +51,7 @@ const invoiceData = [
     transactionId: "xcghfHY5cv953",
     payableAmount: "N/A",
     paidAmount: "PKR -150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "payment",
   },
 
@@ -65,7 +65,7 @@ const invoiceData = [
     transactionId: "xcghfHY5cv953",
     payableAmount: "N/A",
     paidAmount: "PKR -150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "payment",
   },
 
@@ -79,7 +79,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "PKR 150,000",
     paidAmount: "PKR 150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "purchase",
   },
 
@@ -93,7 +93,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "PKR 150,000",
     paidAmount: "PKR 150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "purchase",
   },
 
@@ -107,7 +107,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "N/A",
     paidAmount: "PKR -150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "payment",
   },
 
@@ -121,7 +121,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "N/A",
     paidAmount: "PKR -150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "payment",
   },
 
@@ -135,7 +135,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "PKR 150,000",
     paidAmount: "PKR 150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "purchase",
   },
 
@@ -149,7 +149,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "PKR 200,000",
     paidAmount: "PKR 200,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "purchase",
   },
 
@@ -163,7 +163,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "PKR 150,000",
     paidAmount: "PKR 150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "purchase",
   },
 
@@ -177,7 +177,7 @@ const invoiceData = [
     transactionId: "xcghfHY5cv953",
     payableAmount: "N/A",
     paidAmount: "PKR -150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "payment",
   },
 
@@ -191,7 +191,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "PKR 150,000",
     paidAmount: "PKR 150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "purchase",
   },
 
@@ -205,7 +205,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "PKR 150,000",
     paidAmount: "PKR 150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "purchase",
   },
 
@@ -219,7 +219,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "N/A",
     paidAmount: "PKR -150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "payment",
   },
 
@@ -233,7 +233,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "PKR 150,000",
     paidAmount: "PKR 150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "purchase",
   },
 
@@ -247,7 +247,7 @@ const invoiceData = [
     transactionId: "xcghfHY5cv953",
     payableAmount: "N/A",
     paidAmount: "PKR -150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "payment",
   },
 
@@ -261,7 +261,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "PKR 150,000",
     paidAmount: "PKR 150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "purchase",
   },
 
@@ -275,7 +275,7 @@ const invoiceData = [
     transactionId: "N/A",
     payableAmount: "PKR 150,000",
     paidAmount: "PKR 150,000",
-    openBalance: "PKR 150,000",
+    openBalance: "PKR 300,000",
     type: "purchase",
   },
 ];

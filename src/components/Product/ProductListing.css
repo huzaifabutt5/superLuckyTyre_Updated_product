@@ -1,0 +1,413 @@
+/* =====================================
+   PRODUCT PAGE
+===================================== */
+
+.product-page {
+  width: 100%;
+  padding: 22px;
+  background: #f5f6f8;
+  min-height: calc(100vh - 60px);
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 18px;
+}
+
+.product-breadcrumb {
+  font-size: 10px;
+  color: #8a8f9b;
+  margin-bottom: 8px;
+}
+
+.product-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #293047;
+}
+
+
+/* =====================================
+   ADD PRODUCT BUTTON
+===================================== */
+
+.add-product-btn {
+  height: 38px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 6px;
+  background: #4b7df7;
+  color: white;
+text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.add-product-btn:hover {
+  background: #376ce8;
+}
+
+
+/* =====================================
+   MAIN CARD
+===================================== */
+
+.product-card {
+  background: #ffffff;
+  border-radius: 7px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =====================================
+   TOOLBAR
+===================================== */
+
+.product-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2px 4px 12px;
+}
+
+
+/* ENTRIES */
+
+.entries-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.entries-section select {
+  width: 40px;
+  height: 30px;
+
+  border: 1px solid #dfe2e8;
+  border-radius: 5px;
+
+  background: white;
+  color: #4d5565;
+
+  font-size: 11px;
+  padding-left: 7px;
+  outline: none;
+}
+
+.entries-section span {
+  font-size: 11px;
+  color: #687080;
+}
+
+
+/* SEARCH */
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-section label {
+  font-size: 11px;
+  color: #626978;
+}
+
+.search-section input {
+  width: 155px;
+  height: 30px;
+
+  border: 1px solid #dfe2e8;
+  border-radius: 5px;
+
+  padding: 0 10px;
+
+  outline: none;
+
+  font-size: 11px;
+  color: #444;
+}
+
+.search-section input::placeholder {
+  color: #9da2ad;
+}
+
+
+/* =====================================
+   TABLE
+===================================== */
+
+.product-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.product-table {
+  width: 100%;
+  min-width: 850px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  border: 1px solid #e6e8ed;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+
+/* TABLE HEADER */
+
+.product-table thead {
+  background: #f3f5f9;
+}
+
+.product-table th {
+  height: 42px;
+
+  padding: 0 12px;
+
+  text-align: left;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #252c3d;
+
+  white-space: nowrap;
+}
+
+
+/* TABLE BODY */
+
+.product-table td {
+  height: 41px;
+
+  padding: 7px 12px;
+
+  border-top: 1px solid #eceef2;
+
+  font-size: 11px;
+
+  color: #566070;
+
+  white-space: nowrap;
+}
+
+.product-table tbody tr:hover {
+  background: #fafbff;
+}
+
+
+/* =====================================
+   PRODUCT NAME
+===================================== */
+
+.product-name {
+  font-size: 11px;
+  color: #414959;
+  line-height: 15px;
+}
+
+.product-size {
+  font-size: 9px;
+  color: #4b7df7;
+  margin-top: 1px;
+}
+
+
+/* =====================================
+   ACTION BUTTONS
+===================================== */
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.action-buttons button {
+  width: 22px;
+  height: 22px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 9px;
+}
+
+
+/* VIEW */
+
+.view-btn {
+  background: #e9f0ff;
+  color: #4b7df7;
+}
+
+.view-btn:hover {
+  background: #d8e5ff;
+}
+
+
+/* EDIT */
+
+
+  .edit-btn {
+  width: 22px;
+  height: 22px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e5f8ec;
+  color: #36ad65;
+
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 9px;
+}
+
+
+.edit-btn:hover {
+  background: #d3f2df;
+}
+
+
+/* DELETE */
+
+.delete-btn {
+  background: #ffe9e9;
+  color: #f25b5b;
+}
+
+.delete-btn:hover {
+  background: #ffdada;
+}
+
+
+/* =====================================
+   PAGINATION
+===================================== */
+
+.product-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 4px 2px;
+}
+
+.product-pagination > span {
+  font-size: 11px;
+  color: #697181;
+}
+
+
+.pagination-buttons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination-buttons button {
+  width: 25px;
+  height: 25px;
+
+  border: none;
+  border-radius: 4px;
+
+  background: #f2f3f6;
+
+  color: #596171;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.pagination-buttons button:hover {
+  background: #e5e7eb;
+}
+
+.pagination-buttons button.active {
+  background: #4b7df7;
+  color: white;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+  .product-page {
+    padding: 15px;
+  }
+
+  .product-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .product-toolbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .product-header {
+    flex-direction: column;
+  }
+
+  .add-product-btn {
+    align-self: flex-end;
+  }
+
+  .product-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-section {
+    width: 100%;
+  }
+
+  .search-section input {
+    width: 100%;
+  }
+
+  .product-pagination {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+}

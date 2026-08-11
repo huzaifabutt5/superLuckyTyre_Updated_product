@@ -1,0 +1,676 @@
+/* =========================================================
+   CUSTOMER STEP PAGE
+========================================================= */
+
+.customer-step-page {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* =========================================================
+   STEP BAR
+========================================================= */
+
+.sale-steps {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.sale-step {
+  height: 42px;
+  border: 1px solid #e1e5eb;
+  border-radius: 6px;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0 14px;
+
+  font-size: 12px;
+  color: #777f8b;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.sale-step span {
+  font-weight: 500;
+}
+
+.sale-step b {
+  margin-left: auto;
+  font-size: 11px;
+}
+
+.sale-step.completed {
+  color: #4b5563;
+  background: #ffffff;
+}
+
+.sale-step.completed:hover {
+  background: #f7f9fc;
+}
+
+.sale-step.active {
+  color: #ffffff;
+  background: #477cf5;
+  border-color: #477cf5;
+}
+
+
+/* =========================================================
+   MAIN CUSTOMER LAYOUT
+========================================================= */
+
+.customer-layout {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr) 320px;
+
+  gap: 15px;
+
+  align-items: start;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT CUSTOMER SECTION
+========================================================= */
+
+.customer-left {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   CUSTOMER BOX
+========================================================= */
+
+.customer-box {
+  width: 114%;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e6eb;
+
+  border-radius: 6px;
+
+  margin-bottom: 15px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CUSTOMER BOX HEADING
+========================================================= */
+
+.customer-box h3 {
+  margin: 0;
+
+  padding: 13px 15px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #252b36;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   PAYMENT MODE BODY
+========================================================= */
+
+.customer-box-body {
+  padding: 16px;
+}
+
+.customer-box-body label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  color: #424955;
+}
+
+.customer-box-body select {
+  width: 100%;
+
+  height: 38px;
+
+  border: 1px solid #dfe3e8;
+
+  border-radius: 5px;
+
+  padding: 0 11px;
+
+  background: #ffffff;
+
+  color: #626a76;
+
+  font-size: 11px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+}
+
+.customer-box-body select:focus {
+  border-color: #477cf5;
+}
+
+
+/* =========================================================
+   CUSTOMER FIELDS
+========================================================= */
+
+.customer-fields {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  padding: 16px;
+}
+
+.customer-fields > div {
+  min-width: 0;
+}
+
+.customer-fields label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  color: #424955;
+}
+
+.customer-fields label span {
+  color: #e5484d;
+  margin-left: 2px;
+}
+
+
+/* =========================================================
+   CUSTOMER INPUT
+========================================================= */
+
+.customer-fields input,
+.customer-fields select {
+  width: 100%;
+
+  height: 38px;
+
+  border: 1px solid #dfe3e8;
+
+  border-radius: 5px;
+
+  padding: 0 11px;
+
+  background: #ffffff;
+
+  color: #626a76;
+
+  font-size: 11px;
+
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+.customer-fields input::placeholder {
+  color: #a0a6af;
+}
+
+.customer-fields input:focus,
+.customer-fields select:focus {
+  border-color: #477cf5;
+}
+
+
+/* =========================================================
+   RIGHT CART DETAIL
+========================================================= */
+
+.customer-cart {
+  width: 250px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e6eb;
+
+  border-radius: 6px;
+
+  box-sizing: border-box;
+
+  position: sticky;
+
+  top: 80px;
+
+  max-height: calc(100vh - 100px);
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+  margin-left: 80px;
+  
+}
+
+
+/* =========================================================
+   CART HEADER
+========================================================= */
+
+.customer-cart > h3 {
+  margin: 0;
+
+  padding: 13px 14px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #252b36;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   CART PRODUCTS AREA
+========================================================= */
+
+.customer-cart-products {
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SINGLE CART PRODUCT
+========================================================= */
+
+.customer-cart-product {
+  width: 100%;
+
+  min-height: 70px;
+
+  padding: 11px 12px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.customer-cart-product > div:first-child {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.customer-cart-product strong {
+  display: block;
+
+  font-size: 10px;
+
+  line-height: 15px;
+
+  font-weight: 600;
+
+  color: #303744;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.customer-cart-product small {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 9px;
+
+  line-height: 12px;
+
+  color: #777f8b;
+}
+
+
+/* =========================================================
+   CART PRICE AREA
+========================================================= */
+
+.cart-price {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  white-space: nowrap;
+}
+
+.cart-price button {
+  width: 24px;
+
+  height: 22px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #e05252;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  border-radius: 4px;
+}
+
+.cart-price button:hover {
+  background: #fff1f1;
+}
+
+.cart-price span {
+  font-size: 9px;
+
+  font-weight: 600;
+
+  color: #444b57;
+}
+
+
+/* =========================================================
+   CART SUMMARY
+========================================================= */
+
+.customer-cart-summary {
+  padding: 13px 12px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.customer-cart-summary > div {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+
+  font-size: 12px;
+ 
+}
+
+.customer-cart-summary > div:last-child {
+  margin-bottom: 0;
+}
+
+.customer-cart-summary span {
+  color: #4B5563;
+
+}
+
+.customer-cart-summary b {
+  color:#4B5563;
+line-height: 24px;
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PROFIT
+========================================================= */
+
+.customer-cart-summary .profit {
+  color: #18a968;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.customer-cart-summary .total {
+  color: #477cf5;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   PROCEED TO PAY BUTTON
+========================================================= */
+
+.proceed-pay {
+  width: calc(100% - 24px);
+
+  height: 38px;
+
+  margin: 0 12px 12px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #477cf5;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.proceed-pay:hover {
+  background: #386be5;
+}
+
+.proceed-pay:active {
+  transform: translateY(1px);
+}
+
+
+/* =========================================================
+   CART SCROLLBAR
+========================================================= */
+
+.customer-cart::-webkit-scrollbar {
+  width: 5px;
+}
+
+.customer-cart::-webkit-scrollbar-track {
+  background: #f5f6f8;
+}
+
+.customer-cart::-webkit-scrollbar-thumb {
+  background: #cdd2d9;
+
+  border-radius: 10px;
+}
+
+.customer-cart::-webkit-scrollbar-thumb:hover {
+  background: #b7bdc6;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .customer-layout {
+    grid-template-columns:
+      minmax(0, 1fr) 290px;
+
+    gap: 12px;
+  }
+
+  .customer-cart {
+    width: 290px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .sale-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-cart {
+    width: 100%;
+
+    position: relative;
+
+    top: 0;
+
+    max-height: none;
+
+    margin-top: 5px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .customer-fields {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    padding: 12px;
+  }
+
+  .customer-box-body {
+    padding: 12px;
+  }
+
+  .customer-box h3 {
+    padding: 12px;
+
+    font-size: 12px;
+  }
+
+  .sale-step {
+    height: 40px;
+
+    padding: 0 11px;
+
+    font-size: 11px;
+  }
+
+  .customer-cart-product {
+    padding: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .customer-fields {
+    padding: 10px;
+  }
+
+  .customer-box-body {
+    padding: 10px;
+  }
+
+  .customer-cart-summary {
+    padding: 11px 10px;
+  }
+
+  .proceed-pay {
+    width: calc(100% - 20px);
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+  }
+
+}

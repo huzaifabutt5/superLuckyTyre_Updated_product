@@ -1,0 +1,56 @@
+.customer-card{
+    background:#fff;
+    border-radius:12px;
+    padding:18px;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.customer-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.customer-header h3{
+    font-size:18px;
+    font-weight:600;
+    color:#222;
+}
+
+.customer-header button{
+    border:none;
+    background:none;
+    color:#4F7CFF;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:500;
+}
+
+.customer-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.customer-table thead{
+    background:#F6F7FB;
+}
+
+.customer-table th{
+    padding:14px;
+    text-align:left;
+    font-size:13px;
+    color:#555;
+}
+
+.customer-table td{
+    padding:14px;
+    border-bottom:1px solid #ECECEC;
+    font-size:13px;
+    color:#444;
+}
+
+.customer-table tbody tr:hover{
+    background:#F8FAFF;
+}
+

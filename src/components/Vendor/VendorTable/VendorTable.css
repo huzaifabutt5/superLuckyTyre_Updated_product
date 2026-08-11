@@ -1,0 +1,524 @@
+/* =========================================
+   VENDOR TABLE CARD
+========================================= */
+
+.vendor-table-card {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TOP CONTROLS
+========================================= */
+
+.vendor-table-top {
+    width: 100%;
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 15px;
+
+    box-sizing: border-box;
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================================
+   ENTRIES
+========================================= */
+
+.entries-section {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #6f7787;
+    font-size: 11px;
+}
+
+
+.entries-section select {
+    width: 48px;
+    height: 29px;
+
+    padding: 0 5px;
+
+    border: 1px solid #d9dde5;
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    color: #4e5667;
+    font-size: 11px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.entries-section select:focus {
+    border-color: #4779f5;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.vendor-search {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 11px;
+    color: #555d6d;
+}
+
+
+.vendor-search label {
+    white-space: nowrap;
+}
+
+
+.vendor-search input {
+    width: 165px;
+    height: 30px;
+
+    padding: 0 9px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d9dde5;
+    border-radius: 4px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #444b5a;
+    font-size: 11px;
+}
+
+
+.vendor-search input::placeholder {
+    color: #a3a9b5;
+}
+
+
+.vendor-search input:focus {
+    border-color: #4779f5;
+}
+
+
+/* =========================================
+   HORIZONTAL TABLE WRAPPER
+========================================= */
+
+.vendor-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: thin;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.vendor-table-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+
+.vendor-table-wrapper::-webkit-scrollbar-track {
+    background: #f4f5f7;
+}
+
+
+.vendor-table-wrapper::-webkit-scrollbar-thumb {
+    background: #c7ccd5;
+    border-radius: 10px;
+}
+
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.vendor-table {
+    width: 100%;
+
+    /*
+       Important:
+       This keeps every column visible
+       through horizontal scrolling.
+    */
+
+    min-width: 1500px;
+
+    border-collapse: collapse;
+
+    table-layout: auto;
+
+    font-size: 10px;
+
+    color: #444b5a;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.vendor-table thead th {
+    height: 43px;
+
+    padding: 0 12px;
+
+    background: #f8f9fb;
+
+    border-bottom: 1px solid #e8eaf0;
+
+   color: #111827;
+font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.vendor-table tbody td {
+    height: 43px;
+
+    padding: 0 12px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    
+
+    font-size: 14px;
+    font-weight: 400;
+
+    white-space: nowrap;
+
+    vertical-align: middle;
+}
+
+
+/* =========================================
+   ROW HOVER
+========================================= */
+
+.vendor-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+
+.vendor-table tbody tr:hover {
+    background: #fafbfe;
+}
+
+
+/* =========================================
+   COLUMN WIDTHS
+========================================= */
+
+.vendor-table th:nth-child(1),
+.vendor-table td:nth-child(1) {
+    width: 45px;
+    min-width: 45px;
+    text-align: center;
+}
+
+
+.vendor-table th:nth-child(2),
+.vendor-table td:nth-child(2) {
+    min-width: 150px;
+}
+
+
+.vendor-table th:nth-child(3),
+.vendor-table td:nth-child(3) {
+    min-width: 145px;
+}
+
+
+.vendor-table th:nth-child(4),
+.vendor-table td:nth-child(4) {
+    min-width: 210px;
+}
+
+
+.vendor-table th:nth-child(5),
+.vendor-table td:nth-child(5) {
+    min-width: 145px;
+}
+
+
+.vendor-table th:nth-child(6),
+.vendor-table td:nth-child(6) {
+    min-width: 180px;
+}
+
+
+.vendor-table th:nth-child(7),
+.vendor-table td:nth-child(7) {
+    min-width: 140px;
+}
+
+
+.vendor-table th:nth-child(8),
+.vendor-table td:nth-child(8) {
+    min-width: 150px;
+}
+
+
+.vendor-table th:nth-child(9),
+.vendor-table td:nth-child(9) {
+    min-width: 230px;
+}
+
+
+.vendor-table th:nth-child(10),
+.vendor-table td:nth-child(10) {
+    min-width: 125px;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.vendor-actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+
+    padding: 8px 0;
+
+    border: none;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =========================================
+   VIEW BUTTON
+========================================= */
+
+.view-btn {
+    background: rgba(72, 127, 255, 0.15);
+    color: #487FFF;
+}
+
+
+/* =========================================
+   EDIT BUTTON
+========================================= */
+
+.edit-btn {
+    background: rgba(69, 179, 105, 0.15);
+    color: #45B369;
+}
+
+
+/* =========================================
+   DELETE BUTTON
+========================================= */
+
+.delete-btn {
+    background: rgba(239, 71, 112, 0.15);
+    color: #EF4770;
+}
+
+
+/* =========================================
+   NO VENDOR
+========================================= */
+
+.no-vendor {
+    height: 100px !important;
+
+    text-align: center !important;
+
+    color: #9aa0ac !important;
+}
+
+
+/* =========================================
+   TABLE BOTTOM
+========================================= */
+
+.vendor-table-bottom {
+    min-height: 58px;
+
+    margin-top: 12px;
+
+    padding: 10px 15px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+/* =========================================
+   ENTRIES INFORMATION
+========================================= */
+
+.entries-info {
+    color: #7a8190;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+
+.pagination button {
+    min-width: 27px;
+    height: 27px;
+
+    padding: 0 7px;
+
+    border: 1px solid #e1e4e9;
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    color: #6c7381;
+
+    font-size: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+.pagination button:hover:not(:disabled) {
+    background: #f2f5ff;
+    border-color: #4779f5;
+    color: #4779f5;
+}
+
+
+/* =========================================
+   ACTIVE PAGE
+========================================= */
+
+.pagination .active-page {
+    background: #4779f5;
+    border-color: #4779f5;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   PAGINATION ARROWS
+========================================= */
+
+.pagination .pagination-arrow {
+    font-size: 8px;
+}
+
+
+.pagination .pagination-arrow:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    background: #f7f7f8;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .vendor-table-top {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    .vendor-search {
+        width: 100%;
+    }
+
+
+    .vendor-search input {
+        width: 100%;
+    }
+
+
+    .vendor-table-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+}

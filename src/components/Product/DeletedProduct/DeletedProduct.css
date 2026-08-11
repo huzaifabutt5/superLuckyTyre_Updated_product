@@ -1,0 +1,179 @@
+/* ================================
+   DELETE OVERLAY
+================================ */
+
+.delete-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+
+/* ================================
+   DELETE MODAL
+================================ */
+
+.delete-modal {
+  width: 450px;
+  max-width: calc(100% - 80px);
+  
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.delete-modal-header {
+  padding: 20px 30px 20px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.delete-modal-header h2 {
+  margin: 0;
+
+  color: #192235;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+.delete-modal-body {
+  padding: 30px 30px 25px;
+}
+
+.delete-modal-body p {
+  margin: 0;
+
+  color: #192235;
+
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.delete-modal-buttons {
+  display: flex;
+
+  gap: 20px;
+size: 20px;
+  padding: 0 34px 34px;
+}
+
+
+/* ================================
+   CANCEL
+================================ */
+
+.delete-cancel-btn {
+  flex: 1;
+
+  height: 60px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #e8e9eb;
+
+  color: #505a6b;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.delete-cancel-btn:hover {
+  background: #dedfe1;
+}
+
+
+/* ================================
+   DELETE
+================================ */
+
+.delete-confirm-btn {
+  flex: 1;
+
+  height: 58px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #f45100;
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.delete-confirm-btn:hover {
+  background: #e34700;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+  .delete-modal-header {
+    padding: 20px;
+  }
+
+  .delete-modal-header h2 {
+    font-size: 25px;
+  }
+
+  .delete-modal-body {
+    padding: 25px 20px;
+  }
+
+  .delete-modal-body p {
+    font-size: 21px;
+  }
+
+  .delete-modal-buttons {
+    padding: 0 20px 20px;
+
+    gap: 12px;
+  }
+
+  .delete-cancel-btn,
+  .delete-confirm-btn {
+    height: 60px;
+
+    font-size: 18px;
+  }
+}

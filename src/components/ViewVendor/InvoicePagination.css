@@ -1,0 +1,54 @@
+.invoice-pagination{
+    margin-top:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.pagination-info{
+    font-size:14px;
+    color:#666;
+}
+
+.pagination-buttons{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.page-btn{
+    width:32px;
+    height:32px;
+    border:none;
+    background:#f3f4f6;
+    color:#555;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.page-btn:hover{
+    background:#e5e7eb;
+}
+
+.page-btn.active{
+    background:#4f7cff;
+    color:#fff;
+}
+
+@media(max-width:768px){
+
+.invoice-pagination{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.pagination-buttons{
+    width:100%;
+    justify-content:flex-end;
+}
+
+}

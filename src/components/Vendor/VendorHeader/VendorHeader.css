@@ -1,0 +1,105 @@
+/* =========================================
+   HEADER CONTAINER
+========================================= */
+
+.vendor-header {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.vendor-title-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.breadcrumb {
+    font-size: 12px;
+    font-weight: 400;
+    color: #7c8495;
+margin-top: 7px;
+    margin-bottom: 7px;
+    line-height: 14px;
+}
+
+.breadcrumb::first-letter {
+    color: #7c8495;
+}
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.vendor-title-section h1 {
+    margin: 0;
+
+    font-size: 26px;
+    line-height: 40px;
+
+    font-weight: 700;
+    color: #282D44;
+}
+
+
+/* =========================================
+   ADD CUSTOMER BUTTON
+========================================= */
+
+.add-vendor-btn {
+    height: 42px;
+
+    padding: 0 20px;
+
+    margin-left: auto;
+
+    border: none;
+    border-radius: 6px;
+
+    color: #ffffff;
+    background: #4779f5 ;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    cursor: pointer;
+
+   
+}
+
+
+
+
+/* =========================================
+   PLUS ICON
+========================================= */
+
+.add-icon {
+    font-size: 16px;
+    font-weight: 300;
+
+    line-height: 1;
+    margin-top: -1px;
+}

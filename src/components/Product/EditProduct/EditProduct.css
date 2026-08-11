@@ -1,0 +1,275 @@
+/* =================================
+   EDIT PRODUCT PAGE
+================================= */
+
+.edit-product-page {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+
+  padding: 12px 15px;
+
+  background: #f4f4f6;
+}
+
+
+/* =================================
+   BREADCRUMB
+================================= */
+
+.edit-product-breadcrumb {
+  font-size: 9px;
+  color: #737987;
+
+  margin-bottom: 8px;
+}
+
+
+/* =================================
+   PAGE TITLE
+================================= */
+
+.edit-product-title {
+  margin: 0 0 10px 0;
+
+  font-size: 21px;
+  font-weight: 600;
+
+  color: #293047;
+}
+
+
+/* =================================
+   INFORMATION CARD
+================================= */
+
+.edit-product-information-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 5px;
+
+  margin-bottom: 12px;
+
+  overflow: hidden;
+}
+
+
+/* =================================
+   CARD TITLE
+================================= */
+
+.edit-product-card-title {
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #222938;
+}
+
+
+/* =================================
+   FORM
+================================= */
+
+.edit-product-form {
+  padding: 12px 11px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 9px;
+  row-gap: 8px;
+}
+
+
+/* =================================
+   FORM GROUP
+================================= */
+
+.edit-product-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =================================
+   LABEL
+================================= */
+
+.edit-product-form-group label {
+  margin-bottom: 5px;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  color: #414858;
+}
+
+.edit-product-form-group label span {
+  color: #ff3d3d;
+}
+
+
+/* =================================
+   INPUT
+================================= */
+
+.edit-product-form-group input {
+  width: 100%;
+  height: 29px;
+
+  padding: 0 10px;
+
+  border: 1px solid #dfe2e7;
+
+  border-radius: 5px;
+
+  outline: none;
+
+  font-size: 10px;
+
+  color: #4b5361;
+
+  background: #ffffff;
+}
+
+.edit-product-form-group input::placeholder {
+  color: #9da2ab;
+}
+
+.edit-product-form-group input:focus {
+  border-color: #4b7df7;
+}
+
+
+/* =================================
+   FULL WIDTH
+================================= */
+
+.edit-product-form-group.full-width {
+  grid-column: 1 / 3;
+}
+
+
+/* =================================
+   BUTTON CARD
+================================= */
+
+.edit-product-button-card {
+  width: 100%;
+
+  min-height: 45px;
+
+  background: #ffffff;
+
+  border-radius: 5px;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 6px 11px;
+}
+
+
+/* =================================
+   CANCEL
+================================= */
+
+.edit-cancel-product-btn {
+  width: 87px;
+  height: 29px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  background: #f1f2f4;
+
+  color: #555c68;
+
+  text-decoration: none;
+
+  font-size: 10px;
+}
+
+.edit-cancel-product-btn:hover {
+  background: #e6e7e9;
+}
+
+
+/* =================================
+   UPDATE PRODUCT
+================================= */
+
+.update-product-btn {
+  width: 100px;
+  height: 29px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #4b7df7;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+.update-product-btn:hover {
+  background: #376ce8;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 700px) {
+
+  .edit-product-page {
+    padding: 12px;
+  }
+
+  .edit-product-form {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-product-form-group.full-width {
+    grid-column: auto;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .edit-product-button-card {
+    justify-content: center;
+  }
+
+  .edit-product-title {
+    font-size: 19px;
+  }
+
+}
