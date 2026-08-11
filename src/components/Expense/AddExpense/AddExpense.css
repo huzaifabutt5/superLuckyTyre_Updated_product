@@ -1,0 +1,376 @@
+/* =========================================
+   ADD EXPENSE PAGE
+========================================= */
+
+.add-expense-page {
+  width: 100%;
+  min-height: calc(100vh - 40px);
+  padding: 8px 20px 30px;
+  box-sizing: border-box;
+  background: #f5f6f8;
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.add-expense-breadcrumb {
+  font-size: 9px;
+  color: #667085;
+  margin-bottom: 7px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.add-expense-heading {
+  margin-bottom: 10px;
+}
+
+.add-expense-heading h1 {
+  margin: 0;
+  color: #28324a;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.add-expense-form {
+  width: 100%;
+}
+
+
+/* =========================================
+   EXPENSE INFORMATION CARD
+========================================= */
+
+.expense-information-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.expense-information-header {
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 14px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.expense-information-header h2 {
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #182033;
+}
+
+
+/* =========================================
+   FORM BODY
+========================================= */
+
+.expense-information-body {
+  padding: 12px 14px 11px;
+}
+
+
+/* =========================================
+   THREE INPUTS
+========================================= */
+
+.expense-fields-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+
+/* =========================================
+   FIELD
+========================================= */
+
+.expense-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-field label,
+.expense-description-field label {
+  margin-bottom: 5px;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  color: #344054;
+}
+
+.expense-field label span,
+.expense-description-field label span {
+  color: #f04438;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.expense-field input {
+  width: 100%;
+  height: 34px;
+
+  box-sizing: border-box;
+
+  padding: 0 10px;
+
+  border: 1px solid #d9dee8;
+  border-radius: 5px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #344054;
+
+  font-size: 10px;
+}
+
+.expense-field input::placeholder {
+  color: #98a2b3;
+}
+
+.expense-field input:focus {
+  border-color: #4a7df5;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.expense-description-field {
+  margin-top: 10px;
+}
+
+.expense-description-field textarea {
+  width: 100%;
+  height: 52px;
+
+  box-sizing: border-box;
+
+  padding: 9px 10px;
+
+  border: 1px solid #d9dee8;
+  border-radius: 5px;
+
+  outline: none;
+
+  resize: none;
+
+  font-family: inherit;
+  font-size: 10px;
+
+  color: #344054;
+}
+
+.expense-description-field textarea::placeholder {
+  color: #98a2b3;
+}
+
+.expense-description-field textarea:focus {
+  border-color: #4a7df5;
+}
+
+
+/* =========================================
+   BUTTON CARD
+========================================= */
+
+.add-expense-buttons {
+  width: 100%;
+
+  min-height: 42px;
+
+  margin-top: 11px;
+
+  padding: 6px 10px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 6px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 7px;
+}
+
+
+/* =========================================
+   CANCEL BUTTON
+========================================= */
+
+.cancel-expense-btn {
+  width: 85px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  background: #f2f4f7;
+  color: #667085;
+
+  border-radius: 5px;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+.cancel-expense-btn:hover {
+  background: #e9ebef;
+}
+
+
+/* =========================================
+   ADD EXPENSE BUTTON
+========================================= */
+
+.save-expense-btn {
+  width: 85px;
+  height: 28px;
+
+  border: none;
+
+  background: #4a7df5;
+  color: #ffffff;
+
+  border-radius: 5px;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+.save-expense-btn:hover {
+  background: #386be2;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+  .add-expense-page {
+    padding: 10px 15px 25px;
+  }
+
+  .add-expense-heading h1 {
+    font-size: 22px;
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .add-expense-page {
+    padding: 10px;
+  }
+
+  .add-expense-heading h1 {
+    font-size: 20px;
+  }
+
+  .expense-fields-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .expense-information-body {
+    padding: 12px;
+  }
+
+  .expense-field input {
+    height: 36px;
+  }
+
+  .expense-description-field textarea {
+    height: 80px;
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .add-expense-breadcrumb {
+    font-size: 8px;
+  }
+
+  .add-expense-heading h1 {
+    font-size: 19px;
+  }
+
+  .expense-information-header {
+    height: 40px;
+    padding: 0 10px;
+  }
+
+  .expense-information-header h2 {
+    font-size: 12px;
+  }
+
+  .expense-information-body {
+    padding: 10px;
+  }
+
+  .add-expense-buttons {
+    justify-content: stretch;
+  }
+
+  .cancel-expense-btn,
+  .save-expense-btn {
+    flex: 1;
+    width: auto;
+  }
+
+}

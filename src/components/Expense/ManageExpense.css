@@ -1,0 +1,557 @@
+/* ================================
+   MANAGE EXPENSE PAGE
+================================ */
+
+.manage-expense-page {
+  width: 100%;
+  min-height: calc(100vh - 40px);
+  padding: 8px 20px 30px;
+  box-sizing: border-box;
+  background: #f5f6f8;
+}
+
+
+/* ================================
+   BREADCRUMB
+================================ */
+
+.expense-breadcrumb {
+  font-size: 9px;
+  color: #667085;
+  margin-bottom: 7px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.expense-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.expense-header h1 {
+  margin: 0;
+  color: #28324a;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+/* ================================
+   ADD EXPENSE BUTTON
+================================ */
+
+.add-expense-btn {
+  border: none;
+  background: #4b7df7;
+  color: white;
+  height: 32px;
+  padding: 0 13px;
+  border-radius: 6px;
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  transition: 0.2s ease;
+}
+
+.add-expense-btn:hover {
+  background: #376ce8;
+}
+
+
+/* ================================
+   MAIN CARD
+================================ */
+
+.expense-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   CARD HEADER
+================================ */
+
+.expense-card-header {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.expense-card-header h2 {
+  margin: 0;
+  color: #182033;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* ================================
+   TOOLBAR
+================================ */
+
+.expense-toolbar {
+  min-height: 55px;
+  padding: 0 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+
+/* Entries */
+
+.entries-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #667085;
+  font-size: 10px;
+}
+
+.entries-select {
+  width: 28px;
+  height: 28px;
+
+  border: 1px solid #d8dee8;
+  border-radius: 5px;
+
+  background: white;
+  color: #667085;
+
+  font-size: 10px;
+  padding: 0 3px;
+}
+
+
+/* Search */
+
+.expense-search-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #667085;
+  font-size: 10px;
+}
+
+.expense-search-section input {
+  width: 112px;
+  height: 30px;
+
+  border: 1px solid #d9dee8;
+  border-radius: 5px;
+
+  padding: 0 9px;
+
+  outline: none;
+
+  font-size: 10px;
+  color: #344054;
+  background: white;
+}
+
+.expense-search-section input:focus {
+  border-color: #4a7df5;
+}
+
+.expense-search-section input::placeholder {
+  color: #98a2b3;
+}
+
+
+/* Calendar */
+
+.calendar-btn {
+  width: 29px;
+  height: 29px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #4a7df5;
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 12px;
+}
+
+.calendar-btn:hover {
+  background: #386be2;
+}
+
+
+/* ================================
+   TABLE WRAPPER
+================================ */
+
+.expense-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   TABLE
+================================ */
+
+.expense-table {
+  width: 100%;
+  min-width: 700px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  border: 1px solid #e7ebf0;
+  border-radius: 6px;
+  overflow: hidden;
+
+  color: #475467;
+  font-size: 15px;
+}
+
+
+/* Header */
+
+.expense-table thead {
+  background: #f3f5f9;
+}
+
+.expense-table th {
+  height: 35px;
+
+  padding: 0 10px;
+
+  text-align: left;
+
+  color: #182033;
+  font-size: 15px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* Body */
+
+.expense-table td {
+  height: 42px;
+
+  padding: 0 10px;
+
+  border-top: 1px solid #edf0f4;
+
+  white-space: nowrap;
+}
+
+.expense-table tbody tr:hover {
+  background: #fafbfc;
+}
+
+
+/* Amount */
+
+.expense-table td:nth-child(5) {
+  font-weight: 500;
+}
+
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+
+.expense-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+/* View */
+
+.view-action,
+.edit-action {
+  width: 20px;
+  height: 20px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+
+/* Blue View */
+
+.view-action {
+  background: #e7efff;
+  color: #4a7df5;
+
+}
+
+.view-action:hover {
+  background: #d6e4ff;
+}
+
+
+/* Green Edit */
+
+.edit-action {
+  background: #e5f7ed;
+  color: #42a96b;
+}
+
+.edit-action:hover {
+  background: #d2f0df;
+}
+
+
+/* ================================
+   NO DATA
+================================ */
+
+.no-expense {
+  text-align: center !important;
+  height: 70px !important;
+  color: #98a2b3;
+}
+
+
+/* ================================
+   TABLE FOOTER
+================================ */
+
+.expense-table-footer {
+  min-height: 45px;
+
+  padding: 0 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.entries-info {
+  color: #667085;
+  font-size: 9px;
+}
+
+
+/* ================================
+   PAGINATION
+================================ */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.pagination button {
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.pagination-arrow {
+  width: 25px;
+  height: 25px;
+
+  background: transparent;
+  color: #98a2b3;
+
+  border-radius: 4px;
+}
+
+.pagination-arrow:hover {
+  background: #f2f4f7;
+}
+
+.pagination-number {
+  width: 25px;
+  height: 25px;
+
+  background: #f2f4f7;
+  color: #667085;
+
+  border-radius: 4px;
+}
+
+.pagination-number.active {
+  background: #4a7df5;
+  color: white;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+/* Tablet */
+
+@media (max-width: 992px) {
+
+  .manage-expense-page {
+    padding: 10px 15px 25px;
+  }
+
+  .expense-header h1 {
+    font-size: 22px;
+  }
+
+  .expense-toolbar {
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .manage-expense-page {
+    padding: 10px;
+  }
+
+  .expense-header {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .expense-header h1 {
+    font-size: 20px;
+  }
+
+  /* .add-expense-btn {
+    font-size: 10px;
+    height: 30px;
+    padding: 0 9px;
+  } */
+  .add-expense-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background: #4b7df7;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 11px;
+
+  height: 46px;
+  padding: 0 18px;
+
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-expense-btn:hover {
+  background: #376ce8;
+}
+
+
+  .expense-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .expense-search-section {
+    justify-content: flex-end;
+  }
+
+  .expense-search-section input {
+    flex: 1;
+    max-width: 180px;
+  }
+
+  .expense-table-wrapper {
+    padding: 0 8px;
+  }
+
+  .expense-table-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+}
+
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+  .expense-header {
+    flex-direction: column;
+  }
+
+  .add-expense-btn {
+    align-self: flex-end;
+  }
+
+  .expense-card-header {
+    padding: 0 10px;
+  }
+
+  .expense-card-header h2 {
+    font-size: 12px;
+  }
+
+  .entries-section {
+    width: 100%;
+  }
+
+  .expense-search-section {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .expense-search-section input {
+    max-width: none;
+    width: 100%;
+  }
+
+  .pagination {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+}

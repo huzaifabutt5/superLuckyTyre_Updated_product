@@ -167,7 +167,7 @@ export default function Sidebar({ sidebarOpen }) {
           EXPENSE MANAGEMENT
         </h5>
 
-<Link href="/expense" className={`menu-link ${isActive("/expense") ? "active" : ""}`}>
+<Link href="/Expense" className={`menu-link ${isActive("/Expense") ? "active" : ""}`}>
 
              <HiOutlineHome className="menu-icon" />
 

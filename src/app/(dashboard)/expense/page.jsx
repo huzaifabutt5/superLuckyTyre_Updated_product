@@ -1,8 +1,5 @@
+import ManageExpense from "@/components/Expense/ManageExpense";
+
 export default function ExpensePage() {
-  return (
-    <div>
-      <h1>Manage Expenses</h1>
-      <p>This page is under construction.</p>
-    </div>
-  );
+  return <ManageExpense />;
 }

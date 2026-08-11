@@ -55,7 +55,9 @@ export default function VendorTable() {
       vendor.vendorEmail.toLowerCase().includes(searchValue) ||
       vendor.vendorPhone.toLowerCase().includes(searchValue) ||
       vendor.address.toLowerCase().includes(searchValue) ||
-      vendor.bankName.toLowerCase().includes(searchValue)
+      vendor.bankName.toLowerCase().includes(searchValue) ||
+      vendor.pay.toLowerCase().includes(searchValue) ||
+      vendor.receive.toLowerCase().includes(searchValue)
     );
   });
 
@@ -197,7 +199,7 @@ export default function VendorTable() {
 
               <th>Payable</th>
 
-               <th>Receivable</th>
+              <th>Receivable</th>
 
               <th>Actions</th>
 
@@ -274,14 +276,22 @@ export default function VendorTable() {
                   <td>
                     {vendor.iban}
                   </td>
-                  {/* {payable} */}
-       <td>
-        {vendor.pay}
-       </td>
-     {/* receivable */}
-<td>
-  {vendor.receive}
-</td>
+
+
+                  {/* PAYABLE */}
+
+                  <td>
+                    {vendor.pay}
+                  </td>
+
+
+                  {/* RECEIVABLE */}
+
+                  <td>
+                    {vendor.receive}
+                  </td>
+
+
                   {/* ACTIONS */}
 
                   <td>
@@ -339,16 +349,16 @@ export default function VendorTable() {
 
             ) : (
 
-              <tr>
+                <tr>
 
-                <td
-                  colSpan="10"
-                  className="no-vendor"
-                >
-                  No vendors found
-                </td>
+                  <td
+                    colSpan="12"
+                    className="no-vendor"
+                  >
+                    No vendors found
+                  </td>
 
-              </tr>
+                </tr>
 
             )}
 

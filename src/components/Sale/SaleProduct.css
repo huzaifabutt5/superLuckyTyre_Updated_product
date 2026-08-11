@@ -125,10 +125,24 @@
 }
 
 .entries-box span:first-child {
-  border: 1px solid #dce1e8;
-  padding: 5px 8px;
+  min-width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #dfe3e8;
+
   border-radius: 5px;
+
   color: #566071;
+
+  font-size: 9px;
+
+  padding: 0 6px;
+
+  box-sizing: border-box;
 }
 
 .product-search {
@@ -140,16 +154,36 @@
 .product-search label {
   font-size: 10px;
   color: #667080;
+  
 }
 
 .product-search input {
-  width: 120px;
+  /* width: 120px;
   height: 26px;
   border: 1px solid #dce1e8;
   border-radius: 5px;
   padding: 0 9px;
   font-size: 10px;
+  outline: none; */
+  width: 105px;
+
+  height: 27px;
+
+  padding: 0 9px;
+
+  border: 1px solid #dfe3e8;
+
+  border-radius: 5px;
+
   outline: none;
+
+  background: white;
+
+  font-size: 8px;
+
+  color: #505b6c;
+
+  box-sizing: border-box;
 }
 
 .product-search input::placeholder {

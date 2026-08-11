@@ -301,7 +301,19 @@ font-family: "Inter", sans-serif;
 
 .vendor-table th:nth-child(10),
 .vendor-table td:nth-child(10) {
-    min-width: 125px;
+    min-width: 120px;
+}
+
+
+.vendor-table th:nth-child(11),
+.vendor-table td:nth-child(11) {
+    min-width: 120px;
+}
+
+
+.vendor-table th:nth-child(12),
+.vendor-table td:nth-child(12) {
+    min-width: 130px;
 }
 
 

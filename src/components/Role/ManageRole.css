@@ -1,0 +1,252 @@
+.role-page {
+  width: 100%;
+  min-height: 100%;
+  background: #f1f1f3;
+  padding: 16px 20px 30px;
+  box-sizing: border-box;
+}
+
+/* Breadcrumb */
+
+.role-breadcrumb {
+  font-size: 10px;
+  color: #6b7280;
+  margin-bottom: 7px;
+}
+
+/* Header */
+
+.role-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.role-header h1 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 600;
+  color: #252b45;
+}
+
+/* Add Role Button */
+
+.add-role-btn {
+  height: 42px;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #4b7ff5;
+  color: white;
+
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.add-role-btn span {
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.add-role-btn:hover {
+  background: #3e70df;
+}
+
+/* Main Card */
+
+.roles-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 0 14px 14px;
+  box-sizing: border-box;
+}
+
+.roles-card h3 {
+  margin: 0;
+  padding: 12px 0;
+  font-size: 14px;
+  color: #202638;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* Toolbar */
+
+.role-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 0 10px;
+}
+
+.entries-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 12px;
+  color: #5f6675;
+}
+
+.entries-control span:first-child {
+  border: 1px solid #dce1e8;
+  border-radius: 6px;
+  padding: 7px 10px;
+  color: #4d5564;
+}
+
+/* Search */
+
+.role-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 12px;
+  color: #505766;
+}
+
+.role-search input {
+  width: 130px;
+  height: 34px;
+
+  border: 1px solid #d9dee7;
+  border-radius: 6px;
+
+  padding: 0 10px;
+  outline: none;
+
+  font-size: 12px;
+}
+
+.role-search input:focus {
+  border-color: #4b7ff5;
+}
+
+/* Table */
+
+.role-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.role-table {
+  width: 100%;
+  min-width: 750px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  border: 1px solid #e4e7ec;
+  border-radius: 6px;
+  overflow: hidden;
+
+  font-size: 12px;
+}
+
+.role-table th {
+  height: 40px;
+  background: #f4f5f8;
+
+  text-align: left;
+
+  padding: 0 11px;
+
+  font-weight: 600;
+  color: #252b3a;
+}
+
+.role-table td {
+  height: 40px;
+
+  padding: 0 11px;
+
+  border-top: 1px solid #e7e9ee;
+
+  color: #555d6d;
+}
+
+.role-table tbody tr:hover {
+  background: #fafbfc;
+}
+
+/* Access */
+
+.access-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.access-badge {
+  display: inline-flex;
+  align-items: center;
+
+  background: #e3e6eb;
+  color: #555c68;
+
+  border-radius: 12px;
+
+  padding: 3px 8px;
+
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .role-page {
+    padding: 14px;
+  }
+
+  .role-header h1 {
+    font-size: 20px;
+  }
+
+  .role-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .role-search {
+    width: 100%;
+  }
+
+  .role-search input {
+    flex: 1;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .role-page {
+    padding: 10px;
+  }
+
+  .role-header {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .role-header h1 {
+    font-size: 18px;
+  }
+
+  .add-role-btn {
+    height: 38px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+}

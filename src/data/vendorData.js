@@ -22,7 +22,7 @@ const vendorData = [
     bankName: "Habib Bank Limited",
     accountTitle: "Al-Madina Rubber Works",
     iban: "PK24 HABB 0024 4567 8901 2345",
-     pay: "PKR 225900",
+    pay: "PKR 225900",
     receive: "PKR 225900",
   },
   {
@@ -35,7 +35,7 @@ const vendorData = [
     bankName: "Allied Bank",
     accountTitle: "Pak Auto Parts Co.",
     iban: "PK42 ABPA 0001 6789 0123 4567",
-     pay: "PKR 225900",
+    pay: "PKR 225900",
     receive: "PKR 225900",
   },
   {
@@ -48,7 +48,7 @@ const vendorData = [
     bankName: "United Bank Limited",
     accountTitle: "Gulf Wheels & Tyres",
     iban: "PK66 UBLP 0005 3456 7890 1234",
-     pay: "PKR 225900",
+    pay: "PKR 225900",
     receive: "PKR 225900",
   },
   {
@@ -61,7 +61,7 @@ const vendorData = [
     bankName: "Bank Alfalah",
     accountTitle: "Bismillah Tyre Centre",
     iban: "PK33 ALFH 0012 8901 2345 6789",
-     pay: "PKR 225900",
+    pay: "PKR 225900",
     receive: "PKR 225900",
   },
   {
@@ -74,7 +74,7 @@ const vendorData = [
     bankName: "MCB Bank",
     accountTitle: "Shahid Rubber Imports",
     iban: "PK51 MCBA 0003 4567 8901 2345",
-     pay: "PKR 225900",
+    pay: "PKR 225900",
     receive: "PKR 225900",
   },
   {
@@ -87,7 +87,7 @@ const vendorData = [
     bankName: "Standard Chartered",
     accountTitle: "Prime Tyre Supply",
     iban: "PK77 SCBL 0004 5678 9012 3456",
-     pay: "PKR 225900",
+    pay: "PKR 225900",
     receive: "PKR 225900",
   },
   {
