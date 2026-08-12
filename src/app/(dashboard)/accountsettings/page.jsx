@@ -1,9 +1,5 @@
-import React from 'react'
+import AccountSetting from "@/components/AccountSetting/AccountSetting";
 
-export default function page() {
-  return (
-    <div>
-      <h1>Account settings</h1>
-    </div>
-  )
+export default function AccountSettingPage() {
+  return <AccountSetting />;
 }

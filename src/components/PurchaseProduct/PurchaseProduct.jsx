@@ -79,6 +79,7 @@ export default function PurchaseProduct() {
 
   const [showProductModal, setShowProductModal] =
     useState(false);
+    
 
   const [dotMfg, setDotMfg] = useState("");
 

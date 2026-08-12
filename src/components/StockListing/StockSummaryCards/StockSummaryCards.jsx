@@ -32,6 +32,7 @@ const cards = [
     icon: <FaShoppingCart />,
     className: "stock-card-orange",
   },
+
 ];
 
 export default function StockSummaryCards() {
