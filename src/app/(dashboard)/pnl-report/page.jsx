@@ -1,8 +1,11 @@
-export default function PnlReportPage() {
+import PnLReport from "@/components/PnLReport/PnLReport";
+
+import React from 'react'
+
+export default function page() {
   return (
     <div>
-      <h1>PnL Report</h1>
-      <p>This page is under construction.</p>
+      <PnLReport/>
     </div>
-  );
+  )
 }

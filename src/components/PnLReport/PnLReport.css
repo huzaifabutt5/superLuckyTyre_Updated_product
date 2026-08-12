@@ -1,0 +1,1027 @@
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.pnl-page {
+  width: 100%;
+  min-height: calc(100vh - 65px);
+
+  padding: 22px 20px 35px;
+
+  background: #f3f3f6;
+
+  box-sizing: border-box;
+
+  color: #27334a;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.pnl-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+
+  color: #70798a;
+}
+
+.pnl-breadcrumb b {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.pnl-breadcrumb strong {
+  color: #27334a;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.pnl-title {
+  margin: 0 0 18px;
+
+  font-size: 25px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: #28344b;
+}
+
+
+/* =========================================================
+   SEARCH CARD
+========================================================= */
+
+.pnl-search-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e4e9;
+
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  margin-bottom: 18px;
+
+  box-sizing: border-box;
+}
+
+
+/* SEARCH TITLE */
+
+.pnl-search-title {
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 24px;
+
+  border-bottom: 1px solid #e4e6eb;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #202a3d;
+
+  box-sizing: border-box;
+}
+
+
+/* SEARCH BODY */
+
+.pnl-search-body {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 156px;
+
+  gap: 18px;
+
+  align-items: end;
+
+  padding: 25px 24px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DATE FIELD
+========================================================= */
+
+.date-field {
+  width: 100%;
+}
+
+.date-field label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #30394a;
+}
+
+.date-field label span {
+  color: #ef4444;
+}
+
+
+/* DATE INPUT */
+
+.date-field input {
+  width: 100%;
+
+  height: 42px;
+
+  padding: 0 13px;
+
+  border: 1px solid #d4d9e2;
+
+  border-radius: 5px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #596273;
+
+  font-size: 12px;
+
+  font-family: inherit;
+
+  box-sizing: border-box;
+}
+
+.date-field input:focus {
+  border-color: #477df5;
+
+  box-shadow: 0 0 0 2px rgba(71, 125, 245, 0.08);
+}
+
+
+/* =========================================================
+   HIDE CALENDAR ICON
+========================================================= */
+
+.date-field input::-webkit-calendar-picker-indicator {
+  display: none;
+
+  -webkit-appearance: none;
+}
+
+.date-field input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.date-field input::-webkit-clear-button {
+  display: none;
+}
+
+
+/* =========================================================
+   GET REPORT BUTTON
+========================================================= */
+
+.get-report-btn {
+  width: 100%;
+
+  height: 42px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #477df5;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.get-report-btn:hover {
+  background: #356bea;
+}
+
+
+/* =========================================================
+   WHITE SUMMARY CONTAINER
+========================================================= */
+
+.pnl-summary-container {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  padding: 10px;
+
+  margin-bottom: 18px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SUMMARY GRID
+========================================================= */
+
+.pnl-summary-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   COMMON SUMMARY CARD
+========================================================= */
+
+.pnl-summary-card {
+  min-width: 0;
+
+  
+
+  padding: 12px 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  border-radius: 7px;
+
+  border-left: 4px solid;
+}
+
+
+/* =========================================================
+   BLUE CARD
+========================================================= */
+
+.sale-card {
+  background: #e4efff;
+
+  border-left-color: #3b7cf5;
+}
+
+.sale-card .summary-icon {
+  background: #cce0ff;
+
+  color: #3b7cf5;
+}
+
+
+/* =========================================================
+   PURPLE CARD
+========================================================= */
+
+.cogs-card {
+  background: #eee5ff;
+
+  border-left-color: #7847e8;
+}
+
+.cogs-card .summary-icon {
+  background: #ddceff;
+
+  color: #7847e8;
+}
+
+
+/* =========================================================
+   ORANGE CARD
+========================================================= */
+
+.expense-card {
+  background: #fff0dc;
+
+  border-left-color: #ff941c;
+}
+
+.expense-card .summary-icon {
+  background: #ffddb0;
+
+  color: #ff941c;
+}
+
+
+/* =========================================================
+   GREEN CARD
+========================================================= */
+
+.profit-card {
+  background: #e1f6e9;
+
+  border-left-color: #27a865;
+}
+
+.profit-card .summary-icon {
+  background: #c9ecd7;
+
+  color: #27a865;
+}
+
+
+/* =========================================================
+   SUMMARY TEXT
+========================================================= */
+
+.summary-text {
+  min-width: 0;
+}
+
+.summary-text p {
+  margin: 0 0 7px;
+
+  font-size: 13px;
+
+  line-height: 1.2;
+
+  font-weight: 500;
+
+  color: #293449;
+}
+
+.summary-text h3 {
+  margin: 0;
+
+  font-size: 17px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: #1e2b40;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SUMMARY ICON
+========================================================= */
+
+.summary-icon {
+  width: 44px;
+
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 6px;
+}
+
+.summary-icon svg {
+  font-size: 21px;
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.pnl-table-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e5ea;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLE TITLE
+========================================================= */
+
+.pnl-table-title {
+  height: 49px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 16px;
+
+  border-bottom: 1px solid #e4e6eb;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  color: #222c3e;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLE TOP
+========================================================= */
+
+.pnl-table-top {
+  min-height: 59px;
+
+  padding: 10px 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ENTRIES
+========================================================= */
+
+.entries-control {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.entries-number {
+  width: 30px;
+
+  height: 27px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid #d5dae2;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #505a6a;
+
+  font-size: 12px;
+
+  box-sizing: border-box;
+}
+
+.entries-control span {
+  font-size: 12px;
+
+  color: #616a79;
+}
+
+
+/* =========================================================
+   EXPORT BUTTONS
+========================================================= */
+
+.export-buttons {
+  display: flex;
+
+  gap: 8px;
+}
+
+.pdf-btn,
+.csv-btn {
+  height: 35px;
+
+  width: 100px;
+
+  padding: 10 12px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.pdf-btn {
+ 
+background: var(--Active-Primary, #487FFF);
+}
+
+.csv-btn {
+  background: #45B369;
+}
+
+
+.pdf-btn svg,
+.csv-btn svg {
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.pnl-table-wrapper {
+  width: calc(100% - 28px);
+
+  margin: 0 14px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+}
+
+.pnl-table-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.pnl-table {
+  width: 100%;
+
+  min-width: 700px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+
+/* TABLE HEADER */
+
+.pnl-table thead {
+  background: #f5f6f9;
+}
+
+.pnl-table th {
+  height: 42px;
+
+  padding: 0 12px;
+
+  text-align: left;
+
+  border-bottom: 1px solid #dfe3e9;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: #273044;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+}
+
+
+/* TABLE BODY */
+
+.pnl-table td {
+  height: 43px;
+
+  padding: 0 12px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  font-size: 12px;
+
+  color: #596273;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+}
+
+.pnl-table tbody tr:hover {
+  background: #fafbfc;
+}
+
+
+/* =========================================================
+   COLUMN WIDTHS
+========================================================= */
+
+.pnl-table th:nth-child(1),
+.pnl-table td:nth-child(1) {
+  width: 7%;
+}
+
+.pnl-table th:nth-child(2),
+.pnl-table td:nth-child(2) {
+  width: 25%;
+}
+
+.pnl-table th:nth-child(3),
+.pnl-table td:nth-child(3) {
+  width: 17%;
+}
+
+.pnl-table th:nth-child(4),
+.pnl-table td:nth-child(4) {
+  width: 17%;
+}
+
+.pnl-table th:nth-child(5),
+.pnl-table td:nth-child(5) {
+  width: 17%;
+}
+
+.pnl-table th:nth-child(6),
+.pnl-table td:nth-child(6) {
+  width: 17%;
+}
+
+
+/* =========================================================
+   BALANCE COLORS
+========================================================= */
+
+.positive-balance {
+  color: #45B369;
+
+  font-weight: 700;
+}
+
+.negative-balance {
+  color:#EF4A00;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   TABLE BOTTOM
+========================================================= */
+
+.pnl-table-bottom {
+  min-height: 55px;
+
+  padding: 0 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+.showing-text {
+  font-size: 12px;
+
+  color: #626b79;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.pagination {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+.pagination button {
+  width: 28px;
+
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 4px;
+
+  background: transparent;
+
+  color: #697282;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background: #edf2ff;
+
+  color: #477df5;
+}
+
+.pagination .active-page {
+  background: #477df5;
+
+  color: #ffffff;
+}
+
+.pagination .active-page:hover {
+  background: #477df5;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   1260px
+========================================================= */
+
+@media (max-width: 1260px) {
+
+  .pnl-page {
+    padding: 20px 16px 30px;
+  }
+
+  .pnl-summary-card {
+    padding: 14px 13px;
+  }
+
+  .summary-text p {
+    font-size: 12px;
+  }
+
+  .summary-text h3 {
+    font-size: 15px;
+  }
+
+  .summary-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+/* =========================================================
+   1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .pnl-search-body {
+    grid-template-columns: 1fr 1fr 130px;
+  }
+
+  .pnl-summary-grid {
+    gap: 8px;
+  }
+
+  .pnl-summary-card {
+    padding: 13px 11px;
+  }
+
+  .summary-text h3 {
+    font-size: 14px;
+  }
+
+  .summary-icon {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+
+/* =========================================================
+   950px
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .pnl-search-body {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .get-report-btn {
+    width: 140px;
+  }
+
+  .pnl-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+  }
+
+  .pnl-summary-card {
+    height: 90px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .pnl-page {
+    padding: 16px 12px 25px;
+  }
+
+  .pnl-title {
+    font-size: 23px;
+  }
+
+  .pnl-search-title {
+    font-size: 15px;
+  }
+
+  .pnl-search-body {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding: 20px;
+  }
+
+  .get-report-btn {
+    width: 100%;
+  }
+
+  .pnl-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pnl-table-title {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .pnl-page {
+    padding: 13px 9px 20px;
+  }
+
+  .pnl-breadcrumb {
+    font-size: 9px;
+
+    gap: 4px;
+  }
+
+  .pnl-title {
+    font-size: 21px;
+
+    margin-bottom: 14px;
+  }
+
+  .pnl-search-title {
+    height: 46px;
+
+    padding: 0 14px;
+
+    font-size: 14px;
+  }
+
+  .pnl-search-body {
+    padding: 15px;
+  }
+
+  .date-field label {
+    font-size: 12px;
+  }
+
+  .date-field input {
+    height: 40px;
+  }
+
+  /* ONE CARD PER ROW */
+
+  .pnl-summary-container {
+    padding: 8px;
+  }
+
+  .pnl-summary-grid {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .pnl-summary-card {
+    height: 85px;
+  }
+
+  .summary-text p {
+    font-size: 12px;
+  }
+
+  .summary-text h3 {
+    font-size: 15px;
+  }
+
+  .pnl-table-title {
+    height: 46px;
+
+    padding: 0 12px;
+
+    font-size: 13px;
+  }
+
+  .pnl-table-top {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 12px;
+  }
+
+  .export-buttons {
+    width: 100%;
+  }
+
+  .pdf-btn,
+  .csv-btn {
+    flex: 1;
+  }
+
+  .pnl-table-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 12px;
+  }
+
+  .pagination {
+    align-self: flex-end;
+  }
+}
