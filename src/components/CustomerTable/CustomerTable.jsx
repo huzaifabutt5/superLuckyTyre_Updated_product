@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
   FaEye,
@@ -37,10 +37,15 @@ export default function CustomerTable() {
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [customers, setCustomers] = useState(loadCustomers);
+  const [mounted, setMounted] = useState(false);
 
   const router = useRouter();
 
   const entriesPerPage = 10;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   /* =========================
      SEARCH
@@ -129,6 +134,10 @@ export default function CustomerTable() {
 
   return (
     <div className="customer-table-card">
+
+      {!mounted ? null : (
+
+      <>
 
       {/* =================================
           TOP CONTROLS
@@ -446,6 +455,9 @@ export default function CustomerTable() {
         </div>
 
       </div>
+
+      </>
+      )}
 
     </div>
   );
