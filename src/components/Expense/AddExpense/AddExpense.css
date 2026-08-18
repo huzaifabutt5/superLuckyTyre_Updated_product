@@ -3,7 +3,8 @@
 ========================================= */
 
 .add-expense-page {
-  width: 100%;
+  width: 106%;
+  margin-left: -3%;
   min-height: calc(100vh - 40px);
   padding: 8px 20px 30px;
   box-sizing: border-box;

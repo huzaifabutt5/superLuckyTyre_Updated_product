@@ -3,7 +3,8 @@
 ========================================= */
 
 .add-vendor-page {
-    width: 90%;
+    width: 106%;
+    margin-left: -3%;
     min-height: calc(100vh - 50px);
 
     padding: 7px 12px 75px 12px;

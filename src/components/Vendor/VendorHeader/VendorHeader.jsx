@@ -11,6 +11,7 @@ export default function VendorHeader() {
   };
 
   return (
+    
     <div className="vendor-header">
 
       <div className="vendor-title-section">

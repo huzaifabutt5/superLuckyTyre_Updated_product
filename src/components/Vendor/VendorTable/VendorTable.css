@@ -4,6 +4,7 @@
 
 .vendor-table-card {
     width: 100%;
+    margin-left: -1%;
     background: #ffffff;
     border-radius: 6px;
     padding: 0;

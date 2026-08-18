@@ -364,9 +364,18 @@ export default function SaleProduct() {
             <div className="product-toolbar">
 
               <div className="entries-box">
-                <span>10</span>
+              
+            <select defaultValue="10">
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+            </select>
+
                 <span>entries per page</span>
-              </div>
+              </div> 
+           
+
+         
 
               <div className="product-search">
                 <label>Search:</label>

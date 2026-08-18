@@ -10,6 +10,16 @@ export default function CustomerStep({
   return (
     <div className="customer-step-page">
 
+
+      {/* HEADING */}
+      <div className="order-confirm-heading">
+        <h1>Sale Product</h1>
+
+         <button className="sale-return-btn">
+          ↶ Sale Return
+        </button> 
+      </div>
+      
       {/* STEP BAR */}
       <div className="sale-steps">
 

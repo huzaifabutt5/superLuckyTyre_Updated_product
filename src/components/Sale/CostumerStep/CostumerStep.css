@@ -1,12 +1,23 @@
 /* =========================================================
    CUSTOMER STEP PAGE
 ========================================================= */
+.order-confirm-heading{
+  margin-top: 30px;
+}
+.order-confirm-heading h1{
+font-size: 35px;
+color: #282D44;
 
+font-style: normal;
+font-weight: 600;
+line-height: 40px; /* 142.857% */
+}
 .customer-step-page {
   width: 100%;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  
 }
 
 

@@ -87,8 +87,6 @@ const selectedCustomer = customerData.find(
         View Customer
       </h1>
 
-<div className="customer-summary-area"></div>
-
       {/* =================================
           TOP SUMMARY SECTION
       ================================= */}

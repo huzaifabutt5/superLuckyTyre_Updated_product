@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import "./ManageRole.css";
-
+import { FaPlus } from "react-icons/fa";
 export default function ManageRole() {
 
   const users = [
@@ -35,11 +35,16 @@ export default function ManageRole() {
       {/* Header */}
       <div className="role-header">
         <h1>Manage Roles</h1>
-
-        <Link href="/role/add" className="add-role-btn">
-          <span>+</span>
-          Add New Role
-        </Link>
+        <button
+    type="button"
+    className="add-role-btn"
+    onClick={() => {
+      window.location.href = "/role/add";
+    }}
+  >
+    <FaPlus className="add-role-icon" />
+    <span>Add New Role</span>
+  </button>
       </div>
 
       {/* Main Card */}
@@ -51,7 +56,13 @@ export default function ManageRole() {
         <div className="role-toolbar">
 
           <div className="entries-control">
-            <span>10</span>
+           
+            <select defaultValue="10">
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+            </select>
+
             <span>entries per page</span>
           </div>
 

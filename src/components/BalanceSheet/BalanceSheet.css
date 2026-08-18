@@ -3,7 +3,8 @@
 ================================ */
 
 .balance-sheet-page {
-  width: 100%;
+  width: 106%;
+  margin-left: -3%;
   min-height: calc(100vh - 60px);
 
   padding: 18px 20px 30px;
