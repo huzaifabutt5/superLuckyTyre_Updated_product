@@ -1,14 +1,8 @@
-/* =========================================
-   SALE RETURN PAGE
-========================================= */
-
-.sale-return-page {
-  width: 100%;
+.purchase-return-page {
   min-height: calc(100vh - 65px);
+  padding: 12px 15px 25px;
 
-  padding: 18px 20px 30px;
-
-  background: #f3f4f6;
+  background: #f1f1f3;
 
   box-sizing: border-box;
 
@@ -18,362 +12,328 @@
 }
 
 
-/* =========================================
-   HEADER
-========================================= */
+/* ================= BREADCRUMB ================= */
 
-.return-header {
-  width: 100%;
-
+.purchase-return-breadcrumb {
   display: flex;
-
-  align-items: flex-end;
-
-  justify-content: space-between;
-
-  margin-bottom: 12px;
-}
-
-
-.return-breadcrumb {
-  font-size: 8px;
-
-  color: #89919e;
-
-  margin-bottom: 7px;
-}
-
-
-.return-header h1 {
-  margin: 0;
-
-  font-size: 18px;
-
-  font-weight: 600;
-
-  color: #293650;
-}
-
-
-/* =========================================
-   TOP RETURN PRODUCT BUTTON
-========================================= */
-
-.return-product-top-btn {
-  height: 34px;
-
-  padding: 0 14px;
-
-  display: flex;
-
   align-items: center;
+  gap: 5px;
 
-  justify-content: center;
+  margin-bottom: 8px;
 
-  gap: 6px;
+  font-size: 8px;
+  color: #667085;
+}
 
-  border: none;
+.purchase-return-breadcrumb svg {
+  font-size: 6px;
+  color: #737b89;
+}
 
-  border-radius: 5px;
-
-  background: #f05a20;
-
-  color: white;
-
-  font-size: 9px;
-
-  cursor: pointer;
+.purchase-return-breadcrumb strong {
+  color: #252c3d;
+  font-weight: 600;
 }
 
 
-.return-product-top-btn:hover {
-  background: #df4d16;
+/* ================= PAGE TITLE ================= */
+
+.purchase-return-title {
+  margin: 0 0 11px;
+
+  font-size: 17px;
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: #29324a;
 }
 
 
-/* =========================================
-   WHITE SECTION
-========================================= */
+/* ================= COMMON CARD ================= */
 
-.return-section {
-  width: 100%;
+.return-card {
+  width: 106%;
+  margin-left: -3%;
 
   background: #ffffff;
 
-  border-radius: 6px;
+  border-radius: 5px;
 
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 
   overflow: hidden;
+
+  box-sizing: border-box;
 }
 
-
-/* =========================================
-   SECTION TITLE
-========================================= */
-
-.section-title {
-  height: 38px;
+.return-card-header {
+  height: 28px;
 
   display: flex;
-
   align-items: center;
 
   padding: 0 12px;
 
-  border-bottom: 1px solid #e5e8ed;
+  border-bottom: 1px solid #e7e9ee;
 
-  font-size: 10px;
+  font-size: 11px;
+  font-weight: 700;
 
-  font-weight: 600;
+  color: #20283a;
+}
 
-  color: #303b4d;
+.return-card-body {
+  padding: 10px 11px 10px;
 }
 
 
-/* =========================================
-   ORDER INFORMATION
-========================================= */
+/* ================= ORDER INFORMATION ================= */
 
-.invoice-row {
-  display: flex;
+.return-label {
+  display: block;
 
-  align-items: flex-end;
+  margin-bottom: 5px;
 
-  gap: 7px;
-
-  padding: 10px 12px;
-}
-
-
-.invoice-input-box {
-  flex: 1;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 5px;
-}
-
-
-.invoice-input-box label {
   font-size: 8px;
 
-  color: #4c5667;
+  color: #374151;
+
+  font-weight: 500;
 }
 
-
-.invoice-input-box label span {
-  color: #f05a20;
-
+.return-label span {
+  color: #ef3b2d;
   margin-left: 2px;
 }
 
+.invoice-row {
+  display: flex;
+  align-items: center;
 
-.invoice-input-box input {
-  width: 100%;
+  gap: 6px;
+}
 
-  height: 32px;
+.invoice-input {
+  flex: 1;
+
+  height: 26px;
 
   padding: 0 10px;
 
-  border: 1px solid #dce1e8;
-
+  border: 1px solid #d9dee7;
   border-radius: 5px;
 
   outline: none;
 
-  box-sizing: border-box;
+  background: #fff;
 
   font-size: 9px;
 
-  color: #4d5869;
+  color: #3e4758;
 
-  background: #ffffff;
+  box-sizing: border-box;
 }
 
-
-.invoice-input-box input:focus {
-  border-color: #4b7df3;
+.invoice-input::placeholder {
+  color: #737d8d;
 }
 
+.invoice-input:focus {
+  border-color: #4c7ff7;
+}
 
 .get-invoice-btn {
-  width: 82px;
-
-  height: 32px;
+  width: 77px;
+  height: 26px;
 
   border: none;
-
   border-radius: 5px;
 
-  background: #4b7df3;
+  background: #4b7ff5;
 
-  color: white;
+  color: #fff;
 
   font-size: 8px;
+  font-weight: 500;
 
   cursor: pointer;
 }
 
-
 .get-invoice-btn:hover {
-  background: #3d6fe4;
+  background: #3f72e8;
 }
 
 
-/* =========================================
-   PRODUCT DETAIL
-========================================= */
+/* ================= PRODUCT DETAIL ================= */
 
-.return-product-list {
-  width: 100%;
-
-  background: #ffffff;
+.product-list {
+  padding: 0 11px;
 }
 
-
-.return-product-row {
-  min-height: 58px;
-
-  padding: 8px 12px;
+.product-row {
+  min-height: 49px;
 
   display: flex;
-
+  justify-content: space-between;
   align-items: center;
 
-  justify-content: space-between;
+  border-bottom: 1px solid #eef0f3;
 
   box-sizing: border-box;
-
-  border-bottom: 1px solid #edf0f4;
 }
 
-
-.return-product-row:last-child {
+.product-row:last-child {
   border-bottom: none;
 }
 
+.product-left {
+  position: relative;
 
-/* LEFT PRODUCT */
+  padding: 7px 0;
 
-.return-product-info {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 2px;
-
-  min-width: 0;
+  flex: 1;
 }
 
-
-.return-product-name {
+.product-name {
   font-size: 9px;
 
-  font-weight: 500;
-
-  color: #3d4859;
+  color: #3b4557;
 
   line-height: 13px;
+
+  font-weight: 400;
 }
 
+.returned-quantity {
+  display: inline-block;
 
-.return-product-size {
+  margin-left: 5px;
+
+  color: #f04432;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.product-size {
+  margin-top: 1px;
+
   font-size: 7px;
 
-  color: #4b7df3;
-
-  line-height: 10px;
+  color: #2875df;
 }
 
+.product-quantity {
+  margin-top: 1px;
 
-.return-product-quantity {
   font-size: 7px;
 
-  font-style: italic;
-
-  color: #4d5868;
-
-  line-height: 10px;
+  color: #27334b;
 }
 
 
-/* RIGHT PRODUCT */
+/* ================= PRODUCT RIGHT ================= */
 
-.return-product-right {
-  min-width: 80px;
+.product-right {
+  width: 75px;
 
-  height: 42px;
+  min-width: 75px;
+
+  height: 100%;
 
   display: flex;
-
   flex-direction: column;
 
   align-items: flex-end;
+  justify-content: center;
 
-  justify-content: space-between;
+  gap: 5px;
 }
 
+.product-edit-btn {
+  width: 15px;
+  height: 15px;
 
-/* GREEN CHECK */
-
-.product-return-icon {
-  width: 17px;
-
-  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   padding: 0;
 
-  display: flex;
+  border: 1px solid #b9e8d0;
+  border-radius: 2px;
 
-  align-items: center;
+  background: #ecfff5;
 
-  justify-content: center;
-
-  border: none;
-
-  background: transparent;
-
-  color: #55c98a;
+  color: #35a66a;
 
   cursor: pointer;
-
-  font-size: 13px;
 }
 
-
-.product-return-icon:hover {
-  color: #32b674;
+.product-edit-btn svg {
+  font-size: 7px;
 }
 
-
-.product-return-icon.returned {
-  color: #55c98a;
+.product-edit-btn:hover {
+  background: #dff8ea;
 }
 
-
-/* PRODUCT PRICE */
-
-.return-product-total {
+.product-price {
   font-size: 7px;
 
-  font-style: italic;
-
-  color: #4d5868;
+  color: #27334b;
 
   white-space: nowrap;
 }
 
 
-/* =========================================
-   PAYMENT INFO
-========================================= */
+/* ================= EDIT QUANTITY ================= */
 
-.payment-grid {
-  padding: 12px;
+.edit-quantity-box {
+  display: flex;
+  align-items: center;
 
+  gap: 5px;
+
+  margin-top: 5px;
+}
+
+.edit-quantity-box input {
+  width: 45px;
+  height: 20px;
+
+  padding: 0 5px;
+
+  border: 1px solid #4b7ff5;
+  border-radius: 3px;
+
+  outline: none;
+
+  font-size: 8px;
+
+  color: #293650;
+}
+
+.edit-quantity-box span {
+  font-size: 7px;
+
+  color: #737d8c;
+}
+
+
+/* ================= PAYMENT INFO ================= */
+
+.payment-card {
+  margin-bottom: 12px;
+}
+
+.payment-body {
+  padding: 10px 11px 11px;
+}
+
+.payment-row {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
@@ -381,86 +341,84 @@
   gap: 10px;
 }
 
-
 .payment-field {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 5px;
+  width: 100%;
 }
-
-
-.payment-field.full {
-  grid-column: 1 / -1;
-}
-
 
 .payment-field label {
+  display: block;
+
+  margin-bottom: 5px;
+
   font-size: 8px;
 
-  color: #4c5667;
-}
+  color: #364052;
 
+  font-weight: 500;
+}
 
 .payment-field input {
   width: 100%;
 
-  height: 32px;
+  height: 26px;
 
   padding: 0 10px;
 
-  border: 1px solid #dce1e8;
-
+  border: 1px solid #d9dee7;
   border-radius: 5px;
 
   outline: none;
 
   box-sizing: border-box;
 
+  background: #fff;
+
   font-size: 8px;
 
-  color: #566174;
-
-  background: #ffffff;
+  color: #3c4657;
 }
-
-
-.payment-field input:focus {
-  border-color: #4b7df3;
-}
-
 
 .payment-field input::placeholder {
-  color: #87909e;
+  color: #727d8d;
+}
+
+.deducted-field {
+  margin-top: 10px;
 }
 
 
-/* =========================================
-   BOTTOM BUTTONS
-========================================= */
+/* ================= BOTTOM ACTIONS ================= */
 
-.return-bottom-buttons {
-  width: 100%;
+.return-actions {
+  width: 106%;
+margin-left: -3%;
+  min-height: 37px;
 
   display: flex;
 
   justify-content: flex-end;
+  align-items: center;
 
   gap: 7px;
 
-  padding: 0 12px 10px;
+  padding: 6px 11px;
 
   box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 5px;
 }
 
 
-.cancel-return-btn,
-.return-only-btn,
-.return-payback-btn {
-  height: 29px;
+/* Cancel */
 
-  padding: 0 17px;
+.cancel-btn,
+.return-only-btn,
+.payback-btn {
+  height: 25px;
+
+  padding: 0 20px;
 
   border: none;
 
@@ -468,94 +426,98 @@
 
   font-size: 8px;
 
+  font-weight: 500;
+
   cursor: pointer;
 }
 
+.cancel-btn {
+  min-width: 75px;
 
-.cancel-return-btn {
-  background: #f0f1f3;
+  background: #f4f4f4;
 
-  color: #697280;
+  color: #697386;
+}
+
+.cancel-btn:hover {
+  background: #ebebeb;
 }
 
 
-.cancel-return-btn:hover {
-  background: #e5e7ea;
+/* Return Only */
+
+.return-only-btn {
+  min-width: 99px;
+
+  background: #d6d6d6;
+
+  color: #9b9b9b;
+}
+
+.return-only-btn.active {
+  background: #ff9926;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.return-only-btn.active:hover {
+  background: #f18b17;
 }
 
 
-.return-only-btn,
-.return-payback-btn {
-  background: #4b7df3;
+/* Return & Payback */
 
-  color: white;
+.payback-btn {
+  min-width: 105px;
+
+  background: #d6d6d6;
+
+  color: #9b9b9b;
+}
+
+.payback-btn.active {
+  background: #4b7ff5;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.payback-btn.active:hover {
+  background: #3d70e5;
 }
 
 
-.return-only-btn:disabled,
-.return-payback-btn:disabled {
-  background: #d1d4d9;
+/* ================= RESPONSIVE ================= */
 
-  color: #f7f7f7;
+@media (max-width: 700px) {
 
-  cursor: not-allowed;
-}
+  .purchase-return-page {
+    padding: 12px 10px 20px;
+  }
 
-
-.return-only-btn:not(:disabled):hover,
-.return-payback-btn:not(:disabled):hover {
-  background: #3d6fe4;
-}
-
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media (max-width: 800px) {
-
-  .return-header {
-    flex-direction: column;
-
-    align-items: flex-start;
-
+  .payment-row {
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
-
-  .invoice-row {
-    flex-direction: column;
-
-    align-items: stretch;
-  }
-
-
-  .get-invoice-btn {
-    width: 100%;
-  }
-
-
-  .payment-grid {
-    grid-template-columns: 1fr;
-  }
-
-
-  .payment-field.full {
-    grid-column: auto;
-  }
-
-
-  .return-bottom-buttons {
+  .return-actions {
     justify-content: stretch;
   }
 
-
-  .cancel-return-btn,
+  .cancel-btn,
   .return-only-btn,
-  .return-payback-btn {
+  .payback-btn {
     flex: 1;
 
     padding: 0 8px;
   }
 
+  .product-right {
+    width: 65px;
+    min-width: 65px;
+  }
 }
+

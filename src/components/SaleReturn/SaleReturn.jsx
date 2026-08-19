@@ -2,136 +2,111 @@
 
 import { useState } from "react";
 import {
-  FaRedo,
-  FaCheckSquare,
+  FaEdit,
+  FaChevronRight,
 } from "react-icons/fa";
 import Link from "next/link";
 
 import "./SaleReturn.css";
 
-
-const products = [
+const productsData = [
   {
     id: 1,
     name: "All-Season Comfort",
     size: "195/70 R 14",
+    price: 5000,
     quantity: 3,
-    unitPrice: 5000,
   },
   {
     id: 2,
     name: "Winter Performance",
     size: "205/65 R 15",
+    price: 6000,
     quantity: 4,
-    unitPrice: 6000,
   },
   {
     id: 3,
     name: "Summer Grip",
     size: "225/60 R 16",
+    price: 7500,
     quantity: 2,
-    unitPrice: 7500,
   },
   {
     id: 4,
     name: "Off-Road Adventure",
     size: "245/75 R 17",
+    price: 8500,
     quantity: 1,
-    unitPrice: 8500,
   },
 ];
 
-
-export default function SaleReturn() {
-
+export default function PurchaseReturn() {
   const [invoiceId, setInvoiceId] = useState("");
-
   const [invoiceLoaded, setInvoiceLoaded] = useState(false);
 
-  const [returnedProducts, setReturnedProducts] = useState([]);
+  const [products, setProducts] = useState(productsData);
 
+  const [editingId, setEditingId] = useState(null);
 
-  /* =========================================
-     GET INVOICE
-  ========================================= */
+  const [returnQuantities, setReturnQuantities] = useState({});
+
+  const [returnAmount, setReturnAmount] = useState(0);
 
   const handleGetInvoice = () => {
-
     if (!invoiceId.trim()) {
-      alert("Please enter Invoice ID");
       return;
     }
 
     setInvoiceLoaded(true);
-
-    setReturnedProducts([]);
   };
 
+  const handleEdit = (id) => {
+    setEditingId(id);
+  };
 
-  /* =========================================
-     RETURN PRODUCT
-  ========================================= */
+  const handleQuantityChange = (id, value) => {
+    const product = products.find((item) => item.id === id);
 
-  const handleReturnProduct = (product) => {
+    if (!product) return;
 
-    const alreadyReturned =
-      returnedProducts.some(
-        (item) => item.id === product.id
-      );
+    let quantity = Number(value);
 
-    if (alreadyReturned) {
-      return;
+    if (quantity < 0) {
+      quantity = 0;
     }
 
-    setReturnedProducts([
-      ...returnedProducts,
-      product,
-    ]);
+    if (quantity > product.quantity) {
+      quantity = product.quantity;
+    }
+
+    setReturnQuantities((prev) => ({
+      ...prev,
+      [id]: quantity,
+    }));
+
+    setEditingId(null);
   };
 
+  const calculateReturnAmount = () => {
+    let total = 0;
 
-  /* =========================================
-     REMOVE RETURN
-  ========================================= */
+    products.forEach((product) => {
+      const returnQty = returnQuantities[product.id] || 0;
 
-  const handleRemoveReturn = (productId) => {
+      total += returnQty * product.price;
+    });
 
-    setReturnedProducts(
-      returnedProducts.filter(
-        (item) => item.id !== productId
-      )
-    );
+    return total;
   };
 
+  const totalReturnAmount = calculateReturnAmount();
 
-  /* =========================================
-     TOTAL RETURN QUANTITY
-  ========================================= */
-
-  const totalReturnQuantity =
-    returnedProducts.reduce(
-      (total, product) =>
-        total + product.quantity,
-      0
-    );
-
-
-  /* =========================================
-     TOTAL RETURN AMOUNT
-  ========================================= */
-
-  const totalReturnAmount =
-    returnedProducts.reduce(
-      (total, product) =>
-        total +
-        product.quantity *
-          product.unitPrice,
-      0
-    );
-
+  const hasReturn = totalReturnAmount > 0;
 
   return (
+    <div className="purchase-return-page">
 
+<<<<<<< HEAD
     <div className="sale-return-page">
 
 
@@ -170,304 +145,281 @@ export default function SaleReturn() {
 
         )}
 
+=======
+      {/* Breadcrumb */}
+      <div className="purchase-return-breadcrumb">
+        <span>Tyre Shop</span>
+        <FaChevronRight />
+        <span>Sale/Purchase Management</span>
+        <FaChevronRight />
+        <strong>Sale Return</strong>
+>>>>>>> 36c404d8707741a5f1ed17c8a13356c5f44b7ecb
       </div>
 
+      {/* Page Title */}
+      <h1 className="purchase-return-title">
+        Sale Return
+      </h1>
 
+      {/* ================= ORDER INFORMATION ================= */}
+      <section className="return-card order-card">
 
-      {/* =====================================
-          ORDER INFORMATION
-      ===================================== */}
-
-      <div className="return-section">
-
-        <div className="section-title">
+        <div className="return-card-header">
           Order Information
         </div>
 
+        <div className="return-card-body">
 
-        <div className="invoice-row">
+          <label className="return-label">
+            Invoice ID#
+            <span>*</span>
+          </label>
 
-          <div className="invoice-input-box">
-
-            <label>
-              Invoice ID
-              <span>*</span>
-            </label>
-
+          <div className="invoice-row">
 
             <input
               type="text"
-              placeholder="Enter Invoice ID"
               value={invoiceId}
-              onChange={(e) =>
-                setInvoiceId(e.target.value)
-              }
+              onChange={(e) => setInvoiceId(e.target.value)}
+              placeholder="Enter Invoice ID#"
+              className="invoice-input"
             />
 
+            <button
+              type="button"
+              className="get-invoice-btn"
+              onClick={handleGetInvoice}
+            >
+              Get Invoice
+            </button>
+
           </div>
-
-
-          <button
-            className="get-invoice-btn"
-            onClick={handleGetInvoice}
-          >
-            Get Invoice
-          </button>
 
         </div>
+      </section>
 
-      </div>
-
-
-
-      {/* =====================================
-          PRODUCT DETAIL
-      ===================================== */}
-
+      {/* ================= PRODUCT DETAIL ================= */}
       {invoiceLoaded && (
+        <>
+          <section className="return-card product-card">
 
-        <div className="return-section">
+            <div className="return-card-header">
+              Product Detail
+            </div>
 
-          <div className="section-title">
-            Product Detail
-          </div>
+            <div className="product-list">
 
+              {products.map((product) => {
+                const returnedQty =
+                  returnQuantities[product.id] || 0;
 
-          <div className="return-product-list">
+                const remainingQty =
+                  product.quantity - returnedQty;
 
-            {products.map((product) => {
+                const productReturnAmount =
+                  returnedQty * product.price;
 
-              const alreadyReturned =
-                returnedProducts.some(
-                  (item) =>
-                    item.id === product.id
-                );
+                return (
+                  <div
+                    className="product-row"
+                    key={product.id}
+                  >
 
+                    <div className="product-left">
 
-              const productTotal =
-                product.quantity *
-                product.unitPrice;
+                      <div className="product-name">
 
+                        {product.name}
 
-              return (
+                        {returnedQty > 0 && (
+                          <span className="returned-quantity">
+                            -{returnedQty}
+                          </span>
+                        )}
 
-                <div
-                  className="return-product-row"
-                  key={product.id}
-                >
+                      </div>
 
+                      <div className="product-size">
+                        {product.size}
+                      </div>
 
-                  {/* LEFT */}
+                      <div className="product-quantity">
+                        {remainingQty} X {product.price.toLocaleString()}
+                      </div>
 
-                  <div className="return-product-info">
+                      {editingId === product.id && (
+                        <div className="edit-quantity-box">
 
-                    <div className="return-product-name">
-                      {product.name}
+                          <input
+                            type="number"
+                            min="0"
+                            max={product.quantity}
+                            autoFocus
+                            defaultValue={returnedQty}
+                            onBlur={(e) =>
+                              handleQuantityChange(
+                                product.id,
+                                e.target.value
+                              )
+                            }
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter") {
+                                handleQuantityChange(
+                                  product.id,
+                                  e.target.value
+                                );
+                              }
+                            }}
+                          />
+
+                          <span>
+                            Return Qty
+                          </span>
+
+                        </div>
+                      )}
+
                     </div>
 
+                    <div className="product-right">
 
-                    <div className="return-product-size">
-                      {product.size}
-                    </div>
-
-
-                    <div className="return-product-quantity">
-                      {product.quantity} X{" "}
-                      {product.unitPrice.toLocaleString()}
-                    </div>
-
-                  </div>
-
-
-
-                  {/* RIGHT */}
-
-                  <div className="return-product-right">
-
-
-                    <button
-                      className={
-                        alreadyReturned
-                          ? "product-return-icon returned"
-                          : "product-return-icon"
-                      }
-
-                      onClick={() => {
-
-                        if (
-                          alreadyReturned
-                        ) {
-
-                          handleRemoveReturn(
-                            product.id
-                          );
-
-                        } else {
-
-                          handleReturnProduct(
-                            product
-                          );
-
+                      <button
+                        type="button"
+                        className="product-edit-btn"
+                        onClick={() =>
+                          handleEdit(product.id)
                         }
+                      >
+                        <FaEdit />
+                      </button>
 
-                      }}
-                    >
-
-                      <FaCheckSquare />
-
-                    </button>
-
-
-                    <div className="return-product-total">
-
-                      Rs.{" "}
-                      {productTotal.toLocaleString()}
+                      <div className="product-price">
+                        ={" "}
+                        {productReturnAmount > 0
+                          ? productReturnAmount.toLocaleString()
+                          : (
+                              product.quantity *
+                              product.price
+                            ).toLocaleString()
+                        }
+                      </div>
 
                     </div>
 
                   </div>
+                );
+              })}
 
+            </div>
+
+          </section>
+
+          {/* ================= PAYMENT INFO ================= */}
+          <section className="return-card payment-card">
+
+            <div className="return-card-header">
+              Payment Info
+            </div>
+
+            <div className="payment-body">
+
+              <div className="payment-row">
+
+                <div className="payment-field">
+
+                  <label>
+                    Return Quantity
+                  </label>
+
+                  <input
+                    type="text"
+                    readOnly
+                    value={
+                      hasReturn
+                        ? Object.values(returnQuantities).reduce(
+                            (sum, qty) => sum + qty,
+                            0
+                          )
+                        : ""
+                    }
+                    placeholder="Returning Quantity (Auto Calculate)"
+                  />
 
                 </div>
 
-              );
+                <div className="payment-field">
 
-            })}
+                  <label>
+                    Returning Amount
+                  </label>
 
-          </div>
+                  <input
+                    type="text"
+                    readOnly
+                    value={
+                      hasReturn
+                        ? totalReturnAmount.toLocaleString()
+                        : ""
+                    }
+                    placeholder="Returning Amount (Auto Calculated)"
+                  />
 
-        </div>
+                </div>
 
-      )}
+              </div>
 
+              <div className="payment-field deducted-field">
 
+                <label>
+                  Deducted Profit
+                </label>
 
-      {/* =====================================
-          PAYMENT INFO
-      ===================================== */}
+                <input
+                  type="text"
+                  readOnly
+                  placeholder="Returning Amount (Auto Calculated)"
+                />
 
-      {invoiceLoaded && (
-
-        <div className="return-section">
-
-          <div className="section-title">
-            Payment Info
-          </div>
-
-
-          <div className="payment-grid">
-
-
-            {/* RETURN QUANTITY */}
-
-            <div className="payment-field">
-
-              <label>
-                Return Quantity
-              </label>
-
-              <input
-                type="text"
-                readOnly
-                value={
-                  totalReturnQuantity
-                    ? `${totalReturnQuantity} pcs`
-                    : ""
-                }
-
-                placeholder="Returning Quantity (Auto Calculated)"
-              />
+              </div>
 
             </div>
 
+          </section>
 
-
-            {/* RETURNING AMOUNT */}
-
-            <div className="payment-field">
-
-              <label>
-                Returning Amount
-              </label>
-
-              <input
-                type="text"
-                readOnly
-                value={
-                  totalReturnAmount
-                    ? `Rs. ${totalReturnAmount.toLocaleString()}`
-                    : ""
-                }
-
-                placeholder="Returning Amount (Auto Calculated)"
-              />
-
-            </div>
-
-
-
-            {/* DEDUCTED PROFIT */}
-
-            <div className="payment-field full">
-
-              <label>
-                Deducted Profit
-              </label>
-
-              <input
-                type="text"
-                placeholder="Returning Amount (Auto Calculated)"
-              />
-
-            </div>
-
-
-
-            
-          </div>
-
-
-
-          {/* =================================
-              BOTTOM BUTTONS
-          ================================= */}
-
-          <div className="return-bottom-buttons">
+          {/* ================= BOTTOM BUTTONS ================= */}
+          <div className="return-actions">
 
             <button
-              className="cancel-return-btn"
+              type="button"
+              className="cancel-btn"
             >
               Cancel
             </button>
 
-
             <button
-              className="return-only-btn"
-              disabled={
-                returnedProducts.length === 0
-              }
+              type="button"
+              className={`return-only-btn ${
+                hasReturn ? "active" : ""
+              }`}
+              disabled={!hasReturn}
             >
               Return Only
             </button>
 
-
             <button
-              className="return-payback-btn"
-              disabled={
-                returnedProducts.length === 0
-              }
+              type="button"
+              className={`payback-btn ${
+                hasReturn ? "active" : ""
+              }`}
+              disabled={!hasReturn}
             >
-              Return & Payback
+              Return &amp; Payback
             </button>
 
           </div>
-
-        </div>
-
+        </>
       )}
 
     </div>
-
   );
-
 }

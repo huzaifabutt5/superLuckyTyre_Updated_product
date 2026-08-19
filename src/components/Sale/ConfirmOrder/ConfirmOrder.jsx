@@ -34,11 +34,11 @@ export default function ConfirmOrder({
 
       {/* HEADING */}
       <div className="order-confirm-heading">
-        <h1>Confirm Order &amp; Pay</h1>
+        <h1>Sale Product</h1>
 
-        <button className="sale-return-btn">
+        * <button className="sale-return-btn">
           ↶ Sale Return
-        </button>
+        </button> 
       </div>
 
       {/* STEP BAR */}

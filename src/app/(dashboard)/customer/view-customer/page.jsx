@@ -106,8 +106,14 @@ const selectedCustomer = customerData.find(
         View Customer
       </h1>
 
+<<<<<<< HEAD
 
     <div className="customer-summary-area">
+=======
+      {/* =================================
+          TOP SUMMARY SECTION
+      ================================= */}
+>>>>>>> 36c404d8707741a5f1ed17c8a13356c5f44b7ecb
 
   {/* SUMMARY CARDS */}
 

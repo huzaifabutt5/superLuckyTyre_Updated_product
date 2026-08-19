@@ -26,7 +26,9 @@ export default function AppLayout({ children }) {
     <div className="dashboard-layout">
       <Sidebar sidebarOpen={sidebarOpen} />
       <Navbar toggleSidebar={toggleSidebar} />
-      <main className="dashboard-main">{children}</main>
+      <main className="dashboard-main">
+        {children}
+      </main>
     </div>
   );
 }

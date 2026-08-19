@@ -3,7 +3,8 @@
 ===================================== */
 
 .product-page {
-  width: 100%;
+  width: 106%;
+  margin-left: -3%;
   padding: 22px;
   background: #f5f6f8;
   min-height: calc(100vh - 60px);
