@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import "./CustomerHeader.css";
 
 export default function CustomerHeader() {
@@ -16,7 +17,11 @@ export default function CustomerHeader() {
       <div className="customer-title-section">
 
         <div className="breadcrumb">
-          Tyre Shop &gt; Customer Management &gt; Customer Listing
+          Tyre Shop &gt;{" "}
+          <Link href="/customer" className="breadcrumb-link">
+            Customer Management
+          </Link>{" "}
+          &gt; Customer Listing
         </div>
 
         <h1>Customer Listing</h1>

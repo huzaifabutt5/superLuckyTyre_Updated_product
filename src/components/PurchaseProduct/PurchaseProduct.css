@@ -3,8 +3,8 @@
 ========================================= */
 
 .purchase-product-page {
-  min-height: calc(100vh - 65px);
-  padding: 18px 20px 30px;
+  width: calc(100% + 30px);
+  margin-left: -18px;
 
   background: #f3f4f6;
 
@@ -160,6 +160,11 @@
 }
 
 
+.purchase-step.completed svg {
+  color: #28a745;
+}
+
+
 /* =========================================
    MAIN LAYOUT
 ========================================= */
@@ -242,30 +247,38 @@
 }
 
 
-.entries-box {
-  width: 27px;
-  height: 27px;
+.entries-section {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid #dfe3e8;
-
-  border-radius: 5px;
-
-  background: white;
-
-  color: #5d6675;
-
-  font-size: 8px;
+    color: #6f7787;
+    font-size: 11px;
 }
 
 
-.product-toolbar > span {
-  font-size: 8px;
+.entries-section select {
+    width: 48px;
+    height: 29px;
 
-  color: #687181;
+    padding: 0 5px;
+
+    border: 1px solid #d9dde5;
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    color: #4e5667;
+    font-size: 11px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.entries-section select:focus {
+    border-color: #4779f5;
 }
 
 
@@ -514,11 +527,10 @@
 ========================================= */
 
 .cart-detail {
-  width: 178px;
+  width: 240px;
 
-  min-width: 178px;
 
-  min-height: 438px;
+  min-height: 500px;
 
   background: white;
 
@@ -1197,4 +1209,731 @@
     grid-column: auto;
   }
 
+}
+
+/* =========================================================
+   LARGE SCREEN - 2583px
+   Make content, table, cards and text larger
+   ========================================================= */
+
+@media (min-width: 2000px) {
+
+  /* Main page */
+  .purchase-product-page {
+    padding: 25px 30px 40px;
+  }
+
+  /* Header */
+  .purchase-breadcrumb {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .purchase-page-header h1 {
+    font-size: 26px;
+  }
+
+  .purchase-return-btn {
+    height: 44px;
+    padding: 0 22px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+
+  /* Step bar */
+  .purchase-steps {
+    padding: 14px;
+    gap: 10px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+  }
+
+  .purchase-step {
+    height: 50px;
+    padding: 0 15px;
+    gap: 9px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+
+  .purchase-step svg {
+    font-size: 14px;
+  }
+
+  /* Main layout */
+  .purchase-main-layout {
+    gap: 14px;
+  }
+
+  /* White sections */
+  .purchase-section {
+    margin-bottom: 14px;
+    border-radius: 8px;
+  }
+
+  .purchase-section-title {
+    min-height: 52px;
+    padding: 0 18px;
+    font-size: 15px;
+  }
+
+  /* Toolbar */
+  .product-toolbar {
+    height: 62px;
+    padding: 0 18px;
+    gap: 10px;
+  }
+
+  .entries-section {
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .entries-section select {
+    width: 65px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .product-search {
+    gap: 10px;
+  }
+
+  .product-search label {
+    font-size: 12px;
+  }
+
+  .product-search input {
+    width: 180px;
+    height: 38px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  /* Product cards/table */
+  .product-card-grid {
+    padding: 14px 18px 18px;
+    gap: 9px;
+  }
+
+  .product-card {
+    min-height: 62px;
+    padding: 10px 13px;
+    border-radius: 6px;
+  }
+
+  .product-card-name {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .product-card-size {
+    margin-top: 3px;
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+  /* Forms */
+  .single-form {
+    padding: 18px 18px 20px;
+    gap: 8px;
+  }
+
+  .single-form label {
+    font-size: 11px;
+  }
+
+  .single-form select {
+    height: 42px;
+    padding: 0 13px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+
+  /* Payment form */
+  .payment-form-grid {
+    padding: 18px 18px 20px;
+    gap: 14px;
+  }
+
+  .payment-form-field {
+    gap: 7px;
+  }
+
+  .payment-form-field label {
+    font-size: 11px;
+  }
+
+  .payment-form-field input {
+    height: 42px;
+    padding: 0 13px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+
+  /* =========================
+     CART
+     ========================= */
+
+  .cart-detail {
+    width: 340px;
+    min-height: 650px;
+    border-radius: 8px;
+  }
+
+  .cart-title {
+    height: 52px;
+    padding: 0 17px;
+    font-size: 15px;
+  }
+
+  .cart-items {
+    padding: 0 14px;
+  }
+
+  .cart-item {
+    min-height: 90px;
+    padding: 13px 0;
+  }
+
+  .cart-product-name {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .cart-product-size {
+    margin-top: 3px;
+    font-size: 9px;
+  }
+
+  .cart-product-dot {
+    gap: 7px;
+    margin-top: 4px;
+    font-size: 8px;
+  }
+
+  .dot-badge {
+    padding: 3px 6px;
+    font-size: 7px;
+  }
+
+  .cart-product-meta {
+    margin-top: 5px;
+    gap: 16px;
+    font-size: 8px;
+  }
+
+  .cart-delete-btn {
+    width: 23px;
+    height: 23px;
+    font-size: 10px;
+    border-radius: 4px;
+  }
+
+  .cart-bottom {
+    padding: 15px;
+  }
+
+  .cart-total-row {
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+
+  .cart-continue-btn {
+    height: 40px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+
+  /* =========================
+     PRODUCT MODAL
+     ========================= */
+
+  .product-modal {
+    width: 480px;
+    border-radius: 8px;
+  }
+
+  .modal-header {
+    height: 50px;
+    padding: 0 17px;
+    font-size: 15px;
+  }
+
+  .modal-product {
+    padding: 14px 17px;
+  }
+
+  .modal-product div {
+    font-size: 12px;
+  }
+
+  .modal-product span {
+    margin-top: 3px;
+    font-size: 9px;
+  }
+
+  .modal-form {
+    padding: 17px;
+    gap: 14px;
+  }
+
+  .modal-field {
+    gap: 7px;
+  }
+
+  .modal-field label {
+    font-size: 11px;
+  }
+
+  .modal-field input {
+    height: 42px;
+    padding: 0 13px;
+    font-size: 11px;
+  }
+
+  .modal-buttons {
+    padding: 0 17px 17px;
+    gap: 10px;
+  }
+
+  .modal-buttons button {
+    height: 40px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+}
+
+/* =========================================================
+   LARGE DESKTOP - 2000px+
+   READABLE FONT SIZES
+   ========================================================= */
+
+@media (min-width: 2000px) {
+
+  /* ================= PAGE ================= */
+
+  .purchase-product-page {
+    padding: 30px 40px 45px;
+  }
+
+
+  /* ================= HEADER ================= */
+
+  .purchase-breadcrumb {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .purchase-page-header h1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .purchase-return-btn {
+    height: 48px;
+    padding: 0 25px;
+    gap: 10px;
+
+    font-size: 14px;
+    border-radius: 7px;
+  }
+
+
+  /* ================= STEP BAR ================= */
+
+  .purchase-steps {
+    padding: 16px;
+    gap: 12px;
+    margin-bottom: 18px;
+    border-radius: 9px;
+  }
+
+  .purchase-step {
+    height: 58px;
+    padding: 0 18px;
+    gap: 10px;
+
+    font-size: 15px;
+
+    border-radius: 7px;
+  }
+
+  .purchase-step svg {
+    font-size: 17px;
+  }
+
+
+  /* ================= MAIN LAYOUT ================= */
+
+  .purchase-main-layout {
+    gap: 18px;
+  }
+
+
+  /* ================= SECTION ================= */
+
+  .purchase-section {
+    margin-bottom: 17px;
+    border-radius: 9px;
+  }
+
+  .purchase-section-title {
+    min-height: 60px;
+    padding: 0 22px;
+
+    font-size: 17px;
+
+    border-bottom: 1px solid #e8ebef;
+  }
+
+
+  /* ================= TOOLBAR ================= */
+
+  .product-toolbar {
+    height: 70px;
+    padding: 0 22px;
+    gap: 12px;
+  }
+
+  .entries-section {
+    gap: 9px;
+    font-size: 14px;
+  }
+
+  .entries-section select {
+    width: 75px;
+    height: 44px;
+
+    font-size: 14px;
+  }
+
+  .product-search {
+    gap: 10px;
+  }
+
+  .product-search label {
+    font-size: 14px;
+  }
+
+  .product-search input {
+    width: 230px;
+    height: 44px;
+
+    padding: 0 13px;
+
+    font-size: 14px;
+  }
+
+
+  /* ================= PRODUCT TABLE / CARDS ================= */
+
+  .product-card-grid {
+    padding: 20px 22px 24px;
+    gap: 12px;
+  }
+
+  .product-card {
+    min-height: 82px;
+
+    padding: 14px 17px;
+
+    border-radius: 7px;
+  }
+
+  .product-card-name {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .product-card-size {
+    margin-top: 4px;
+
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+
+  /* ================= STEP 2 FORM ================= */
+
+  .single-form {
+    padding: 22px;
+    gap: 9px;
+  }
+
+  .single-form label {
+    font-size: 14px;
+  }
+
+  .single-form select {
+    height: 48px;
+
+    padding: 0 14px;
+
+    font-size: 14px;
+
+    border-radius: 7px;
+  }
+
+
+  /* ================= PAYMENT FORM ================= */
+
+  .payment-form-grid {
+    padding: 22px;
+    gap: 16px;
+  }
+
+  .payment-form-field {
+    gap: 7px;
+  }
+
+  .payment-form-field label {
+    font-size: 14px;
+  }
+
+  .payment-form-field input {
+    height: 48px;
+
+    padding: 0 14px;
+
+    font-size: 14px;
+
+    border-radius: 7px;
+  }
+
+
+  /* ================= CART ================= */
+
+  .cart-detail {
+    width: 390px;
+    min-height: 720px;
+
+    border-radius: 9px;
+  }
+
+  .cart-title {
+    height: 60px;
+
+    padding: 0 20px;
+
+    font-size: 17px;
+  }
+
+  .cart-items {
+    padding: 0 18px;
+  }
+
+  .cart-item {
+    min-height: 105px;
+    padding: 16px 0;
+  }
+
+  .cart-product-name {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .cart-product-size {
+    margin-top: 4px;
+
+    font-size: 12px;
+  }
+
+  .cart-product-dot {
+    gap: 7px;
+    margin-top: 5px;
+
+    font-size: 11px;
+  }
+
+  .dot-badge {
+    padding: 4px 7px;
+
+    font-size: 10px;
+  }
+
+  .cart-product-meta {
+    margin-top: 6px;
+    gap: 18px;
+
+    font-size: 10px;
+  }
+
+  .cart-delete-btn {
+    width: 28px;
+    height: 28px;
+
+    font-size: 12px;
+  }
+
+  .cart-bottom {
+    padding: 18px;
+  }
+
+  .cart-total-row {
+    margin-bottom: 12px;
+
+    font-size: 14px;
+  }
+
+  .cart-continue-btn {
+    height: 48px;
+
+    font-size: 14px;
+
+    border-radius: 7px;
+  }
+
+
+  /* ================= PRODUCT MODAL ================= */
+
+  .product-modal {
+    width: 500px;
+
+    border-radius: 9px;
+  }
+
+  .modal-header {
+    height: 58px;
+
+    padding: 0 20px;
+
+    font-size: 17px;
+  }
+
+  .modal-product {
+    padding: 16px 20px;
+  }
+
+  .modal-product div {
+    font-size: 15px;
+  }
+
+  .modal-product span {
+    margin-top: 4px;
+
+    font-size: 12px;
+  }
+
+  .modal-form {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .modal-field {
+    gap: 7px;
+  }
+
+  .modal-field label {
+    font-size: 14px;
+  }
+
+  .modal-field input {
+    height: 48px;
+
+    padding: 0 14px;
+
+    font-size: 14px;
+  }
+
+  .modal-buttons {
+    padding: 0 20px 20px;
+
+    gap: 10px;
+  }
+
+  .modal-buttons button {
+    height: 46px;
+
+    font-size: 14px;
+
+    border-radius: 7px;
+  }
+}
+
+
+/* =========================================================
+   VERY LARGE SCREEN - 2400px+
+   FOR 2583px SCREEN
+   ========================================================= */
+
+@media (min-width: 2400px) {
+
+  .purchase-product-page {
+    padding: 35px 50px 50px;
+  }
+
+  .purchase-page-header h1 {
+    font-size: 34px;
+  }
+
+  .purchase-breadcrumb {
+    font-size: 14px;
+  }
+
+  .purchase-section-title {
+    font-size: 18px;
+  }
+
+  .purchase-step {
+    font-size: 16px;
+  }
+
+  .product-card-name {
+    font-size: 18px;
+  }
+
+  .product-card-size {
+    font-size: 13px;
+  }
+
+  .entries-section {
+    font-size: 15px;
+  }
+
+  .product-search label {
+    font-size: 15px;
+  }
+
+  .product-search input {
+    font-size: 15px;
+  }
+
+  .single-form label,
+  .payment-form-field label {
+    font-size: 15px;
+  }
+
+  .single-form select,
+  .payment-form-field input {
+    font-size: 15px;
+  }
+
+  .cart-title {
+    font-size: 18px;
+  }
+
+  .cart-product-name {
+    font-size: 16px;
+  }
+
+  .cart-product-size {
+    font-size: 13px;
+  }
+
+  .cart-product-dot {
+    font-size: 12px;
+  }
+
+  .cart-product-meta {
+    font-size: 11px;
+  }
+
+  .cart-total-row {
+    font-size: 15px;
+  }
+
+  .cart-continue-btn {
+    font-size: 15px;
+  }
 }

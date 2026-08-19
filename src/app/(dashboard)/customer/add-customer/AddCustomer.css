@@ -51,12 +51,11 @@
 ========================================= */
 
 .customer-form-card {
-    width: 100%;
+    width: 119%;
+    margin-left: -4%;
 
-    background: #ffffff;
-
+ background: #ffffff;
     border-radius: 5px;
-
     margin-bottom: 9px;
 
     padding: 10px 0;
@@ -234,8 +233,8 @@
 ========================================= */
 
 .customer-form-actions {
-    width: 100%;
-
+    width: 119%;
+margin-left: -4%;
     min-height: 45px;
 
     padding: 7px 11px;

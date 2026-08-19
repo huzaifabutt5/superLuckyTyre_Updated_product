@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import "./VendorTable.css";
 
 const vendors = [
@@ -36,12 +37,14 @@ const vendors = [
 ];
 
 export default function VendorTable() {
+  const router = useRouter();
+
   return (
     <div className="vendor-card">
 
       <div className="vendor-header">
         <h3>Top Vendors</h3>
-        <button>View All</button>
+        <button onClick={() => router.push("/vendor")}>View All</button>
       </div>
 
       <table className="vendor-table">

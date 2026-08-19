@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import "./ConfirmOrder.css";
 
 export default function ConfirmOrder({
@@ -24,7 +25,11 @@ export default function ConfirmOrder({
 
       {/* BREADCRUMB */}
       <div className="order-confirm-breadcrumb">
-        Tyre Shop &gt; Sale/Purchase Management &gt; Sale
+        Tyre Shop &gt;{" "}
+        <Link href="/sale" className="breadcrumb-link">
+          Sale/Purchase Management
+        </Link>{" "}
+        &gt; Confirm Order
       </div>
 
       {/* HEADING */}

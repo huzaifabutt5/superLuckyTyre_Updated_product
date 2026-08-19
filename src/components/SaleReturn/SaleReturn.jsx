@@ -5,6 +5,7 @@ import {
   FaRedo,
   FaCheckSquare,
 } from "react-icons/fa";
+import Link from "next/link";
 
 import "./SaleReturn.css";
 
@@ -143,7 +144,11 @@ export default function SaleReturn() {
         <div>
 
           <div className="return-breadcrumb">
-            Tyre Shop &gt; Sale/Purchase Management &gt; Sale Return
+            Tyre Shop &gt;{" "}
+            <Link href="/sale" style={{ textDecoration: "none", color: "inherit" }}>
+              Sale/Purchase Management
+            </Link>{" "}
+            &gt; Sale Return
           </div>
 
           <h1>

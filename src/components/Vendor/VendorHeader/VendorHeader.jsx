@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import "./VendorHeader.css";
 
 export default function VendorHeader() {
@@ -16,7 +17,11 @@ export default function VendorHeader() {
       <div className="vendor-title-section">
 
         <div className="breadcrumb">
-          Tyre Shop &gt; Vendor Management &gt; Vendor Listing
+          Tyre Shop &gt;{" "}
+          <Link href="/vendor" style={{ textDecoration: "none", color: "inherit" }}>
+            Vendor Management
+          </Link>{" "}
+          &gt; Vendor Listing
         </div>
 
         <h1>Vendor Listing</h1>

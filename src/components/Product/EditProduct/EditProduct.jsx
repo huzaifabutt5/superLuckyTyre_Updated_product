@@ -9,7 +9,11 @@ export default function EditProduct() {
 
       {/* Breadcrumb */}
       <div className="edit-product-breadcrumb">
-        Tyre Shop &gt; Product Management &gt; Edit Product
+        Tyre Shop &gt;{" "}
+        <Link href="/product" className="breadcrumb-link">
+          Product Management
+        </Link>{" "}
+        &gt; Edit Product
       </div>
 
       {/* Heading */}

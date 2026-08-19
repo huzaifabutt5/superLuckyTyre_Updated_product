@@ -5,12 +5,12 @@ import CustomerTable from "@/components/CustomerTable/CustomerTable";
 
 export default function CustomerPage() {
   return (
-    <main className="customer-page">
+    <div className="customer-page">
 
       <CustomerHeader />
 
       <CustomerTable />
 
-    </main>
+    </div>
   );
 }

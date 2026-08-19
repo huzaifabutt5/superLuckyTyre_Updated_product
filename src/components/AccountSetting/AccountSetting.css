@@ -4,11 +4,12 @@
 
 .account-page {
   width: 100%;
+  
   min-height: calc(100vh - 65px);
 
   background: #f3f3f6;
 
-  padding: 18px 16px 30px;
+  padding: 18px 20px 30px;
 
   box-sizing: border-box;
 
@@ -23,6 +24,7 @@
 .account-breadcrumb {
   display: flex;
   align-items: center;
+
   gap: 5px;
 
   margin-bottom: 8px;
@@ -59,7 +61,9 @@
 ========================================================= */
 
 .account-card {
-  width: 100%;
+  width: 104%;
+margin-left: -2%;
+  margin: 0;
 
   background: #ffffff;
 
@@ -86,7 +90,9 @@
 }
 
 
-/* PROFILE IMAGE */
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
 
 .profile-image-wrapper {
   width: 48px;
@@ -133,7 +139,9 @@
 }
 
 
-/* PROFILE CONTENT */
+/* =========================================================
+   PROFILE CONTENT
+========================================================= */
 
 .profile-content {
   flex: 1;
@@ -152,7 +160,9 @@
 }
 
 
-/* PROFILE BUTTONS */
+/* =========================================================
+   PROFILE BUTTONS
+========================================================= */
 
 .profile-buttons {
   display: flex;
@@ -174,6 +184,8 @@
   justify-content: center;
 
   gap: 6px;
+
+  border: none;
 
   background: #477df5;
 
@@ -213,7 +225,9 @@
 }
 
 
-/* PROFILE NOTE */
+/* =========================================================
+   PROFILE NOTE
+========================================================= */
 
 .profile-note {
   margin: 6px 0 0;
@@ -255,6 +269,8 @@
 
 .form-group {
   width: 100%;
+
+  min-width: 0;
 }
 
 .form-group label {
@@ -306,6 +322,8 @@
   display: flex;
 
   gap: 5px;
+
+  width: 100%;
 }
 
 .email-input-row input {
@@ -332,6 +350,10 @@
   font-size: 9px;
 
   cursor: pointer;
+}
+
+.change-email-btn:hover {
+  background: #356bea;
 }
 
 .input-note {
@@ -457,6 +479,10 @@
   color: #ffffff;
 }
 
+.save-main-btn:hover {
+  background: #356bea;
+}
+
 
 /* =========================================================
    POPUP OVERLAY
@@ -500,21 +526,17 @@
 }
 
 
-/* PASSWORD POPUP */
+/* =========================================================
+   POPUP WIDTHS
+========================================================= */
 
 .password-popup {
   max-width: 355px;
 }
 
-
-/* EMAIL POPUP */
-
 .email-popup {
   max-width: 345px;
 }
-
-
-/* THIRD POPUP */
 
 .new-email-popup {
   max-width: 365px;
@@ -526,9 +548,9 @@
 ========================================================= */
 
 .popup-header {
-  height: 37px;
+  min-height: 37px;
 
-  padding: 0 12px;
+  padding: 8px 12px;
 
   display: flex;
 
@@ -562,7 +584,7 @@
 
   color: #8a929e;
 
-  display: none;
+  display: flex;
 
   align-items: center;
 
@@ -645,7 +667,7 @@
 
 
 /* =========================================================
-   OTP ROW
+   OTP
 ========================================================= */
 
 .otp-input-row {
@@ -754,22 +776,40 @@
   cursor: not-allowed;
 }
 
+.popup-primary-btn:hover {
+  background: #356bea;
+}
+
 
 /* =========================================================
-   RESPONSIVE
+   TABLET
+   <= 991px
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
+
+  .account-page {
+    padding: 18px 16px 30px;
+  }
 
   .account-form {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .account-card {
+    padding: 16px;
+  }
+
+  .account-title {
+    margin-left: 0;
   }
 
 }
 
 
 /* =========================================================
-   TABLET
+   SMALL TABLET / MOBILE
+   <= 650px
 ========================================================= */
 
 @media (max-width: 650px) {
@@ -778,8 +818,18 @@
     padding: 15px 12px 25px;
   }
 
+  .account-title {
+    font-size: 20px;
+
+    margin-bottom: 15px;
+  }
+
   .account-card {
-    padding: 13px;
+    padding: 14px;
+  }
+
+  .account-form {
+    grid-template-columns: 1fr;
   }
 
   .profile-section {
@@ -803,16 +853,22 @@
   .cancel-main-btn,
   .save-main-btn {
     flex: 1;
-  }
 
+    width: auto;
+  }
 }
 
 
 /* =========================================================
    MOBILE
+   <= 576px
 ========================================================= */
 
-@media (max-width: 450px) {
+@media (max-width: 576px) {
+
+  .account-breadcrumb {
+    font-size: 9px;
+  }
 
   .account-title {
     font-size: 20px;
@@ -830,6 +886,21 @@
 
   .profile-buttons {
     flex-wrap: wrap;
+
+    gap: 5px;
+  }
+
+  .upload-btn,
+  .remove-btn {
+    height: 28px;
+
+    padding: 0 10px;
+
+    font-size: 9px;
+  }
+
+  .profile-note {
+    font-size: 8px;
   }
 
   .email-input-row {
@@ -848,6 +919,18 @@
     max-width: 100%;
   }
 
+  .popup-header {
+    padding: 8px 12px;
+  }
+
+  .popup-header h2 {
+    font-size: 12px;
+  }
+
+  .popup-body {
+    padding: 12px;
+  }
+
   .otp-input-row {
     flex-direction: column;
   }
@@ -858,6 +941,8 @@
 
   .popup-footer {
     flex-direction: row;
+
+    padding: 7px 10px;
   }
 
   .popup-cancel-btn,
@@ -865,5 +950,391 @@
   .popup-disabled-btn {
     width: 50%;
   }
+}
 
+
+/* =========================================================
+   LARGE SCREENS
+   2000px+
+   
+   ONE breakpoint for ALL large screens:
+   2000 / 2200 / 2583 / 3000 / 3440 / 3840
+========================================================= */
+
+@media (min-width: 2000px) {
+
+  /* =====================================================
+     PAGE
+  ===================================================== */
+
+  .account-page {
+    padding: 40px 55px 55px;
+  }
+
+
+  /* =====================================================
+     BREADCRUMB
+  ===================================================== */
+
+  .account-breadcrumb {
+    gap: 9px;
+
+    margin-bottom: 16px;
+
+    font-size: 17px;
+  }
+
+
+  /* =====================================================
+     TITLE
+  ===================================================== */
+
+  .account-title {
+    margin-left: 0;
+
+    margin-bottom: 25px;
+
+    font-size: 36px;
+  }
+
+
+  /* =====================================================
+     ACCOUNT CARD
+  ===================================================== */
+
+  .account-card {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 32px;
+
+    border-radius: 11px;
+  }
+
+
+  /* =====================================================
+     PROFILE
+  ===================================================== */
+
+  .profile-section {
+    gap: 22px;
+
+    min-height: 105px;
+  }
+
+  .profile-image-wrapper {
+    width: 80px;
+
+    height: 80px;
+  }
+
+  .profile-placeholder {
+    font-size: 30px;
+  }
+
+  .profile-content h3 {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+  }
+
+
+  /* =====================================================
+     PROFILE BUTTONS
+  ===================================================== */
+
+  .profile-buttons {
+    gap: 12px;
+  }
+
+  .upload-btn,
+  .remove-btn {
+    height: 46px;
+
+    padding: 0 22px;
+
+    gap: 9px;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+  }
+
+  .upload-btn svg {
+    font-size: 16px;
+  }
+
+  .profile-note {
+    margin-top: 10px;
+
+    font-size: 14px;
+  }
+
+
+  /* =====================================================
+     DIVIDER
+  ===================================================== */
+
+  .account-divider {
+    margin: 24px 0;
+  }
+
+
+  /* =====================================================
+     FORM
+  ===================================================== */
+
+  .account-form {
+    column-gap: 24px;
+
+    row-gap: 25px;
+  }
+
+  .form-group label {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+  }
+
+  .form-group input {
+    height: 52px;
+
+    padding: 0 16px;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+  }
+
+
+  /* =====================================================
+     EMAIL
+  ===================================================== */
+
+  .email-input-row {
+    gap: 10px;
+  }
+
+  .change-email-btn {
+    width: 145px;
+
+    height: 52px;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+  }
+
+  .input-note {
+    margin-top: 9px;
+
+    font-size: 14px;
+  }
+
+
+  /* =====================================================
+     CHANGE PASSWORD
+  ===================================================== */
+
+  .change-password-section {
+    gap: 25px;
+  }
+
+  .change-password-section h3 {
+    margin-bottom: 7px;
+
+    font-size: 20px;
+  }
+
+  .change-password-section p {
+    font-size: 14px;
+  }
+
+  .change-password-btn {
+    height: 48px;
+
+    padding: 0 24px;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+  }
+
+
+  /* =====================================================
+     SAVE BAR
+  ===================================================== */
+
+  .account-save-bar {
+    width: 100%;
+
+    margin-left: 0;
+
+    min-height: 68px;
+
+    margin-top: 22px;
+
+    padding: 10px 22px;
+
+    border-radius: 9px;
+
+    gap: 12px;
+  }
+
+  .cancel-main-btn,
+  .save-main-btn {
+    width: 150px;
+
+    height: 48px;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+  }
+
+
+  /* =====================================================
+     POPUP
+  ===================================================== */
+
+  .popup-overlay {
+    padding: 40px;
+  }
+
+  .popup-box {
+    border-radius: 10px;
+  }
+
+
+  /* =====================================================
+     POPUP WIDTH
+  ===================================================== */
+
+  .password-popup {
+    max-width: 620px;
+  }
+
+  .email-popup {
+    max-width: 610px;
+  }
+
+  .new-email-popup {
+    max-width: 640px;
+  }
+
+
+  /* =====================================================
+     POPUP HEADER
+  ===================================================== */
+
+  .popup-header {
+    min-height: 70px;
+
+    padding: 0 25px;
+  }
+
+  .popup-header h2 {
+    font-size: 21px;
+  }
+
+  .popup-header button {
+    width: 36px;
+
+    height: 36px;
+
+    font-size: 20px;
+
+    display: flex;
+  }
+
+
+  /* =====================================================
+     POPUP BODY
+  ===================================================== */
+
+  .popup-body {
+    padding: 30px;
+  }
+
+
+  /* =====================================================
+     POPUP FIELDS
+  ===================================================== */
+
+  .popup-field {
+    margin-bottom: 22px;
+  }
+
+  .popup-field label {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+  }
+
+  .popup-field input {
+    height: 54px;
+
+    padding: 0 17px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+  }
+
+
+  /* =====================================================
+     OTP
+  ===================================================== */
+
+  .otp-input-row {
+    gap: 10px;
+  }
+
+  .get-otp-btn {
+    width: 145px;
+
+    height: 54px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+  }
+
+
+  /* =====================================================
+     POPUP FOOTER
+  ===================================================== */
+
+  .popup-footer {
+    min-height: 78px;
+
+    padding: 12px 25px;
+
+    gap: 12px;
+  }
+
+
+  /* =====================================================
+     POPUP BUTTONS
+  ===================================================== */
+
+  .popup-cancel-btn,
+  .popup-primary-btn,
+  .popup-disabled-btn {
+    height: 50px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+  }
+
+  .popup-cancel-btn {
+    width: 165px;
+  }
+
+  .popup-primary-btn,
+  .popup-disabled-btn {
+    width: 210px;
+  }
 }

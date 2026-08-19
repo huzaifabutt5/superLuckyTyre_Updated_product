@@ -13,22 +13,30 @@ import "./StockTable.css";
 
 export default function StockTable() {
   const [search, setSearch] = useState("");
-  const [entries, setEntries] = useState(10);
+  const [entriesPerPage, setEntriesPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
   const [openRow, setOpenRow] = useState(null);
 
   /* =========================
-     SEARCH
+     SEARCH / FILTER
   ========================= */
 
-const filteredData = stockData.filter((product) => {
+  const filteredData = stockData.filter((product) => {
     const searchText = search.toLowerCase();
 
     return (
-      product.productName.toLowerCase().includes(searchText) ||
-      product.size.toLowerCase().includes(searchText) ||
-      product.brandName.toLowerCase().includes(searchText) ||
-      product.status.toLowerCase().includes(searchText)
+      product.productName
+        ?.toLowerCase()
+        .includes(searchText) ||
+      product.size
+        ?.toLowerCase()
+        .includes(searchText) ||
+      product.brandName
+        ?.toLowerCase()
+        .includes(searchText) ||
+      product.status
+        ?.toLowerCase()
+        .includes(searchText)
     );
   });
 
@@ -37,12 +45,18 @@ const filteredData = stockData.filter((product) => {
   ========================= */
 
   const totalPages = Math.ceil(
-    filteredData.length / entries
+    filteredData.length / entriesPerPage
   );
 
-  const startIndex = (currentPage - 1) * entries;
+  const startIndex =
+    (currentPage - 1) * entriesPerPage;
 
-  const endIndex = startIndex + entries;
+  const endIndex =
+    startIndex + entriesPerPage;
+
+  /* =========================
+     CURRENT PAGE DATA
+  ========================= */
 
   const currentData = filteredData.slice(
     startIndex,
@@ -64,7 +78,7 @@ const filteredData = stockData.filter((product) => {
   ========================= */
 
   const handleEntriesChange = (e) => {
-    setEntries(Number(e.target.value));
+    setEntriesPerPage(Number(e.target.value));
     setCurrentPage(1);
     setOpenRow(null);
   };
@@ -98,16 +112,15 @@ const filteredData = stockData.filter((product) => {
     <div className="stock-table-card">
 
       {/* =========================
-          TABLE TITLE
+          TITLE
       ========================= */}
 
       <div className="stock-table-title">
         <h2>All Product Listing</h2>
       </div>
 
-
       {/* =========================
-          TABLE CONTROLS
+          CONTROLS
       ========================= */}
 
       <div className="stock-table-controls">
@@ -117,20 +130,19 @@ const filteredData = stockData.filter((product) => {
         <div className="entries-section">
 
           <select
-            value={entries}
+            className="entries-select"
+            value={entriesPerPage}
             onChange={handleEntriesChange}
           >
             <option value={10}>10</option>
             <option value={25}>25</option>
             <option value={50}>50</option>
+            <option value={100}>100</option>
           </select>
 
-          <span>
-            entries per page
-          </span>
+          <span>entries per page</span>
 
         </div>
-
 
         {/* SEARCH */}
 
@@ -154,7 +166,6 @@ const filteredData = stockData.filter((product) => {
         </div>
 
       </div>
-
 
       {/* =========================
           MAIN TABLE
@@ -194,7 +205,6 @@ const filteredData = stockData.filter((product) => {
 
           </thead>
 
-
           <tbody>
 
             {currentData.length > 0 ? (
@@ -210,9 +220,7 @@ const filteredData = stockData.filter((product) => {
                     product={product}
                     isOpen={isOpen}
                     onToggle={() =>
-                      handleRowClick(
-                        product.id
-                      )
+                      handleRowClick(product.id)
                     }
                   />
                 );
@@ -240,12 +248,13 @@ const filteredData = stockData.filter((product) => {
 
       </div>
 
-
       {/* =========================
           FOOTER
       ========================= */}
 
       <div className="stock-table-footer">
+
+        {/* SHOWING TEXT */}
 
         <div className="showing-text">
 
@@ -270,36 +279,41 @@ const filteredData = stockData.filter((product) => {
 
         </div>
 
-
-        {/* PAGINATION */}
+        {/* =========================
+            PAGINATION
+        ========================= */}
 
         <div className="pagination">
 
           {/* FIRST */}
 
           <button
+            type="button"
             onClick={() => goToPage(1)}
-            disabled={currentPage === 1}
+            disabled={
+              currentPage === 1 ||
+              totalPages === 0
+            }
             className="pagination-arrow"
           >
             «
           </button>
 
-
           {/* PREVIOUS */}
 
           <button
+            type="button"
             onClick={() =>
-              goToPage(
-                currentPage - 1
-              )
+              goToPage(currentPage - 1)
             }
-            disabled={currentPage === 1}
+            disabled={
+              currentPage === 1 ||
+              totalPages === 0
+            }
             className="pagination-arrow"
           >
             ‹
           </button>
-
 
           {/* PAGE NUMBERS */}
 
@@ -309,6 +323,7 @@ const filteredData = stockData.filter((product) => {
           ).map((page) => (
 
             <button
+              type="button"
               key={page}
               onClick={() =>
                 goToPage(page)
@@ -324,14 +339,12 @@ const filteredData = stockData.filter((product) => {
 
           ))}
 
-
           {/* NEXT */}
 
           <button
+            type="button"
             onClick={() =>
-              goToPage(
-                currentPage + 1
-              )
+              goToPage(currentPage + 1)
             }
             disabled={
               currentPage === totalPages ||
@@ -342,10 +355,10 @@ const filteredData = stockData.filter((product) => {
             ›
           </button>
 
-
           {/* LAST */}
 
           <button
+            type="button"
             onClick={() =>
               goToPage(totalPages)
             }
@@ -378,7 +391,9 @@ function ProductRow({
 }) {
   return (
     <>
-      {/* MAIN PRODUCT ROW */}
+      {/* =========================
+          PRODUCT ROW
+      ========================= */}
 
       <tr
         className={
@@ -388,28 +403,38 @@ function ProductRow({
         }
       >
 
-        {/* ARROW */}
+        {/* EXPAND BUTTON */}
 
         <td className="expand-column">
 
           <button
+            type="button"
             className="expand-button"
             onClick={onToggle}
-            aria-label="Show batches"
+            aria-label={
+              isOpen
+                ? "Hide batches"
+                : "Show batches"
+            }
           >
 
-<FaPlay />
+            <FaPlay
+              className={
+                isOpen
+                  ? "play-icon-open"
+                  : ""
+              }
+            />
 
           </button>
 
         </td>
 
-
         {/* PRODUCT NAME */}
 
         <td>
 
-<div className="product-name-wrapper">
+          <div className="product-name-wrapper">
 
             <span className="product-name">
               {product.productName}
@@ -423,13 +448,11 @@ function ProductRow({
 
         </td>
 
-
         {/* BRAND */}
 
         <td>
           {product.brandName}
         </td>
-
 
         {/* BATCHES */}
 
@@ -441,13 +464,11 @@ function ProductRow({
 
         </td>
 
-
         {/* QUANTITY */}
 
         <td>
           {product.totalQuantity}
         </td>
-
 
         {/* STATUS */}
 
@@ -455,11 +476,9 @@ function ProductRow({
 
           <span
             className={`stock-status ${
-              product.status ===
-              "Low Stock"
+              product.status === "Low Stock"
                 ? "status-low"
-                : product.status ===
-                  "Out of Stock"
+                : product.status === "Out of Stock"
                 ? "status-out"
                 : "status-in"
             }`}
@@ -471,12 +490,12 @@ function ProductRow({
 
       </tr>
 
-
-      {/* =================================================
+      {/* =========================
           BATCH TABLE
-      ================================================= */}
+      ========================= */}
 
       {isOpen && (
+
         <tr className="batch-row">
 
           <td colSpan="6">
@@ -486,7 +505,6 @@ function ProductRow({
               <h3>
                 Multi Vendor Batches
               </h3>
-
 
               <table className="batch-table">
 
@@ -512,7 +530,6 @@ function ProductRow({
 
                 </thead>
 
-
                 <tbody>
 
                   {batchData[product.id] &&
@@ -522,12 +539,10 @@ function ProductRow({
                       (batch) => (
 
                         <tr
-                          key={
-                            batch.batchId
-                          }
+                          key={batch.batchId}
                         >
 
-<td>
+                          <td>
                             {batch.id}
                           </td>
 
@@ -584,6 +599,7 @@ function ProductRow({
           </td>
 
         </tr>
+
       )}
 
     </>

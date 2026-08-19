@@ -3,7 +3,8 @@
 ========================================= */
 
 .view-customer-page {
-    width: 100%;
+    width: 106%;
+    margin-left: -3%;
     min-height: calc(100vh - 65px);
 
     padding: 7px 12px 45px 12px;
@@ -61,200 +62,358 @@
     margin-bottom: 9px;
 }
 
+/* =====================================================
+   OUTER WHITE SUMMARY AREA
+===================================================== */
 
-/* =========================================
-   SUMMARY CARDS CONTAINER
-========================================= */
+.customer-summary-area {
+  width: 100%;
+  height: 96px;
+
+  padding: 14px 12px;
+
+  display: flex;
+  align-items: stretch;
+
+  gap: 10px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   THREE SUMMARY CARDS CONTAINER
+===================================================== */
 
 .customer-summary-cards {
-    flex: 1;
+  flex: 1;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-    gap: 8px;
+  gap: 10px;
 
-    min-width: 0;
+  min-width: 0;
 }
 
 
-/* =========================================
-   SUMMARY CARD
-========================================= */
+/* =====================================================
+   INDIVIDUAL SUMMARY CARD
+===================================================== */
 
 .customer-summary-card {
-    height: 60px;
+  position: relative;
 
-    min-width: 0;
+  min-width: 0;
+  height: 66px;
 
-    padding: 0 10px;
+  padding: 10px 11px;
 
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    border-radius: 4px;
+  border-radius: 4px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  overflow: hidden;
 
-    overflow: hidden;
+  box-sizing: border-box;
 }
 
 
-/* =========================================
+/* =====================================================
+   DARK / COLORED LEFT LINE
+===================================================== */
+
+.customer-summary-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 7px;
+
+  width: 3px;
+  height: 70%;
+
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* =====================================================
    PURCHASE CARD
-========================================= */
+===================================================== */
 
 .purchase-card {
-    background: #e2f2ff;
+  background: #e4f2ff;
+}
+
+.purchase-card::before {
+  background: #377dff;
 }
 
 
-/* =========================================
+/* =====================================================
    RETURN CARD
-========================================= */
+===================================================== */
 
 .return-card {
-    background: #e8dcff;
+  background: #e4d9fb;
+}
+
+.return-card::before {
+  background: #8246e8;
 }
 
 
-/* =========================================
-   REMAINING CARD
-========================================= */
+/* =====================================================
+   REMAINING AMOUNT CARD
+===================================================== */
 
 .remaining-card {
-    background: #ffe7c7;
+  background: #ffe7c4;
+}
+
+.remaining-card::before {
+  background: #ff9d22;
 }
 
 
-/* =========================================
-   SUMMARY CONTENT
-========================================= */
+/* =====================================================
+   CARD CONTENT
+===================================================== */
 
 .summary-card-content {
-    min-width: 0;
+  min-width: 0;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    justify-content: center;
+  justify-content: center;
+
+  gap: 2px;
 }
 
+
+/* =====================================================
+   CARD LABEL
+===================================================== */
 
 .summary-card-label {
-    margin-bottom: 3px;
+  font-size: 10px;
 
-    color: #555d6d;
+  line-height: 13px;
 
-    font-size: 8px;
-    font-weight: 400;
+  color: #4b5565;
 
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
+
+/* =====================================================
+   CARD AMOUNT
+===================================================== */
 
 .summary-card-content strong {
-    color: #303747;
+  display: block;
 
-    font-size: 11px;
-    font-weight: 600;
+  font-size: 12px;
 
-    white-space: nowrap;
+  line-height: 15px;
+
+  font-weight: 700;
+
+  color: #293047;
+
+  white-space: nowrap;
 }
 
 
-/* =========================================
-   SUMMARY ICON
-========================================= */
+/* =====================================================
+   RS TEXT
+===================================================== */
+
+.summary-card-content strong::before {
+  content: "Rs. ";
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  color: #727b8a;
+}
+
+
+/* =====================================================
+   ICON BOX
+===================================================== */
 
 .summary-card-icon {
-    width: 28px;
-    height: 28px;
+  width: 27px;
+  height: 27px;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-left: 8px;
 
-    border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    font-size: 14px;
+  border-radius: 4px;
 }
 
+
+/* =====================================================
+   ICON SIZE
+===================================================== */
+
+.summary-card-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+
+/* =====================================================
+   PURCHASE ICON
+===================================================== */
 
 .purchase-icon {
-    background: #c9e2ff;
-    color: #5595ff;
+  background: #c8e1ff;
+
+  color: #377dff;
 }
 
+
+/* =====================================================
+   RETURN ICON
+===================================================== */
 
 .return-icon {
-    background: #d6c2ff;
-    color: #7549e8;
+  background: #d8c7f8;
+
+  color: #8246e8;
 }
 
+
+/* =====================================================
+   REMAINING ICON
+===================================================== */
 
 .remaining-icon {
-    background: #ffd89f;
-    color: #ff991c;
+  background: #ffd59d;
+
+  color: #ff9d22;
 }
 
 
-/* =========================================
-   PAYMENT BUTTONS
-========================================= */
+/* =====================================================
+   PAYMENT BUTTON AREA
+===================================================== */
 
 .customer-payment-buttons {
-    width: 92px;
+  width: 124px;
 
-    display: flex;
-    flex-direction: column;
+  flex-shrink: 0;
 
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
 
-    flex-shrink: 0;
+  gap: 6px;
 }
 
 
-.get-payment-button,
-.pay-customer-button {
-    width: 92px;
-    height: 28px;
+/* =====================================================
+   BOTH PAYMENT BUTTONS
+===================================================== */
 
-    border: none;
-    border-radius: 4px;
+.customer-payment-buttons button {
+  width: 100%;
+  height: 29px;
 
-    padding: 0 5px;
+  border: none;
 
-    font-family: inherit;
+  border-radius: 6px;
 
-    font-size: 8px;
-    font-weight: 400;
+  font-size: 9px;
 
-    cursor: pointer;
+  font-weight: 500;
+
+  box-sizing: border-box;
 }
 
+
+/* =====================================================
+   GET PAYMENT
+===================================================== */
 
 .get-payment-button {
-    background: #4779f5;
+  background: #477bf2;
 
-    color: #ffffff;
+  color: #ffffff;
+
+  cursor: pointer;
 }
-
 
 .get-payment-button:hover {
-    background: #3569e8;
+  background: #386ce0;
 }
 
 
+/* =====================================================
+   PAY TO CUSTOMER
+===================================================== */
+
 .pay-customer-button {
-    background: #d9d9d9;
+  background: #d7d8da;
 
-    color: #9b9b9b;
+  color: #a3a5a9;
 
-    cursor: not-allowed;
+  cursor: not-allowed;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .customer-summary-area {
+    height: auto;
+
+    flex-direction: column;
+  }
+
+  .customer-summary-cards {
+    width: 100%;
+  }
+
+  .customer-payment-buttons {
+    width: 100%;
+
+    flex-direction: row;
+  }
+
+  .customer-payment-buttons button {
+    flex: 1;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .customer-summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-payment-buttons {
+    flex-direction: column;
+  }
 }
 
 
@@ -322,40 +481,39 @@
    ENTRIES
 ========================================= */
 
-.invoice-entries {
+.entries-section {
     display: flex;
     align-items: center;
-
     gap: 6px;
 
-    color: #747b88;
-
-    font-size: 9px;
-
-    white-space: nowrap;
+    color: #6f7787;
+    font-size: 11px;
 }
 
 
-.invoice-entries select {
-    width: 28px;
-    height: 25px;
+.entries-section select {
+    width: 48px;
+    height: 29px;
 
-    padding: 0 3px;
+    padding: 0 5px;
 
     border: 1px solid #d9dde5;
     border-radius: 4px;
 
-    outline: none;
-
     background: #ffffff;
 
-    color: #626a78;
+    color: #4e5667;
+    font-size: 11px;
 
-    font-size: 9px;
+    outline: none;
 
     cursor: pointer;
 }
 
+
+.entries-section select:focus {
+    border-color: #4779f5;
+}
 
 /* =========================================
    SEARCH
@@ -440,6 +598,115 @@
 
 .date-filter-button svg {
     font-size: 9px;
+}
+
+
+/* =========================================
+   CALENDAR POPUP
+========================================= */
+
+.invoice-controls > div:last-child {
+    position: relative;
+}
+
+.vc-calendar-popup {
+    position: absolute;
+
+    top: 100%;
+
+    right: 0;
+
+    margin-top: 6px;
+
+    z-index: 1000;
+}
+
+.vc-calendar-inner {
+    width: 240px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 6px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+    overflow: hidden;
+}
+
+.vc-calendar-header {
+    padding: 8px 10px;
+
+    background: #f9fafb;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #1f2937;
+
+    text-align: center;
+}
+
+.vc-calendar-body {
+    padding: 8px;
+}
+
+.vc-cal-weekdays {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 1px;
+
+    margin-bottom: 4px;
+}
+
+.vc-cal-weekdays span {
+    text-align: center;
+
+    font-size: 9px;
+
+    color: #6b7280;
+
+    font-weight: 500;
+}
+
+.vc-cal-days {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 1px;
+}
+
+.vc-cal-day {
+    text-align: center;
+
+    padding: 5px 0;
+
+    font-size: 10px;
+
+    color: #374151;
+
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+
+.vc-cal-day:hover {
+    background: #f3f4f6;
+}
+
+.vc-cal-active {
+    background: #4779f5;
+
+    color: #ffffff;
+
+    font-weight: 600;
 }
 
 
@@ -702,8 +969,8 @@
 
 
 .invoice-action-button {
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
 
     padding: 0;
 
@@ -714,7 +981,7 @@
     align-items: center;
     justify-content: center;
 
-    font-size: 8px;
+    font-size: 12px;
 
     cursor: pointer;
 
@@ -724,19 +991,13 @@
 }
 
 
-.invoice-action-button:hover {
-    transform: translateY(-1px);
-
-    opacity: 0.85;
-}
-
 
 /* Green payment icon */
 
 .payment-action {
     background: #dff5e9;
 
-    color: #4bb67b;
+    color: #45B369;
 }
 
 
@@ -1108,3 +1369,4 @@
 .payment-submit-button:hover {
     background: #3d6ee0;
 }
+

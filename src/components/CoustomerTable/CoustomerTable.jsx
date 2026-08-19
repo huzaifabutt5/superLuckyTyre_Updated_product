@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import "./CoustomerTable.css";
 
 const customers = [
@@ -36,12 +37,14 @@ const customers = [
 ];
 
 export default function CoustomerTable() {
+  const router = useRouter();
+
   return (
     <div className="top-customer-card">
 
       <div className="top-customer-header">
         <h3>Top Customer</h3>
-        <button>View All</button>
+        <button onClick={() => router.push("/customer")}>View All</button>
       </div>
 
       <table className="top-customer-table">

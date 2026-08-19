@@ -28,7 +28,11 @@ export default function AddExpense() {
 
       {/* Breadcrumb */}
       <div className="add-expense-breadcrumb">
-        Tyre Shop &gt; Expense Management &gt; Add New Expense
+        Tyre Shop &gt;{" "}
+        <Link href="/expense" className="breadcrumb-link">
+          Expense Management
+        </Link>{" "}
+        &gt; Add New Expense
       </div>
 
       {/* Page Heading */}

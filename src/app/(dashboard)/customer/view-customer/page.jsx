@@ -1,11 +1,12 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import {
   FaShoppingCart,
   FaUndo,
-  FaMoneyBillWave,
+  FaPrint,
   FaCalendarAlt,
   FaChevronLeft,
   FaChevronRight,
@@ -25,6 +26,20 @@ const selectedCustomer = customerData.find(
 );
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState("");
+  const [showCalendar, setShowCalendar] = useState(false);
+  const calendarRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (calendarRef.current && !calendarRef.current.contains(e.target)) {
+        setShowCalendar(false);
+      }
+    }
+    if (showCalendar) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [showCalendar]);
 
   const entriesPerPage = 10;
 
@@ -68,14 +83,18 @@ const selectedCustomer = customerData.find(
   const remainingAmount = "Rs. 53,659,748";
 
   return (
-    <main className="view-customer-page">
+    <div className="view-customer-page">
 
       {/* =================================
           BREADCRUMB
       ================================= */}
 
       <div className="view-customer-breadcrumb">
-        Tyre Shop &gt; Customer Management &gt; View Customer
+        Tyre Shop &gt;{" "}
+        <Link href="/customer" className="breadcrumb-link">
+          Customer Management
+        </Link>{" "}
+        &gt; View Customer
       </div>
 
 
@@ -87,112 +106,98 @@ const selectedCustomer = customerData.find(
         View Customer
       </h1>
 
-<div className="customer-summary-area"></div>
 
-      {/* =================================
-          TOP SUMMARY SECTION
-      ================================= */}
+    <div className="customer-summary-area">
 
-      <div className="customer-summary-area">
+  {/* SUMMARY CARDS */}
 
-        {/* SUMMARY CARDS */}
+  <div className="customer-summary-cards">
 
-        <div className="customer-summary-cards">
+    {/* TODAY PURCHASE */}
+    <div className="customer-summary-card purchase-card">
 
-          {/* TODAY PURCHASE */}
+      <div className="summary-card-content">
+        <span className="summary-card-label">
+          Today Purchase
+        </span>
 
-          <div className="customer-summary-card purchase-card">
-
-            <div className="summary-card-content">
-
-              <span className="summary-card-label">
-                Today Purchase
-              </span>
-
-              <strong>
-                {todayPurchase}
-              </strong>
-
-            </div>
-
-            <div className="summary-card-icon purchase-icon">
-              <FaShoppingCart />
-            </div>
-
-          </div>
-
-
-          {/* TODAY RETURN */}
-
-          <div className="customer-summary-card return-card">
-
-            <div className="summary-card-content">
-
-              <span className="summary-card-label">
-                Today Purchase Return
-              </span>
-
-              <strong>
-                {todayReturn}
-              </strong>
-
-            </div>
-
-            <div className="summary-card-icon return-icon">
-  <FaShoppingCart />
-            </div>
-
-          </div>
-
-
-          {/* REMAINING AMOUNT */}
-
-          <div className="customer-summary-card remaining-card">
-
-            <div className="summary-card-content">
-
-              <span className="summary-card-label">
-                Remaining Amount
-              </span>
-
-              <strong>
-                {remainingAmount}
-              </strong>
-
-            </div>
-
-            <div className="summary-card-icon remaining-icon">
-               <FaShoppingCart />
-            </div>
-
-          </div>
-
-        </div>
-
-
-        {/* PAYMENT BUTTONS */}
-
-        <div className="customer-payment-buttons">
-
-         <button
-  type="button"
-  className="get-payment-button"
-  onClick={() => setShowPaymentPopup(true)}
->
-  Get Payment
-</button>
-
-          <button
-            type="button"
-            className="pay-customer-button"
-            disabled
-          >
-            Pay to Customer
-          </button>
-
-        </div>
-
+        <strong>
+          {todayPurchase}
+        </strong>
       </div>
+
+      <div className="summary-card-icon purchase-icon">
+        <FaShoppingCart />
+      </div>
+
+    </div>
+
+
+    {/* TODAY PURCHASE RETURN */}
+    <div className="customer-summary-card return-card">
+
+      <div className="summary-card-content">
+        <span className="summary-card-label">
+          Today Purchase Return
+        </span>
+
+        <strong>
+          {todayReturn}
+        </strong>
+      </div>
+
+      <div className="summary-card-icon return-icon">
+        <FaShoppingCart />
+      </div>
+
+    </div>
+
+
+    {/* REMAINING AMOUNT */}
+    <div className="customer-summary-card remaining-card">
+
+      <div className="summary-card-content">
+        <span className="summary-card-label">
+          Remaining Amount
+        </span>
+
+        <strong>
+          {remainingAmount}
+        </strong>
+      </div>
+
+      <div className="summary-card-icon remaining-icon">
+        <FaShoppingCart />
+      </div>
+
+    </div>
+
+  </div>
+
+
+  {/* PAYMENT BUTTONS */}
+
+  <div className="customer-payment-buttons">
+
+    <button
+      type="button"
+      className="get-payment-button"
+      onClick={() => setShowPaymentPopup(true)}
+    >
+      Get Payment
+    </button>
+
+    <button
+      type="button"
+      className="pay-customer-button"
+      disabled
+    >
+      Pay to Customer
+    </button>
+
+  </div>
+
+</div>
 
 
       {/* =================================
@@ -216,19 +221,17 @@ const selectedCustomer = customerData.find(
 
           {/* ENTRIES */}
 
-          <div className="invoice-entries">
+           <div className="entries-section">
+          <select defaultValue="10">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+           
+          </select>
 
-            <select defaultValue="10">
-              <option value="10">10</option>
-              <option value="25">25</option>
-              <option value="50">50</option>
-            </select>
+          <span>entries per page</span>
+        </div>
 
-            <span>
-              entries per page
-            </span>
-
-          </div>
 
 
           {/* SEARCH */}
@@ -254,16 +257,39 @@ const selectedCustomer = customerData.find(
 
           {/* DATE */}
 
-          <button
-            type="button"
-            className="date-filter-button"
-          >
-            <FaCalendarAlt />
+          <div ref={calendarRef}>
+            <button
+              type="button"
+              className="date-filter-button"
+              onClick={() => setShowCalendar((prev) => !prev)}
+            >
+              <FaCalendarAlt />
 
-            <span>
-              Jul 12, 2026 - Aug 12, 2026
-            </span>
-          </button>
+              <span>
+                Jul 12, 2026 - Aug 12, 2026
+              </span>
+            </button>
+
+            {showCalendar && (
+              <div className="vc-calendar-popup">
+                <div className="vc-calendar-inner">
+                  <div className="vc-calendar-header">
+                    <span>August 2026</span>
+                  </div>
+                  <div className="vc-calendar-body">
+                    <div className="vc-cal-weekdays">
+                      <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                    </div>
+                    <div className="vc-cal-days">
+                      {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31].map((d) => (
+                        <div key={d} className={`vc-cal-day ${d === 12 ? "vc-cal-active" : ""}`}>{d}</div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
 
         </div>
 
@@ -429,7 +455,7 @@ const selectedCustomer = customerData.find(
                           className="invoice-action-button payment-action"
                           title="Payment"
                         >
-                          <FaMoneyBillWave />
+                          <FaPrint />
                         </button>
 
                         <button
@@ -668,7 +694,7 @@ const selectedCustomer = customerData.find(
       )}
 
 
-    </main>
+        </div>
   );
 }
 
@@ -680,13 +706,17 @@ export default function ViewCustomerPage() {
   return (
     <Suspense
       fallback={
-        <main className="view-customer-page">
+        <div className="view-customer-page">
           <div className="view-customer-breadcrumb">
-            {"Tyre Shop > Customer Management > View Customer"}
+            Tyre Shop &gt;{" "}
+            <Link href="/customer" className="breadcrumb-link">
+              Customer Management
+            </Link>{" "}
+            &gt; View Customer
           </div>
           <h1 className="view-customer-title">View Customer</h1>
           <div className="customer-summary-area"></div>
-        </main>
+    </div>
       }
     >
       <ViewCustomerContent />

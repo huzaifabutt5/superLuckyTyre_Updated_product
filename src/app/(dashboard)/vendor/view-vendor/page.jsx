@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import {
   FaShoppingCart,
   FaUndo,
@@ -68,14 +69,18 @@ function ViewVendorContent() {
   const remainingAmount = "Rs. 53,659,748";
 
   return (
-    <main className="view-vendor-page">
+          <div className="view-vendor-page">
 
       {/* =================================
           BREADCRUMB
       ================================= */}
 
       <div className="view-vendor-breadcrumb">
-        Tyre Shop &gt; Vendor Management &gt; View Vendor
+        Tyre Shop &gt;{" "}
+        <Link href="/vendor" className="breadcrumb-link">
+          Vendor Management
+        </Link>{" "}
+        &gt; View Vendor
       </div>
 
 
@@ -682,7 +687,7 @@ function ViewVendorContent() {
       )}
 
 
-    </main>
+    </div>
   );
 }
 
@@ -692,13 +697,13 @@ export default function ViewVendorPage() {
   return (
     <Suspense
       fallback={
-        <main className="view-vendor-page">
+              <div className="view-vendor-page">
           <div className="view-vendor-breadcrumb">
             {"Tyre Shop > Vendor Management > View Vendor"}
           </div>
           <h1 className="view-vendor-title">View Vendor</h1>
           <div className="vendor-summary-area"></div>
-        </main>
+        </div>
       }
     >
       <ViewVendorContent />

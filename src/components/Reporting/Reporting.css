@@ -3,7 +3,8 @@
 ========================================= */
 
 .reporting-page {
-  width: 100%;
+  width: 106%;
+  margin-left: -3%;
   min-height: calc(100vh - 65px);
   background: #f4f4f7;
   padding: 14px 14px 30px;
@@ -93,33 +94,42 @@
   margin-bottom: 10px;
 }
 
-.entries-control {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  
- 
 
+.entries-section {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #6f7787;
+    font-size: 11px;
 }
 
-.entries-number {
-  width: 28px;
-  height: 24px;
-  border: 1px solid #dfe2e8;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  background: #ffffff;
-  color: #596170;
-  font-size: 9px;
+
+.entries-section select {
+    width: 48px;
+    height: 29px;
+
+    padding: 0 5px;
+
+    border: 1px solid #d9dde5;
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    color: #4e5667;
+    font-size: 11px;
+
+    outline: none;
+
+    cursor: pointer;
 }
 
-.entries-control span {
-  font-size: 9px;
-  color: #656b77;
+
+.entries-section select:focus {
+    border-color: #4779f5;
 }
+
+
 
 
 /* =========================================

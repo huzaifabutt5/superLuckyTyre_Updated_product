@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 import "./AddCustomer.css";
 import customerData from "@/data/customerData";
@@ -114,16 +115,25 @@ function AddCustomerForm() {
   };
 
   return (
-    <main className="add-customer-page">
+    <div className="add-customer-page">
 
       {/* =================================
           BREADCRUMB
       ================================= */}
+<div className="add-customer-breadcrumb">
+  Tyre Shop &gt;{" "}
 
-      <div className="add-customer-breadcrumb">
-        {"Tyre Shop > Customer Management > "}
-        {editingCustomer ? "Edit Customer" : "Add Customer"}
-      </div>
+  <Link
+    href="/customer"
+    className="breadcrumb-link"
+  >
+    Customer Management
+  </Link>{" "}
+
+  &gt;{" "}
+
+  {editingCustomer ? "Edit Customer" : "Add Customer"}
+</div>
 
 
       {/* =================================
@@ -331,7 +341,7 @@ function AddCustomerForm() {
 
       </form>
 
-    </main>
+    </div>
   );
 }
 

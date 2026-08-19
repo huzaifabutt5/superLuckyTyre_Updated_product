@@ -5,111 +5,110 @@ import {
   FaShoppingCart,
   FaFilePdf,
   FaFileCsv,
-  FaChevronLeft,
-  FaChevronRight,
-  FaAngleDoubleLeft,
-  FaAngleDoubleRight,
 } from "react-icons/fa";
+import Link from "next/link";
 
 import "./PnLReport.css";
 
-const pnlData = [
+const reportData = [
   {
-    sl: 1,
+    id: 1,
     date: "June 15, 2026",
     sale: "PKR 15,000",
     cog: "PKR 15,000",
-    expense: "PKR 15,000",
+    expenses: "PKR 15,000",
     balance: "PKR 15,000",
     positive: true,
   },
   {
-    sl: 2,
+    id: 2,
     date: "June 15, 2026",
     sale: "PKR 15,000",
     cog: "PKR 15,000",
-    expense: "PKR 15,000",
+    expenses: "PKR 15,000",
     balance: "PKR 15,000",
     positive: true,
   },
   {
-    sl: 3,
+    id: 3,
     date: "June 15, 2026",
     sale: "PKR 15,000",
     cog: "PKR 15,000",
-    expense: "PKR 15,000",
+    expenses: "PKR 15,000",
     balance: "PKR -15,000",
     positive: false,
   },
   {
-    sl: 4,
+    id: 4,
     date: "June 15, 2026",
     sale: "PKR 15,000",
     cog: "PKR 15,000",
-    expense: "PKR 15,000",
+    expenses: "PKR 15,000",
     balance: "PKR -15,000",
     positive: false,
   },
   {
-    sl: 5,
+    id: 5,
     date: "June 15, 2026",
     sale: "PKR 15,000",
     cog: "PKR 15,000",
-    expense: "PKR 15,000",
+    expenses: "PKR 15,000",
     balance: "PKR 15,000",
     positive: true,
   },
   {
-    sl: 6,
+    id: 6,
     date: "June 15, 2026",
     sale: "PKR 15,000",
     cog: "PKR 15,000",
-    expense: "PKR 15,000",
+    expenses: "PKR 15,000",
     balance: "PKR -15,000",
     positive: false,
   },
   {
-    sl: 7,
+    id: 7,
     date: "June 15, 2026",
     sale: "PKR 15,000",
     cog: "PKR 15,000",
-    expense: "PKR 15,000",
+    expenses: "PKR 15,000",
     balance: "PKR -15,000",
     positive: false,
   },
   {
-    sl: 8,
+    id: 8,
     date: "June 15, 2026",
     sale: "PKR 15,000",
     cog: "PKR 15,000",
-    expense: "PKR 15,000",
+    expenses: "PKR 15,000",
     balance: "PKR 15,000",
     positive: true,
   },
   {
-    sl: 9,
+    id: 9,
     date: "June 15, 2026",
     sale: "PKR 15,000",
     cog: "PKR 15,000",
-    expense: "PKR 15,000",
+    expenses: "PKR 15,000",
     balance: "PKR 15,000",
     positive: true,
   },
   {
-    sl: 10,
+    id: 10,
     date: "June 15, 2026",
     sale: "PKR 15,000",
     cog: "PKR 15,000",
-    expense: "PKR 15,000",
+    expenses: "PKR 15,000",
     balance: "PKR 15,000",
     positive: true,
   },
 ];
 
-export default function PnLReport() {
+export default function PnlReport() {
   const [fromDate, setFromDate] = useState("");
   const [endDate, setEndDate] = useState("");
+
   const [showReport, setShowReport] = useState(false);
+
   const [currentPage, setCurrentPage] = useState(1);
 
   const handleGetReport = () => {
@@ -118,17 +117,19 @@ export default function PnLReport() {
   };
 
   return (
-    <main className="pnl-page">
+    <div className="pnl-page">
 
       {/* ================= BREADCRUMB ================= */}
 
       <div className="pnl-breadcrumb">
-        <span>Tyre Shop</span>
-        <b> &gt; </b>
-        <span>Profit & Loss Management</span>
-        <b> &gt; </b>
-        <strong>PnL Report</strong>
+        Tyre Shop &gt;{" "}
+        <Link href="/pnl-report" className="breadcrumb-link">
+          Profit &amp; Loss Management
+        </Link>{" "}
+        &gt;{" "}
+        <span>PnL Report</span>
       </div>
+
 
       {/* ================= PAGE TITLE ================= */}
 
@@ -136,11 +137,14 @@ export default function PnLReport() {
         PnL Report
       </h1>
 
-      {/* ================= SEARCH CARD ================= */}
+
+      {/* =================================================
+          SEARCH PNL REPORT
+      ================================================= */}
 
       <section className="pnl-search-card">
 
-        <div className="pnl-search-title">
+        <div className="pnl-section-header">
           Search PnL Report
         </div>
 
@@ -148,37 +152,42 @@ export default function PnLReport() {
 
           {/* FROM DATE */}
 
-            <div className="date-field">
-  <label>
-    From Date <span>*</span>
-  </label>
+          <div className="date-field">
 
-  <input
-    type="text"
-    placeholder="DD/MM/YYYY"
-    value={fromDate}
-    onChange={(e) => setFromDate(e.target.value)}
-  />
-</div>
+            <label>
+              From Date <span>*</span>
+            </label>
+
+            <input
+              type="date"
+              value={fromDate}
+              onChange={(e) => setFromDate(e.target.value)}
+            />
+
+          </div>
+
 
           {/* END DATE */}
 
           <div className="date-field">
-  <label>
-    End Date <span>*</span>
-  </label>
 
-  <input
-    type="text"
-    placeholder="DD/MM/YYYY"
-    value={endDate}
-    onChange={(e) => setEndDate(e.target.value)}
-  />
-</div>
+            <label>
+              End Date <span>*</span>
+            </label>
+
+            <input
+              type="date"
+              value={endDate}
+              onChange={(e) => setEndDate(e.target.value)}
+            />
+
+          </div>
+
 
           {/* GET REPORT */}
 
           <button
+            type="button"
             className="get-report-btn"
             onClick={handleGetReport}
           >
@@ -186,124 +195,137 @@ export default function PnLReport() {
           </button>
 
         </div>
+
       </section>
 
-      {/* ==================================================
+
+      {/* =================================================
           REPORT CONTENT
-      ================================================== */}
+      ================================================= */}
 
       {showReport && (
         <>
 
-          {/* ================= SUMMARY WHITE CONTAINER ================= */}
+          {/* ================= SUMMARY CARDS ================= */}
 
-          <section className="pnl-summary-container">
+          <div className="pnl-summary-wrapper">
 
-            <div className="pnl-summary-grid">
+            {/* NET SALE */}
 
-              {/* NET SALE */}
+            <div className="pnl-summary-card pnl-blue">
 
-              <div className="pnl-summary-card sale-card">
+              <div className="pnl-summary-content">
 
-                <div className="summary-text">
+                <span>
+                  Net Sale
+                </span>
 
-                  <p>Net Sale</p>
-
-                  <h3>
-                    Rs. 53,659,748
-                  </h3>
-
-                </div>
-
-                <div className="summary-icon">
-                  <FaShoppingCart />
-                </div>
+                <strong>
+                  Rs. 53,659,748
+                </strong>
 
               </div>
 
-              {/* TOTAL COGS */}
-
-              <div className="pnl-summary-card cogs-card">
-
-                <div className="summary-text">
-
-                  <p>Total COGS</p>
-
-                  <h3>
-                    Rs. 53,659,748
-                  </h3>
-
-                </div>
-
-                <div className="summary-icon">
-                  <FaShoppingCart />
-                </div>
-
-              </div>
-
-              {/* TOTAL EXPENSE */}
-
-              <div className="pnl-summary-card expense-card">
-
-                <div className="summary-text">
-
-                  <p>Total Expense</p>
-
-                  <h3>
-                    Rs. 53,659,748
-                  </h3>
-
-                </div>
-
-                <div className="summary-icon">
-                  <FaShoppingCart />
-                </div>
-
-              </div>
-
-              {/* PNL */}
-
-              <div className="pnl-summary-card profit-card">
-
-                <div className="summary-text">
-
-                  <p>PnL (Profit/Loss)</p>
-
-                  <h3>
-                    Rs. 53,659,748
-                  </h3>
-
-                </div>
-
-                <div className="summary-icon">
-                  <FaShoppingCart />
-                </div>
-
+              <div className="pnl-summary-icon">
+                <FaShoppingCart />
               </div>
 
             </div>
 
-          </section>
 
-          {/* ================= TABLE ================= */}
+            {/* TOTAL COGS */}
+
+            <div className="pnl-summary-card pnl-purple">
+
+              <div className="pnl-summary-content">
+
+                <span>
+                  Total COGS
+                </span>
+
+                <strong>
+                  Rs. 53,659,748
+                </strong>
+
+              </div>
+
+              <div className="pnl-summary-icon">
+                <FaShoppingCart />
+              </div>
+
+            </div>
+
+
+            {/* TOTAL EXPENSE */}
+
+            <div className="pnl-summary-card pnl-orange">
+
+              <div className="pnl-summary-content">
+
+                <span>
+                  Total Expense
+                </span>
+
+                <strong>
+                  Rs. 53,659,748
+                </strong>
+
+              </div>
+
+              <div className="pnl-summary-icon">
+                <FaShoppingCart />
+              </div>
+
+            </div>
+
+
+            {/* PNL */}
+
+            <div className="pnl-summary-card pnl-green">
+
+              <div className="pnl-summary-content">
+
+                <span>
+                  PnL (Profit/Loss)
+                </span>
+
+                <strong>
+                  Rs. 53,659,748
+                </strong>
+
+              </div>
+
+              <div className="pnl-summary-icon">
+                <FaShoppingCart />
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* =================================================
+              TABLE CARD
+          ================================================= */}
 
           <section className="pnl-table-card">
 
-            {/* TABLE TITLE */}
+            {/* TABLE HEADER */}
 
-            <div className="pnl-table-title">
+            <div className="pnl-table-header">
               Sales / Purchases / Expenses Breakdown
             </div>
 
-            {/* TABLE TOP */}
 
-            <div className="pnl-table-top">
+            {/* TABLE TOP CONTROLS */}
+
+            <div className="pnl-table-controls">
 
               <div className="entries-control">
 
-                <div className="entries-number">
+                <span className="entries-number">
                   10
-                </div>
+                </span>
 
                 <span>
                   entries per page
@@ -311,79 +333,101 @@ export default function PnLReport() {
 
               </div>
 
+
               <div className="export-buttons">
 
-                <button className="pdf-btn">
+                <button
+                  type="button"
+                  className="pdf-btn"
+                >
                   <FaFilePdf />
-                  <span>PDF</span>
+                  Pdf
                 </button>
 
-                <button className="csv-btn">
+                <button
+                  type="button"
+                  className="csv-btn"
+                >
                   <FaFileCsv />
-                  <span>CSV</span>
+                  CSV
                 </button>
 
               </div>
 
             </div>
 
-            {/* TABLE */}
 
-            <div className="pnl-table-wrapper">
+            {/* ================= TABLE ================= */}
+
+            <div className="pnl-table-container">
 
               <table className="pnl-table">
 
                 <thead>
 
                   <tr>
-                    <th>SL</th>
-                    <th>Date</th>
-                    <th>Sale</th>
-                    <th>COG</th>
-                    <th>Expenses</th>
-                    <th>Open Balance</th>
+                    <th className="sl-column">
+                      SL
+                    </th>
+
+                    <th>
+                      Date
+                    </th>
+
+                    <th>
+                      Sale
+                    </th>
+
+                    <th>
+                      COG
+                    </th>
+
+                    <th>
+                      Expenses
+                    </th>
+
+                    <th>
+                      Open Balance
+                    </th>
                   </tr>
 
                 </thead>
 
+
                 <tbody>
 
-                  {pnlData.map((item) => (
+                  {reportData.map((row) => (
 
-                    <tr key={item.sl}>
+                    <tr key={row.id}>
 
-                      <td>
-                        {item.sl}
+                      <td className="sl-column">
+                        {row.id}
                       </td>
 
                       <td>
-                        {item.date}
+                        {row.date}
                       </td>
 
                       <td>
-                        {item.sale}
+                        {row.sale}
                       </td>
 
                       <td>
-                        {item.cog}
+                        {row.cog}
                       </td>
 
                       <td>
-                        {item.expense}
+                        {row.expenses}
                       </td>
 
-                      <td>
-
-                        <span
-                          className={
-                            item.positive
-                              ? "positive-balance"
-                              : "negative-balance"
-                          }
-                        >
-                          {item.balance}
-                        </span>
-
+                      <td
+                        className={
+                          row.positive
+                            ? "balance-positive"
+                            : "balance-negative"
+                        }
+                      >
+                        {row.balance}
                       </td>
 
                     </tr>
@@ -396,54 +440,43 @@ export default function PnLReport() {
 
             </div>
 
-            {/* TABLE BOTTOM */}
 
-            <div className="pnl-table-bottom">
+            {/* ================= TABLE FOOTER ================= */}
 
-              <div className="showing-text">
+            <div className="pnl-table-footer">
+
+              <span>
                 Showing 1 to 10 of 20 entries
-              </div>
+              </span>
+
 
               <div className="pagination">
 
-                <button>
-                  <FaAngleDoubleLeft />
+                <button type="button">
+                  «
                 </button>
 
-                <button>
-                  <FaChevronLeft />
+                <button type="button">
+                  ‹
                 </button>
 
                 <button
-                  className={
-                    currentPage === 1
-                      ? "active-page"
-                      : ""
-                  }
-                  onClick={() => setCurrentPage(1)}
+                  type="button"
+                  className="page-active"
                 >
                   1
                 </button>
 
-                <button
-                  className={
-                    currentPage === 2
-                      ? "active-page"
-                      : ""
-                  }
-                  onClick={() => setCurrentPage(2)}
-                >
+                <button type="button">
                   2
                 </button>
 
-                <button
-                  onClick={() => setCurrentPage(2)}
-                >
-                  <FaChevronRight />
+                <button type="button">
+                  ›
                 </button>
 
-                <button>
-                  <FaAngleDoubleRight />
+                <button type="button">
+                  »
                 </button>
 
               </div>
@@ -455,6 +488,6 @@ export default function PnLReport() {
         </>
       )}
 
-    </main>
+    </div>
   );
 }

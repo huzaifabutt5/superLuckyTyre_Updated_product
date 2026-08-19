@@ -115,7 +115,11 @@ export default function ProductListing() {
 
         <div>
           <div className="product-breadcrumb">
-            Tyre Shop &gt; Product Management &gt; Product Listing
+            Tyre Shop &gt;{" "}
+            <Link href="/product" style={{ textDecoration: "none", color: "inherit" }}>
+              Product Management
+            </Link>{" "}
+            &gt; Product Listing
           </div>
 
           <h1>Product Listing</h1>

@@ -9,7 +9,11 @@ export default function AddProduct() {
 
       {/* Breadcrumb */}
       <div className="add-product-breadcrumb">
-        Tyre Shop &gt; Product Management &gt; Add New Product
+        Tyre Shop &gt;{" "}
+        <Link href="/product" style={{ textDecoration: "none", color: "inherit" }}>
+          Product Management
+        </Link>{" "}
+        &gt; Add New Product
       </div>
 
       {/* Page Heading */}

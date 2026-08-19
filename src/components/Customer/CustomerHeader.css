@@ -43,7 +43,17 @@
     color: #7c8495;
 }
 
+.breadcrumb-link {
+    color: #7c8495;
+    text-decoration: none ; 
+    text-decoration-line: none;
+    font-weight: 500;
+}
 
+.breadcrumb-link:hover {
+    text-decoration: underline;
+}
+   
 /* =========================================
    PAGE TITLE
 ========================================= */

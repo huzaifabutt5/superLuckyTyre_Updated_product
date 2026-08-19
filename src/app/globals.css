@@ -43,3 +43,17 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}

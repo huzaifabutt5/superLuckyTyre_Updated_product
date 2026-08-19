@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import "./BalanceSheet.css";
 
 export default function BalanceSheet() {
@@ -95,7 +96,11 @@ export default function BalanceSheet() {
 
       {/* Breadcrumb */}
       <div className="balance-breadcrumb">
-        Tyre Shop &gt; Profit & Loss Management &gt; Open Balance Sheet
+        Tyre Shop &gt;{" "}
+        <Link href="/balance-sheet" style={{ textDecoration: "none", color: "inherit" }}>
+          Profit &amp; Loss Management
+        </Link>{" "}
+        &gt; Open Balance Sheet
       </div>
 
       {/* Page Header */}

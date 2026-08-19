@@ -5,12 +5,12 @@ import VendorTable from "@/components/Vendor/VendorTable/VendorTable";
 
 export default function VendorPage() {
   return (
-    <main className="vendor-page">
+    <div className="vendor-page">
 
       <VendorHeader />
 
       <VendorTable />
 
-    </main>
+    </div>
   );
 }

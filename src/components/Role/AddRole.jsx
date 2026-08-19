@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import "./AddRole.css";
 import {
   FaEye,
@@ -85,7 +86,11 @@ export default function AddRole() {
       {/* BREADCRUMB */}
 
       <div className="role-breadcrumb">
-        Tyre Shop &gt; Role Management &gt; Add New Role
+        Tyre Shop &gt;{" "}
+        <Link href="/role" className="breadcrumb-link">
+          Role Management
+        </Link>{" "}
+        &gt; Add New Role
       </div>
 
       {/* PAGE HEADER */}

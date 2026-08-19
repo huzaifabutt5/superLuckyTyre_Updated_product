@@ -1,8 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import "./SummaryChart.css";
 
-import { FaChevronDown, FaRegCalendarAlt } from "react-icons/fa";
+import {
+  FaChevronDown,
+  FaRegCalendarAlt,
+  FaTimes,
+} from "react-icons/fa";
 
 import BottomSummaryCard from "@/components/BottomsummaryCards/BottomsummaryCard";
 
@@ -13,8 +18,8 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  // Legend,
 } from "recharts";
+
 
 const data = [
   { month: "Jan", sales: 58, purchase: 12, cogs: 25, expenses: 47 },
@@ -31,50 +36,302 @@ const data = [
   { month: "Dec", sales: 58, purchase: 35, cogs: 12, expenses: 58 },
 ];
 
+
 export default function SalesChart() {
+
+  /* ================================
+     POPUP
+  ================================= */
+
+  const [showDatePopup, setShowDatePopup] = useState(false);
+
+
+  /* ================================
+     DATES
+  ================================= */
+
+  const [fromDate, setFromDate] = useState("");
+  const [toDate, setToDate] = useState("");
+
+
+  /* ================================
+     APPLIED DATES
+  ================================= */
+
+  const [appliedFromDate, setAppliedFromDate] = useState("");
+  const [appliedToDate, setAppliedToDate] = useState("");
+
+
+  /* ================================
+     ERROR
+  ================================= */
+
+  const [dateError, setDateError] = useState("");
+
+
+  /* ================================
+     OPEN CALENDAR POPUP
+  ================================= */
+
+  const handleCalendarClick = () => {
+    setShowDatePopup(true);
+    setDateError("");
+  };
+
+
+  /* ================================
+     CLOSE POPUP
+  ================================= */
+
+  const closeDatePopup = () => {
+    setShowDatePopup(false);
+    setDateError("");
+  };
+
+
+  /* ================================
+     RESET
+  ================================= */
+
+  const handleReset = () => {
+
+    setFromDate("");
+    setToDate("");
+
+    setAppliedFromDate("");
+    setAppliedToDate("");
+
+    setDateError("");
+  };
+
+
+  /* ================================
+     APPLY FILTER
+  ================================= */
+
+  const handleApplyFilter = () => {
+
+    if (!fromDate || !toDate) {
+
+      setDateError(
+        "Please select both dates."
+      );
+
+      return;
+    }
+
+
+    if (fromDate > toDate) {
+
+      setDateError(
+        "From Date cannot be greater than To Date."
+      );
+
+      return;
+    }
+
+
+    setAppliedFromDate(fromDate);
+    setAppliedToDate(toDate);
+
+    setDateError("");
+
+    setShowDatePopup(false);
+  };
+
+
   return (
+
     <div className="chart-wrapper">
 
-<div className="chart-header">
-        <h2 className="chart-title">Purchase &amp; Sale</h2>
+
+      {/* =================================
+          CHART HEADER
+      ================================= */}
+
+      <div className="chart-header">
+
+        <h2 className="chart-title">
+          Purchase &amp; Sale
+        </h2>
+
+
         <div className="chart-actions">
-          <button className="year-btn">
-            <span>This Year</span>
-            <FaChevronDown className="year-icon" />
+
+          <button
+            type="button"
+            className="year-btn"
+          >
+
+            <span>
+              This Year
+            </span>
+
+            <FaChevronDown
+              className="year-icon"
+            />
+
           </button>
-          <button className="calendar-btn">
+
+
+          {/* CALENDAR BUTTON */}
+
+          <button
+            type="button"
+            className="calendar-btn"
+            onClick={handleCalendarClick}
+          >
+
             <FaRegCalendarAlt />
+
           </button>
+
         </div>
+
       </div>
 
-      <ResponsiveContainer width="100%" height={350}>
 
-        <AreaChart data={data} isAnimationActive={false}>
+      {/* =================================
+          APPLIED DATE
+      ================================= */}
+
+      {(appliedFromDate || appliedToDate) && (
+
+        <div className="applied-date">
+
+          <span>
+            {appliedFromDate}
+          </span>
+
+          <span className="date-arrow">
+            →
+          </span>
+
+          <span>
+            {appliedToDate}
+          </span>
+
+          <button
+            type="button"
+            onClick={handleReset}
+          >
+            Clear
+          </button>
+
+        </div>
+
+      )}
+
+
+      {/* =================================
+          CHART
+      ================================= */}
+
+      <ResponsiveContainer
+        width="100%"
+        height={350}
+      >
+
+        <AreaChart
+          data={data}
+          isAnimationActive={false}
+        >
 
           <defs>
 
-            <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#3B82F6" stopOpacity={0.25}/>
-              <stop offset="95%" stopColor="#3B82F6" stopOpacity={0}/>
+            <linearGradient
+              id="blue"
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+
+              <stop
+                offset="5%"
+                stopColor="#3B82F6"
+                stopOpacity={0.25}
+              />
+
+              <stop
+                offset="95%"
+                stopColor="#3B82F6"
+                stopOpacity={0}
+              />
+
             </linearGradient>
 
-            <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#16A34A" stopOpacity={0.25}/>
-              <stop offset="95%" stopColor="#16A34A" stopOpacity={0}/>
+
+            <linearGradient
+              id="green"
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+
+              <stop
+                offset="5%"
+                stopColor="#16A34A"
+                stopOpacity={0.25}
+              />
+
+              <stop
+                offset="95%"
+                stopColor="#16A34A"
+                stopOpacity={0}
+              />
+
             </linearGradient>
 
-            <linearGradient id="purple" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#7C3AED" stopOpacity={0.25}/>
-              <stop offset="95%" stopColor="#7C3AED" stopOpacity={0}/>
+
+            <linearGradient
+              id="purple"
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+
+              <stop
+                offset="5%"
+                stopColor="#7C3AED"
+                stopOpacity={0.25}
+              />
+
+              <stop
+                offset="95%"
+                stopColor="#7C3AED"
+                stopOpacity={0}
+              />
+
             </linearGradient>
 
-            <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#F97316" stopOpacity={0.25}/>
-              <stop offset="95%" stopColor="#F97316" stopOpacity={0}/>
+
+            <linearGradient
+              id="orange"
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+
+              <stop
+                offset="5%"
+                stopColor="#F97316"
+                stopOpacity={0.25}
+              />
+
+              <stop
+                offset="95%"
+                stopColor="#F97316"
+                stopOpacity={0}
+              />
+
             </linearGradient>
 
           </defs>
+
 
           <CartesianGrid
             stroke="#EEF1F6"
@@ -82,26 +339,41 @@ export default function SalesChart() {
             vertical={false}
           />
 
+
           <XAxis
             dataKey="month"
             tickLine={false}
             axisLine={false}
-            tick={{ fill: "#8A94A6", fontSize: 13 }}
+            tick={{
+              fill: "#8A94A6",
+              fontSize: 13,
+            }}
           />
+
 
           <YAxis
-            tickFormatter={(value) => `${value}k`}
-            domain={[0,70]}
-            ticks={[0,10,20,30,40,50,60,70]}
+            tickFormatter={(value) =>
+              `${value}k`
+            }
+            domain={[0, 70]}
+            ticks={[
+              0,
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70,
+            ]}
             tickLine={false}
             axisLine={false}
-            tick={{ fill: "#8A94A6", fontSize: 13 }}
+            tick={{
+              fill: "#8A94A6",
+              fontSize: 13,
+            }}
           />
 
-          {/* <Legend
-            verticalAlign="bottom"
-            iconType="circle"
-          /> */}
 
           <Area
             type="monotone"
@@ -113,6 +385,7 @@ export default function SalesChart() {
             isAnimationActive={false}
           />
 
+
           <Area
             type="monotone"
             dataKey="expenses"
@@ -122,6 +395,7 @@ export default function SalesChart() {
             dot={false}
             isAnimationActive={false}
           />
+
 
           <Area
             type="monotone"
@@ -133,6 +407,7 @@ export default function SalesChart() {
             isAnimationActive={false}
           />
 
+
           <Area
             type="monotone"
             dataKey="cogs"
@@ -143,12 +418,145 @@ export default function SalesChart() {
             isAnimationActive={false}
           />
 
-</AreaChart>
+        </AreaChart>
 
       </ResponsiveContainer>
 
+
       <BottomSummaryCard />
 
+
+      {/* =========================================
+          DATE POPUP
+      ========================================= */}
+
+      {showDatePopup && (
+
+        <div
+          className="date-popup-overlay"
+          onMouseDown={(e) => {
+
+            if (
+              e.target.classList.contains(
+                "date-popup-overlay"
+              )
+            ) {
+              closeDatePopup();
+            }
+
+          }}
+        >
+
+          <div className="date-popup">
+
+
+            {/* POPUP HEADER */}
+
+            <div className="date-popup-header">
+
+              <h2>
+                Select Date
+              </h2>
+
+              <button
+                type="button"
+                className="date-popup-close"
+                onClick={closeDatePopup}
+              >
+
+                <FaTimes />
+
+              </button>
+
+            </div>
+
+
+            {/* POPUP BODY */}
+
+            <div className="date-popup-content">
+
+
+              {/* FROM DATE */}
+
+              <div className="date-input-group">
+
+                <label>
+                  From Date
+                </label>
+
+                <input
+                  type="date"
+                  value={fromDate}
+                  onChange={(e) =>
+                    setFromDate(e.target.value)
+                  }
+                />
+
+              </div>
+
+
+              {/* TO DATE */}
+
+              <div className="date-input-group">
+
+                <label>
+                  To Date
+                </label>
+
+                <input
+                  type="date"
+                  value={toDate}
+                  onChange={(e) =>
+                    setToDate(e.target.value)
+                  }
+                />
+
+              </div>
+
+
+              {/* ERROR */}
+
+              {dateError && (
+
+                <div className="date-error">
+                  {dateError}
+                </div>
+
+              )}
+
+
+              {/* BUTTONS */}
+
+              <div className="date-popup-buttons">
+
+                <button
+                  type="button"
+                  className="reset-date-btn"
+                  onClick={handleReset}
+                >
+                  Reset
+                </button>
+
+
+                <button
+                  type="button"
+                  className="apply-date-btn"
+                  onClick={handleApplyFilter}
+                >
+                  Apply Filter
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      )}
+
     </div>
+
   );
 }

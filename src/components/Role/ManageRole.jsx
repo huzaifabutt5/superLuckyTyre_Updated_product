@@ -29,7 +29,11 @@ export default function ManageRole() {
 
       {/* Breadcrumb */}
       <div className="role-breadcrumb">
-        Tyre Shop &gt; Role Management &gt; Manage Role
+        Tyre Shop &gt;{" "}
+        <Link href="/role" className="breadcrumb-link">
+          Role Management
+        </Link>{" "}
+        &gt; Manage Role
       </div>
 
       {/* Header */}

@@ -8,6 +8,7 @@ import {
   FaUndo,
   FaTimes,
 } from "react-icons/fa";
+import Link from "next/link";
 
 import "./PurchaseProduct.css";
 
@@ -278,7 +279,7 @@ export default function PurchaseProduct() {
 
 
   /* =========================================
-     CHANGE STEP BY CLICKING STEP BAR
+      CHANGE STEP BY CLICKING STEP BAR
   ========================================= */
 
   const changeStep = (step) => {
@@ -306,6 +307,11 @@ export default function PurchaseProduct() {
   };
 
 
+  const step1Complete = currentStep > 1;
+  const step2Complete = currentStep > 2;
+  const step3Complete = showConfirmation;
+
+
   return (
 
     <div className="purchase-product-page">
@@ -320,7 +326,11 @@ export default function PurchaseProduct() {
         <div>
 
           <div className="purchase-breadcrumb">
-            Tyre Shop &gt; Sale/Purchase Management &gt; Purchase
+            Tyre Shop &gt;{" "}
+            <Link href="/purchase" style={{ textDecoration: "none", color: "inherit" }}>
+              Sale/Purchase Management
+            </Link>{" "}
+            &gt; Purchase
           </div>
 
           <h1>
@@ -357,7 +367,9 @@ export default function PurchaseProduct() {
 
         <button
           className={
-            currentStep === 1
+            step1Complete
+              ? "purchase-step completed"
+              : currentStep === 1
               ? "purchase-step active"
               : "purchase-step"
           }
@@ -381,7 +393,9 @@ export default function PurchaseProduct() {
 
         <button
           className={
-            currentStep === 2
+            step2Complete
+              ? "purchase-step completed"
+              : currentStep === 2
               ? "purchase-step active"
               : "purchase-step"
           }
@@ -405,7 +419,9 @@ export default function PurchaseProduct() {
 
         <button
           className={
-            currentStep === 3
+            step3Complete
+              ? "purchase-step completed"
+              : currentStep === 3
               ? "purchase-step active"
               : "purchase-step"
           }
@@ -458,13 +474,17 @@ export default function PurchaseProduct() {
 
               <div className="product-toolbar">
 
-                <div className="entries-box">
-                  10
-                </div>
+               
+        <div className="entries-section">
+          <select defaultValue="10">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
 
-                <span>
-                  entries per page
-                </span>
+          <span>entries per page</span>
+        </div>
 
 
                 <div className="product-search">

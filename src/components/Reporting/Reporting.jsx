@@ -10,6 +10,7 @@ import {
   FaAngleDoubleLeft,
   FaAngleDoubleRight,
 } from "react-icons/fa";
+import Link from "next/link";
 
 import "./Reporting.css";
 
@@ -206,7 +207,11 @@ export default function Reporting() {
 
       {/* Breadcrumb */}
       <div className="reporting-breadcrumb">
-        Tyre Shop &gt; Sale/Purchase Management &gt; Reporting
+        Tyre Shop &gt;{" "}
+        <Link href="/report" style={{ textDecoration: "none", color: "inherit" }}>
+          Sale/Purchase Management
+        </Link>{" "}
+        &gt; Reporting
       </div>
 
       {/* Page Title */}
@@ -246,13 +251,16 @@ export default function Reporting() {
 
         {/* Top controls */}
         <div className="reporting-controls">
+<div className="entries-section">
+          <select defaultValue="10">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
 
-          <div className="entries-control">
-             <div className="entries-number">10</div>
-
-            <span>entries per page</span>
-          </div>
-
+          <span>entries per page</span>
+        </div>
           <div className="search-control">
             <label>Search:</label>
 

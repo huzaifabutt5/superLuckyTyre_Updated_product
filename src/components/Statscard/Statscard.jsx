@@ -2,87 +2,85 @@
 
 import "./Statscard.css";
 
-import {
-  FaShoppingCart,
-  FaShoppingBag,
-  FaWallet,
-  FaMoneyBillWave,
-  FaChartLine,
-} from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 
 const cards = [
   {
     title: "Net Sale",
     amount: "Rs. 53,659,748",
-    icon: <FaShoppingCart />,
-    bg: "#EEF4FF",
-    iconBg: "#D8E6FF",
-    iconColor: "#4A6CF7",
+    bg: "linear-gradient(270deg, #EEF7FF 0%, #DFF0FF 100%)",
+    iconBg: "#D8E8FF",
+    color: "#4A6CF7",
   },
   {
-    title: "Total COGS - Sale",
+    title: "Total COG - Sale",
     amount: "Rs. 53,659,748",
-    icon: <FaShoppingCart />,
-    bg: "#EEF4FF",
-    iconBg: "#D8E6FF",
-    iconColor: "#4A6CF7",
+    bg: "linear-gradient(270deg, #EEF7FF 0%, #DFF0FF 100%)",
+    iconBg: "#D8E8FF",
+    color: "#4A6CF7",
   },
   {
     title: "Net Purchase",
     amount: "Rs. 53,659,748",
-    icon: <FaShoppingCart />,
-    bg: "#F3ECFF",
-    iconBg: "#E6DAFF",
-    iconColor: "#8B5CF6",
+    bg:"linear-gradient(270deg, #E0D4FA 0%, #E0D4FA 100%)",
+    iconBg: "#E4D8FF",
+    color: "#8B5CF6",
   },
   {
     title: "Overall Expenses",
     amount: "Rs. 53,659,748",
-    icon: <FaShoppingCart />,
-    bg: "#FFF1E5",
+    bg: "linear-gradient(270deg, #FFE4C2 0%, #FFE4C2 100%)",
     iconBg: "#FFE0C2",
-    iconColor: "#F59E0B",
+    color: "#F59E0B",
   },
   {
     title: "Net Profit",
     amount: "Rs. 53,659,748",
-    icon: <FaShoppingCart />,
-    bg: "#EAFBF1",
-    iconBg: "#D3F5E3",
-    iconColor: "#22C55E",
+    bg: "linear-gradient(270deg, #E5FEEE 0%, #D2F9E0 100%)",
+    iconBg: "#D2F5E1",
+    color: "#22C55E",
   },
 ];
 
 export default function StatsCards() {
   return (
-    <div className="stats-grid">
-      {cards.map((card, index) => (
-<div
-          className="stats-card"
-          key={index}
-          style={{ background: card.bg }}
-        >
-          <div className="stats-content">
-            <span className="stats-title">
-              {card.title}
-            </span>
+    <div className="stats-wrapper">
+      <div className="stats-grid">
 
-            <h3 className="stats-value">
-              {card.amount}
-            </h3>
-          </div>
-
+        {cards.map((card, index) => (
           <div
-            className="stats-icon"
+            className="stats-card"
+            key={index}
             style={{
-              background: card.iconBg,
-              color: card.iconColor,
+              "--card-bg": card.bg,
+              "--card-color": card.color,
+              "--icon-bg": card.iconBg,
             }}
           >
-            {card.icon}
+
+            {/* LEFT DARK LINE */}
+            <div className="stats-left-line"></div>
+
+            {/* CARD CONTENT */}
+            <div className="stats-content">
+              <div className="stats-title">
+                {card.title}
+              </div>
+
+              <div className="stats-value">
+                {card.amount}
+              </div>
+            </div>
+
+            {/* ICON */}
+            <div className="stats-icon">
+              <FaShoppingCart />
+            </div>
+
           </div>
-        </div>
-      ))}
+        ))}
+
+      </div>
     </div>
   );
 }

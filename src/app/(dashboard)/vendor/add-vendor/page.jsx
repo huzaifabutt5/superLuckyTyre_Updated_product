@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 import "./AddVendor.css";
 import vendorData from "@/data/vendorData";
@@ -118,14 +119,18 @@ function AddVendorForm() {
   };
 
   return (
-    <main className="add-vendor-page">
+    <div className="add-vendor-page">
 
       {/* =================================
           BREADCRUMB
       ================================= */}
 
       <div className="add-vendor-breadcrumb">
-        {"Tyre Shop > Vendor Management > "}
+        Tyre Shop &gt;{" "}
+        <Link href="/vendor" className="breadcrumb-link">
+          Vendor Management
+        </Link>{" "}
+        &gt;{" "}
         {editingVendor ? "Edit Vendor" : "Add Vendor"}
       </div>
 
@@ -331,7 +336,7 @@ function AddVendorForm() {
 
       </form>
 
-    </main>
+    </div>
   );
 }
 

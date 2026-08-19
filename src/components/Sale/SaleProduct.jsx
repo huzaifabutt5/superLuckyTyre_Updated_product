@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import "./SaleProduct.css";
 import ProductVariant from "./ProductVariant/ProductVariant";
 import CustomerStep from "./CostumerStep/CostumerStep";
@@ -297,7 +298,11 @@ export default function SaleProduct() {
       <>
         {/* Breadcrumb */}
         <div className="sale-breadcrumb">
-          Tyre Shop &gt; Sale/Purchase Management &gt; Sale
+          Tyre Shop &gt;{" "}
+          <Link href="/sale" style={{ textDecoration: "none", color: "inherit" }}>
+            Sale/Purchase Management
+          </Link>{" "}
+          &gt; Sale
         </div>
 
         {/* Heading */}

@@ -227,46 +227,995 @@ background: var(--Alert, #EF4A00);
 }
 
 
-/* ===================================
-   RESPONSIVE
-=================================== */
+/* =========================================================
+   SIDEBAR MENU SCROLLBAR
+========================================================= */
 
-@media(max-width:991px){
+.sidebar-menu::-webkit-scrollbar {
+    width: 5px;
+}
 
-    .sidebar{
-
-        left:-250px;
-
-        transition:.35s;
-
-    }
-
-    .sidebar.show{
-
-        left:0;
-
-    }
-
+.sidebar-menu::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 4px;
 }
 
 
-@media(max-width:768px){
+/* =========================================================
+   MENU HEADINGS
+========================================================= */
 
-    .sidebar{
+.menu-heading {
+    font-size: 8px;
+    color: #8a8a8a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 
-        width:230px;
+    margin: 18px 0 8px;
+    padding-left: 8px;
 
-    }
+    font-weight: 700;
 
+    white-space: nowrap;
 }
 
 
-@media(max-width:576px){
+/* =========================================================
+   MENU LINKS
+========================================================= */
 
-    .sidebar{
+.menu-link {
+    display: flex;
+    align-items: center;
 
-        width:220px;
+    gap: 12px;
 
+    text-decoration: none;
+
+    color: #5a5a5a;
+
+    padding: 11px 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    line-height: 1.25;
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MENU ICON
+========================================================= */
+
+.menu-icon {
+    font-size: 18px;
+
+    min-width: 18px;
+
+    flex-shrink: 0;
+}
+
+.menu-link svg {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ACTIVE MENU
+========================================================= */
+
+.menu-link.active {
+    background: #4e79f7;
+    color: #fff;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+========================================================= */
+
+.sidebar-bottom {
+    padding: 12px;
+
+    border-top: 1px solid #ececec;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ACCOUNT SETTING
+========================================================= */
+
+.setting-btn {
+    width: 100%;
+
+    height: 42px;
+
+    background: #3f6ff4;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 15px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
+}
+
+.setting-btn.active {
+    background: #295ee8;
+}
+
+.setting-btn:hover {
+    background: #295ee8;
+}
+
+.setting-btn svg {
+    width: 18px;
+    height: 18px;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.logout-btn {
+    width: 100%;
+
+    height: 42px;
+
+    margin-top: 10px;
+
+    background: var(--Alert, #ef4a00);
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 15px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
+}
+
+.logout-btn:hover {
+    background: #e14f00;
+}
+
+.logout-btn svg {
+    width: 18px;
+    height: 18px;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .sidebar {
+        left: -250px;
+
+        transition: 0.35s;
+
+        width: 250px;
     }
 
+    .sidebar.show {
+        left: 0;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 230px;
+    }
+
+    .sidebar-menu {
+        padding: 8px 10px;
+    }
+
+    .menu-heading {
+        font-size: 7px;
+
+        margin: 16px 0 7px;
+
+        padding-left: 6px;
+    }
+
+    .menu-link {
+        gap: 10px;
+
+        padding: 10px 10px;
+
+        min-height: 40px;
+
+        font-size: 13px;
+    }
+
+    .menu-link svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .menu-icon {
+        font-size: 17px;
+        min-width: 17px;
+    }
+
+    .sidebar-bottom {
+        padding: 10px;
+    }
+
+    .setting-btn,
+    .logout-btn {
+        height: 40px;
+
+        padding: 0 12px;
+
+        font-size: 13px;
+
+        gap: 9px;
+    }
+
+    .setting-btn svg,
+    .logout-btn svg {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .sidebar-menu {
+        padding: 7px 8px;
+    }
+
+    .menu-heading {
+        font-size: 7px;
+
+        margin: 15px 0 6px;
+
+        padding-left: 5px;
+    }
+
+    .menu-link {
+        gap: 9px;
+
+        padding: 9px 9px;
+
+        min-height: 38px;
+
+        font-size: 12px;
+    }
+
+    .menu-link svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .menu-icon {
+        font-size: 16px;
+        min-width: 16px;
+    }
+
+    .sidebar-bottom {
+        padding: 8px;
+    }
+
+    .setting-btn,
+    .logout-btn {
+        height: 38px;
+
+        padding: 0 10px;
+
+        font-size: 12px;
+
+        gap: 8px;
+    }
+
+    .setting-btn svg,
+    .logout-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .menu-link {
+        font-size: 11px;
+
+        gap: 8px;
+
+        padding: 8px;
+    }
+
+    .menu-heading {
+        font-size: 6px;
+    }
+
+    .menu-link svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .setting-btn,
+    .logout-btn {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP - 992px+
+========================================================= */
+
+@media (min-width: 992px) {
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .sidebar-menu {
+        padding: 10px 12px;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP - 1400px+
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .sidebar {
+        width: 270px;
+    }
+
+    .sidebar-menu {
+        padding: 12px 15px;
+    }
+
+    .menu-heading {
+        font-size: 9px;
+
+        margin: 20px 0 10px;
+    }
+
+    .menu-link {
+        gap: 13px;
+
+        min-height: 45px;
+
+        padding: 12px 13px;
+
+        font-size: 15px;
+    }
+
+    .menu-link svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .menu-icon {
+        font-size: 19px;
+        min-width: 19px;
+    }
+
+    .setting-btn,
+    .logout-btn {
+        height: 44px;
+
+        font-size: 15px;
+
+        padding: 0 14px;
+    }
+}
+
+
+/* =========================================================
+   1600px+
+========================================================= */
+
+@media (min-width: 1600px) {
+
+    .sidebar {
+        width: 285px;
+    }
+
+    .sidebar-menu {
+        padding: 14px 17px;
+    }
+
+    .menu-heading {
+        font-size: 10px;
+
+        margin: 22px 0 11px;
+    }
+
+    .menu-link {
+        gap: 15px;
+
+        min-height: 48px;
+
+        padding: 13px 14px;
+
+        font-size: 16px;
+    }
+
+    .menu-link svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .menu-icon {
+        font-size: 21px;
+        min-width: 21px;
+    }
+
+    .sidebar-bottom {
+        padding: 14px;
+    }
+
+    .setting-btn,
+    .logout-btn {
+        height: 48px;
+
+        font-size: 16px;
+
+        gap: 11px;
+    }
+
+    .setting-btn svg,
+    .logout-btn svg {
+        width: 21px;
+        height: 21px;
+    }
+}
+
+
+/* =========================================================
+   2000px+
+   LARGE SCREEN
+========================================================= */
+
+@media (min-width: 2000px) {
+
+    /* ================= SIDEBAR ================= */
+
+    .sidebar {
+        width: 320px !important;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    .sidebar-header {
+        height: 82px !important;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 17px;
+
+        padding: 0 22px !important;
+
+        box-sizing: border-box;
+
+        white-space: nowrap;
+    }
+
+    .sidebar-header img,
+    .sidebar-logo {
+        width: 46px !important;
+        height: 46px !important;
+
+        flex-shrink: 0;
+    }
+
+    .sidebar-header span,
+    .sidebar-title,
+    .logo-text {
+        font-size: 20px !important;
+
+        line-height: 1.2;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* ================= MENU ================= */
+
+    .sidebar-menu {
+        padding: 16px 18px !important;
+    }
+
+
+    /* ================= HEADINGS ================= */
+
+    .menu-heading {
+        font-size: 12px !important;
+
+        letter-spacing: 0.7px;
+
+        margin: 25px 0 13px !important;
+
+        padding-left: 4px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* ================= MENU LINKS ================= */
+
+    .menu-link {
+        display: flex;
+
+        align-items: center;
+
+        gap: 18px !important;
+
+        min-height: 58px !important;
+
+        padding: 13px 14px !important;
+
+        margin-bottom: 7px !important;
+
+        border-radius: 9px;
+
+        font-size: 20px !important;
+
+        line-height: 1.25;
+
+        white-space: nowrap !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ================= ICONS ================= */
+
+    .menu-link svg {
+        width: 26px !important;
+        height: 26px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    .menu-icon {
+        font-size: 26px !important;
+
+        min-width: 26px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+
+    /* ================= BOTTOM ================= */
+
+    .sidebar-bottom {
+        padding: 16px !important;
+    }
+
+
+    /* ================= ACCOUNT ================= */
+
+    .setting-btn {
+        height: 56px !important;
+
+        padding: 0 18px !important;
+
+        gap: 14px;
+
+        border-radius: 9px;
+
+        font-size: 19px !important;
+
+        white-space: nowrap !important;
+    }
+
+    .setting-btn svg {
+        width: 25px !important;
+        height: 25px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+
+    /* ================= LOGOUT ================= */
+
+    .logout-btn {
+        height: 56px !important;
+
+        margin-top: 10px;
+
+        padding: 0 18px !important;
+
+        gap: 14px;
+
+        border-radius: 9px;
+
+        font-size: 19px !important;
+
+        white-space: nowrap !important;
+    }
+
+    .logout-btn svg {
+        width: 25px !important;
+        height: 25px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+
+    /* ================= SCROLLBAR ================= */
+
+    .sidebar-menu::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    .sidebar-menu::-webkit-scrollbar-thumb {
+        background: #d5d5d5;
+
+        border-radius: 5px;
+    }
+}
+
+
+/* =========================================================
+   2400px+
+   2583px EXTRA LARGE SCREEN
+========================================================= */
+
+@media (min-width: 2400px) {
+
+    /* ================= SIDEBAR ================= */
+
+    .sidebar {
+        width: 340px !important;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    .sidebar-header {
+        height: 92px !important;
+
+        gap: 18px;
+
+        padding: 0 24px !important;
+    }
+
+    .sidebar-header img,
+    .sidebar-logo {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .sidebar-header span,
+    .sidebar-title,
+    .logo-text {
+        font-size: 22px !important;
+
+        line-height: 1.2;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* ================= MENU ================= */
+
+    .sidebar-menu {
+        padding: 18px 20px !important;
+    }
+
+
+    /* ================= HEADINGS ================= */
+
+    .menu-heading {
+        font-size: 13px !important;
+
+        letter-spacing: 0.8px;
+
+        margin: 28px 0 15px !important;
+
+        padding-left: 4px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* ================= MENU LINKS ================= */
+
+    .menu-link {
+        gap: 19px !important;
+
+        min-height: 62px !important;
+
+        padding: 14px 15px !important;
+
+        margin-bottom: 7px !important;
+
+        border-radius: 10px;
+
+        font-size: 22px !important;
+
+        line-height: 1.25;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* ================= ICONS ================= */
+
+    .menu-link svg {
+        width: 28px !important;
+        height: 28px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    .menu-icon {
+        font-size: 28px !important;
+
+        min-width: 28px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+
+    /* ================= BOTTOM ================= */
+
+    .sidebar-bottom {
+        padding: 18px !important;
+    }
+
+
+    /* ================= ACCOUNT ================= */
+
+    .setting-btn {
+        height: 60px !important;
+
+        padding: 0 18px !important;
+
+        gap: 14px;
+
+        border-radius: 10px;
+
+        font-size: 21px !important;
+
+        white-space: nowrap !important;
+    }
+
+    .setting-btn svg {
+        width: 27px !important;
+        height: 27px !important;
+    }
+
+
+    /* ================= LOGOUT ================= */
+
+    .logout-btn {
+        height: 60px !important;
+
+        margin-top: 11px;
+
+        padding: 0 18px !important;
+
+        gap: 14px;
+
+        border-radius: 10px;
+
+        font-size: 21px !important;
+
+        white-space: nowrap !important;
+    }
+
+    .logout-btn svg {
+        width: 27px !important;
+        height: 27px !important;
+    }
+
+
+    /* ================= SCROLLBAR ================= */
+
+    .sidebar-menu::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .sidebar-menu::-webkit-scrollbar-thumb {
+        background: #d3d3d3;
+
+        border-radius: 6px;
+    }
+}
+
+/* =========================================================
+   LARGE SCREEN LOGO - 2000px+
+========================================================= */
+
+@media (min-width: 2000px) {
+
+    .sidebar-header {
+        height: 105px !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        gap: 22px !important;
+
+        padding: 0 28px !important;
+
+        box-sizing: border-box;
+
+        white-space: nowrap;
+    }
+
+    /* LOGO IMAGE */
+    .sidebar-header img,
+    .sidebar-logo,
+    .logo img,
+    .logo-image {
+        width: 65px !important;
+        height: 65px !important;
+
+        min-width: 65px !important;
+        min-height: 65px !important;
+
+        max-width: 65px !important;
+        max-height: 65px !important;
+
+        object-fit: contain !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    /* LOGO TEXT */
+    .sidebar-header span,
+    .sidebar-title,
+    .logo-text,
+    .logo span {
+        font-size: 25px !important;
+
+        font-weight: 600 !important;
+
+        line-height: 1.2 !important;
+
+        white-space: nowrap !important;
+
+        flex-shrink: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   2400px+ / 2583px
+========================================================= */
+
+@media (min-width: 2400px) {
+
+    .sidebar-header {
+        height: 120px !important;
+
+        gap: 25px !important;
+
+        padding: 0 30px !important;
+    }
+
+    /* BIG LOGO */
+    .sidebar-header img,
+    .sidebar-logo,
+    .logo img,
+    .logo-image {
+        width: 100px !important;
+        height: 100px !important;
+
+        min-width: 78px !important;
+        min-height: 78px !important;
+
+        max-width: 78px !important;
+        max-height: 78px !important;
+
+        object-fit: contain !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    /* BIG LOGO TEXT */
+    .sidebar-header span,
+    .sidebar-title,
+    .logo-text,
+    .logo span {
+        font-size: 28px !important;
+
+        font-weight: 600 !important;
+
+        white-space: nowrap !important;
+    }
 }

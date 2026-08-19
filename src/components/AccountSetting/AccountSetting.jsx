@@ -6,6 +6,7 @@ import {
   FaCamera,
   FaTimes,
 } from "react-icons/fa";
+import Link from "next/link";
 
 import "./AccountSetting.css";
 
@@ -165,14 +166,14 @@ export default function AccountSetting() {
   };
 
   return (
-    <main className="account-page">
+    <div className="account-page">
 
       {/* ==========================================
           BREADCRUMB
       ========================================== */}
 
       <div className="account-breadcrumb">
-        <span>Tyre Shop</span>
+        <Link href="/" className="breadcrumb-link">Tyre Shop</Link>
         <span>&gt;</span>
         <strong>Account Setting</strong>
       </div>
@@ -798,6 +799,6 @@ export default function AccountSetting() {
         </div>
       )}
 
-    </main>
+    </div>
   );
 }

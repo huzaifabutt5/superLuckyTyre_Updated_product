@@ -107,7 +107,11 @@ export default function ManageExpense() {
 
       {/* Breadcrumb */}
       <div className="expense-breadcrumb">
-        Tyre Shop &gt; Expense Management &gt; Manage Expense
+        Tyre Shop &gt;{" "}
+        <Link href="/expense" style={{ textDecoration: "none", color: "inherit" }}>
+          Expense Management
+        </Link>{" "}
+        &gt; Manage Expense
       </div>
 
       {/* Header */}
@@ -115,7 +119,7 @@ export default function ManageExpense() {
 
         <h1>Manage Expense</h1>
 <Link
-  href="/Expense/add"
+  href="/expense/add"
   className="add-expense-btn"
   onClick={handleAddExpense}
 >
