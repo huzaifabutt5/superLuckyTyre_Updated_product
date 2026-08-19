@@ -106,54 +106,13 @@ export default function PurchaseReturn() {
   return (
     <div className="purchase-return-page">
 
-<<<<<<< HEAD
-    <div className="sale-return-page">
-
-
-      {/* =====================================
-          HEADER
-      ===================================== */}
-
-      <div className="return-header">
-
-        <div>
-
-          <div className="return-breadcrumb">
-            Tyre Shop &gt;{" "}
-            <Link href="/sale" style={{ textDecoration: "none", color: "inherit" }}>
-              Sale/Purchase Management
-            </Link>{" "}
-            &gt; Sale Return
-          </div>
-
-          <h1>
-            Sale Return
-          </h1>
-
-        </div>
-
-
-        {invoiceLoaded && (
-
-          <button
-            className="return-product-top-btn"
-          >
-            <FaRedo />
-
-            Return Product
-          </button>
-
-        )}
-
-=======
-      {/* Breadcrumb */}
+    {/* Breadcrumb */}
       <div className="purchase-return-breadcrumb">
         <span>Tyre Shop</span>
         <FaChevronRight />
         <span>Sale/Purchase Management</span>
         <FaChevronRight />
         <strong>Sale Return</strong>
->>>>>>> 36c404d8707741a5f1ed17c8a13356c5f44b7ecb
       </div>
 
       {/* Page Title */}
