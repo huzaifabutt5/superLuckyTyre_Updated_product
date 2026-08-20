@@ -3,7 +3,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import "./SaleProduct.css";
 import ProductVariant from "./ProductVariant/ProductVariant";
 import CustomerStep from "./CostumerStep/CostumerStep";
@@ -215,44 +214,12 @@ export default function SaleProduct() {
 
   // Product clicked
   const handleProductClick = (product) => {
-    setShowVariantModal(true);
+    setShowVariantModal(product);
   };
 
   // Apply to order from popup
-  const handleApplyOrder = () => {
-    // Demo products for Cart Detail
-    const selectedProducts = [
-      {
-        id: 1,
-        name: "All-Season Comfort",
-        size: "195/70 R14",
-        quantity: 1,
-        price: 15000,
-      },
-      {
-        id: 2,
-        name: "Winter Performance",
-        size: "205/65 R15",
-        quantity: 1,
-        price: 24000,
-      },
-      {
-        id: 3,
-        name: "Summer Grip",
-        size: "225/60 R16",
-        quantity: 1,
-        price: 15000,
-      },
-      {
-        id: 4,
-        name: "Off-Road Adventure",
-        size: "245/75 R17",
-        quantity: 1,
-        price: 8500,
-      },
-    ];
-
-    setCartProducts(selectedProducts);
+  const handleApplyOrder = (cartItems) => {
+    setCartProducts((prev) => [...prev, ...cartItems]);
     setShowVariantModal(false);
   };
 
@@ -269,22 +236,62 @@ export default function SaleProduct() {
   const netProfit = 12500;
 
   const netTotal = totalCOG + netProfit;
-  
 
- return (
-  <div className="sale-product-page">
+  function StepBar({ currentStep }) {
+    return (
+      <div className="sale-steps">
+        <button
+          className={`sale-step ${currentStep === 1 ? "active" : currentStep > 1 ? "completed" : ""}`}
+          onClick={currentStep === 1 ? () => setShowVariantModal(true) : () => setCurrentStep(1)}
+          type="button"
+        >
+          <span>Step 1:</span>
+          Select Product
+          {currentStep > 1 ? <b className="step-dot-green">●</b> : currentStep === 1 ? <span>◉</span> : <span>⊙</span>}
+        </button>
 
-    {currentStep === 3 ? (
+        <button
+          className={`sale-step ${currentStep === 2 ? "active" : ""}`}
+          type="button"
+        >
+          <span>Step 2:</span>
+          Select Customer
+          {currentStep === 2 || currentStep > 2 ? <b className="step-dot-green">●</b> : <span>⊙</span>}
+        </button>
+
+        <button
+          className={`sale-step ${currentStep === 3 ? "active" : ""}`}
+          type="button"
+        >
+          <span>Step 3:</span>
+          Confirm Order & Pay
+          {currentStep === 3 ? <span>●</span> : <span>⊙</span>}
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="sale-product-page">
+
+      {currentStep === 3 ? (
 
       <ConfirmOrder
         cartProducts={cartProducts}
+        showConfirmPopup={showConfirmPopup}
         onConfirm={() => setShowConfirmPopup(true)}
+        onDelete={(id) =>
+          setCartProducts((prev) =>
+            prev.filter((product) => product.id !== id)
+          )
+        }
       />
 
     ) : currentStep === 2 ? (
 
       <CustomerStep
         cartProducts={cartProducts}
+        setCartProducts={setCartProducts}
         onBack={() => setCurrentStep(1)}
         onContinue={() => setCurrentStep(3)}
       />
@@ -298,11 +305,7 @@ export default function SaleProduct() {
       <>
         {/* Breadcrumb */}
         <div className="sale-breadcrumb">
-          Tyre Shop &gt;{" "}
-          <Link href="/sale" style={{ textDecoration: "none", color: "inherit" }}>
-            Sale/Purchase Management
-          </Link>{" "}
-          &gt; Sale
+          Tyre Shop &gt; Sale/Purchase Management &gt; Sale
         </div>
 
         {/* Heading */}
@@ -319,37 +322,7 @@ export default function SaleProduct() {
         </div>
 
         {/* STEP BAR */}
-        <div className="sale-steps">
-
-          <button
-            className="sale-step active"
-            onClick={() => setShowVariantModal(true)}
-          >
-            <span>Step 1:</span>
-            Select Product
-            <span>◉</span>
-          </button>
-
-          <button
-            className="sale-step"
-            type="button"
-          >
-            <span>Step 2:</span>
-            Select Customer
-            <span>⊙</span>
-          </button>
-
-          <button
-            className="sale-step"
-            type="button"
-          >
-            <span>Step 3:</span>
-            Confirm Order & Pay
-            <span>⊙</span>
-          </button>
-
-        </div>
-
+        <StepBar currentStep={currentStep} />
 
         {/* ==============================
             STEP 1 MAIN CONTENT
@@ -369,19 +342,17 @@ export default function SaleProduct() {
             <div className="product-toolbar">
 
               <div className="entries-box">
-              
-            <select defaultValue="10">
-              <option value="10">10</option>
-              <option value="25">25</option>
-              <option value="50">50</option>
-            </select>
+                
+          <select defaultValue="10">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
 
-                <span>entries per page</span>
-              </div> 
-           
-
-         
-
+          <span>entries per page</span>
+        </div>
+               
               <div className="product-search">
                 <label>Search:</label>
 
@@ -461,12 +432,14 @@ export default function SaleProduct() {
 
                     </div>
 
-                    <button className="cart-delete">
+                    <button className="cart-delete" onClick={() => {
+                      setCartProducts(prev => prev.filter(p => p.id !== product.id || p.batch !== product.batch));
+                    }}>
                       🗑
                     </button>
 
                     <div className="cart-product-total">
-                      Rs.{" "}
+                       ≈ {" "}
                       {(
                         product.quantity *
                         product.price
@@ -538,6 +511,7 @@ export default function SaleProduct() {
         {showVariantModal && (
 
           <ProductVariant
+            product={showVariantModal}
             onClose={() =>
               setShowVariantModal(false)
             }

@@ -3,8 +3,7 @@
 ========================================= */
 
 .add-expense-page {
-  width: 106%;
-  margin-left: -3%;
+  width: 100%;
   min-height: calc(100vh - 40px);
   padding: 8px 20px 30px;
   box-sizing: border-box;
@@ -24,6 +23,7 @@
 
 .breadcrumb-link{
   color: #667085;
+  text-decoration: none;
 }
 
 /* =========================================
@@ -303,6 +303,11 @@
     font-size: 22px;
   }
 
+  .expense-fields-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
 }
 
 
@@ -341,6 +346,48 @@
 
 
 /* =========================================
+   RESPONSIVE - MEDIUM MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .add-expense-page {
+    padding: 10px 12px 24px;
+  }
+
+  .add-expense-heading h1 {
+    font-size: 20px;
+  }
+
+  .expense-information-body {
+    padding: 10px 10px;
+  }
+
+  .expense-field input {
+    height: 38px;
+    font-size: 11px;
+  }
+
+  .expense-description-field textarea {
+    height: 70px;
+    font-size: 11px;
+  }
+
+  .add-expense-buttons {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .cancel-expense-btn,
+  .save-expense-btn {
+    height: 36px;
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================
    RESPONSIVE - SMALL MOBILE
 ========================================= */
 
@@ -365,6 +412,10 @@
 
   .expense-information-body {
     padding: 10px;
+  }
+
+  .expense-fields-row {
+    gap: 8px;
   }
 
   .add-expense-buttons {

@@ -19,6 +19,32 @@
   }
 }
 
+/* Keep the content margin in sync with the sidebar width
+   so the table never sits flush against / under the sidebar. */
+@media (min-width: 1400px) {
+  .dashboard-main {
+    margin-left: 270px; /* sidebar width 270px */
+  }
+}
+
+@media (min-width: 1600px) {
+  .dashboard-main {
+    margin-left: 285px; /* sidebar width 285px */
+  }
+}
+
+@media (min-width: 2000px) {
+  .dashboard-main {
+    margin-left: 320px; /* sidebar width 320px */
+  }
+}
+
+@media (min-width: 2400px) {
+  .dashboard-main {
+    margin-left: 340px; /* sidebar width 340px */
+  }
+}
+
 @media (max-width: 576px) {
   .dashboard-main {
     padding-left: 14px;

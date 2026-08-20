@@ -3,8 +3,8 @@
 ================================= */
 
 .add-product-page {
-  width: 106%;
-  margin-left: -3%;
+  width: 100%;
+  margin-left: 0;
   min-height: calc(100vh - 60px);
   padding: 12px 15px;
   background: #f4f4f6;
@@ -262,11 +262,31 @@
 @media (max-width: 450px) {
 
   .product-button-card {
-    justify-content: center;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 8px;
+  }
+
+  .cancel-product-btn,
+  .save-product-btn {
+    width: 100%;
   }
 
   .add-product-title {
     font-size: 19px;
+  }
+
+}
+
+
+@media (max-width: 380px) {
+
+  .add-product-page {
+    padding: 10px;
+  }
+
+  .product-card-title {
+    font-size: 10px;
   }
 
 }

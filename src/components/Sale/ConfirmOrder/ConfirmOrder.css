@@ -6,9 +6,8 @@
   width: 100%;
   min-height: calc(100vh - 60px);
   background: #f3f4f7;
-  padding: 10px 14px 30px;
+  padding: 16px 20px 36px;
   box-sizing: border-box;
-  
 }
 
 
@@ -17,9 +16,9 @@
 ========================================= */
 
 .order-confirm-breadcrumb {
-  font-size: 9px;
+  font-size: 13px;
   color: #6b7280;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 
@@ -31,12 +30,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .order-confirm-heading h1 {
   margin: 0;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   color: #273043;
 }
@@ -45,99 +46,26 @@
   border: none;
   background: #f4510b;
   color: white;
-
-  height: 28px;
-  padding: 0 15px;
-
-  border-radius: 6px;
-
-  font-size: 10px;
+  height: 38px;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-size: 14px;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .sale-return-btn:hover {
   background: #e84705;
 }
-
-
-/* =========================================
-   STEP BAR
-========================================= */
-
-.order-step-bar {
-  width: 100%;
-  display: flex;
-  gap: 5px;
-
-  background: #ffffff;
-
-  border-radius: 7px;
-
-  padding: 7px;
-
-  margin-bottom: 10px;
-
-  box-sizing: border-box;
-}
-
-.order-step {
-  flex: 1;
-
-  height: 30px;
-
-  border: 1px solid #e3e6eb;
-
-  background: #ffffff;
-
-  border-radius: 5px;
-
-  color: #a0a6af;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 10px;
-
-  font-size: 10px;
-
-  cursor: default;
-}
-
-.order-step span {
-  margin-right: 4px;
-}
-
-.order-step b {
-  font-size: 10px;
-}
-
-.order-step.completed {
-  background: #477cf5;
-  color: white;
-  border-color: #477cf5;
-}
-
-.order-step.active {
-  background: #477cf5;
-  color: white;
-  border-color: #477cf5;
-}
-
-
 /* =========================================
    MAIN LAYOUT
 ========================================= */
 
 .order-confirm-layout {
   width: 100%;
-
   display: grid;
-
-  grid-template-columns: minmax(0, 1fr) 205px;
-
-  gap: 8px;
-
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 12px;
   align-items: stretch;
 }
 
@@ -157,52 +85,35 @@
 
 .payment-information-card {
   background: #ffffff;
-
-  border-radius: 5px;
-
+  border-radius: 8px;
   border: 1px solid #e1e4e8;
-
   width: 100%;
-
   box-sizing: border-box;
-
   overflow: hidden;
 }
 
 .payment-information-header {
-  height: 38px;
-
+  height: 44px;
   display: flex;
   align-items: center;
-
-  padding: 0 14px;
-
+  padding: 0 16px;
   border-bottom: 1px solid #e5e7eb;
-
   box-sizing: border-box;
 }
 
 .payment-information-header h3 {
   margin: 0;
-
-  font-size: 12px;
-
+  font-size: 15px;
   font-weight: 700;
-
   color: #252c3b;
 }
 
 .payment-information-body {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
-  column-gap: 10px;
-
-  row-gap: 12px;
-
-  padding: 15px;
-
+  column-gap: 14px;
+  row-gap: 16px;
+  padding: 18px;
   box-sizing: border-box;
 }
 
@@ -214,7 +125,7 @@
 .payment-field {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .payment-field.full-width {
@@ -222,10 +133,8 @@
 }
 
 .payment-field label {
-  font-size: 10px;
-
+  font-size: 13px;
   font-weight: 600;
-
   color: #555d69;
 }
 
@@ -236,23 +145,14 @@
 .payment-field input,
 .payment-field select {
   width: 100%;
-
-  height: 36px;
-
+  height: 42px;
   box-sizing: border-box;
-
   border: 1px solid #d9dee6;
-
-  border-radius: 5px;
-
+  border-radius: 6px;
   background: #ffffff;
-
-  padding: 0 12px;
-
-  font-size: 11px;
-
+  padding: 0 14px;
+  font-size: 14px;
   color: #555d69;
-
   outline: none;
 }
 
@@ -268,35 +168,22 @@
 
 .order-cart-card {
   background: #ffffff;
-
   border: 1px solid #e1e4e8;
-
-  border-radius: 5px;
-
+  border-radius: 8px;
   min-height: 445px;
-
   height: 100%;
-
   display: flex;
-
   flex-direction: column;
-
   box-sizing: border-box;
-
   overflow: hidden;
 }
 
 .order-cart-card > h3 {
   margin: 0;
-
-  padding: 10px 12px;
-
-  font-size: 12px;
-
+  padding: 14px 16px;
+  font-size: 15px;
   font-weight: 700;
-
   color: #252c3b;
-
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -307,75 +194,53 @@
 
 .order-cart-products {
   flex: 1;
-
-  padding: 3px 10px;
-
+  padding: 6px 14px;
   overflow-y: auto;
-
   min-height: 0;
 }
 
 .order-cart-product {
   position: relative;
-
   display: flex;
-
   justify-content: space-between;
-
-  min-height: 62px;
-
-  padding: 8px 0;
-
+  min-height: 68px;
+  padding: 10px 0;
   border-bottom: 1px solid #f0f1f3;
-
   box-sizing: border-box;
 }
 
 .order-cart-product-info {
   min-width: 0;
-
-  padding-right: 5px;
+  padding-right: 8px;
 }
 
 .order-cart-product-name {
-  font-size: 10px;
-
+  font-size: 13px;
   color: #4b5563;
-
   font-weight: 500;
-
-  margin-bottom: 2px;
+  margin-bottom: 3px;
+  line-height: 1.4;
 }
 
 .order-cart-product-size {
-  font-size: 8px;
-
+  font-size: 11px;
   color: #477cf5;
-
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .order-cart-product-quantity {
-  font-size: 8px;
-
+  font-size: 11px;
   color: #555d69;
 }
 
 .order-cart-product-right {
   display: flex;
-
   flex-direction: column;
-
   align-items: flex-end;
-
   justify-content: space-between;
-
-  gap: 5px;
-
-  font-size: 8px;
-
+  gap: 6px;
+  font-size: 11px;
   color: #555d69;
-
   white-space: nowrap;
 }
 
@@ -385,25 +250,16 @@
 ========================================= */
 
 .order-delete-btn {
-  width: 20px;
-  height: 20px;
-
+  width: 24px;
+  height: 24px;
   border: none;
-
-  border-radius: 4px;
-
+  border-radius: 5px;
   background: #fff0ef;
-
   color: #ff5b50;
-
-  font-size: 10px;
-
+  font-size: 12px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   cursor: pointer;
 }
 
@@ -417,30 +273,22 @@
 ========================================= */
 
 .order-cart-summary {
-  padding: 10px;
-
+  padding: 14px;
   border-top: 1px solid #e5e7eb;
-
   background: #ffffff;
 }
 
 .order-summary-row {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
-  margin-bottom: 7px;
-
-  font-size: 10px;
-
+  margin-bottom: 9px;
+  font-size: 13px;
   color: #555d69;
 }
 
 .order-summary-row strong {
-  font-weight: 500;
-
+  font-weight: 600;
   color: #555d69;
 }
 
@@ -455,22 +303,15 @@
 
 .confirm-order-btn {
   width: 100%;
-
-  height: 31px;
-
-  margin-top: 5px;
-
+  height: 40px;
+  margin-top: 8px;
   border: none;
-
-  border-radius: 5px;
-
+  border-radius: 6px;
   background: #477cf5;
-
   color: white;
-
-  font-size: 10px;
-
+  font-size: 14px;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .confirm-order-btn:hover {
@@ -484,69 +325,41 @@
 
 .order-page-navigation {
   position: fixed;
-
   bottom: 0;
-
   left: 50%;
-
   transform: translateX(-50%);
-
-  height: 55px;
-
-  min-width: 225px;
-
+  height: 60px;
+  min-width: 240px;
   background: #ffffff;
-
   border: 1px solid #e1e4e8;
-
   border-bottom: none;
-
-  border-radius: 20px 20px 0 0;
-
+  border-radius: 22px 22px 0 0;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
   z-index: 50;
 }
 
 .page-arrow {
-  width: 60px;
-
+  width: 70px;
   height: 100%;
-
   border: none;
-
   background: transparent;
-
-  font-size: 28px;
-
+  font-size: 30px;
   color: #273043;
-
   cursor: pointer;
 }
 
 .page-number {
-  height: 36px;
-
-  padding: 0 25px;
-
+  height: 42px;
+  padding: 0 30px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   border-left: 1px solid #e5e7eb;
-
   border-right: 1px solid #e5e7eb;
-
-  font-size: 16px;
-
+  font-size: 18px;
   color: #273043;
 }
 
@@ -555,10 +368,10 @@
    RESPONSIVE
 ========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
   .order-confirm-layout {
-    grid-template-columns: minmax(0, 1fr) 190px;
+    grid-template-columns: minmax(0, 1fr) 200px;
   }
 
   .payment-information-body {
@@ -568,11 +381,10 @@
   .payment-field.full-width {
     grid-column: auto;
   }
-
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
   .order-confirm-layout {
     grid-template-columns: 1fr;
@@ -582,29 +394,91 @@
     min-height: 400px;
   }
 
-  .order-step-bar {
-    overflow-x: auto;
+  .order-cart-card {
+    position: relative;
+    top: 0;
   }
-
-  .order-step {
-    min-width: 180px;
-  }
-
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
   .order-confirm-page {
-    padding: 8px;
+    padding: 12px 14px 28px;
   }
 
   .order-confirm-heading h1 {
-    font-size: 16px;
+    font-size: 20px;
   }
+
+  .order-confirm-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sale-return-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .payment-information-body {
+    padding: 14px;
+  }
+
+  .order-cart-products {
+    padding: 6px 12px;
+  }
+
+  .order-cart-summary {
+    padding: 12px;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .order-confirm-page {
+    padding: 10px 10px 24px;
+  }
+
+  .order-confirm-heading h1 {
+    font-size: 18px;
+  }
+
+  .payment-information-header {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .order-cart-card > h3 {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+
+@media (max-width: 380px) {
 
   .payment-information-body {
     padding: 10px;
   }
 
+  .order-cart-products {
+    padding: 4px 10px;
+  }
+
+  .order-cart-summary {
+    padding: 10px;
+  }
+
+  .page-arrow {
+    width: 50px;
+    font-size: 24px;
+  }
+
+  .page-number {
+    padding: 0 20px;
+    font-size: 16px;
+  }
 }

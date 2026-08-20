@@ -208,19 +208,19 @@ export default function ManageExpense() {
 
                   <tr key={expense.id}>
 
-                    <td>{expense.id}</td>
+                    <td data-label="SL">{expense.id}</td>
 
-                    <td>{expense.date}</td>
+                    <td data-label="Date">{expense.date}</td>
 
-                    <td>{expense.name}</td>
+                    <td data-label="Expense Name">{expense.name}</td>
 
-                    <td>{expense.description}</td>
+                    <td data-label="Description">{expense.description}</td>
 
-                    <td>
+                    <td data-label="Amount">
                       PKR {expense.amount}
                     </td>
 
-                    <td>
+                    <td data-label="Actions">
 
                       <div className="expense-actions">
 
@@ -255,14 +255,15 @@ export default function ManageExpense() {
 
               ) : (
 
-                <tr>
-                  <td
-                    colSpan="6"
-                    className="no-expense"
-                  >
-                    No expenses found
-                  </td>
-                </tr>
+                  <tr>
+                    <td
+                      colSpan="6"
+                      className="no-expense"
+                      data-label=""
+                    >
+                      No expenses found
+                    </td>
+                  </tr>
 
               )}
 

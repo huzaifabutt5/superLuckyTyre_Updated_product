@@ -1,11 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import "./ConfirmOrder.css";
 
 export default function ConfirmOrder({
   cartProducts = [],
+  showConfirmPopup,
   onConfirm,
+  onDelete,
 }) {
   const totalProducts = cartProducts.reduce(
     (total, product) => total + product.quantity,
@@ -25,42 +26,47 @@ export default function ConfirmOrder({
 
       {/* BREADCRUMB */}
       <div className="order-confirm-breadcrumb">
-        Tyre Shop &gt;{" "}
-        <Link href="/sale" className="breadcrumb-link">
-          Sale/Purchase Management
-        </Link>{" "}
-        &gt; Confirm Order
+        Tyre Shop &gt; Sale/Purchase Management &gt; Sale
       </div>
 
       {/* HEADING */}
       <div className="order-confirm-heading">
-        <h1>Sale Product</h1>
+        <h1>Confirm Order &amp; Pay</h1>
 
-        * <button className="sale-return-btn">
+        <button className="sale-return-btn">
           ↶ Sale Return
-        </button> 
+        </button>
       </div>
 
       {/* STEP BAR */}
-      <div className="order-step-bar">
+      <div className="sale-steps">
 
-        <div className="order-step completed">
+        <button
+          type="button"
+          className="sale-step completed"
+        >
           <span>Step 1:</span>
           Select Product
-          <b>✓</b>
-        </div>
+          <b className="step-dot-green">●</b>
+        </button>
 
-        <div className="order-step completed">
+        <button
+          type="button"
+          className="sale-step completed"
+        >
           <span>Step 2:</span>
           Select Customer
-          <b>✓</b>
-        </div>
+          <b className="step-dot-green">●</b>
+        </button>
 
-        <div className="order-step active">
+        <button
+          type="button"
+          className={`sale-step ${showConfirmPopup ? "completed" : "active"}`}
+        >
           <span>Step 3:</span>
           Confirm Order &amp; Pay
-          <b>●</b>
-        </div>
+          {showConfirmPopup ? <b className="step-dot-green">●</b> : <span>●</span>}
+        </button>
 
       </div>
 
@@ -193,12 +199,13 @@ export default function ConfirmOrder({
                   <button
                     type="button"
                     className="order-delete-btn"
+                    onClick={() => onDelete(product.id)}
                   >
                     🗑
                   </button>
 
                   <span>
-                    Rs.{" "}
+                    ≈  {" "}
                     {(
                       product.price *
                       product.quantity

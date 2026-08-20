@@ -3,8 +3,8 @@
 ===================================== */
 
 .product-page {
-  width: 106%;
-  margin-left: -3%;
+  width: 100%;
+  margin-left: 0;
   padding: 22px;
   background: #f5f6f8;
   min-height: calc(100vh - 60px);
@@ -363,6 +363,18 @@ text-decoration: none;
    RESPONSIVE
 ===================================== */
 
+/* Large laptop */
+@media (max-width: 1200px) {
+
+  .product-table th,
+  .product-table td {
+    padding: 6px 10px;
+  }
+
+}
+
+
+/* Tablet landscape */
 @media (max-width: 900px) {
 
   .product-page {
@@ -382,6 +394,18 @@ text-decoration: none;
 }
 
 
+/* Tablet portrait */
+@media (max-width: 768px) {
+
+  .product-table th,
+  .product-table td {
+    font-size: 10px;
+  }
+
+}
+
+
+/* Large phone */
 @media (max-width: 600px) {
 
   .product-header {
@@ -409,6 +433,45 @@ text-decoration: none;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+
+}
+
+
+/* Small phone */
+@media (max-width: 450px) {
+
+  .product-page {
+    padding: 12px;
+  }
+
+  .product-header h1 {
+    font-size: 20px;
+  }
+
+  .add-product-btn {
+    align-self: stretch;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .entries-section {
+    width: 100%;
+  }
+
+  .pagination-buttons {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+/* Extra small phone */
+@media (max-width: 380px) {
+
+  .product-table th,
+  .product-table td {
+    padding: 6px 8px;
   }
 
 }

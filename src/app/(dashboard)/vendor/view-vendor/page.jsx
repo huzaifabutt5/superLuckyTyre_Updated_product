@@ -26,8 +26,7 @@ function ViewVendorContent() {
   );
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState("");
-
-  const entriesPerPage = 10;
+  const [entriesPerPage, setEntriesPerPage] = useState(10);
 
   /* =================================
      SEARCH
@@ -221,7 +220,13 @@ function ViewVendorContent() {
 
           <div className="invoice-entries">
 
-            <select defaultValue="10">
+            <select
+              value={entriesPerPage}
+              onChange={(e) => {
+                setEntriesPerPage(Number(e.target.value));
+                setCurrentPage(1);
+              }}
+            >
               <option value="10">10</option>
               <option value="25">25</option>
               <option value="50">50</option>
