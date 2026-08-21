@@ -5,7 +5,7 @@
 .navbar{
     position: fixed;
     top: 0;
-    left: 250px;          /* Sidebar width */
+    left: 250px;
     width: calc(100% - 250px);
     height: 65px;
     background: #ffffff;
@@ -37,7 +37,6 @@
     height:38px;
  border: none;
     outline:none;
-   
     border-radius:8px;
     display:flex;
      color:#111827;
@@ -169,4 +168,83 @@
         gap:12px;
     }
 
+}
+
+@media (min-width: 1400px) {
+    .navbar {
+        left: 270px;
+        width: calc(100% - 270px);
+        padding: 0 28px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .navbar {
+        left: 285px;
+        width: calc(100% - 285px);
+        padding: 0 32px;
+        height: 75px;
+    }
+
+    .search-box {
+        width: 380px;
+        height: 44px;
+    }
+
+    .menu-btn,
+    .icon-btn {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .navbar {
+        left: 320px;
+        width: calc(100% - 320px);
+        padding: 0 40px;
+        height: 85px;
+    }
+
+    .search-box {
+        width: 450px;
+        height: 50px;
+    }
+
+    .menu-btn,
+    .icon-btn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .profile-img {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (min-width: 2400px) {
+    .navbar {
+        left: 340px;
+        width: calc(100% - 340px);
+        padding: 0 50px;
+        height: 95px;
+    }
+
+    .search-box {
+        width: 550px;
+        height: 56px;
+    }
+
+    .menu-btn,
+    .icon-btn {
+        width: 54px;
+        height: 54px;
+    }
+
+    .profile-img {
+        width: 50px;
+        height: 50px;
+    }
 }

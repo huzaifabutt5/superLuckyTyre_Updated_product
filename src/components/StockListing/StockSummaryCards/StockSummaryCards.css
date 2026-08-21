@@ -3,15 +3,14 @@
 ===================================================== */
 
 .stock-summary-wrapper {
-  width: 106%;
-  height: 70px;
-margin-left: -3%;
-  padding: 10px;
+  width: 100%;
+  margin-left: 0;
+  margin-top: clamp(12px, 1.5vw, 20px);
+  padding: clamp(10px, 1.2vw, 16px);
 
   background: #ffffff;
-margin-top: 10px;
-  border-radius: 9px;
-  margin-bottom: 30px;
+  border-radius: 10px;
+  margin-bottom: clamp(16px, 2vw, 28px);
 
   box-sizing: border-box;
 }
@@ -23,13 +22,13 @@ margin-top: 10px;
 
 .stock-summary-cards {
   width: 100%;
-  height: 50px;
+  height: auto;
 
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
-  gap: 9px;
+  gap: clamp(6px, 1vw, 12px);
 
   box-sizing: border-box;
 }
@@ -42,11 +41,10 @@ margin-top: 10px;
 .stock-summary-card {
   position: relative;
 
-  height: 50px;
-
   min-width: 0;
+  height: clamp(50px, 5vw, 72px);
 
-  padding: 7px 9px 7px 12px;
+  padding: clamp(6px, 0.8vw, 10px) clamp(8px, 1vw, 12px);
 
   display: flex;
 
@@ -54,7 +52,7 @@ margin-top: 10px;
 
   justify-content: space-between;
 
-  border-radius: 4px;
+  border-radius: 6px;
 
   overflow: hidden;
 
@@ -72,11 +70,11 @@ margin-top: 10px;
   position: absolute;
 
   left: 0;
-  top: 7px;
+  top: clamp(5px, 0.6vw, 8px);
 
   width: 3px;
 
-  height: 36px;
+  height: 70%;
 
   border-radius: 0 2px 2px 0;
 }
@@ -134,7 +132,7 @@ margin-top: 10px;
 
   justify-content: center;
 
-  gap: 1px;
+  gap: 2px;
 }
 
 
@@ -145,9 +143,9 @@ margin-top: 10px;
 .stock-card-title {
   display: block;
 
-  font-size: 9px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
-  line-height: 12px;
+  line-height: 1.2;
 
   font-weight: 400;
 
@@ -172,9 +170,9 @@ margin-top: 10px;
 
   gap: 3px;
 
-  font-size: 11px;
+  font-size: clamp(10px, 1vw, 14px);
 
-  line-height: 14px;
+  line-height: 1.2;
 
   font-weight: 700;
 
@@ -189,7 +187,7 @@ margin-top: 10px;
 ===================================================== */
 
 .stock-currency {
-  font-size: 7px;
+  font-size: clamp(6px, 0.8vw, 9px);
 
   line-height: 1;
 
@@ -204,12 +202,12 @@ margin-top: 10px;
 ===================================================== */
 
 .stock-card-icon {
-  width: 24px;
-  height: 24px;
+  width: clamp(22px, 2vw, 30px);
+  height: clamp(22px, 2vw, 30px);
 
   flex-shrink: 0;
 
-  margin-left: 7px;
+  margin-left: clamp(4px, 0.6vw, 8px);
 
   display: flex;
 
@@ -217,7 +215,7 @@ margin-top: 10px;
 
   justify-content: center;
 
-  border-radius: 4px;
+  border-radius: 5px;
 
   box-sizing: border-box;
 }
@@ -228,8 +226,8 @@ margin-top: 10px;
 ===================================================== */
 
 .stock-card-icon svg {
-  width: 12px;
-  height: 12px;
+  width: clamp(11px, 1.1vw, 16px);
+  height: clamp(11px, 1.1vw, 16px);
 }
 
 
@@ -272,18 +270,8 @@ margin-top: 10px;
 
 @media (max-width: 1000px) {
 
-  .stock-summary-wrapper {
-    height: auto;
-  }
-
   .stock-summary-cards {
     grid-template-columns: repeat(2, 1fr);
-
-    height: auto;
-  }
-
-  .stock-summary-card {
-    height: 50px;
   }
 }
 
@@ -295,6 +283,82 @@ margin-top: 10px;
   }
 
   .stock-summary-wrapper {
-    padding: 8px;
+    padding: 10px;
   }
+}
+
+@media (min-width: 1600px) {
+    .stock-summary-wrapper {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .stock-summary-cards {
+        gap: 16px;
+    }
+
+    .stock-summary-card {
+        height: 85px;
+        padding: 12px 16px;
+    }
+
+    .stock-card-title {
+        font-size: 13px;
+    }
+
+    .stock-card-value {
+        font-size: 17px;
+    }
+
+    .stock-currency {
+        font-size: 11px;
+    }
+
+    .stock-card-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .stock-card-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .stock-summary-wrapper {
+        padding: 28px;
+        border-radius: 18px;
+    }
+
+    .stock-summary-cards {
+        gap: 20px;
+    }
+
+    .stock-summary-card {
+        height: 100px;
+        padding: 16px 20px;
+    }
+
+    .stock-card-title {
+        font-size: 15px;
+    }
+
+    .stock-card-value {
+        font-size: 20px;
+    }
+
+    .stock-currency {
+        font-size: 13px;
+    }
+
+    .stock-card-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .stock-card-icon svg {
+        width: 22px;
+        height: 22px;
+    }
 }

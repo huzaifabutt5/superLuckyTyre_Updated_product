@@ -3,18 +3,21 @@
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
-    margin-bottom:25px;
+    margin-bottom: clamp(20px, 2.5vw, 32px);
+    gap: 16px;
 }
 
 
 .header-left{
     display:flex;
     flex-direction:column;
+    flex: 1;
+    min-width: 0;
 }
 
 .breadcrumb{
     margin-top: 30px;
-    font-size:17px;
+    font-size: clamp(14px, 1.4vw, 20px);
     color:#9ca3af;
     margin-bottom:6px;
 }
@@ -25,7 +28,7 @@
 
 .header-left h1{
     margin-left:auto;
-    font-size:30px;
+    font-size: clamp(24px, 2.5vw, 36px);
     font-weight:700;
     color:#1f2937;
     margin:0;
@@ -36,6 +39,7 @@
 .header-right{
     display:flex;
     align-items:center;
+    flex-shrink: 0;
 }
 
 .date-btn{
@@ -50,9 +54,9 @@
 
     border-radius:8px;
 
-    padding:10px 18px;
+    padding: clamp(8px, 0.9vw, 14px) clamp(14px, 1.6vw, 22px);
 
-    font-size:14px;
+    font-size: clamp(12px, 1.1vw, 15px);
 
     color:#6b7280;
 
@@ -68,4 +72,95 @@
 
 .date-btn svg{
     font-size:14px;
+}
+
+@media (min-width: 1600px) {
+    .breadcrumb {
+        margin-top: 36px;
+        font-size: 22px;
+    }
+
+    .header-left h1 {
+        font-size: 42px;
+    }
+
+    .date-btn {
+        margin-top: 28px;
+        padding: 14px 28px;
+        font-size: 17px;
+    }
+
+    .date-btn svg {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .breadcrumb {
+        margin-top: 44px;
+        font-size: 26px;
+    }
+
+    .header-left h1 {
+        font-size: 48px;
+    }
+
+    .date-btn {
+        margin-top: 32px;
+        padding: 16px 32px;
+        font-size: 19px;
+    }
+
+    .date-btn svg {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .date-btn {
+        margin-top: 0;
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .breadcrumb {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .header-left h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb {
+        font-size: 12px;
+        margin-top: 16px;
+    }
+
+    .header-left h1 {
+        font-size: 20px;
+    }
+
+    .date-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .date-btn svg {
+        font-size: 12px;
+    }
 }

@@ -111,8 +111,15 @@ export default function PnlReport() {
 
   const [currentPage, setCurrentPage] = useState(1);
 
+  const [entriesPerPage, setEntriesPerPage] = useState(10);
+
   const handleGetReport = () => {
     setShowReport(true);
+    setCurrentPage(1);
+  };
+
+  const handleEntriesChange = (e) => {
+    setEntriesPerPage(Number(e.target.value));
     setCurrentPage(1);
   };
 
@@ -323,9 +330,16 @@ export default function PnlReport() {
 
               <div className="entries-control">
 
-                <span className="entries-number">
-                  10
-                </span>
+                <select
+                  className="entries-number"
+                  value={entriesPerPage}
+                  onChange={handleEntriesChange}
+                >
+                  <option value={10}>10</option>
+                  <option value={20}>20</option>
+                  <option value={50}>50</option>
+                  <option value={100}>100</option>
+                </select>
 
                 <span>
                   entries per page

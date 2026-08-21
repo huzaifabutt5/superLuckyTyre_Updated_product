@@ -3,12 +3,13 @@
 ===================================================== */
 
 .stock-table-card {
-  width: 106%;
-  margin-left: -3%;
+  width: 100%;
+  margin-left: 0;
   background: #ffffff;
-  border-radius: 7px;
+  border-radius: 10px;
   overflow: hidden;
   box-sizing: border-box;
+  box-shadow: 0 1px 6px rgba(0,0,0,.05);
 }
 
 
@@ -17,8 +18,8 @@
 ===================================================== */
 
 .stock-table-title {
-  height: 39px;
-  padding: 0 14px;
+  height: clamp(36px, 3vw, 48px);
+  padding: 0 clamp(10px, 1.2vw, 14px);
   display: flex;
   align-items: center;
   border-bottom: 1px solid #eeeeee;
@@ -28,7 +29,7 @@
 .stock-table-title h2 {
   margin: 0;
   color: #202a38;
-  font-size: 12px;
+  font-size: clamp(11px, 1.1vw, 15px);
   font-weight: 700;
 }
 
@@ -38,12 +39,15 @@
 ===================================================== */
 
 .stock-table-controls {
-  height: 51px;
-  padding: 0 15px;
+  min-height: clamp(44px, 4vw, 56px);
+  padding: clamp(6px, 0.8vw, 10px) clamp(10px, 1.2vw, 15px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 
@@ -55,23 +59,21 @@
   align-items: center;
   gap: 7px;
 
-  height: 30px;
-
   box-sizing: border-box;
 }
 
 .entries-section > span {
-  font-size: 10px;
+  font-size: clamp(9px, 0.9vw, 12px);
   color: #596273;
   white-space: nowrap;
 }
 
 .entries-select {
-  width: 38px !important;
-  height: 25px !important;
+  width: clamp(36px, 4vw, 44px) !important;
+  height: clamp(24px, 2.2vw, 30px) !important;
 
-  min-width: 38px !important;
-  max-width: 38px !important;
+  min-width: clamp(36px, 4vw, 44px) !important;
+  max-width: clamp(36px, 4vw, 44px) !important;
 
   padding: 0 3px !important;
 
@@ -85,9 +87,9 @@
   color: #596273 !important;
 
   font-family: inherit !important;
-  font-size: 9px !important;
+  font-size: clamp(9px, 0.9vw, 11px) !important;
 
-  line-height: 23px !important;
+  line-height: 1 !important;
 
   outline: none !important;
   box-shadow: none !important;
@@ -116,15 +118,13 @@
 
   gap: 8px;
 
-  height: 32px;
-
   box-sizing: border-box;
 }
 
 .search-input-wrapper {
-   width: 220px;
+   width: clamp(140px, 18vw, 220px);
 
-  height: 30px;
+  height: clamp(28px, 2.5vw, 34px);
 
   display: flex;
 
@@ -148,7 +148,7 @@
 
   height: 100%;
 
-  padding: 0 30px 0 10px;
+  padding: 0 28px 0 10px;
 
   margin: 0;
 
@@ -164,7 +164,7 @@
 
   -webkit-appearance: none;
 
-  font-size: 10px;
+  font-size: clamp(9px, 0.9vw, 11px);
 
   font-family: inherit;
 
@@ -185,9 +185,9 @@
 
   transform: translateY(-50%);
 
-  width: 12px;
+  width: clamp(10px, 1vw, 12px);
 
-  height: 12px;
+  height: clamp(10px, 1vw, 12px);
 
   color: #7b8492;
 
@@ -195,7 +195,7 @@
 }
 
 .search-section > span {
-  font-size: 10px;
+  font-size: clamp(9px, 0.9vw, 12px);
 
   color: #4f5868;
 
@@ -209,8 +209,20 @@
 
 .main-table-wrapper {
   width: 100%;
-  padding: 0 15px;
+  padding: 0 clamp(10px, 1.2vw, 15px);
   box-sizing: border-box;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.main-table-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 
@@ -226,6 +238,7 @@
   border-collapse: separate;
   overflow: hidden;
   table-layout: fixed;
+  min-width: 900px;
 }
 
 
@@ -234,11 +247,11 @@
 ===================================================== */
 
 .main-stock-table thead th {
-  height: 36px;
-  padding: 0 8px;
+  height: clamp(32px, 3vw, 40px);
+  padding: 0 clamp(6px, 1vw, 10px);
   background: #f1f3f7;
   color: #303a48;
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
   font-weight: 600;
   text-align: center;
   border-bottom: 1px solid #e2e5e9;
@@ -261,6 +274,7 @@
 .main-stock-table th:nth-child(1),
 .main-stock-table td:nth-child(1) {
   width: 35px;
+  min-width: 35px;
 }
 
 .main-stock-table th:nth-child(2) {
@@ -289,11 +303,11 @@
 ===================================================== */
 
 .main-stock-table tbody td {
-  height: 35px;
-  padding: 0 8px;
+  height: clamp(32px, 2.8vw, 40px);
+  padding: 0 clamp(6px, 1vw, 10px);
   background: #ffffff;
   color: #536070;
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
   text-align: center;
   border-bottom: 1px solid #e8eaed;
   box-sizing: border-box;
@@ -317,20 +331,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1px;
+  gap: 2px;
 }
 
 .product-name {
   color: #536070;
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
   font-weight: 500;
-  line-height: 11px;
+  line-height: 1.2;
 }
 
 .product-size {
   color: #3983ed;
-  font-size: 7px;
-  line-height: 8px;
+  font-size: clamp(7px, 0.8vw, 10px);
+  line-height: 1.2;
 }
 
 
@@ -339,8 +353,8 @@
 ===================================================== */
 
 .expand-button {
-  width: 20px;
-  height: 20px;
+  width: clamp(18px, 1.8vw, 24px);
+  height: clamp(18px, 1.8vw, 24px);
   padding: 0;
   margin: 0;
   display: inline-flex;
@@ -350,7 +364,7 @@
   outline: none;
   background: transparent;
   color: #505b68;
-  font-size: 8px;
+  font-size: clamp(7px, 0.8vw, 10px);
   cursor: pointer;
 }
 
@@ -369,16 +383,16 @@
 ===================================================== */
 
 .batch-count {
-  min-width: 48px;
-  height: 17px;
-  padding: 0 7px;
+  min-width: clamp(40px, 4vw, 55px);
+  height: clamp(16px, 1.5vw, 22px);
+  padding: 0 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   background: #e3e7ec;
   color: #68727e;
-  font-size: 7px;
+  font-size: clamp(7px, 0.8vw, 10px);
   font-weight: 400;
   box-sizing: border-box;
 }
@@ -389,14 +403,14 @@
 ===================================================== */
 
 .stock-status {
-  min-width: 48px;
-  height: 17px;
-  padding: 0 7px;
+  min-width: clamp(40px, 4vw, 55px);
+  height: clamp(16px, 1.5vw, 22px);
+  padding: 0 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  font-size: 7px;
+  font-size: clamp(7px, 0.8vw, 10px);
   font-weight: 400;
   box-sizing: border-box;
 }
@@ -422,9 +436,10 @@
 ===================================================== */
 
 .no-products {
-  height: 80px !important;
+  height: 70px !important;
   color: #969da6 !important;
   text-align: center !important;
+  font-size: clamp(10px, 1vw, 12px) !important;
 }
 
 
@@ -445,15 +460,16 @@
 
 .batch-container {
   width: 100%;
-  padding: 8px 10px 10px;
+  padding: clamp(8px, 1vw, 12px) clamp(10px, 1.2vw, 14px);
   box-sizing: border-box;
 }
 
 .batch-container h3 {
-  margin-right: 80%;
+  margin-right: 0;
   color: #343d49;
-  font-size: 12px;
+  font-size: clamp(10px, 1vw, 13px);
   font-weight: 600;
+  margin-bottom: 8px;
 }
 
 
@@ -475,11 +491,11 @@
 ===================================================== */
 
 .batch-table th {
-  height: 29px;
-  padding: 0 8px;
+  height: clamp(26px, 2.5vw, 34px);
+  padding: 0 clamp(6px, 0.8vw, 10px);
   background: #f1f3f6;
   color: #343d49;
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
   font-weight: 600;
   text-align: left;
   border-bottom: 1px solid #e0e3e7;
@@ -491,11 +507,11 @@
 ===================================================== */
 
 .batch-table td {
-  height: 29px;
-  padding: 0 8px;
+  height: clamp(26px, 2.5vw, 34px);
+  padding: 0 clamp(6px, 0.8vw, 10px);
   background: #ffffff;
   color: #626b77;
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
   text-align: left;
   border-bottom: 1px solid #e9ebee;
 }
@@ -553,6 +569,7 @@
   height: 45px !important;
   text-align: center !important;
   color: #969da6 !important;
+  font-size: clamp(10px, 1vw, 12px) !important;
 }
 
 
@@ -561,17 +578,20 @@
 ===================================================== */
 
 .stock-table-footer {
-  min-height: 45px;
-  padding: 0 15px;
+  min-height: clamp(40px, 3.5vw, 50px);
+  padding: 0 clamp(10px, 1.2vw, 15px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .showing-text {
   color: #626c78;
-  font-size: 9px;
+  font-size: clamp(9px, 0.9vw, 12px);
 }
 
 
@@ -586,8 +606,8 @@
 }
 
 .pagination button {
-  width: 22px;
-  height: 22px;
+  width: clamp(22px, 2.2vw, 28px);
+  height: clamp(22px, 2.2vw, 28px);
   padding: 0;
   display: flex;
   align-items: center;
@@ -596,7 +616,7 @@
   border-radius: 3px;
   background: transparent;
   color: #7c848e;
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
   cursor: pointer;
 }
 
@@ -623,9 +643,218 @@
 @media (max-width: 900px) {
   .main-table-wrapper {
     overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .main-table-wrapper::-webkit-scrollbar {
+    display: none;
   }
 
   .main-stock-table {
     min-width: 650px;
   }
+
+  .stock-table-controls {
+    flex-wrap: wrap;
+  }
+
+  .search-section {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .search-input-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-stock-table {
+    min-width: 550px;
+  }
+
+  .stock-table-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .entries-section {
+    width: 100%;
+  }
+
+  .search-section {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+    .stock-table-title {
+        padding: 0 18px;
+    }
+
+    .stock-table-title h2 {
+        font-size: 16px;
+    }
+
+    .stock-table-controls {
+        padding: 10px 18px;
+    }
+
+    .entries-section > span {
+        font-size: 13px;
+    }
+
+    .entries-select {
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .search-section > span {
+        font-size: 13px;
+    }
+
+    .search-input-wrapper {
+        width: 280px;
+        height: 36px;
+    }
+
+    .search-input-wrapper input {
+        font-size: 13px;
+    }
+
+    .main-stock-table thead th {
+        height: 44px;
+        font-size: 13px;
+    }
+
+    .main-stock-table tbody td {
+        height: 44px;
+        font-size: 12px;
+    }
+
+    .product-name {
+        font-size: 12px;
+    }
+
+    .product-size {
+        font-size: 10px;
+    }
+
+    .expand-button {
+        width: 26px;
+        height: 26px;
+        font-size: 11px;
+    }
+
+    .batch-count {
+        height: 22px;
+        font-size: 10px;
+    }
+
+    .stock-status {
+        height: 22px;
+        font-size: 10px;
+    }
+
+    .stock-table-footer {
+        padding: 10px 18px;
+    }
+
+    .showing-text {
+        font-size: 12px;
+    }
+
+    .pagination button {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .stock-table-title {
+        padding: 0 22px;
+    }
+
+    .stock-table-title h2 {
+        font-size: 18px;
+    }
+
+    .stock-table-controls {
+        padding: 12px 22px;
+    }
+
+    .entries-section > span {
+        font-size: 14px;
+    }
+
+    .entries-select {
+        width: 48px;
+        height: 36px;
+        font-size: 13px;
+    }
+
+    .search-section > span {
+        font-size: 14px;
+    }
+
+    .search-input-wrapper {
+        width: 320px;
+        height: 40px;
+    }
+
+    .search-input-wrapper input {
+        font-size: 14px;
+    }
+
+    .main-stock-table thead th {
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .main-stock-table tbody td {
+        height: 50px;
+        font-size: 13px;
+    }
+
+    .product-name {
+        font-size: 13px;
+    }
+
+    .product-size {
+        font-size: 11px;
+    }
+
+    .expand-button {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .batch-count {
+        height: 24px;
+        font-size: 11px;
+    }
+
+    .stock-status {
+        height: 24px;
+        font-size: 11px;
+    }
+
+    .stock-table-footer {
+        padding: 12px 22px;
+    }
+
+    .showing-text {
+        font-size: 13px;
+    }
+
+    .pagination button {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
 }

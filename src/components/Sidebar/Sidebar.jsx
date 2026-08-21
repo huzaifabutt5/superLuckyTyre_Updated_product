@@ -10,13 +10,19 @@ import {
   FiLogOut,
 } from "react-icons/fi";
 
-export default function Sidebar({ sidebarOpen }) {
+export default function Sidebar({ sidebarOpen, toggleSidebar }) {
   const pathname = usePathname();
 
   const isActive = (path) =>
     path === "/" ? pathname === "/" : pathname.startsWith(path);
   return (
-    <aside className={`sidebar ${sidebarOpen ? "show" : ""}`}>
+    <>
+      <aside className={`sidebar ${sidebarOpen ? "show" : ""}`}>
+
+        {/* Close button - mobile only */}
+        <button className="sidebar-close" onClick={toggleSidebar}>
+          &times;
+        </button>
 
       {/* =======================
           LOGO
@@ -217,5 +223,10 @@ export default function Sidebar({ sidebarOpen }) {
       </div>
 
     </aside>
+
+    {/* Backdrop overlay for mobile */}
+    {sidebarOpen && <div className="sidebar-backdrop" onClick={toggleSidebar} />}
+
+  </>
   );
 }

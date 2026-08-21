@@ -3,11 +3,11 @@
 ========================================= */
 
 .reporting-page {
-  width: 106%;
-  margin-left: -3%;
+  width: 100%;
+  margin-left: 0;
   min-height: calc(100vh - 65px);
   background: #f4f4f7;
-  padding: 14px 14px 30px;
+  padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
   box-sizing: border-box;
   color: #374151;
 }
@@ -18,16 +18,24 @@
 ========================================= */
 
 .reporting-breadcrumb {
-  font-size: 9px;
+  margin-top: 2%;
+  font-size: clamp(8px, 1vw, 12px);
   color: #737783;
-  margin-bottom: 7px;
+  margin-bottom: clamp(4px, 0.8vw, 8px);
+  line-height: 1.3;
 }
 
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
 .reporting-title {
-  font-size: 22px;
+  font-size: clamp(16px, 1.8vw, 24px);
   font-weight: 700;
   color: #30364b;
-  margin: 0 0 12px;
+  margin: 0 0 clamp(10px, 1.5vw, 18px);
+  line-height: 1.3;
 }
 
 
@@ -36,24 +44,25 @@
 ========================================= */
 
 .reporting-tabs {
-  width: 316px;
-  height: 48px;
+  width: 100%;
+  max-width: 316px;
+  height: clamp(40px, 3.5vw, 52px);
   background: #ffffff;
   border-radius: 7px;
   padding: 5px;
   display: flex;
   align-items: center;
-  margin-bottom: 11px;
+  margin-bottom: clamp(8px, 1.2vw, 14px);
   box-sizing: border-box;
 }
 
 .reporting-tab {
-  height: 38px;
+  height: clamp(30px, 2.8vw, 42px);
   flex: 1;
   border: none;
   background: transparent;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: clamp(10px, 1vw, 13px);
   color: #4b4f59;
   cursor: pointer;
   transition: 0.2s ease;
@@ -78,7 +87,7 @@
   width: 100%;
   background: #ffffff;
   border-radius: 7px;
-  padding: 14px;
+  padding: clamp(10px, 1.2vw, 14px);
   box-sizing: border-box;
 }
 
@@ -91,7 +100,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: clamp(8px, 1vw, 12px);
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 
@@ -101,13 +112,13 @@
     gap: 6px;
 
     color: #6f7787;
-    font-size: 11px;
+    font-size: clamp(10px, 1vw, 12px);
 }
 
 
 .entries-section select {
-    width: 48px;
-    height: 29px;
+    width: clamp(40px, 4vw, 50px);
+    height: clamp(24px, 2.2vw, 32px);
 
     padding: 0 5px;
 
@@ -117,7 +128,7 @@
     background: #ffffff;
 
     color: #4e5667;
-    font-size: 11px;
+    font-size: clamp(10px, 1vw, 12px);
 
     outline: none;
 
@@ -128,8 +139,6 @@
 .entries-section select:focus {
     border-color: #4779f5;
 }
-
-
 
 
 /* =========================================
@@ -143,13 +152,14 @@
 }
 
 .search-control label {
-  font-size: 9px;
+  font-size: clamp(8px, 0.9vw, 11px);
   color: #5d6471;
+  white-space: nowrap;
 }
 
 .search-box {
-  width: 116px;
-  height: 25px;
+  width: clamp(100px, 15vw, 140px);
+  height: clamp(24px, 2.2vw, 32px);
   border: 1px solid #d9dde5;
   border-radius: 5px;
   display: flex;
@@ -160,7 +170,7 @@
 }
 
 .search-box svg {
-  font-size: 9px;
+  font-size: clamp(8px, 0.9vw, 11px);
   color: #9298a3;
 }
 
@@ -169,7 +179,7 @@
   height: 100%;
   border: none;
   outline: none;
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
   color: #4d5562;
   background: transparent;
 }
@@ -203,7 +213,7 @@
 
 .reporting-table {
   width: 100%;
-  min-width: 1120px;
+  min-width: 900px;
   border-collapse: collapse;
   table-layout: auto;
 }
@@ -213,10 +223,10 @@
 }
 
 .reporting-table th {
-  height: 34px;
-  padding: 0 9px;
+  height: clamp(32px, 3vw, 42px);
+  padding: 0 clamp(6px, 1vw, 10px);
   text-align: left;
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
   font-weight: 600;
   color: #1f2633;
   white-space: nowrap;
@@ -224,9 +234,9 @@
 }
 
 .reporting-table td {
-  height: 35px;
-  padding: 0 9px;
-  font-size: 9px;
+  height: clamp(30px, 2.8vw, 38px);
+  padding: 0 clamp(6px, 1vw, 10px);
+  font-size: clamp(9px, 1vw, 12px);
   color: #596170;
   white-space: nowrap;
   border-bottom: 1px solid #e9ebef;
@@ -253,8 +263,8 @@
 }
 
 .invoice-dot {
-  width: 5px;
-  height: 5px;
+  width: clamp(4px, 0.5vw, 6px);
+  height: clamp(4px, 0.5vw, 6px);
   border-radius: 50%;
   background: #ff991f;
   display: inline-block;
@@ -269,11 +279,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 68px;
-  height: 19px;
-  padding: 0 9px;
+  min-width: clamp(50px, 5vw, 70px);
+  height: clamp(16px, 1.5vw, 24px);
+  padding: 0 clamp(6px, 0.8vw, 10px);
   border-radius: 12px;
-  font-size: 8px;
+  font-size: clamp(7px, 0.8vw, 10px);
   font-weight: 500;
   box-sizing: border-box;
 }
@@ -300,8 +310,8 @@
 }
 
 .action-btn {
-  width: 18px;
-  height: 18px;
+  width: clamp(16px, 1.8vw, 24px);
+  height: clamp(16px, 1.8vw, 24px);
   border: none;
   border-radius: 50%;
   display: flex;
@@ -312,7 +322,7 @@
 }
 
 .action-btn svg {
-  font-size: 8px;
+  font-size: clamp(7px, 0.9vw, 11px);
 }
 
 .print-btn {
@@ -335,9 +345,10 @@
 ========================================= */
 
 .no-data {
-  height: 80px !important;
+  height: 70px !important;
   text-align: center !important;
   color: #9297a1 !important;
+  font-size: clamp(10px, 1vw, 12px) !important;
 }
 
 
@@ -346,32 +357,34 @@
 ========================================= */
 
 .reporting-bottom {
-  height: 40px;
+  min-height: clamp(36px, 3.5vw, 48px);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .showing-text {
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
   color: #626976;
 }
 
 .pagination {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .page-arrow,
 .page-number {
-  width: 22px;
-  height: 22px;
+  width: clamp(22px, 2.2vw, 30px);
+  height: clamp(22px, 2.2vw, 30px);
   border: none;
   border-radius: 3px;
   background: transparent;
   color: #6d737d;
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -411,6 +424,9 @@
     max-width: 316px;
   }
 
+  .reporting-table {
+    min-width: 700px;
+  }
 }
 
 
@@ -426,6 +442,11 @@
     justify-content: flex-start;
   }
 
+  .search-box {
+    flex: 1;
+    max-width: 100%;
+  }
+
   .reporting-card {
     padding: 10px;
   }
@@ -438,4 +459,247 @@
     padding-top: 10px;
   }
 
+  .reporting-table {
+    min-width: 550px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reporting-page {
+    padding: 8px 8px 24px;
+  }
+
+  .reporting-breadcrumb {
+    font-size: 9px;
+  }
+
+  .reporting-title {
+    font-size: 18px;
+  }
+
+  .reporting-tabs {
+    height: 38px;
+  }
+
+  .reporting-tab {
+    font-size: 11px;
+  }
+
+  .reporting-table {
+    min-width: 450px;
+  }
+
+  .entries-section {
+    font-size: 10px;
+  }
+
+  .search-control label {
+    font-size: 9px;
+  }
+}
+
+
+@media (min-width: 1600px) {
+  .reporting-page {
+    padding: 12px 24px 50px;
+  }
+
+  .reporting-breadcrumb {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .reporting-title {
+    font-size: 28px;
+    margin-bottom: 22px;
+  }
+
+  .reporting-tabs {
+    max-width: 360px;
+    height: 56px;
+    padding: 6px;
+    margin-bottom: 18px;
+  }
+
+  .reporting-tab {
+    height: 48px;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+
+  .reporting-card {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .reporting-controls {
+    margin-bottom: 14px;
+  }
+
+  .entries-section {
+    font-size: 14px;
+  }
+
+  .entries-section select {
+    width: 60px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .search-control label {
+    font-size: 13px;
+  }
+
+  .search-box {
+    width: 160px;
+    height: 36px;
+  }
+
+  .search-box input {
+    font-size: 13px;
+  }
+
+  .reporting-table th {
+    height: 48px;
+    font-size: 13px;
+    padding: 0 12px;
+  }
+
+  .reporting-table td {
+    height: 48px;
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  .transaction-badge {
+    height: 24px;
+    font-size: 11px;
+  }
+
+  .action-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .action-btn svg {
+    font-size: 12px;
+  }
+
+  .reporting-bottom {
+    padding-top: 12px;
+  }
+
+  .showing-text {
+    font-size: 12px;
+  }
+
+  .page-arrow,
+  .page-number {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+
+@media (min-width: 2560px) {
+  .reporting-page {
+    padding: 16px 32px 60px;
+  }
+
+  .reporting-breadcrumb {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .reporting-title {
+    font-size: 32px;
+    margin-bottom: 26px;
+  }
+
+  .reporting-tabs {
+    max-width: 420px;
+    height: 64px;
+    padding: 8px;
+    margin-bottom: 22px;
+  }
+
+  .reporting-tab {
+    height: 54px;
+    font-size: 17px;
+    border-radius: 8px;
+  }
+
+  .reporting-card {
+    padding: 28px;
+    border-radius: 12px;
+  }
+
+  .reporting-controls {
+    margin-bottom: 18px;
+  }
+
+  .entries-section {
+    font-size: 16px;
+  }
+
+  .entries-section select {
+    width: 70px;
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .search-control label {
+    font-size: 15px;
+  }
+
+  .search-box {
+    width: 180px;
+    height: 42px;
+  }
+
+  .search-box input {
+    font-size: 15px;
+  }
+
+  .reporting-table th {
+    height: 56px;
+    font-size: 14px;
+    padding: 0 14px;
+  }
+
+  .reporting-table td {
+    height: 56px;
+    font-size: 13px;
+    padding: 0 14px;
+  }
+
+  .transaction-badge {
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .action-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .action-btn svg {
+    font-size: 13px;
+  }
+
+  .reporting-bottom {
+    padding-top: 14px;
+  }
+
+  .showing-text {
+    font-size: 13px;
+  }
+
+  .page-arrow,
+  .page-number {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
 }

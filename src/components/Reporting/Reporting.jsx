@@ -207,7 +207,10 @@ export default function Reporting() {
 
       {/* Breadcrumb */}
       <div className="reporting-breadcrumb">
-        Tyre Shop &gt;{" "}
+        <Link href="/" className="breadcrumb-link" style={{ textDecoration: "none", color: "inherit" }}>
+          Tyre Shop
+        </Link>
+        &gt;{" "}
         <Link href="/report" style={{ textDecoration: "none", color: "inherit" }}>
           Sale/Purchase Management
         </Link>{" "}

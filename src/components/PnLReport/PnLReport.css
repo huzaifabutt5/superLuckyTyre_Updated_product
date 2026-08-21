@@ -3,15 +3,12 @@
 ===================================================== */
 
 .pnl-page {
-  width: 106%;
-  margin-left: -3%;
-  
+  width: 100%;
+  margin-left: 0;
+  margin-top:2%;
   min-height: calc(100vh - 65px);
-
-  padding: 8px 14px 20px;
-
   background: #f3f3f5;
-
+  padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
   box-sizing: border-box;
 }
 
@@ -21,11 +18,14 @@
 ===================================================== */
 
 .pnl-breadcrumb {
-  margin-bottom: 10px;
-
-  font-size: 9px;
-
+  margin-bottom: clamp(4px, 0.8vw, 8px);
+  font-size: clamp(8px, 1vw, 12px);
   color: #77808f;
+  line-height: 1.3;
+}
+.breadcrumb-link{
+   color: #77808f;
+   text-decoration: none;
 }
 
 .pnl-breadcrumb span {
@@ -38,14 +38,10 @@
 ===================================================== */
 
 .pnl-title {
-  margin: 0 0 13px;
-
-  font-size: 18px;
-
-  line-height: 1;
-
+  margin: 0 0 clamp(10px, 1.5vw, 18px);
+  font-size: clamp(16px, 1.8vw, 24px);
+  line-height: 1.3;
   font-weight: 700;
-
   color: #293047;
 }
 
@@ -56,14 +52,11 @@
 
 .pnl-search-card {
   width: 100%;
-
-  margin-bottom: 12px;
-
+  margin-bottom: clamp(10px, 1.5vw, 16px);
   background: #ffffff;
-
   border-radius: 6px;
-
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 
@@ -72,22 +65,14 @@
 ===================================================== */
 
 .pnl-section-header {
-  height: 29px;
-
+  min-height: clamp(32px, 3vw, 42px);
   display: flex;
-
   align-items: center;
-
-  padding: 0 12px;
-
+  padding: 0 clamp(10px, 1.2vw, 14px);
   border-bottom: 1px solid #e6e7ea;
-
-  font-size: 11px;
-
+  font-size: clamp(10px, 1vw, 13px);
   font-weight: 700;
-
   color: #202637;
-
   box-sizing: border-box;
 }
 
@@ -97,16 +82,11 @@
 ===================================================== */
 
 .pnl-search-body {
-  padding: 12px;
-
+  padding: clamp(8px, 1.2vw, 14px);
   display: grid;
-
-  grid-template-columns: 1fr 1fr 82px;
-
-  gap: 9px;
-
+  grid-template-columns: 1fr 1fr auto;
+  gap: clamp(6px, 1vw, 10px);
   align-items: end;
-
   box-sizing: border-box;
 }
 
@@ -117,23 +97,18 @@
 
 .date-field {
   display: flex;
-
   flex-direction: column;
-
   gap: 5px;
 }
 
 .date-field label {
-  font-size: 9px;
-
+  font-size: clamp(8px, 0.9vw, 11px);
   font-weight: 600;
-
   color: #4b5565;
 }
 
 .date-field label span {
   color: #f44336;
-
   margin-left: 2px;
 }
 
@@ -144,27 +119,16 @@
 
 .date-field input {
   width: 100%;
-
-  height: 27px;
-
+  height: clamp(26px, 2.2vw, 34px);
   padding: 0 9px;
-
   border: 1px solid #d8dce4;
-
   border-radius: 5px;
-
   background: #ffffff;
-
   color: #4e5869;
-
   outline: none;
-
-  font-size: 10px;
-
+  font-size: clamp(9px, 1vw, 12px);
   font-family: inherit;
-
   box-sizing: border-box;
-
   cursor: pointer;
 }
 
@@ -173,39 +137,20 @@
 }
 
 
-/* Make calendar icon small */
-
-.date-field input::-webkit-calendar-picker-indicator {
-  width: 12px;
-
-  height: 12px;
-
-  cursor: pointer;
-
-  opacity: 0.7;
-}
-
-
 /* =====================================================
    GET REPORT
 ===================================================== */
 
 .get-report-btn {
-  width: 82px;
-
-  height: 27px;
-
+  height: clamp(26px, 2.2vw, 34px);
+  padding: 0 clamp(12px, 1.5vw, 18px);
   border: none;
-
   border-radius: 5px;
-
   background: #477bf2;
-
   color: #ffffff;
-
-  font-size: 8px;
-
+  font-size: clamp(8px, 0.9vw, 11px);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .get-report-btn:hover {
@@ -219,23 +164,14 @@
 
 .pnl-summary-wrapper {
   width: 100%;
-
-  min-height: 61px;
-
-  padding: 9px;
-
-  margin-bottom: 12px;
-
+  min-height: auto;
+  padding: clamp(8px, 1vw, 12px);
+  margin-bottom: clamp(10px, 1.5vw, 16px);
   display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 8px;
-
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(6px, 1vw, 10px);
   background: #ffffff;
-
   border-radius: 7px;
-
   box-sizing: border-box;
 }
 
@@ -246,21 +182,14 @@
 
 .pnl-summary-card {
   position: relative;
-
-  height: 43px;
-
-  padding: 6px 9px 6px 11px;
-
+  min-width: 0;
+  height: clamp(44px, 4vw, 60px);
+  padding: clamp(5px, 0.6vw, 8px) clamp(7px, 0.8vw, 10px) clamp(5px, 0.6vw, 8px) clamp(8px, 1vw, 11px);
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
-  border-radius: 3px;
-
+  border-radius: 4px;
   overflow: hidden;
-
   box-sizing: border-box;
 }
 
@@ -271,71 +200,30 @@
 
 .pnl-summary-card::before {
   content: "";
-
   position: absolute;
-
   left: 0;
-
-  top: 6px;
-
+  top: clamp(4px, 0.5vw, 7px);
   width: 3px;
-
-  height: 31px;
-
+  height: 70%;
   border-radius: 0 2px 2px 0;
 }
 
 
 /* =====================================================
-   BLUE
+   CARD COLORS
 ===================================================== */
 
-.pnl-blue {
-  background: #e5f2ff;
-}
+.pnl-blue { background: #e5f2ff; }
+.pnl-blue::before { background: #397cff; }
 
-.pnl-blue::before {
-  background: #397cff;
-}
+.pnl-purple { background: #e4d9fb; }
+.pnl-purple::before { background: #8246e8; }
 
+.pnl-orange { background: #ffe5c1; }
+.pnl-orange::before { background: #ff981c; }
 
-/* =====================================================
-   PURPLE
-===================================================== */
-
-.pnl-purple {
-  background: #e4d9fb;
-}
-
-.pnl-purple::before {
-  background: #8246e8;
-}
-
-
-/* =====================================================
-   ORANGE
-===================================================== */
-
-.pnl-orange {
-  background: #ffe5c1;
-}
-
-.pnl-orange::before {
-  background: #ff981c;
-}
-
-
-/* =====================================================
-   GREEN
-===================================================== */
-
-.pnl-green {
-  background: #ddf7e6;
-}
-
-.pnl-green::before {
-  background: #22b864;
-}
+.pnl-green { background: #ddf7e6; }
+.pnl-green::before { background: #22b864; }
 
 
 /* =====================================================
@@ -344,33 +232,23 @@
 
 .pnl-summary-content {
   min-width: 0;
-
   display: flex;
-
   flex-direction: column;
-
-  gap: 1px;
+  gap: 2px;
 }
 
 .pnl-summary-content span {
-  font-size: 8px;
-
-  line-height: 10px;
-
+  font-size: clamp(7px, 0.8vw, 10px);
+  line-height: 1.2;
   color: #4c5667;
-
   white-space: nowrap;
 }
 
 .pnl-summary-content strong {
-  font-size: 10px;
-
-  line-height: 12px;
-
+  font-size: clamp(9px, 0.9vw, 13px);
+  line-height: 1.2;
   color: #293047;
-
   font-weight: 700;
-
   white-space: nowrap;
 }
 
@@ -380,64 +258,33 @@
 ===================================================== */
 
 .pnl-summary-icon {
-  width: 23px;
-
-  height: 23px;
-
+  width: clamp(20px, 2vw, 28px);
+  height: clamp(20px, 2vw, 28px);
   flex-shrink: 0;
-
-  margin-left: 6px;
-
+  margin-left: clamp(4px, 0.6vw, 8px);
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .pnl-summary-icon svg {
-  width: 11px;
-
-  height: 11px;
+  width: clamp(10px, 1vw, 14px);
+  height: clamp(10px, 1vw, 14px);
 }
 
 
 /* Blue icon */
-
-.pnl-blue .pnl-summary-icon {
-  background: #c9e1ff;
-
-  color: #397cff;
-}
-
+.pnl-blue .pnl-summary-icon { background: #c9e1ff; color: #397cff; }
 
 /* Purple icon */
-
-.pnl-purple .pnl-summary-icon {
-  background: #d5c5f7;
-
-  color: #8246e8;
-}
-
+.pnl-purple .pnl-summary-icon { background: #d5c5f7; color: #8246e8; }
 
 /* Orange icon */
-
-.pnl-orange .pnl-summary-icon {
-  background: #ffd49b;
-
-  color: #ff9217;
-}
-
+.pnl-orange .pnl-summary-icon { background: #ffd49b; color: #ff9217; }
 
 /* Green icon */
-
-.pnl-green .pnl-summary-icon {
-  background: #c5efd3;
-
-  color: #20ae5d;
-}
+.pnl-green .pnl-summary-icon { background: #c5efd3; color: #20ae5d; }
 
 
 /* =====================================================
@@ -446,13 +293,9 @@
 
 .pnl-table-card {
   width: 100%;
-
   background: #ffffff;
-
   border-radius: 6px;
-
   overflow: hidden;
-
   box-sizing: border-box;
 }
 
@@ -462,22 +305,14 @@
 ===================================================== */
 
 .pnl-table-header {
-  height: 29px;
-
-  padding: 0 12px;
-
+  min-height: clamp(32px, 3vw, 42px);
+  padding: 0 clamp(10px, 1.2vw, 14px);
   display: flex;
-
   align-items: center;
-
   border-bottom: 1px solid #e4e6e9;
-
-  font-size: 11px;
-
+  font-size: clamp(10px, 1vw, 13px);
   font-weight: 700;
-
   color: #202637;
-
   box-sizing: border-box;
 }
 
@@ -487,17 +322,14 @@
 ===================================================== */
 
 .pnl-table-controls {
-  height: 45px;
-
-  padding: 7px 13px;
-
+  min-height: clamp(40px, 3.5vw, 52px);
+  padding: clamp(5px, 0.8vw, 8px) clamp(10px, 1.2vw, 14px);
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   box-sizing: border-box;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 
@@ -507,36 +339,32 @@
 
 .entries-control {
   display: flex;
-
   align-items: center;
-
   gap: 7px;
-
   color: #596273;
-
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
 }
 
 .entries-number {
-  width: 28px;
-
-  height: 23px;
-
+  width: clamp(50px, 5vw, 70px);
+  height: clamp(24px, 2.2vw, 32px);
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   border: 1px solid #d8dce4;
-
   border-radius: 4px;
-
   background: #ffffff;
-
   color: #4f5969;
-
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
+  padding: 0 5px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 24 24' fill='none' stroke='%23737b89' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  padding-right: 20px;
 }
 
 
@@ -546,59 +374,37 @@
 
 .export-buttons {
   display: flex;
-
   align-items: center;
-
   gap: 7px;
+  flex-wrap: wrap;
 }
 
 .export-buttons button {
-  height: 24px;
-
-  min-width: 58px;
-
-  padding: 0 9px;
-
+  height: clamp(24px, 2.5vw, 32px);
+  min-width: clamp(50px, 8vw, 70px);
+  padding: 0 clamp(8px, 1vw, 12px);
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 5px;
-
   border: none;
-
   border-radius: 5px;
-
   color: #ffffff;
-
-  font-size: 8px;
-
+  font-size: clamp(8px, 0.9vw, 11px);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .export-buttons svg {
-  width: 9px;
-
-  height: 9px;
+  width: clamp(8px, 0.9vw, 11px);
+  height: clamp(8px, 0.9vw, 11px);
 }
 
-.pdf-btn {
-  background: #477bf2;
-}
+.pdf-btn { background: #477bf2; }
+.pdf-btn:hover { background: #386ce0; }
 
-.pdf-btn:hover {
-  background: #386ce0;
-}
-
-.csv-btn {
-  background: #42b96d;
-}
-
-.csv-btn:hover {
-  background: #35a55d;
-}
+.csv-btn { background: #42b96d; }
+.csv-btn:hover { background: #35a55d; }
 
 
 /* =====================================================
@@ -607,11 +413,8 @@
 
 .pnl-table-container {
   width: 100%;
-
-  padding: 0 13px;
-
+  padding: 0 clamp(8px, 1vw, 13px);
   box-sizing: border-box;
-
   overflow-x: auto;
 }
 
@@ -622,21 +425,14 @@
 
 .pnl-table {
   width: 100%;
-
+  min-width: 800px;
   border-collapse: separate;
-
   border-spacing: 0;
-
   border: 1px solid #e8eaed;
-
   border-radius: 5px;
-
   overflow: hidden;
-
   table-layout: fixed;
-
-  font-size: 9px;
-
+  font-size: clamp(9px, 1vw, 12px);
   color: #596273;
 }
 
@@ -650,20 +446,13 @@
 }
 
 .pnl-table th {
-  height: 34px;
-
-  padding: 0 9px;
-
+  height: clamp(32px, 3vw, 42px);
+  padding: 0 clamp(6px, 1vw, 10px);
   text-align: left;
-
   color: #222b3b;
-
-  font-size: 9px;
-
+  font-size: clamp(9px, 1vw, 12px);
   font-weight: 700;
-
   border-bottom: 1px solid #e5e7eb;
-
   box-sizing: border-box;
 }
 
@@ -673,16 +462,11 @@
 ===================================================== */
 
 .pnl-table td {
-  height: 32px;
-
-  padding: 0 9px;
-
+  height: clamp(30px, 2.8vw, 38px);
+  padding: 0 clamp(6px, 1vw, 10px);
   border-bottom: 1px solid #eeeeef;
-
   color: #596273;
-
-  font-size: 9px;
-
+  font-size: clamp(9px, 1vw, 12px);
   box-sizing: border-box;
 }
 
@@ -698,6 +482,7 @@
 .pnl-table th:nth-child(1),
 .pnl-table td:nth-child(1) {
   width: 42px;
+  min-width: 42px;
 }
 
 .pnl-table th:nth-child(2),
@@ -741,13 +526,11 @@
 
 .balance-positive {
   color: #20b65b !important;
-
   font-weight: 700;
 }
 
 .balance-negative {
   color: #ff4b0b !important;
-
   font-weight: 700;
 }
 
@@ -757,21 +540,16 @@
 ===================================================== */
 
 .pnl-table-footer {
-  min-height: 43px;
-
-  padding: 7px 13px;
-
+  min-height: clamp(36px, 3.5vw, 48px);
+  padding: clamp(5px, 0.8vw, 8px) clamp(10px, 1.2vw, 14px);
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   color: #596273;
-
-  font-size: 9px;
-
+  font-size: clamp(9px, 1vw, 12px);
   box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 
@@ -781,29 +559,19 @@
 
 .pagination {
   display: flex;
-
   align-items: center;
-
   gap: 4px;
 }
 
 .pagination button {
-  width: 23px;
-
-  height: 23px;
-
+  width: clamp(22px, 2.2vw, 30px);
+  height: clamp(22px, 2.2vw, 30px);
   padding: 0;
-
   border: none;
-
   background: transparent;
-
   color: #737b88;
-
   border-radius: 4px;
-
-  font-size: 9px;
-
+  font-size: clamp(9px, 1vw, 12px);
   cursor: pointer;
 }
 
@@ -813,7 +581,6 @@
 
 .pagination .page-active {
   background: #477bf2;
-
   color: #ffffff;
 }
 
@@ -823,7 +590,6 @@
 ===================================================== */
 
 @media (max-width: 900px) {
-
   .pnl-search-body {
     grid-template-columns: 1fr 1fr;
   }
@@ -837,11 +603,13 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .pnl-table {
+    min-width: 700px;
+  }
 }
 
 
 @media (max-width: 600px) {
-
   .pnl-page {
     padding: 8px;
   }
@@ -859,15 +627,298 @@
   }
 
   .pnl-table {
-    min-width: 700px;
+    min-width: 550px;
   }
 
   .pnl-table-footer {
     flex-direction: column;
-
     align-items: flex-start;
-
     gap: 8px;
   }
+}
 
+
+@media (max-width: 480px) {
+  .pnl-page {
+    padding: 6px 8px 24px;
+  }
+
+  .pnl-breadcrumb {
+    font-size: 9px;
+  }
+
+  .pnl-title {
+    font-size: 16px;
+  }
+
+  .pnl-section-header {
+    font-size: 11px;
+  }
+
+  .pnl-table {
+    min-width: 450px;
+  }
+
+  .export-buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+
+@media (min-width: 1600px) {
+  .pnl-page {
+    padding: 12px 24px 50px;
+  }
+
+  .pnl-breadcrumb {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .pnl-title {
+    font-size: 28px;
+    margin-bottom: 22px;
+  }
+
+  .pnl-search-card {
+    border-radius: 8px;
+    margin-bottom: 18px;
+  }
+
+  .pnl-section-header {
+    min-height: 52px;
+    padding: 0 18px;
+    font-size: 15px;
+  }
+
+  .pnl-search-body {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .date-field label {
+    font-size: 12px;
+  }
+
+  .date-field input {
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .get-report-btn {
+    height: 40px;
+    font-size: 12px;
+    padding: 0 20px;
+  }
+
+  .pnl-summary-wrapper {
+    padding: 14px;
+    gap: 12px;
+    border-radius: 8px;
+  }
+
+  .pnl-summary-card {
+    height: 70px;
+    padding: 10px 14px;
+  }
+
+  .pnl-summary-content span {
+    font-size: 11px;
+  }
+
+  .pnl-summary-content strong {
+    font-size: 14px;
+  }
+
+  .pnl-summary-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pnl-summary-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .pnl-table-header {
+    min-height: 52px;
+    padding: 0 18px;
+    font-size: 15px;
+  }
+
+  .pnl-table-controls {
+    padding: 10px 18px;
+  }
+
+  .entries-control {
+    font-size: 13px;
+  }
+
+  .entries-number {
+    width: 36px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .export-buttons button {
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .export-buttons svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .pnl-table th {
+    height: 48px;
+    font-size: 13px;
+    padding: 0 12px;
+  }
+
+  .pnl-table td {
+    height: 48px;
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  .pnl-table-footer {
+    padding: 10px 18px;
+  }
+
+  .pagination button {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+
+@media (min-width: 2560px) {
+  .pnl-page {
+    padding: 16px 32px 60px;
+  }
+
+  .pnl-breadcrumb {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .pnl-title {
+    font-size: 32px;
+    margin-bottom: 26px;
+  }
+
+  .pnl-search-card {
+    border-radius: 10px;
+    margin-bottom: 22px;
+  }
+
+  .pnl-section-header {
+    min-height: 60px;
+    padding: 0 22px;
+    font-size: 17px;
+  }
+
+  .pnl-search-body {
+    padding: 22px;
+    gap: 14px;
+  }
+
+  .date-field label {
+    font-size: 14px;
+  }
+
+  .date-field input {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .get-report-btn {
+    height: 44px;
+    font-size: 13px;
+    padding: 0 24px;
+  }
+
+  .pnl-summary-wrapper {
+    padding: 18px;
+    gap: 14px;
+    border-radius: 10px;
+  }
+
+  .pnl-summary-card {
+    height: 85px;
+    padding: 12px 16px;
+  }
+
+  .pnl-summary-content span {
+    font-size: 13px;
+  }
+
+  .pnl-summary-content strong {
+    font-size: 16px;
+  }
+
+  .pnl-summary-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .pnl-summary-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .pnl-table-header {
+    min-height: 60px;
+    padding: 0 22px;
+    font-size: 17px;
+  }
+
+  .pnl-table-controls {
+    padding: 12px 22px;
+  }
+
+  .entries-control {
+    font-size: 14px;
+  }
+
+  .entries-number {
+    width: 40px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .export-buttons button {
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .export-buttons svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pnl-table th {
+    height: 56px;
+    font-size: 14px;
+    padding: 0 14px;
+  }
+
+  .pnl-table td {
+    height: 56px;
+    font-size: 13px;
+    padding: 0 14px;
+  }
+
+  .pnl-table-footer {
+    padding: 12px 22px;
+  }
+
+  .pagination button {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
 }

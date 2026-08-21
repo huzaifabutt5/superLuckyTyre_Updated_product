@@ -1,6 +1,6 @@
 .purchase-return-page {
   min-height: calc(100vh - 65px);
-  padding: 12px 15px 25px;
+  padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
 
   background: #f1f1f3;
 
@@ -14,19 +14,27 @@
 
 /* ================= BREADCRUMB ================= */
 
+
+.breadcrumb-link{
+  color: #667085;
+    text-decoration: none;
+}
 .purchase-return-breadcrumb {
   display: flex;
+  margin-top: 2%;
   align-items: center;
   gap: 5px;
 
-  margin-bottom: 8px;
+  margin-bottom: clamp(4px, 0.8vw, 8px);
 
-  font-size: 8px;
+  font-size: clamp(8px, 1vw, 12px);
   color: #667085;
+
+  flex-wrap: wrap;
 }
 
 .purchase-return-breadcrumb svg {
-  font-size: 6px;
+  font-size: clamp(6px, 0.8vw, 9px);
   color: #737b89;
 }
 
@@ -39,10 +47,10 @@
 /* ================= PAGE TITLE ================= */
 
 .purchase-return-title {
-  margin: 0 0 11px;
+  margin: 0 0 clamp(8px, 1.2vw, 14px);
 
-  font-size: 17px;
-  line-height: 1.2;
+  font-size: clamp(16px, 1.8vw, 24px);
+  line-height: 1.3;
 
   font-weight: 700;
 
@@ -53,14 +61,14 @@
 /* ================= COMMON CARD ================= */
 
 .return-card {
-  width: 106%;
-  margin-left: -3%;
+  width: 100%;
+  margin-left: 0;
 
   background: #ffffff;
 
   border-radius: 5px;
 
-  margin-bottom: 11px;
+  margin-bottom: clamp(8px, 1.2vw, 14px);
 
   overflow: hidden;
 
@@ -68,23 +76,25 @@
 }
 
 .return-card-header {
-  height: 28px;
+  min-height: clamp(32px, 3vw, 42px);
 
   display: flex;
   align-items: center;
 
-  padding: 0 12px;
+  padding: 0 clamp(10px, 1.2vw, 14px);
 
   border-bottom: 1px solid #e7e9ee;
 
-  font-size: 11px;
+  font-size: clamp(10px, 1vw, 13px);
   font-weight: 700;
 
   color: #20283a;
+
+  box-sizing: border-box;
 }
 
 .return-card-body {
-  padding: 10px 11px 10px;
+  padding: clamp(8px, 1vw, 12px) clamp(10px, 1.2vw, 14px);
 }
 
 
@@ -95,7 +105,7 @@
 
   margin-bottom: 5px;
 
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
   color: #374151;
 
@@ -112,12 +122,15 @@
   align-items: center;
 
   gap: 6px;
+
+  flex-wrap: wrap;
 }
 
 .invoice-input {
   flex: 1;
+  min-width: 0;
 
-  height: 26px;
+  height: clamp(26px, 2.2vw, 34px);
 
   padding: 0 10px;
 
@@ -128,7 +141,7 @@
 
   background: #fff;
 
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
 
   color: #3e4758;
 
@@ -144,8 +157,8 @@
 }
 
 .get-invoice-btn {
-  width: 77px;
-  height: 26px;
+  width: clamp(60px, 10vw, 90px);
+  height: clamp(26px, 2.2vw, 34px);
 
   border: none;
   border-radius: 5px;
@@ -154,10 +167,12 @@
 
   color: #fff;
 
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
   font-weight: 500;
 
   cursor: pointer;
+
+  white-space: nowrap;
 }
 
 .get-invoice-btn:hover {
@@ -168,11 +183,11 @@
 /* ================= PRODUCT DETAIL ================= */
 
 .product-list {
-  padding: 0 11px;
+  padding: 0 clamp(8px, 1vw, 12px);
 }
 
 .product-row {
-  min-height: 49px;
+  min-height: clamp(44px, 4vw, 60px);
 
   display: flex;
   justify-content: space-between;
@@ -181,6 +196,8 @@
   border-bottom: 1px solid #eef0f3;
 
   box-sizing: border-box;
+
+  gap: 10px;
 }
 
 .product-row:last-child {
@@ -190,17 +207,18 @@
 .product-left {
   position: relative;
 
-  padding: 7px 0;
+  padding: clamp(6px, 0.8vw, 10px) 0;
 
   flex: 1;
+  min-width: 0;
 }
 
 .product-name {
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 12px);
 
   color: #3b4557;
 
-  line-height: 13px;
+  line-height: 1.3;
 
   font-weight: 400;
 }
@@ -212,7 +230,7 @@
 
   color: #f04432;
 
-  font-size: 10px;
+  font-size: clamp(9px, 1vw, 12px);
 
   font-weight: 600;
 }
@@ -220,7 +238,7 @@
 .product-size {
   margin-top: 1px;
 
-  font-size: 7px;
+  font-size: clamp(7px, 0.8vw, 10px);
 
   color: #2875df;
 }
@@ -228,7 +246,7 @@
 .product-quantity {
   margin-top: 1px;
 
-  font-size: 7px;
+  font-size: clamp(7px, 0.8vw, 10px);
 
   color: #27334b;
 }
@@ -237,9 +255,9 @@
 /* ================= PRODUCT RIGHT ================= */
 
 .product-right {
-  width: 75px;
+  width: clamp(60px, 8vw, 85px);
 
-  min-width: 75px;
+  min-width: clamp(60px, 8vw, 85px);
 
   height: 100%;
 
@@ -253,8 +271,8 @@
 }
 
 .product-edit-btn {
-  width: 15px;
-  height: 15px;
+  width: clamp(14px, 1.8vw, 20px);
+  height: clamp(14px, 1.8vw, 20px);
 
   display: flex;
   align-items: center;
@@ -273,7 +291,7 @@
 }
 
 .product-edit-btn svg {
-  font-size: 7px;
+  font-size: clamp(6px, 0.8vw, 9px);
 }
 
 .product-edit-btn:hover {
@@ -281,7 +299,7 @@
 }
 
 .product-price {
-  font-size: 7px;
+  font-size: clamp(7px, 0.8vw, 10px);
 
   color: #27334b;
 
@@ -301,8 +319,8 @@
 }
 
 .edit-quantity-box input {
-  width: 45px;
-  height: 20px;
+  width: clamp(36px, 5vw, 50px);
+  height: clamp(20px, 2.2vw, 28px);
 
   padding: 0 5px;
 
@@ -311,13 +329,13 @@
 
   outline: none;
 
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
   color: #293650;
 }
 
 .edit-quantity-box span {
-  font-size: 7px;
+  font-size: clamp(7px, 0.8vw, 10px);
 
   color: #737d8c;
 }
@@ -326,11 +344,11 @@
 /* ================= PAYMENT INFO ================= */
 
 .payment-card {
-  margin-bottom: 12px;
+  margin-bottom: clamp(8px, 1.2vw, 14px);
 }
 
 .payment-body {
-  padding: 10px 11px 11px;
+  padding: clamp(8px, 1vw, 12px) clamp(10px, 1.2vw, 14px);
 }
 
 .payment-row {
@@ -338,7 +356,7 @@
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 10px;
+  gap: clamp(6px, 1vw, 12px);
 }
 
 .payment-field {
@@ -350,7 +368,7 @@
 
   margin-bottom: 5px;
 
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
   color: #364052;
 
@@ -360,7 +378,7 @@
 .payment-field input {
   width: 100%;
 
-  height: 26px;
+  height: clamp(26px, 2.2vw, 34px);
 
   padding: 0 10px;
 
@@ -373,7 +391,7 @@
 
   background: #fff;
 
-  font-size: 8px;
+  font-size: clamp(9px, 1vw, 12px);
 
   color: #3c4657;
 }
@@ -390,24 +408,25 @@
 /* ================= BOTTOM ACTIONS ================= */
 
 .return-actions {
-  width: 106%;
-margin-left: -3%;
-  min-height: 37px;
+  width: 100%;
+  margin-left: 0;
+  min-height: clamp(34px, 3vw, 44px);
 
   display: flex;
 
   justify-content: flex-end;
-  align-items: center;
 
   gap: 7px;
 
-  padding: 6px 11px;
+  padding: clamp(6px, 0.8vw, 10px) clamp(10px, 1.2vw, 14px);
 
   box-sizing: border-box;
 
   background: #ffffff;
 
   border-radius: 5px;
+
+  flex-wrap: wrap;
 }
 
 
@@ -416,23 +435,25 @@ margin-left: -3%;
 .cancel-btn,
 .return-only-btn,
 .payback-btn {
-  height: 25px;
+  height: clamp(24px, 2.5vw, 32px);
 
-  padding: 0 20px;
+  padding: 0 clamp(12px, 1.5vw, 20px);
 
   border: none;
 
   border-radius: 5px;
 
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
   font-weight: 500;
 
   cursor: pointer;
+
+  white-space: nowrap;
 }
 
 .cancel-btn {
-  min-width: 75px;
+  min-width: clamp(60px, 8vw, 85px);
 
   background: #f4f4f4;
 
@@ -447,7 +468,7 @@ margin-left: -3%;
 /* Return Only */
 
 .return-only-btn {
-  min-width: 99px;
+  min-width: clamp(80px, 10vw, 110px);
 
   background: #d6d6d6;
 
@@ -470,7 +491,7 @@ margin-left: -3%;
 /* Return & Payback */
 
 .payback-btn {
-  min-width: 105px;
+  min-width: clamp(90px, 12vw, 120px);
 
   background: #d6d6d6;
 
@@ -518,5 +539,269 @@ margin-left: -3%;
   .product-right {
     width: 65px;
     min-width: 65px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .purchase-return-page {
+    padding: 8px 8px 20px;
+  }
+
+  .purchase-return-breadcrumb {
+    font-size: 9px;
+  }
+
+  .purchase-return-title {
+    font-size: 16px;
+  }
+
+  .return-card-header {
+    font-size: 11px;
+  }
+
+  .invoice-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .get-invoice-btn {
+    width: 100%;
+  }
+
+  .product-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-right {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .return-actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .return-only-btn,
+  .payback-btn {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 1600px) {
+  .purchase-return-page {
+    padding: 12px 24px 50px;
+  }
+
+  .purchase-return-breadcrumb {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .purchase-return-title {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+
+  .return-card {
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .return-card-header {
+    min-height: 52px;
+    padding: 0 18px;
+    font-size: 15px;
+  }
+
+  .return-card-body {
+    padding: 14px 18px;
+  }
+
+  .return-label {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .invoice-input {
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .get-invoice-btn {
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .product-row {
+    min-height: 70px;
+    padding: 12px 0;
+  }
+
+  .product-name {
+    font-size: 13px;
+  }
+
+  .product-size {
+    font-size: 11px;
+  }
+
+  .product-quantity {
+    font-size: 11px;
+  }
+
+  .returned-quantity {
+    font-size: 13px;
+  }
+
+  .product-edit-btn {
+    width: 22px;
+    height: 22px;
+  }
+
+  .product-edit-btn svg {
+    font-size: 10px;
+  }
+
+  .product-price {
+    font-size: 11px;
+  }
+
+  .edit-quantity-box input {
+    height: 28px;
+    font-size: 11px;
+  }
+
+  .payment-row {
+    gap: 14px;
+  }
+
+  .payment-field label {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .payment-field input {
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .cancel-btn,
+  .return-only-btn,
+  .payback-btn {
+    height: 36px;
+    font-size: 12px;
+  }
+}
+
+
+@media (min-width: 2560px) {
+  .purchase-return-page {
+    padding: 16px 32px 60px;
+  }
+
+  .purchase-return-breadcrumb {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .purchase-return-title {
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+
+  .return-card {
+    border-radius: 10px;
+    margin-bottom: 18px;
+  }
+
+  .return-card-header {
+    min-height: 60px;
+    padding: 0 22px;
+    font-size: 17px;
+  }
+
+  .return-card-body {
+    padding: 18px 22px;
+  }
+
+  .return-label {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .invoice-input {
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .get-invoice-btn {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .product-row {
+    min-height: 85px;
+    padding: 16px 0;
+  }
+
+  .product-name {
+    font-size: 15px;
+  }
+
+  .product-size {
+    font-size: 12px;
+  }
+
+  .product-quantity {
+    font-size: 12px;
+  }
+
+  .returned-quantity {
+    font-size: 14px;
+  }
+
+  .product-edit-btn {
+    width: 26px;
+    height: 26px;
+  }
+
+  .product-edit-btn svg {
+    font-size: 11px;
+  }
+
+  .product-price {
+    font-size: 12px;
+  }
+
+  .edit-quantity-box input {
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .payment-row {
+    gap: 16px;
+  }
+
+  .payment-field label {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .payment-field input {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .cancel-btn,
+  .return-only-btn,
+  .payback-btn {
+    height: 42px;
+    font-size: 13px;
   }
 }

@@ -1,8 +1,7 @@
 import DashboardHeader from "@/components/Dashboard/DashboardHeader";
 import StatsCards from "@/components/Statscard/Statscard";
-import SummaryCards from "@/components/SummaryCards/SummaryCards";
-import VendorTable from "@/components/VendorTable/VendorTable";
 import CoustomerTable from "@/components/CoustomerTable/CoustomerTable";
+import TopVendor from "@/components/TopVendor/TopVendor";
 import SalesChart from "@/components/SummaryChart/SummaryChart";
 export default function HomePage() {
   return (
@@ -11,8 +10,9 @@ export default function HomePage() {
       <StatsCards />
 <SalesChart />
       <div className="tables-row">
-        <VendorTable />
+        <TopVendor/>
         <CoustomerTable />
+       
       </div>
     </>
 

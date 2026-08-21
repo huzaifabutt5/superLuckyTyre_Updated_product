@@ -5,11 +5,11 @@
     border-top:1px solid #ECECEC;
     background:#ffffff;
     border-radius:12px;
-    padding:10px 0;
+    padding: clamp(10px, 1vw, 16px) 0;
 }
 
 .summary-item{
-    padding:16px 18px;
+    padding: clamp(12px, 1.2vw, 20px) clamp(14px, 1.6vw, 24px);
     border-right:1px solid #ECECEC;
 }
 
@@ -20,22 +20,22 @@
 .summary-title{
     display:flex;
     align-items:center;
-    gap:8px;
-    font-size:13px;
+    gap: clamp(6px, 0.7vw, 10px);
+    font-size: clamp(11px, 1vw, 14px);
     color:#6B7280;
-    margin-bottom:10px;
+    margin-bottom: clamp(8px, 0.8vw, 12px);
     font-weight:500;
 }
 
 .circle{
-    font-size:8px;
+    font-size: clamp(6px, 0.6vw, 10px);
 }
 
 .summary-price{
     display:flex;
     align-items:center;
-    gap:8px;
-    font-size:15px;
+    gap: clamp(6px, 0.7vw, 10px);
+    font-size: clamp(13px, 1.2vw, 16px);
     font-weight:700;
     color:#111827;
 }
@@ -45,7 +45,7 @@
     display:flex;
     align-items:center;
     gap:4px;
-    font-size:12px;
+    font-size: clamp(10px, 0.9vw, 13px);
     font-weight:600;
 }
 
@@ -81,7 +81,94 @@
 }
 
 .summary-item:last-child{
-    border-bottom:none;
+   border-bottom:none;
 }
 
+}
+
+@media (max-width: 480px) {
+    .bottom-summary {
+        padding: 8px 0;
+        border-radius: 10px;
+    }
+
+    .summary-item {
+        padding: 10px 12px;
+    }
+
+    .summary-title {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .summary-price {
+        font-size: 14px;
+    }
+
+    .summary-up,
+    .summary-down {
+        font-size: 11px;
+    }
+
+    .circle {
+        font-size: 8px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .bottom-summary {
+        padding: 16px 0;
+        border-radius: 16px;
+    }
+
+    .summary-item {
+        padding: 20px 24px;
+    }
+
+    .summary-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .summary-price {
+        font-size: 18px;
+    }
+
+    .summary-up,
+    .summary-down {
+        font-size: 14px;
+    }
+
+    .circle {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .bottom-summary {
+        padding: 24px 0;
+        border-radius: 20px;
+    }
+
+    .summary-item {
+        padding: 28px 32px;
+    }
+
+    .summary-title {
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+
+    .summary-price {
+        font-size: 22px;
+    }
+
+    .summary-up,
+    .summary-down {
+        font-size: 16px;
+    }
+
+    .circle {
+        font-size: 12px;
+    }
 }

@@ -1,38 +1,74 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import "./TopVendor.css";
-import vendorData from "../../data/vendorData";
+
+const vendors = [
+  {
+    sl: "01",
+    id: "TYRPNT-VN-0006",
+    name: "Sara Khan",
+    due: "Rs 15,000.00",
+  },
+  {
+    sl: "02",
+    id: "TYRPNT-VN-0002",
+    name: "Hamza Iqbal",
+    due: "Rs 45,200.00",
+  },
+  {
+    sl: "03",
+    id: "TYRPNT-VN-0003",
+    name: "Asad Ullah",
+    due: "Rs 98,300.00",
+  },
+  {
+    sl: "04",
+    id: "TYRPNT-VN-0004",
+    name: "Anees",
+    due: "Rs 88,700.00",
+  },
+  {
+    sl: "05",
+    id: "TYRPNT-VN-0005",
+    name: "Huzaifa",
+    due: "Rs 74,200.00",
+  },
+];
 
 export default function TopVendor() {
-  /* Show top 5 vendors */
-  const topVendors = vendorData.slice(0, 5);
+  const router = useRouter();
+
+  const handleViewAll = () => {
+    router.push("/vendor");
+  };
 
   return (
-    <div className="customer-card">
+    <div className="top-vendor-card">
 
-      <div className="customer-header">
-        <h3>Top Vendor</h3>
-        <button>View All</button>
+      <div className="top-vendor-header">
+        <h3>Top Vendors</h3>
+        <button onClick={handleViewAll}>View All</button>
       </div>
 
-      <table className="customer-table">
+      <table className="top-vendor-table">
 
         <thead>
           <tr>
             <th>SL</th>
             <th>Vendor ID</th>
             <th>Vendor Name</th>
-            <th>Contact</th>
+            <th>Due Amount</th>
           </tr>
         </thead>
 
         <tbody>
-          {topVendors.map((vendor, index) => (
+          {vendors.map((vendor) => (
             <tr key={vendor.id}>
-              <td>{String(index + 1).padStart(2, "0")}</td>
-              <td>{vendor.vendorId}</td>
-              <td>{vendor.vendorName}</td>
-              <td>{vendor.vendorPhone}</td>
+              <td>{vendor.sl}</td>
+              <td>{vendor.id}</td>
+              <td>{vendor.name}</td>
+              <td>{vendor.due}</td>
             </tr>
           ))}
         </tbody>

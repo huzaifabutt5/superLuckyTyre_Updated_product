@@ -6,7 +6,7 @@
   width: 100%;
   box-sizing: border-box;
 
-  padding: 8px 10px 20px 10px;
+  padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
 
   background: #f3f3f5;
 
@@ -19,10 +19,13 @@
 ================================= */
 
 .stock-breadcrumb {
-  font-size: 7px;
+  margin-top: 3%;
+  font-size: clamp(8px, 1vw, 12px);
   color: #737b8c;
 
-  margin-bottom: 4px;
+  margin-bottom: clamp(4px, 0.8vw, 8px);
+
+  line-height: 1.3;
 }
 
 
@@ -33,10 +36,71 @@
 .stock-page-title {
   margin: 0;
 
-  font-size: 16px;
-  line-height: 22px;
+  font-size: clamp(16px, 1.8vw, 24px);
+  line-height: 1.3;
 
   font-weight: 700;
 
   color: #273147;
+  margin-bottom: clamp(12px, 1.5vw, 20px);
+}
+
+@media (max-width: 768px) {
+  .stock-page {
+    padding: 6px 12px 30px;
+  }
+
+  .stock-breadcrumb {
+    font-size: 10px;
+  }
+
+  .stock-page-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stock-page {
+    padding: 6px 8px 24px;
+  }
+
+  .stock-breadcrumb {
+    font-size: 9px;
+  }
+
+  .stock-page-title {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .stock-page {
+    padding: 12px 24px 50px;
+  }
+
+  .stock-breadcrumb {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .stock-page-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .stock-page {
+    padding: 16px 32px 60px;
+  }
+
+  .stock-breadcrumb {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .stock-page-title {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
 }

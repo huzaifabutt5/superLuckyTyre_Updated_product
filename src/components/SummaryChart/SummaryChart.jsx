@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./SummaryChart.css";
 
 import {
@@ -70,7 +70,32 @@ export default function SalesChart() {
 
 
   /* ================================
-     OPEN CALENDAR POPUP
+      CHART HEIGHT
+  ================================= */
+
+  const [chartHeight, setChartHeight] = useState(350);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      if (window.innerWidth >= 2560) {
+        setChartHeight(450);
+      } else if (window.innerWidth >= 2000) {
+        setChartHeight(400);
+      } else if (window.innerWidth >= 1600) {
+        setChartHeight(370);
+      } else {
+        setChartHeight(350);
+      }
+    };
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
+
+
+  /* ================================
+      OPEN CALENDAR POPUP
   ================================= */
 
   const handleCalendarClick = () => {
@@ -229,7 +254,7 @@ export default function SalesChart() {
 
       <ResponsiveContainer
         width="100%"
-        height={350}
+        height={chartHeight}
       >
 
         <AreaChart

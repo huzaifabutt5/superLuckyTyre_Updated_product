@@ -14,6 +14,10 @@
   color: #6b7280;
   margin-bottom: 7px;
 }
+.breadcrumb-link{
+  color: #6b7280;
+  text-decoration: none;
+}
 
 /* Header */
 

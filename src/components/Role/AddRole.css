@@ -21,7 +21,10 @@
   color: #697386;
   margin-bottom: 8px;
 }
-
+.breadcrumb-link{
+color: #697386;
+text-decoration: none;
+}
 
 /* =========================================
    TITLE

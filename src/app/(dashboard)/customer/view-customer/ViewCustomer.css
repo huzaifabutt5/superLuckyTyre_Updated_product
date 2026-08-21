@@ -3,11 +3,11 @@
 ========================================= */
 
 .view-customer-page {
-    width: 106%;
-    margin-left: -3%;
+    width: 100%;
+    margin-left: 0;
     min-height: calc(100vh - 65px);
 
-    padding: 7px 12px 45px 12px;
+    padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px) clamp(30px, 4vw, 50px);
 
     box-sizing: border-box;
 
@@ -20,14 +20,14 @@
 ========================================= */
 
 .view-customer-breadcrumb {
-    margin: 0 0 7px 1px;
+    margin: 0 0 clamp(5px, 0.8vw, 8px) 0;
 
     color: #747b88;
 
-    font-size: 8px;
+    font-size: clamp(7px, 0.9vw, 10px);
     font-weight: 400;
 
-    line-height: 14px;
+    line-height: 1.3;
 }
 
 
@@ -36,14 +36,14 @@
 ========================================= */
 
 .view-customer-title {
-    margin: 0 0 9px 1px;
+    margin: 0 0 clamp(6px, 1vw, 10px) 0;
 
     color: #293149;
 
-    font-size: 17px;
+    font-size: clamp(14px, 1.6vw, 20px);
     font-weight: 600;
 
-    line-height: 22px;
+    line-height: 1.3;
 }
 
 
@@ -57,31 +57,34 @@
     display: flex;
     align-items: stretch;
 
-    gap: 8px;
+    gap: clamp(6px, 1vw, 10px);
 
-    margin-bottom: 9px;
+    margin-bottom: clamp(6px, 1vw, 10px);
+
+    flex-wrap: wrap;
 }
+
 
 /* =====================================================
    OUTER WHITE SUMMARY AREA
 ===================================================== */
 
 .customer-summary-area {
-  width: 100%;
-  height: 96px;
+   width: 100%;
+   min-height: clamp(70px, 8vw, 100px);
 
-  padding: 14px 12px;
+   padding: clamp(10px, 1.2vw, 14px) clamp(8px, 1.2vw, 12px);
 
-  display: flex;
-  align-items: stretch;
+   display: flex;
+   align-items: stretch;
 
-  gap: 10px;
+   gap: clamp(6px, 1vw, 10px);
 
-  background: #ffffff;
+   background: #ffffff;
 
-  border-radius: 10px;
+   border-radius: 10px;
 
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 
@@ -90,14 +93,14 @@
 ===================================================== */
 
 .customer-summary-cards {
-  flex: 1;
+   flex: 1;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
 
-  gap: 10px;
+   gap: clamp(6px, 1vw, 10px);
 
-  min-width: 0;
+   min-width: 0;
 }
 
 
@@ -106,22 +109,22 @@
 ===================================================== */
 
 .customer-summary-card {
-  position: relative;
+   position: relative;
 
-  min-width: 0;
-  height: 66px;
+   min-width: 0;
+   height: clamp(50px, 5vw, 70px);
 
-  padding: 10px 11px;
+   padding: clamp(6px, 0.8vw, 10px) clamp(8px, 1vw, 12px);
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 
-  border-radius: 4px;
+   border-radius: 4px;
 
-  overflow: hidden;
+   overflow: hidden;
 
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 
@@ -130,17 +133,17 @@
 ===================================================== */
 
 .customer-summary-card::before {
-  content: "";
+   content: "";
 
-  position: absolute;
+   position: absolute;
 
-  left: 0;
-  top: 7px;
+   left: 0;
+   top: 7px;
 
-  width: 3px;
-  height: 70%;
+   width: 3px;
+   height: 70%;
 
-  border-radius: 3px 0 0 3px;
+   border-radius: 3px 0 0 3px;
 }
 
 
@@ -149,11 +152,11 @@
 ===================================================== */
 
 .purchase-card {
-  background: #e4f2ff;
+   background: #e4f2ff;
 }
 
 .purchase-card::before {
-  background: #377dff;
+   background: #377dff;
 }
 
 
@@ -162,11 +165,11 @@
 ===================================================== */
 
 .return-card {
-  background: #e4d9fb;
+   background: #e4d9fb;
 }
 
 .return-card::before {
-  background: #8246e8;
+   background: #8246e8;
 }
 
 
@@ -175,11 +178,11 @@
 ===================================================== */
 
 .remaining-card {
-  background: #ffe7c4;
+   background: #ffe7c4;
 }
 
 .remaining-card::before {
-  background: #ff9d22;
+   background: #ff9d22;
 }
 
 
@@ -188,14 +191,14 @@
 ===================================================== */
 
 .summary-card-content {
-  min-width: 0;
+   min-width: 0;
 
-  display: flex;
-  flex-direction: column;
+   display: flex;
+   flex-direction: column;
 
-  justify-content: center;
+   justify-content: center;
 
-  gap: 2px;
+   gap: 2px;
 }
 
 
@@ -204,13 +207,13 @@
 ===================================================== */
 
 .summary-card-label {
-  font-size: 10px;
+   font-size: clamp(7px, 0.9vw, 10px);
 
-  line-height: 13px;
+   line-height: 1.2;
 
-  color: #4b5565;
+   color: #4b5565;
 
-  white-space: nowrap;
+   white-space: nowrap;
 }
 
 
@@ -219,17 +222,17 @@
 ===================================================== */
 
 .summary-card-content strong {
-  display: block;
+   display: block;
 
-  font-size: 12px;
+   font-size: clamp(9px, 1vw, 12px);
 
-  line-height: 15px;
+   line-height: 1.2;
 
-  font-weight: 700;
+   font-weight: 700;
 
-  color: #293047;
+   color: #293047;
 
-  white-space: nowrap;
+   white-space: nowrap;
 }
 
 
@@ -238,13 +241,13 @@
 ===================================================== */
 
 .summary-card-content strong::before {
-  content: "Rs. ";
+   content: "Rs. ";
 
-  font-size: 8px;
+   font-size: clamp(6px, 0.8vw, 9px);
 
-  font-weight: 600;
+   font-weight: 600;
 
-  color: #727b8a;
+   color: #727b8a;
 }
 
 
@@ -253,18 +256,18 @@
 ===================================================== */
 
 .summary-card-icon {
-  width: 27px;
-  height: 27px;
+   width: clamp(20px, 2vw, 28px);
+   height: clamp(20px, 2vw, 28px);
 
-  flex-shrink: 0;
+   flex-shrink: 0;
 
-  margin-left: 8px;
+   margin-left: clamp(4px, 0.6vw, 8px);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 
-  border-radius: 4px;
+   border-radius: 4px;
 }
 
 
@@ -273,8 +276,8 @@
 ===================================================== */
 
 .summary-card-icon svg {
-  width: 14px;
-  height: 14px;
+   width: clamp(11px, 1.1vw, 14px);
+   height: clamp(11px, 1.1vw, 14px);
 }
 
 
@@ -283,9 +286,9 @@
 ===================================================== */
 
 .purchase-icon {
-  background: #c8e1ff;
+   background: #c8e1ff;
 
-  color: #377dff;
+   color: #377dff;
 }
 
 
@@ -294,9 +297,9 @@
 ===================================================== */
 
 .return-icon {
-  background: #d8c7f8;
+   background: #d8c7f8;
 
-  color: #8246e8;
+   color: #8246e8;
 }
 
 
@@ -305,9 +308,9 @@
 ===================================================== */
 
 .remaining-icon {
-  background: #ffd59d;
+   background: #ffd59d;
 
-  color: #ff9d22;
+   color: #ff9d22;
 }
 
 
@@ -316,14 +319,14 @@
 ===================================================== */
 
 .customer-payment-buttons {
-  width: 124px;
+   width: clamp(100px, 12vw, 140px);
 
-  flex-shrink: 0;
+   flex-shrink: 0;
 
-  display: flex;
-  flex-direction: column;
+   display: flex;
+   flex-direction: column;
 
-  gap: 6px;
+   gap: clamp(4px, 0.6vw, 6px);
 }
 
 
@@ -332,18 +335,18 @@
 ===================================================== */
 
 .customer-payment-buttons button {
-  width: 100%;
-  height: 29px;
+   width: 100%;
+   height: clamp(24px, 2.5vw, 32px);
 
-  border: none;
+   border: none;
 
-  border-radius: 6px;
+   border-radius: 6px;
 
-  font-size: 9px;
+   font-size: clamp(8px, 0.9vw, 10px);
 
-  font-weight: 500;
+   font-weight: 500;
 
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 
@@ -352,15 +355,15 @@
 ===================================================== */
 
 .get-payment-button {
-  background: #477bf2;
+   background: #477bf2;
 
-  color: #ffffff;
+   color: #ffffff;
 
-  cursor: pointer;
+   cursor: pointer;
 }
 
 .get-payment-button:hover {
-  background: #386ce0;
+   background: #386ce0;
 }
 
 
@@ -369,11 +372,11 @@
 ===================================================== */
 
 .pay-customer-button {
-  background: #d7d8da;
+   background: #d7d8da;
 
-  color: #a3a5a9;
+   color: #a3a5a9;
 
-  cursor: not-allowed;
+   cursor: not-allowed;
 }
 
 
@@ -383,37 +386,65 @@
 
 @media (max-width: 900px) {
 
-  .customer-summary-area {
-    height: auto;
+   .customer-summary-area {
+     height: auto;
 
-    flex-direction: column;
-  }
+     flex-direction: column;
+   }
 
-  .customer-summary-cards {
-    width: 100%;
-  }
+   .customer-summary-cards {
+     width: 100%;
+   }
 
-  .customer-payment-buttons {
-    width: 100%;
+   .customer-payment-buttons {
+     width: 100%;
 
-    flex-direction: row;
-  }
+     flex-direction: row;
+   }
 
-  .customer-payment-buttons button {
-    flex: 1;
-  }
+   .customer-payment-buttons button {
+     flex: 1;
+   }
 }
 
 
 @media (max-width: 600px) {
 
-  .customer-summary-cards {
-    grid-template-columns: 1fr;
-  }
+   .customer-summary-cards {
+     grid-template-columns: 1fr;
+   }
 
-  .customer-payment-buttons {
-    flex-direction: column;
-  }
+   .customer-payment-buttons {
+     flex-direction: column;
+   }
+}
+
+@media (max-width: 480px) {
+    .view-customer-page {
+        padding: 6px 8px 30px;
+    }
+
+    .customer-summary-area {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .customer-summary-cards {
+        gap: 8px;
+    }
+
+    .customer-summary-card {
+        padding: 8px;
+    }
+
+    .customer-payment-buttons {
+        gap: 6px;
+    }
+
+    .customer-payment-buttons button {
+        height: 28px;
+        font-size: 9px;
+    }
 }
 
 
@@ -439,9 +470,9 @@
 ========================================= */
 
 .invoice-card-header {
-    height: 31px;
+    height: clamp(28px, 3vw, 36px);
 
-    padding: 0 12px;
+    padding: 0 clamp(8px, 1.2vw, 12px);
 
     display: flex;
     align-items: center;
@@ -452,7 +483,7 @@
 
     color: #293149;
 
-    font-size: 11px;
+    font-size: clamp(10px, 1.1vw, 13px);
     font-weight: 600;
 }
 
@@ -462,18 +493,20 @@
 ========================================= */
 
 .invoice-controls {
-    min-height: 44px;
+    min-height: clamp(40px, 4vw, 50px);
 
-    padding: 8px 13px;
+    padding: clamp(6px, 0.8vw, 10px) clamp(8px, 1.2vw, 13px);
 
     box-sizing: border-box;
 
     display: flex;
     align-items: center;
 
-    gap: 15px;
+    gap: clamp(8px, 1.2vw, 15px);
 
     background: #ffffff;
+
+    flex-wrap: wrap;
 }
 
 
@@ -487,13 +520,13 @@
     gap: 6px;
 
     color: #6f7787;
-    font-size: 11px;
+    font-size: clamp(9px, 0.9vw, 11px);
 }
 
 
 .entries-section select {
-    width: 48px;
-    height: 29px;
+    width: clamp(40px, 5vw, 50px);
+    height: clamp(24px, 2.5vw, 30px);
 
     padding: 0 5px;
 
@@ -503,7 +536,7 @@
     background: #ffffff;
 
     color: #4e5667;
-    font-size: 11px;
+    font-size: clamp(9px, 0.9vw, 11px);
 
     outline: none;
 
@@ -529,15 +562,15 @@
 
     color: #555d6d;
 
-    font-size: 9px;
+    font-size: clamp(8px, 0.9vw, 10px);
 
     white-space: nowrap;
 }
 
 
 .invoice-search input {
-    width: 110px;
-    height: 25px;
+    width: clamp(80px, 15vw, 120px);
+    height: clamp(22px, 2.2vw, 28px);
 
     padding: 0 8px;
 
@@ -550,7 +583,7 @@
 
     color: #555d6d;
 
-    font-size: 9px;
+    font-size: clamp(8px, 0.9vw, 10px);
 }
 
 
@@ -569,9 +602,9 @@
 ========================================= */
 
 .date-filter-button {
-    height: 27px;
+    height: clamp(22px, 2.2vw, 28px);
 
-    padding: 0 9px;
+    padding: 0 clamp(6px, 0.8vw, 10px);
 
     display: flex;
     align-items: center;
@@ -588,7 +621,7 @@
 
     font-family: inherit;
 
-    font-size: 8px;
+    font-size: clamp(7px, 0.8vw, 9px);
 
     white-space: nowrap;
 
@@ -597,7 +630,7 @@
 
 
 .date-filter-button svg {
-    font-size: 9px;
+    font-size: clamp(8px, 0.9vw, 10px);
 }
 
 
@@ -622,7 +655,7 @@
 }
 
 .vc-calendar-inner {
-    width: 240px;
+    width: clamp(200px, 25vw, 260px);
 
     background: #ffffff;
 
@@ -642,7 +675,7 @@
 
     border-bottom: 1px solid #e5e7eb;
 
-    font-size: 11px;
+    font-size: clamp(9px, 1vw, 12px);
 
     font-weight: 600;
 
@@ -668,7 +701,7 @@
 .vc-cal-weekdays span {
     text-align: center;
 
-    font-size: 9px;
+    font-size: clamp(8px, 0.8vw, 10px);
 
     color: #6b7280;
 
@@ -688,7 +721,7 @@
 
     padding: 5px 0;
 
-    font-size: 10px;
+    font-size: clamp(9px, 0.9vw, 11px);
 
     color: #374151;
 
@@ -720,31 +753,15 @@
     overflow-x: auto;
     overflow-y: hidden;
 
-    scrollbar-width: thin;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 
 /* Chrome / Edge / Safari scrollbar */
 
 .invoice-table-wrapper::-webkit-scrollbar {
-    height: 6px;
-}
-
-
-.invoice-table-wrapper::-webkit-scrollbar-track {
-    background: #f4f5f7;
-}
-
-
-.invoice-table-wrapper::-webkit-scrollbar-thumb {
-    background: #c7ccd5;
-
-    border-radius: 10px;
-}
-
-
-.invoice-table-wrapper::-webkit-scrollbar-thumb:hover {
-    background: #aeb4bf;
+    display: none;
 }
 
 
@@ -755,13 +772,13 @@
 .invoice-table {
     width: 100%;
 
-    min-width: 1450px;
+    min-width: 1200px;
 
     border-collapse: collapse;
 
     table-layout: auto;
 
-    font-size: 9px;
+    font-size: clamp(9px, 1vw, 11px);
 }
 
 
@@ -770,9 +787,9 @@
 ========================================= */
 
 .invoice-table thead th {
-    height: 34px;
+    height: clamp(32px, 3vw, 40px);
 
-    padding: 0 10px;
+    padding: 0 clamp(6px, 1vw, 10px);
 
     background: #f7f8fa;
 
@@ -780,7 +797,7 @@
 
    color: #111827;  
 
-    font-size: 12px;
+    font-size: clamp(10px, 1.1vw, 13px);
     font-weight: 600;
 
     text-align: left;
@@ -794,15 +811,15 @@
 ========================================= */
 
 .invoice-table tbody td {
-    height: 30px;
+    height: clamp(28px, 2.8vw, 36px);
 
-    padding: 0 10px;
+    padding: 0 clamp(6px, 1vw, 10px);
 
     border-bottom: 1px solid #eeeeee;
 
    color: #4B5563;
 
-    font-size: 10px;
+    font-size: clamp(9px, 1vw, 11px);
     font-weight: 400;
 
     white-space: nowrap;
@@ -831,8 +848,8 @@
 
 .invoice-table th:nth-child(1),
 .invoice-table td:nth-child(1) {
-    width: 38px;
-    min-width: 38px;
+    width: 35px;
+    min-width: 35px;
 
     text-align: center;
 }
@@ -840,61 +857,61 @@
 
 .invoice-table th:nth-child(2),
 .invoice-table td:nth-child(2) {
-    min-width: 110px;
+    min-width: 100px;
 }
 
 
 .invoice-table th:nth-child(3),
 .invoice-table td:nth-child(3) {
-    min-width: 125px;
+    min-width: 110px;
 }
 
 
 .invoice-table th:nth-child(4),
 .invoice-table td:nth-child(4) {
-    min-width: 100px;
+    min-width: 90px;
 }
 
 
 .invoice-table th:nth-child(5),
 .invoice-table td:nth-child(5) {
-    min-width: 145px;
+    min-width: 130px;
 }
 
 
 .invoice-table th:nth-child(6),
 .invoice-table td:nth-child(6) {
-    min-width: 145px;
+    min-width: 130px;
 }
 
 
 .invoice-table th:nth-child(7),
 .invoice-table td:nth-child(7) {
-    min-width: 150px;
+    min-width: 140px;
 }
 
 
 .invoice-table th:nth-child(8),
 .invoice-table td:nth-child(8) {
-    min-width: 125px;
+    min-width: 110px;
 }
 
 
 .invoice-table th:nth-child(9),
 .invoice-table td:nth-child(9) {
-    min-width: 115px;
+    min-width: 100px;
 }
 
 
 .invoice-table th:nth-child(10),
 .invoice-table td:nth-child(10) {
-    min-width: 120px;
+    min-width: 100px;
 }
 
 
 .invoice-table th:nth-child(11),
 .invoice-table td:nth-child(11) {
-    min-width: 100px;
+    min-width: 90px;
 }
 
 
@@ -908,14 +925,14 @@
     align-items: center;
     justify-content: center;
 
-    min-width: 66px;
-    height: 18px;
+    min-width: 60px;
+    height: clamp(16px, 1.6vw, 22px);
 
-    padding: 0 10px;
+    padding: 0 8px;
 
     border-radius: 20px;
 
-    font-size: 8px;
+    font-size: clamp(7px, 0.8vw, 9px);
     font-weight: 500;
 }
 
@@ -943,7 +960,7 @@
 
     color: #ff9419;
 
-    font-size: 7px;
+    font-size: clamp(6px, 0.7vw, 8px);
 }
 
 
@@ -969,8 +986,8 @@
 
 
 .invoice-action-button {
-    width: 25px;
-    height: 25px;
+    width: clamp(22px, 2.2vw, 28px);
+    height: clamp(22px, 2.2vw, 28px);
 
     padding: 0;
 
@@ -981,7 +998,7 @@
     align-items: center;
     justify-content: center;
 
-    font-size: 12px;
+    font-size: clamp(10px, 1.1vw, 13px);
 
     cursor: pointer;
 
@@ -1015,7 +1032,7 @@
 ========================================= */
 
 .no-invoice {
-    height: 80px !important;
+    height: 70px !important;
 
     text-align: center !important;
 
@@ -1028,9 +1045,9 @@
 ========================================= */
 
 .invoice-table-footer {
-    min-height: 42px;
+    min-height: clamp(36px, 3.5vw, 45px);
 
-    padding: 7px 13px;
+    padding: clamp(5px, 0.8vw, 8px) clamp(10px, 1.5vw, 13px);
 
     box-sizing: border-box;
 
@@ -1039,6 +1056,9 @@
     justify-content: space-between;
 
     background: #ffffff;
+
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 
@@ -1049,7 +1069,7 @@
 .invoice-entry-info {
     color: #737a87;
 
-    font-size: 9px;
+    font-size: clamp(8px, 0.9vw, 10px);
 
     white-space: nowrap;
 }
@@ -1068,8 +1088,8 @@
 
 
 .invoice-pagination button {
-    width: 25px;
-    height: 25px;
+    min-width: clamp(22px, 2.2vw, 28px);
+    height: clamp(22px, 2.2vw, 28px);
 
     padding: 0;
 
@@ -1080,7 +1100,7 @@
 
     color: #747b88;
 
-    font-size: 9px;
+    font-size: clamp(8px, 0.9vw, 10px);
 
     display: flex;
     align-items: center;
@@ -1115,258 +1135,231 @@
 
 @media (max-width: 900px) {
 
-    .customer-summary-area {
-        flex-direction: column;
-    }
+   .customer-summary-area {
+       flex-direction: column;
+   }
 
-    .customer-payment-buttons {
-        width: 100%;
+   .customer-summary-cards {
+       width: 100%;
+   }
 
-        flex-direction: row;
-    }
+   .customer-payment-buttons {
+       width: 100%;
 
-    .get-payment-button,
-    .pay-customer-button {
-        width: 100%;
-    }
+       flex-direction: row;
+   }
 
+   .get-payment-button,
+   .pay-customer-button {
+       width: 100%;
+   }
 }
 
 
 @media (max-width: 700px) {
 
+   .customer-summary-cards {
+       grid-template-columns: 1fr;
+   }
+
+   .invoice-controls {
+       flex-wrap: wrap;
+   }
+
+   .invoice-search {
+       margin-left: 0;
+   }
+}
+
+@media (max-width: 480px) {
+    .view-customer-page {
+        padding: 6px 8px 30px;
+    }
+
+    .view-customer-breadcrumb {
+        font-size: 8px;
+    }
+
+    .view-customer-title {
+        font-size: 15px;
+    }
+
+    .customer-summary-area {
+        padding: 10px;
+        gap: 8px;
+    }
+
     .customer-summary-cards {
-        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .customer-summary-card {
+        padding: 8px;
+        height: auto;
+        min-height: 50px;
+    }
+
+    .customer-payment-buttons {
+        gap: 6px;
+    }
+
+    .customer-payment-buttons button {
+        height: 28px;
+        font-size: 9px;
+    }
+
+    .invoice-card-header {
+        font-size: 11px;
     }
 
     .invoice-controls {
-        flex-wrap: wrap;
+        padding: 8px 10px;
+        gap: 8px;
     }
 
-    .invoice-search {
-        margin-left: 0;
+    .invoice-table-footer {
+        padding: 8px 10px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .view-customer-page {
+        padding: 12px 24px 60px;
     }
 
-}
-/* =========================================
-   GET PAYMENT POPUP
-========================================= */
+    .view-customer-breadcrumb {
+        font-size: 12px;
+    }
 
-.payment-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+    .view-customer-title {
+        font-size: 24px;
+    }
 
-    width: 100vw;
-    height: 100vh;
+    .customer-summary-area {
+        padding: 18px;
+        gap: 12px;
+    }
 
-    background: rgba(31, 41, 55, 0.45);
+    .customer-summary-cards {
+        gap: 12px;
+    }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .customer-summary-card {
+        padding: 14px;
+        height: 80px;
+    }
 
-    z-index: 9999;
-}
+    .summary-card-label {
+        font-size: 12px;
+    }
 
+    .summary-card-content strong {
+        font-size: 15px;
+    }
 
-/* =========================================
-   POPUP BOX
-========================================= */
+    .summary-card-icon {
+        width: 32px;
+        height: 32px;
+    }
 
-.payment-modal {
-    width: 360px;
+    .customer-payment-buttons {
+        width: 160px;
+        gap: 8px;
+    }
 
-    background: #ffffff;
+    .customer-payment-buttons button {
+        height: 36px;
+        font-size: 11px;
+    }
 
-    border-radius: 6px;
+    .invoice-card-header {
+        font-size: 15px;
+    }
 
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    .invoice-controls {
+        padding: 12px 16px;
+    }
 
-    overflow: hidden;
-}
+    .invoice-table thead th {
+        font-size: 13px;
+    }
 
+    .invoice-table tbody td {
+        font-size: 12px;
+    }
 
-/* =========================================
-   HEADER
-========================================= */
-
-.payment-modal-header {
-    height: 42px;
-
-    display: flex;
-    align-items: center;
-
-    padding: 0 14px;
-
-    box-sizing: border-box;
-
-    color: #273047;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    border-bottom: 1px solid #eeeeee;
-}
-
-
-/* =========================================
-   BODY
-========================================= */
-
-.payment-modal-body {
-    padding: 12px 14px 4px;
+    .invoice-table-footer {
+        padding: 12px 16px;
+    }
 }
 
+@media (min-width: 2560px) {
+    .view-customer-page {
+        padding: 16px 32px 80px;
+    }
 
-/* =========================================
-   FORM GROUP
-========================================= */
+    .view-customer-breadcrumb {
+        font-size: 14px;
+    }
 
-.payment-form-group {
-    margin-bottom: 11px;
+    .view-customer-title {
+        font-size: 28px;
+    }
+
+    .customer-summary-area {
+        padding: 22px;
+        gap: 14px;
+    }
+
+    .customer-summary-cards {
+        gap: 14px;
+    }
+
+    .customer-summary-card {
+        padding: 16px;
+        height: 90px;
+    }
+
+    .summary-card-label {
+        font-size: 13px;
+    }
+
+    .summary-card-content strong {
+        font-size: 17px;
+    }
+
+    .summary-card-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .customer-payment-buttons {
+        width: 180px;
+        gap: 10px;
+    }
+
+    .customer-payment-buttons button {
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .invoice-card-header {
+        font-size: 17px;
+    }
+
+    .invoice-controls {
+        padding: 14px 20px;
+    }
+
+    .invoice-table thead th {
+        font-size: 14px;
+    }
+
+    .invoice-table tbody td {
+        font-size: 13px;
+    }
+
+    .invoice-table-footer {
+        padding: 14px 20px;
+    }
 }
-
-.payment-form-group label {
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: #30384b;
-
-    font-size: 9px;
-    font-weight: 500;
-}
-
-
-/* =========================================
-   INPUTS
-========================================= */
-
-.payment-form-group input,
-.payment-form-group select,
-.payable-amount-box {
-    width: 100%;
-
-    height: 32px;
-
-    box-sizing: border-box;
-
-    border: 1px solid #dfe3e8;
-
-    border-radius: 4px;
-
-    padding: 0 10px;
-
-    background: #ffffff;
-
-    color: #596273;
-
-    font-size: 9px;
-
-    outline: none;
-}
-
-
-/* PAYABLE AMOUNT */
-
-.payable-amount-box {
-    display: flex;
-    align-items: center;
-
-    background: #f4f5f7;
-
-    color: #687181;
-}
-
-
-/* INPUT PLACEHOLDER */
-
-.payment-form-group input::placeholder {
-    color: #89919e;
-}
-
-
-/* SELECT */
-
-.payment-form-group select {
-    cursor: pointer;
-
-    color: #697181;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-.payment-modal-footer {
-    display: flex;
-
-    justify-content: flex-end;
-
-    gap: 6px;
-
-    padding: 8px 14px 12px;
-
-    border-top: 1px solid #f0f0f0;
-}
-
-
-/* =========================================
-   CANCEL BUTTON
-========================================= */
-
-.payment-cancel-button {
-    width: 88px;
-    height: 30px;
-
-    border: none;
-
-    border-radius: 4px;
-
-    background: #eeeeee;
-
-    color: #69717e;
-
-    font-size: 9px;
-
-    cursor: pointer;
-}
-
-
-/* =========================================
-   GET PAYMENT BUTTON
-========================================= */
-
-.payment-submit-button {
-    width: 94px;
-    height: 30px;
-
-    border: none;
-
-    border-radius: 4px;
-
-    background: #4778ed;
-
-    color: #ffffff;
-
-    font-size: 9px;
-    font-weight: 500;
-
-    cursor: pointer;
-}
-
-
-/* =========================================
-   HOVER
-========================================= */
-
-.payment-cancel-button:hover {
-    background: #e3e3e3;
-}
-
-.payment-submit-button:hover {
-    background: #3d6ee0;
-}
-

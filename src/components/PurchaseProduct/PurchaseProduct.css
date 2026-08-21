@@ -3,8 +3,8 @@
 ========================================= */
 
 .purchase-product-page {
-  width: calc(100% + 30px);
-  margin-left: -18px;
+  width: 100%;
+  margin-left: 0;
 
   background: #f3f4f6;
 
@@ -13,6 +13,8 @@
   color: #293650;
 
   font-family: Arial, sans-serif;
+
+  padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
 }
 
 
@@ -25,14 +27,17 @@
   align-items: flex-end;
   justify-content: space-between;
 
-  margin-bottom: 12px;
+  margin-bottom: clamp(10px, 1.5vw, 18px);
+
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 
 .purchase-page-header h1 {
   margin: 0;
 
-  font-size: 19px;
+  font-size: clamp(16px, 1.8vw, 24px);
 
   font-weight: 600;
 
@@ -41,10 +46,13 @@
 
 
 .purchase-breadcrumb {
-  font-size: 8px;
+  margin-top: 4%;
+  font-size: clamp(8px, 1vw, 12px);
   color: #8b93a0;
 
-  margin-bottom: 7px;
+  margin-bottom: clamp(4px, 0.8vw, 8px);
+
+  line-height: 1.3;
 }
 
 
@@ -53,9 +61,9 @@
 ========================================= */
 
 .purchase-return-btn {
-  height: 34px;
+  height: clamp(28px, 3vw, 38px);
 
-  padding: 0 15px;
+  padding: 0 clamp(12px, 1.5vw, 18px);
 
   display: flex;
   align-items: center;
@@ -68,9 +76,12 @@
 
   color: white;
 
-  font-size: 9px;
+  font-size: clamp(9px, 1vw, 13px);
 
   cursor: pointer;
+
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 
@@ -86,10 +97,10 @@
 .purchase-steps {
   width: 100%;
 
-  padding: 10px;
+  padding: clamp(8px, 1vw, 12px);
 
   display: flex;
-  gap: 7px;
+  gap: clamp(4px, 0.8vw, 8px);
 
   background: white;
 
@@ -97,16 +108,20 @@
 
   box-sizing: border-box;
 
-  margin-bottom: 12px;
+  margin-bottom: clamp(10px, 1.5vw, 16px);
+
+  flex-wrap: wrap;
 }
 
 
 .purchase-step {
   flex: 1;
 
-  height: 38px;
+  min-width: 0;
 
-  padding: 0 10px;
+  height: clamp(32px, 3vw, 44px);
+
+  padding: 0 clamp(8px, 1vw, 12px);
 
   display: flex;
   align-items: center;
@@ -121,11 +136,13 @@
 
   color: #9aa1ad;
 
-  font-size: 9px;
+  font-size: clamp(8px, 0.9vw, 12px);
 
   text-align: left;
 
   cursor: pointer;
+
+  box-sizing: border-box;
 }
 
 
@@ -137,7 +154,7 @@
 .purchase-step svg {
   margin-left: auto;
 
-  font-size: 10px;
+  font-size: clamp(9px, 1vw, 12px);
 }
 
 
@@ -174,7 +191,7 @@
 
   align-items: flex-start;
 
-  gap: 8px;
+  gap: clamp(6px, 1vw, 12px);
 
   width: 100%;
 }
@@ -200,23 +217,23 @@
 
   overflow: hidden;
 
-  margin-bottom: 10px;
+  margin-bottom: clamp(8px, 1.2vw, 14px);
 
   box-sizing: border-box;
 }
 
 
 .purchase-section-title {
-  min-height: 39px;
+  min-height: clamp(34px, 3vw, 45px);
 
-  padding: 0 13px;
+  padding: 0 clamp(10px, 1.2vw, 14px);
 
   display: flex;
   align-items: center;
 
   border-bottom: 1px solid #e8ebef;
 
-  font-size: 11px;
+  font-size: clamp(10px, 1vw, 13px);
 
   font-weight: 600;
 
@@ -231,7 +248,7 @@
 ========================================= */
 
 .product-toolbar {
-  height: 48px;
+  min-height: clamp(40px, 3.5vw, 52px);
 
   display: flex;
 
@@ -239,11 +256,13 @@
 
   gap: 7px;
 
-  padding: 0 13px;
+  padding: 0 clamp(10px, 1.2vw, 14px);
 
   background: #f7f8fa;
 
   box-sizing: border-box;
+
+  flex-wrap: wrap;
 }
 
 
@@ -253,13 +272,13 @@
     gap: 6px;
 
     color: #6f7787;
-    font-size: 11px;
+    font-size: clamp(10px, 1vw, 12px);
 }
 
 
 .entries-section select {
-    width: 48px;
-    height: 29px;
+    width: clamp(40px, 4vw, 50px);
+    height: clamp(24px, 2.2vw, 32px);
 
     padding: 0 5px;
 
@@ -269,7 +288,7 @@
     background: #ffffff;
 
     color: #4e5667;
-    font-size: 11px;
+    font-size: clamp(10px, 1vw, 12px);
 
     outline: none;
 
@@ -289,20 +308,26 @@
   align-items: center;
 
   gap: 7px;
+
+  flex: 1;
+  min-width: 0;
+  max-width: 280px;
 }
 
 
 .product-search label {
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
   color: #687181;
+
+  white-space: nowrap;
 }
 
 
 .product-search input {
-  width: 105px;
+  width: 100%;
 
-  height: 27px;
+  height: clamp(26px, 2.2vw, 32px);
 
   padding: 0 9px;
 
@@ -314,7 +339,7 @@
 
   background: white;
 
-  font-size: 8px;
+  font-size: clamp(9px, 1vw, 12px);
 
   color: #505b6c;
 
@@ -332,22 +357,22 @@
 ========================================= */
 
 .product-card-grid {
-  padding: 9px 13px 13px;
+  padding: clamp(6px, 1vw, 12px) clamp(10px, 1.2vw, 14px);
 
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 5px;
+  gap: clamp(4px, 0.8vw, 8px);
 
   box-sizing: border-box;
 }
 
 
 .product-card {
-  min-height: 40px;
+  min-height: clamp(36px, 3vw, 50px);
 
-  padding: 7px 9px;
+  padding: clamp(6px, 0.8vw, 10px) clamp(8px, 1vw, 12px);
 
   display: flex;
 
@@ -368,6 +393,8 @@
   cursor: pointer;
 
   transition: 0.15s;
+
+  box-sizing: border-box;
 }
 
 
@@ -379,22 +406,22 @@
 
 
 .product-card-name {
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
   color: #455164;
 
-  line-height: 11px;
+  line-height: 1.3;
 }
 
 
 .product-card-size {
   margin-top: 2px;
 
-  font-size: 6px;
+  font-size: clamp(6px, 0.8vw, 10px);
 
   color: #4b7df3;
 
-  line-height: 8px;
+  line-height: 1.3;
 }
 
 
@@ -403,7 +430,7 @@
 ========================================= */
 
 .single-form {
-  padding: 12px 13px 14px;
+  padding: clamp(10px, 1.2vw, 14px) clamp(10px, 1.2vw, 14px);
 
   display: flex;
 
@@ -414,7 +441,7 @@
 
 
 .single-form label {
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
   color: #4c5666;
 }
@@ -430,7 +457,7 @@
 .single-form select {
   width: 100%;
 
-  height: 31px;
+  height: clamp(28px, 2.5vw, 36px);
 
   padding: 0 10px;
 
@@ -444,7 +471,9 @@
 
   color: #596475;
 
-  font-size: 8px;
+  font-size: clamp(9px, 1vw, 12px);
+
+  box-sizing: border-box;
 }
 
 
@@ -458,13 +487,15 @@
 ========================================= */
 
 .payment-form-grid {
-  padding: 12px 13px 14px;
+  padding: clamp(10px, 1.2vw, 14px) clamp(10px, 1.2vw, 14px);
 
   display: grid;
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 10px;
+  gap: clamp(6px, 1vw, 12px);
+
+  box-sizing: border-box;
 }
 
 
@@ -483,7 +514,7 @@
 
 
 .payment-form-field label {
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
   color: #4c5666;
 }
@@ -499,7 +530,7 @@
 .payment-form-field input {
   width: 100%;
 
-  height: 31px;
+  height: clamp(28px, 2.5vw, 36px);
 
   padding: 0 10px;
 
@@ -511,7 +542,7 @@
 
   outline: none;
 
-  font-size: 8px;
+  font-size: clamp(9px, 1vw, 12px);
 
   color: #566174;
 }
@@ -529,8 +560,7 @@
 .cart-detail {
   width: 240px;
 
-
-  min-height: 500px;
+  min-height: clamp(300px, 40vw, 500px);
 
   background: white;
 
@@ -541,15 +571,17 @@
   display: flex;
 
   flex-direction: column;
+
+  box-sizing: border-box;
 }
 
 
 /* CART TITLE */
 
 .cart-title {
-  height: 39px;
+  height: clamp(34px, 3vw, 45px);
 
-  padding: 0 12px;
+  padding: 0 clamp(8px, 1vw, 12px);
 
   display: flex;
 
@@ -559,11 +591,13 @@
 
   border-bottom: 1px solid #e8ebef;
 
-  font-size: 11px;
+  font-size: clamp(10px, 1vw, 13px);
 
   font-weight: 600;
 
   color: #30394a;
+
+  box-sizing: border-box;
 }
 
 
@@ -577,16 +611,16 @@
 .cart-items {
   flex: 1;
 
-  padding: 0 10px;
+  padding: 0 clamp(6px, 0.8vw, 10px);
 
   overflow-y: auto;
 }
 
 
 .cart-item {
-  min-height: 68px;
+  min-height: clamp(50px, 5vw, 70px);
 
-  padding: 9px 0;
+  padding: clamp(6px, 0.8vw, 10px) 0;
 
   display: flex;
 
@@ -604,20 +638,22 @@
 
 
 .cart-product-name {
-  font-size: 9px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
   color: #4a5566;
 
-  line-height: 12px;
+  line-height: 1.3;
 }
 
 
 .cart-product-size {
   margin-top: 2px;
 
-  font-size: 7px;
+  font-size: clamp(6px, 0.8vw, 10px);
 
   color: #4b7df3;
+
+  line-height: 1.3;
 }
 
 
@@ -630,7 +666,7 @@
 
   margin-top: 2px;
 
-  font-size: 6px;
+  font-size: clamp(5px, 0.7vw, 8px);
 
   color: #4b5564;
 }
@@ -645,7 +681,7 @@
 
   color: #606876;
 
-  font-size: 5px;
+  font-size: clamp(4px, 0.6vw, 7px);
 }
 
 
@@ -658,7 +694,7 @@
 
   gap: 12px;
 
-  font-size: 6px;
+  font-size: clamp(5px, 0.7vw, 8px);
 
   color: #566071;
 }
@@ -672,8 +708,8 @@
 
 
 .cart-delete-btn {
-  width: 17px;
-  height: 17px;
+  width: clamp(14px, 1.5vw, 20px);
+  height: clamp(14px, 1.5vw, 20px);
 
   flex-shrink: 0;
 
@@ -689,7 +725,7 @@
 
   color: #ff6b57;
 
-  font-size: 7px;
+  font-size: clamp(6px, 0.7vw, 9px);
 
   cursor: pointer;
 }
@@ -705,7 +741,7 @@
 ========================================= */
 
 .cart-bottom {
-  padding: 10px;
+  padding: clamp(8px, 1vw, 12px);
 
   border-top: 1px solid #edf0f3;
 
@@ -720,9 +756,9 @@
 
   align-items: center;
 
-  margin-bottom: 7px;
+  margin-bottom: clamp(4px, 0.6vw, 8px);
 
-  font-size: 8px;
+  font-size: clamp(8px, 1vw, 11px);
 
   color: #596373;
 }
@@ -745,7 +781,7 @@
 .cart-continue-btn {
   width: 100%;
 
-  height: 29px;
+  height: clamp(24px, 2.5vw, 32px);
 
   border: none;
 
@@ -755,7 +791,7 @@
 
   color: white;
 
-  font-size: 8px;
+  font-size: clamp(8px, 1vw, 11px);
 
   cursor: pointer;
 }
@@ -792,7 +828,7 @@
 ========================================= */
 
 .product-modal {
-  width: 335px;
+  width: clamp(280px, 90vw, 380px);
 
   background: white;
 
@@ -805,9 +841,9 @@
 
 
 .modal-header {
-  height: 39px;
+  height: clamp(34px, 3vw, 45px);
 
-  padding: 0 12px;
+  padding: 0 clamp(10px, 1.2vw, 14px);
 
   display: flex;
 
@@ -817,11 +853,13 @@
 
   border-bottom: 1px solid #e5e8ed;
 
-  font-size: 11px;
+  font-size: clamp(10px, 1vw, 13px);
 
   font-weight: 600;
 
   color: #30394a;
+
+  box-sizing: border-box;
 }
 
 
@@ -837,7 +875,7 @@
 
 
 .modal-product {
-  padding: 10px 12px;
+  padding: clamp(8px, 1vw, 12px);
 
   background: #f5f6f8;
 
@@ -846,7 +884,7 @@
 
 
 .modal-product div {
-  font-size: 9px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
   color: #4d5868;
 }
@@ -857,20 +895,22 @@
 
   margin-top: 2px;
 
-  font-size: 7px;
+  font-size: clamp(6px, 0.8vw, 10px);
 
   color: #4b7df3;
 }
 
 
 .modal-form {
-  padding: 12px;
+  padding: clamp(10px, 1.2vw, 14px);
 
   display: grid;
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 10px;
+  gap: clamp(6px, 1vw, 10px);
+
+  box-sizing: border-box;
 }
 
 
@@ -889,7 +929,7 @@
 
 
 .modal-field label {
-  font-size: 8px;
+  font-size: clamp(8px, 0.9vw, 11px);
 
   color: #4b5565;
 }
@@ -905,7 +945,7 @@
 .modal-field input {
   width: 100%;
 
-  height: 32px;
+  height: clamp(28px, 2.5vw, 36px);
 
   padding: 0 10px;
 
@@ -917,7 +957,7 @@
 
   outline: none;
 
-  font-size: 8px;
+  font-size: clamp(9px, 1vw, 12px);
 }
 
 
@@ -929,7 +969,7 @@
 /* MODAL BUTTONS */
 
 .modal-buttons {
-  padding: 0 12px 12px;
+  padding: 0 clamp(10px, 1.2vw, 14px) clamp(10px, 1.2vw, 14px);
 
   display: flex;
 
@@ -940,13 +980,13 @@
 .modal-buttons button {
   flex: 1;
 
-  height: 30px;
+  height: clamp(26px, 2.5vw, 34px);
 
   border: none;
 
   border-radius: 5px;
 
-  font-size: 8px;
+  font-size: clamp(8px, 1vw, 11px);
 
   cursor: pointer;
 }
@@ -969,9 +1009,6 @@
 /* =========================================
    CONFIRMATION MODAL
 ========================================= */
-/* =========================================
-   PURCHASE CONFIRMATION POPUP
-========================================= */
 
 .confirmation-overlay {
   position: fixed;
@@ -987,17 +1024,15 @@
 }
 
 
-/* POPUP BOX */
-
 .confirmation-popup {
-  width: 410px;
-  min-height: 380px;
+  width: clamp(300px, 90vw, 420px);
+  min-height: clamp(280px, 50vw, 400px);
 
   background: #ffffff;
 
   border-radius: 10px;
 
-  padding: 25px 22px 22px;
+  padding: clamp(16px, 2vw, 28px) clamp(14px, 2vw, 24px);
 
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.20);
 
@@ -1007,17 +1042,13 @@
 }
 
 
-/* =========================================
-   GREEN CHECK ICON
-========================================= */
-
 .confirmation-check {
-  width: 78px;
-  height: 78px;
+  width: clamp(56px, 7vw, 78px);
+  height: clamp(56px, 7vw, 78px);
 
-  margin: 0 auto 25px;
+  margin: 0 auto clamp(16px, 2vw, 28px);
 
-  border: 7px solid #45b96b;
+  border: clamp(4px, 0.6vw, 7px) solid #45b96b;
 
   border-radius: 50%;
 
@@ -1030,7 +1061,7 @@
 .confirmation-check span {
   color: #45b96b;
 
-  font-size: 57px;
+  font-size: clamp(40px, 6vw, 57px);
 
   font-weight: 700;
 
@@ -1040,31 +1071,23 @@
 }
 
 
-/* =========================================
-   TITLE
-========================================= */
-
 .confirmation-popup h2 {
-  margin: 0 0 24px;
+  margin: 0 0 clamp(16px, 2vw, 28px);
 
   color: #182033;
 
-  font-size: 21px;
+  font-size: clamp(16px, 2vw, 24px);
 
   font-weight: 700;
 }
 
 
-/* =========================================
-   DETAILS
-========================================= */
-
 .confirmation-details {
   color: #4f596b;
 
-  font-size: 16px;
+  font-size: clamp(12px, 1.4vw, 18px);
 
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 
@@ -1080,40 +1103,24 @@
 }
 
 
-.confirmation-details .invoice-number {
-  margin-top: 2px;
-
-  font-weight: 600;
-}
-
-
-.confirmation-details .invoice-number strong {
-  font-weight: 700;
-}
-
-
-/* =========================================
-   BUTTONS
-========================================= */
-
 .confirmation-buttons {
   display: flex;
 
-  gap: 12px;
+  gap: clamp(8px, 1.2vw, 14px);
 
-  margin-top: 27px;
+  margin-top: clamp(16px, 2vw, 30px);
 }
 
 
 .again-purchase-btn,
 .download-invoice-btn {
-  height: 44px;
+  height: clamp(32px, 3vw, 48px);
 
   border: none;
 
   border-radius: 9px;
 
-  font-size: 16px;
+  font-size: clamp(12px, 1.4vw, 18px);
 
   cursor: pointer;
 
@@ -1170,7 +1177,6 @@
   .product-card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
 
@@ -1208,84 +1214,94 @@
   .payment-form-field.full {
     grid-column: auto;
   }
-
 }
 
-/* =========================================================
-   LARGE SCREEN - 2583px
-   Make content, table, cards and text larger
-   ========================================================= */
 
-@media (min-width: 2000px) {
-
-  /* Main page */
-  .purchase-product-page {
-    padding: 25px 30px 40px;
+@media (max-width: 480px) {
+  .purchase-page-header {
+    gap: 8px;
   }
 
-  /* Header */
+  .purchase-return-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .purchase-steps {
+    gap: 6px;
+  }
+
+  .product-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .product-search {
+    max-width: 100%;
+  }
+
+  .modal-form {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+  }
+
+  .confirmation-buttons {
+    flex-direction: column;
+  }
+}
+
+
+@media (min-width: 1600px) {
+  .purchase-product-page {
+    padding: 16px 24px 50px;
+  }
+
   .purchase-breadcrumb {
-    font-size: 11px;
+    font-size: 14px;
     margin-bottom: 10px;
   }
 
   .purchase-page-header h1 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .purchase-return-btn {
     height: 44px;
     padding: 0 22px;
-    font-size: 13px;
-    border-radius: 6px;
+    font-size: 15px;
   }
 
-  /* Step bar */
   .purchase-steps {
     padding: 14px;
     gap: 10px;
-    margin-bottom: 16px;
-    border-radius: 8px;
+    margin-bottom: 18px;
   }
 
   .purchase-step {
     height: 50px;
-    padding: 0 15px;
-    gap: 9px;
+    padding: 0 14px;
     font-size: 13px;
-    border-radius: 6px;
   }
 
   .purchase-step svg {
     font-size: 14px;
   }
 
-  /* Main layout */
-  .purchase-main-layout {
-    gap: 14px;
-  }
-
-  /* White sections */
-  .purchase-section {
-    margin-bottom: 14px;
-    border-radius: 8px;
-  }
-
   .purchase-section-title {
     min-height: 52px;
-    padding: 0 18px;
     font-size: 15px;
   }
 
-  /* Toolbar */
   .product-toolbar {
     height: 62px;
     padding: 0 18px;
-    gap: 10px;
   }
 
   .entries-section {
-    gap: 8px;
     font-size: 13px;
   }
 
@@ -1295,10 +1311,6 @@
     font-size: 13px;
   }
 
-  .product-search {
-    gap: 10px;
-  }
-
   .product-search label {
     font-size: 12px;
   }
@@ -1306,310 +1318,186 @@
   .product-search input {
     width: 180px;
     height: 38px;
-    padding: 0 12px;
     font-size: 12px;
   }
 
-  /* Product cards/table */
   .product-card-grid {
-    padding: 14px 18px 18px;
-    gap: 9px;
+    padding: 14px 18px;
+    gap: 10px;
   }
 
   .product-card {
-    min-height: 62px;
-    padding: 10px 13px;
-    border-radius: 6px;
+    min-height: 70px;
+    padding: 12px 14px;
   }
 
   .product-card-name {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 13px;
   }
 
   .product-card-size {
-    margin-top: 3px;
-    font-size: 9px;
-    line-height: 12px;
+    font-size: 10px;
   }
 
-  /* Forms */
   .single-form {
-    padding: 18px 18px 20px;
-    gap: 8px;
+    padding: 18px;
   }
 
   .single-form label {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .single-form select {
-    height: 42px;
-    padding: 0 13px;
-    font-size: 11px;
-    border-radius: 6px;
+    height: 44px;
+    font-size: 12px;
   }
 
-  /* Payment form */
   .payment-form-grid {
-    padding: 18px 18px 20px;
+    padding: 18px;
     gap: 14px;
   }
 
-  .payment-form-field {
-    gap: 7px;
-  }
-
   .payment-form-field label {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .payment-form-field input {
-    height: 42px;
-    padding: 0 13px;
-    font-size: 11px;
-    border-radius: 6px;
+    height: 44px;
+    font-size: 12px;
   }
 
-  /* =========================
-     CART
-     ========================= */
-
   .cart-detail {
-    width: 340px;
-    min-height: 650px;
-    border-radius: 8px;
+    width: 320px;
+    min-height: 600px;
   }
 
   .cart-title {
     height: 52px;
-    padding: 0 17px;
     font-size: 15px;
   }
 
-  .cart-items {
-    padding: 0 14px;
-  }
-
   .cart-item {
-    min-height: 90px;
-    padding: 13px 0;
+    min-height: 80px;
   }
 
   .cart-product-name {
     font-size: 12px;
-    line-height: 16px;
   }
 
   .cart-product-size {
-    margin-top: 3px;
-    font-size: 9px;
-  }
-
-  .cart-product-dot {
-    gap: 7px;
-    margin-top: 4px;
-    font-size: 8px;
-  }
-
-  .dot-badge {
-    padding: 3px 6px;
-    font-size: 7px;
-  }
-
-  .cart-product-meta {
-    margin-top: 5px;
-    gap: 16px;
-    font-size: 8px;
-  }
-
-  .cart-delete-btn {
-    width: 23px;
-    height: 23px;
     font-size: 10px;
-    border-radius: 4px;
   }
 
   .cart-bottom {
-    padding: 15px;
+    padding: 14px;
   }
 
   .cart-total-row {
-    margin-bottom: 10px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .cart-continue-btn {
     height: 40px;
-    font-size: 11px;
-    border-radius: 6px;
+    font-size: 12px;
   }
 
-  /* =========================
-     PRODUCT MODAL
-     ========================= */
-
   .product-modal {
-    width: 480px;
-    border-radius: 8px;
+    width: 460px;
   }
 
   .modal-header {
     height: 50px;
-    padding: 0 17px;
     font-size: 15px;
   }
 
-  .modal-product {
-    padding: 14px 17px;
-  }
-
-  .modal-product div {
-    font-size: 12px;
-  }
-
-  .modal-product span {
-    margin-top: 3px;
-    font-size: 9px;
-  }
-
-  .modal-form {
-    padding: 17px;
-    gap: 14px;
-  }
-
-  .modal-field {
-    gap: 7px;
-  }
-
   .modal-field label {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .modal-field input {
     height: 42px;
-    padding: 0 13px;
-    font-size: 11px;
-  }
-
-  .modal-buttons {
-    padding: 0 17px 17px;
-    gap: 10px;
+    font-size: 12px;
   }
 
   .modal-buttons button {
     height: 40px;
-    font-size: 11px;
-    border-radius: 6px;
+    font-size: 12px;
+  }
+
+  .confirmation-popup {
+    padding: 24px;
+  }
+
+  .confirmation-popup h2 {
+    font-size: 22px;
+  }
+
+  .confirmation-details {
+    font-size: 15px;
+  }
+
+  .again-purchase-btn,
+  .download-invoice-btn {
+    height: 44px;
+    font-size: 15px;
   }
 }
 
-/* =========================================================
-   LARGE DESKTOP - 2000px+
-   READABLE FONT SIZES
-   ========================================================= */
 
-@media (min-width: 2000px) {
-
-  /* ================= PAGE ================= */
-
+@media (min-width: 2560px) {
   .purchase-product-page {
-    padding: 30px 40px 45px;
+    padding: 20px 32px 60px;
   }
 
-
-  /* ================= HEADER ================= */
-
   .purchase-breadcrumb {
-    font-size: 13px;
+    font-size: 16px;
     margin-bottom: 12px;
   }
 
   .purchase-page-header h1 {
-    font-size: 30px;
-    line-height: 38px;
+    font-size: 34px;
   }
 
   .purchase-return-btn {
-    height: 48px;
-    padding: 0 25px;
-    gap: 10px;
-
-    font-size: 14px;
-    border-radius: 7px;
-  }
-
-
-  /* ================= STEP BAR ================= */
-
-  .purchase-steps {
-    padding: 16px;
-    gap: 12px;
-    margin-bottom: 18px;
-    border-radius: 9px;
-  }
-
-  .purchase-step {
-    height: 58px;
-    padding: 0 18px;
-    gap: 10px;
-
-    font-size: 15px;
-
-    border-radius: 7px;
-  }
-
-  .purchase-step svg {
+    height: 52px;
+    padding: 0 28px;
     font-size: 17px;
   }
 
-
-  /* ================= MAIN LAYOUT ================= */
-
-  .purchase-main-layout {
-    gap: 18px;
+  .purchase-steps {
+    padding: 18px;
+    gap: 14px;
+    margin-bottom: 22px;
   }
 
+  .purchase-step {
+    height: 60px;
+    padding: 0 18px;
+    font-size: 16px;
+  }
 
-  /* ================= SECTION ================= */
-
-  .purchase-section {
-    margin-bottom: 17px;
-    border-radius: 9px;
+  .purchase-step svg {
+    font-size: 18px;
   }
 
   .purchase-section-title {
     min-height: 60px;
-    padding: 0 22px;
-
-    font-size: 17px;
-
-    border-bottom: 1px solid #e8ebef;
+    font-size: 18px;
   }
 
-
-  /* ================= TOOLBAR ================= */
-
   .product-toolbar {
-    height: 70px;
+    height: 72px;
     padding: 0 22px;
-    gap: 12px;
   }
 
   .entries-section {
-    gap: 9px;
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .entries-section select {
-    width: 75px;
+    width: 80px;
     height: 44px;
-
-    font-size: 14px;
-  }
-
-  .product-search {
-    gap: 10px;
+    font-size: 15px;
   }
 
   .product-search label {
@@ -1617,48 +1505,31 @@
   }
 
   .product-search input {
-    width: 230px;
+    width: 220px;
     height: 44px;
-
-    padding: 0 13px;
-
     font-size: 14px;
   }
 
-
-  /* ================= PRODUCT TABLE / CARDS ================= */
-
   .product-card-grid {
-    padding: 20px 22px 24px;
-    gap: 12px;
+    padding: 18px 22px;
+    gap: 14px;
   }
 
   .product-card {
-    min-height: 82px;
-
-    padding: 14px 17px;
-
-    border-radius: 7px;
+    min-height: 90px;
+    padding: 16px 18px;
   }
 
   .product-card-name {
     font-size: 16px;
-    line-height: 22px;
   }
 
   .product-card-size {
-    margin-top: 4px;
-
     font-size: 12px;
-    line-height: 16px;
   }
 
-
-  /* ================= STEP 2 FORM ================= */
-
   .single-form {
-    padding: 22px;
-    gap: 9px;
+    padding: 24px;
   }
 
   .single-form label {
@@ -1666,25 +1537,13 @@
   }
 
   .single-form select {
-    height: 48px;
-
-    padding: 0 14px;
-
+    height: 50px;
     font-size: 14px;
-
-    border-radius: 7px;
   }
-
-
-  /* ================= PAYMENT FORM ================= */
 
   .payment-form-grid {
-    padding: 22px;
-    gap: 16px;
-  }
-
-  .payment-form-field {
-    gap: 7px;
+    padding: 24px;
+    gap: 18px;
   }
 
   .payment-form-field label {
@@ -1692,77 +1551,29 @@
   }
 
   .payment-form-field input {
-    height: 48px;
-
-    padding: 0 14px;
-
+    height: 50px;
     font-size: 14px;
-
-    border-radius: 7px;
   }
 
-
-  /* ================= CART ================= */
-
   .cart-detail {
-    width: 390px;
-    min-height: 720px;
-
-    border-radius: 9px;
+    width: 380px;
+    min-height: 700px;
   }
 
   .cart-title {
     height: 60px;
-
-    padding: 0 20px;
-
-    font-size: 17px;
-  }
-
-  .cart-items {
-    padding: 0 18px;
+    font-size: 18px;
   }
 
   .cart-item {
-    min-height: 105px;
-    padding: 16px 0;
+    min-height: 100px;
   }
 
   .cart-product-name {
     font-size: 15px;
-    line-height: 21px;
   }
 
   .cart-product-size {
-    margin-top: 4px;
-
-    font-size: 12px;
-  }
-
-  .cart-product-dot {
-    gap: 7px;
-    margin-top: 5px;
-
-    font-size: 11px;
-  }
-
-  .dot-badge {
-    padding: 4px 7px;
-
-    font-size: 10px;
-  }
-
-  .cart-product-meta {
-    margin-top: 6px;
-    gap: 18px;
-
-    font-size: 10px;
-  }
-
-  .cart-delete-btn {
-    width: 28px;
-    height: 28px;
-
     font-size: 12px;
   }
 
@@ -1771,57 +1582,21 @@
   }
 
   .cart-total-row {
-    margin-bottom: 12px;
-
     font-size: 14px;
   }
 
   .cart-continue-btn {
     height: 48px;
-
     font-size: 14px;
-
-    border-radius: 7px;
   }
 
-
-  /* ================= PRODUCT MODAL ================= */
-
   .product-modal {
-    width: 500px;
-
-    border-radius: 9px;
+    width: 520px;
   }
 
   .modal-header {
     height: 58px;
-
-    padding: 0 20px;
-
     font-size: 17px;
-  }
-
-  .modal-product {
-    padding: 16px 20px;
-  }
-
-  .modal-product div {
-    font-size: 15px;
-  }
-
-  .modal-product span {
-    margin-top: 4px;
-
-    font-size: 12px;
-  }
-
-  .modal-form {
-    padding: 20px;
-    gap: 16px;
-  }
-
-  .modal-field {
-    gap: 7px;
   }
 
   .modal-field label {
@@ -1830,110 +1605,29 @@
 
   .modal-field input {
     height: 48px;
-
-    padding: 0 14px;
-
     font-size: 14px;
-  }
-
-  .modal-buttons {
-    padding: 0 20px 20px;
-
-    gap: 10px;
   }
 
   .modal-buttons button {
     height: 46px;
-
-    font-size: 14px;
-
-    border-radius: 7px;
-  }
-}
-
-
-/* =========================================================
-   VERY LARGE SCREEN - 2400px+
-   FOR 2583px SCREEN
-   ========================================================= */
-
-@media (min-width: 2400px) {
-
-  .purchase-product-page {
-    padding: 35px 50px 50px;
-  }
-
-  .purchase-page-header h1 {
-    font-size: 34px;
-  }
-
-  .purchase-breadcrumb {
     font-size: 14px;
   }
 
-  .purchase-section-title {
-    font-size: 18px;
+  .confirmation-popup {
+    padding: 28px;
   }
 
-  .purchase-step {
-    font-size: 16px;
+  .confirmation-popup h2 {
+    font-size: 26px;
   }
 
-  .product-card-name {
-    font-size: 18px;
+  .confirmation-details {
+    font-size: 17px;
   }
 
-  .product-card-size {
-    font-size: 13px;
-  }
-
-  .entries-section {
-    font-size: 15px;
-  }
-
-  .product-search label {
-    font-size: 15px;
-  }
-
-  .product-search input {
-    font-size: 15px;
-  }
-
-  .single-form label,
-  .payment-form-field label {
-    font-size: 15px;
-  }
-
-  .single-form select,
-  .payment-form-field input {
-    font-size: 15px;
-  }
-
-  .cart-title {
-    font-size: 18px;
-  }
-
-  .cart-product-name {
-    font-size: 16px;
-  }
-
-  .cart-product-size {
-    font-size: 13px;
-  }
-
-  .cart-product-dot {
-    font-size: 12px;
-  }
-
-  .cart-product-meta {
-    font-size: 11px;
-  }
-
-  .cart-total-row {
-    font-size: 15px;
-  }
-
-  .cart-continue-btn {
-    font-size: 15px;
+  .again-purchase-btn,
+  .download-invoice-btn {
+    height: 52px;
+    font-size: 17px;
   }
 }

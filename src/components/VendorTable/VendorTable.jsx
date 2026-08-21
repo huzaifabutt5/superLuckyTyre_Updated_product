@@ -40,14 +40,14 @@ export default function VendorTable() {
   const router = useRouter();
 
   return (
-    <div className="vendor-card">
+    <div className="top-vendor-card">
 
-      <div className="vendor-header">
+      <div className="top-vendor-header">
         <h3>Top Vendors</h3>
         <button onClick={() => router.push("/vendor")}>View All</button>
       </div>
 
-      <table className="vendor-table">
+      <table className="top-vendor-table">
 
         <thead>
           <tr>
