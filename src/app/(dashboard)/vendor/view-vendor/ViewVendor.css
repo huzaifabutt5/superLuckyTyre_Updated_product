@@ -877,12 +877,7 @@
 }
 
 
-<<<<<<< HEAD
 @media (max-width: 768px) {
-=======
-/* Tablet portrait */
-@media (max-width: 700px) {
->>>>>>> 0eaec86641d26a70aa58c1bc35e043a2c58b2c9b
 
     .vendor-summary-cards {
         grid-template-columns: 1fr;
@@ -949,11 +944,10 @@
         flex-wrap: wrap;
     }
 
-<<<<<<< HEAD
     .invoice-search {
         margin-left: 0;
         width: 100%;
-=======
+    }
 }
 
 
@@ -966,7 +960,6 @@
 
     .payment-modal {
         width: 92%;
->>>>>>> 0eaec86641d26a70aa58c1bc35e043a2c58b2c9b
     }
 
     .invoice-search input {
