@@ -3,8 +3,7 @@
 ================================ */
 
 .manage-expense-page {
-  width: 106%;
-  margin-left: -3%;
+  width: 100%;
   min-height: calc(100vh - 40px);
   padding: 8px 20px 30px;
   box-sizing: border-box;
@@ -457,42 +456,21 @@
     font-size: 20px;
   }
 
-  /* .add-expense-btn {
-    font-size: 10px;
-    height: 30px;
-    padding: 0 9px;
-  } */
   .add-expense-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-
-  background: #4b7df7;
-  color: #ffffff;
-
-  border: none;
-  border-radius: 11px;
-
-  height: 46px;
-  padding: 0 18px;
-
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.add-expense-btn:hover {
-  background: #376ce8;
-}
-
+    gap: 12px;
+    border-radius: 11px;
+    height: 46px;
+    padding: 0 18px;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
 
   .expense-toolbar {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
   }
 
   .expense-search-section {
@@ -512,6 +490,66 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
+  }
+
+}
+
+
+/* Medium Mobile */
+
+@media (max-width: 600px) {
+
+  .manage-expense-page {
+    padding: 8px 12px 24px;
+  }
+
+  .expense-header h1 {
+    font-size: 20px;
+  }
+
+  .expense-toolbar {
+    gap: 8px;
+  }
+
+  .expense-card-header {
+    padding: 0 10px;
+  }
+
+  .expense-card-header h2 {
+    font-size: 12px;
+  }
+
+  .expense-table-wrapper {
+    padding: 0 6px;
+  }
+
+  .expense-table {
+    font-size: 13px;
+    min-width: 560px;
+  }
+
+  .expense-table th,
+  .expense-table td {
+    padding: 0 6px;
+    font-size: 13px;
+  }
+
+  .expense-table-footer {
+    padding: 8px 10px;
+  }
+
+  .entries-info {
+    font-size: 8px;
+  }
+
+  .pagination button {
+    font-size: 9px;
+  }
+
+  .pagination-arrow,
+  .pagination-number {
+    width: 22px;
+    height: 22px;
   }
 
 }
@@ -554,6 +592,21 @@
   .pagination {
     width: 100%;
     justify-content: flex-end;
+  }
+
+  .expense-table-wrapper {
+    padding: 0 4px;
+  }
+
+  .expense-table {
+    font-size: 13px;
+    min-width: 600px;
+  }
+
+  .expense-table th,
+  .expense-table td {
+    padding: 0 6px;
+    font-size: 13px;
   }
 
 }

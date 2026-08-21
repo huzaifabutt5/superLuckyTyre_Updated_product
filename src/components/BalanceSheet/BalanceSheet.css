@@ -1,124 +1,105 @@
 /* ================================
    OPEN BALANCE SHEET
-================================ */
+=============================== */
 
 .balance-sheet-page {
-  width: 106%;
-  margin-left: -3%;
+  width: 100%;
   min-height: calc(100vh - 60px);
-
-  padding: 18px 20px 30px;
-
+  padding: 20px 24px 40px;
   background: #f4f4f6;
-
   box-sizing: border-box;
 }
 
 
 /* ================================
    BREADCRUMB
-================================ */
+=============================== */
 
 .balance-breadcrumb {
-  font-size: 10px;
+  font-size: 13px;
   color: #697386;
-
-  margin-bottom: 7px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
 /* ================================
    PAGE HEADER
-================================ */
+=============================== */
 
 .balance-page-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .balance-page-header h1 {
   margin: 0;
-
-  font-size: 20px;
-  line-height: 1.2;
-
+  font-size: 26px;
+  line-height: 1.3;
   font-weight: 700;
-
   color: #252b3a;
 }
 
 
 /* ================================
    MAIN CARD
-================================ */
+=============================== */
 
 .balance-card {
   width: 100%;
-
   background: #ffffff;
-
-  border-radius: 6px;
-
+  border-radius: 10px;
   overflow: hidden;
-
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 
 /* ================================
    CARD HEADER
-================================ */
+=============================== */
 
 .balance-card-header {
-  min-height: 48px;
-
-  padding: 0 14px;
-
+  min-height: 54px;
+  padding: 0 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   border-bottom: 1px solid #e8eaf0;
-
   box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .balance-card-header h3 {
   margin: 0;
-
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
-
   color: #202635;
 }
 
 
 /* ================================
    SELECT
-================================ */
+=============================== */
 
 .balance-select {
-  width: 117px;
-  height: 26px;
-
-  padding: 0 8px;
-
+  width: 160px;
+  height: 38px;
+  padding: 0 14px;
   border: 1px solid #d9dee8;
-
-  border-radius: 5px;
-
+  border-radius: 6px;
   background: #ffffff;
-
   color: #5e6879;
-
-  font-size: 10px;
-
+  font-size: 13px;
   outline: none;
-
   cursor: pointer;
+  font-weight: 500;
 }
 
 .balance-select:focus {
@@ -128,55 +109,43 @@
 
 /* ================================
    TABLE AREA
-================================ */
+=============================== */
 
 .balance-table-wrapper {
-  margin: 14px;
-
+  margin: 16px;
   border: 1px solid #e7eaf0;
-
-  border-radius: 5px;
-
+  border-radius: 8px;
   overflow-x: auto;
 }
 
 
 /* ================================
    TABLE
-================================ */
+=============================== */
 
 .balance-table {
   width: 100%;
-
-  min-width: 650px;
-
+  min-width: 700px;
   border-collapse: collapse;
-
   table-layout: fixed;
 }
 
 
 /* ================================
    TABLE HEADER
-================================ */
+=============================== */
 
 .balance-table thead {
   background: #f5f6f9;
 }
 
 .balance-table th {
-  height: 38px;
-
-  padding: 0 10px;
-
+  height: 44px;
+  padding: 0 14px;
   text-align: left;
-
-  font-size: 10px;
-
+  font-size: 13px;
   font-weight: 700;
-
   color: #202635;
-
   border-bottom: 1px solid #e4e7ed;
 }
 
@@ -202,19 +171,14 @@
 
 /* ================================
    TABLE BODY
-================================ */
+=============================== */
 
 .balance-table td {
-  height: 37px;
-
-  padding: 0 10px;
-
-  font-size: 10px;
-
+  height: 44px;
+  padding: 0 14px;
+  font-size: 13px;
   color: #596477;
-
   border-bottom: 1px solid #e8eaf0;
-
   white-space: nowrap;
 }
 
@@ -228,16 +192,17 @@
 
 /* ================================
    NEGATIVE AMOUNT
-================================ */
+=============================== */
 
 .balance-table .negative-amount {
   color: #ff4b2b;
+  font-weight: 600;
 }
 
 
 /* ================================
    HOVER
-================================ */
+=============================== */
 
 .balance-table tbody tr:hover {
   background: #fafbfc;
@@ -245,13 +210,144 @@
 
 
 /* ================================
+   MOBILE CARD TABLE
+=============================== */
+
+@media (max-width: 768px) {
+
+  .balance-table-wrapper {
+    margin: 12px;
+    border: none;
+    overflow-x: visible;
+  }
+
+  .balance-table,
+  .balance-table thead,
+  .balance-table tbody,
+  .balance-table th,
+  .balance-table td,
+  .balance-table tr {
+    display: block;
+  }
+
+  .balance-table thead {
+    display: none;
+  }
+
+  .balance-table tr {
+    margin-bottom: 12px;
+    border: 1px solid #e7eaf0;
+    border-radius: 8px;
+    padding: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  }
+
+  .balance-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f1f4;
+    white-space: normal;
+    font-size: 13px;
+  }
+
+  .balance-table td:last-child {
+    border-bottom: none;
+  }
+
+  .balance-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #202635;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-right: 10px;
+  }
+
+  .balance-table tbody tr:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/* ================================
    LARGE SCREENS
-================================ */
+=============================== */
 
 @media (min-width: 1400px) {
-
   .balance-sheet-page {
-    padding: 20px 24px 35px;
+    padding: 24px 32px 48px;
+  }
+
+  .balance-page-header h1 {
+    font-size: 28px;
+  }
+
+  .balance-card-header h3 {
+    font-size: 17px;
+  }
+
+  .balance-select {
+    width: 180px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .balance-table th,
+  .balance-table td {
+    font-size: 14px;
+    padding: 0 16px;
+  }
+
+  .balance-table th {
+    height: 48px;
+  }
+
+  .balance-table td {
+    height: 48px;
+  }
+}
+
+
+/* ================================
+   TABLET
+=============================== */
+
+@media (max-width: 992px) {
+  .balance-sheet-page {
+    padding: 18px;
+  }
+
+  .balance-page-header h1 {
+    font-size: 24px;
+  }
+
+  .balance-card-header {
+    padding: 0 16px;
+    min-height: 50px;
+  }
+
+  .balance-table-wrapper {
+    margin: 14px;
+  }
+
+  .balance-table {
+    min-width: 650px;
+  }
+}
+
+
+/* ================================
+   SMALL TABLET
+=============================== */
+
+@media (max-width: 768px) {
+  .balance-sheet-page {
+    padding: 14px;
   }
 
   .balance-page-header h1 {
@@ -259,152 +355,71 @@
   }
 
   .balance-card-header {
-    min-height: 52px;
+    padding: 0 14px;
+  }
+
+  .balance-card-header h3 {
+    font-size: 15px;
+  }
+}
+
+
+/* ================================
+   MOBILE
+=============================== */
+
+@media (max-width: 576px) {
+  .balance-sheet-page {
+    padding: 12px;
+  }
+
+  .balance-breadcrumb {
+    font-size: 11px;
+  }
+
+  .balance-page-header h1 {
+    font-size: 20px;
+  }
+
+  .balance-card-header {
+    padding: 0 12px;
+    min-height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   .balance-card-header h3 {
     font-size: 14px;
   }
 
-  .balance-table th,
-  .balance-table td {
-    font-size: 11px;
-  }
-
-}
-
-
-/* ================================
-   TABLET
-================================ */
-
-@media (max-width: 992px) {
-
-  .balance-sheet-page {
-    padding: 16px;
+  .balance-select {
+    width: 100%;
   }
 
   .balance-table-wrapper {
-    margin: 12px;
+    margin: 10px;
   }
-
-  .balance-table {
-    min-width: 620px;
-  }
-
 }
 
 
 /* ================================
-   SMALL TABLET
-================================ */
+   VERY SMALL MOBILE
+=============================== */
 
-@media (max-width: 768px) {
-
+@media (max-width: 400px) {
   .balance-sheet-page {
-    padding: 14px;
+    padding: 10px;
   }
 
   .balance-page-header h1 {
     font-size: 18px;
   }
 
-  .balance-card-header {
-    padding: 0 12px;
-  }
-
-  .balance-table-wrapper {
-    margin: 10px;
-  }
-
-}
-
-
-/* ================================
-   MOBILE
-================================ */
-
-@media (max-width: 576px) {
-
-  .balance-sheet-page {
-    padding: 12px 10px 20px;
-  }
-
-  .balance-breadcrumb {
-    font-size: 8px;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-  }
-
-  .balance-page-header {
-    margin-bottom: 10px;
-  }
-
-  .balance-page-header h1 {
-    font-size: 17px;
-  }
-
-  .balance-card-header {
-    min-height: 46px;
-
-    padding: 0 10px;
-  }
-
   .balance-card-header h3 {
-    font-size: 12px;
-  }
-
-  .balance-select {
-    width: 110px;
-    height: 27px;
-
-    font-size: 9px;
-  }
-
-  .balance-table-wrapper {
-    margin: 8px;
-
-    overflow-x: auto;
-  }
-
-  .balance-table {
-    min-width: 600px;
-  }
-
-  .balance-table th,
-  .balance-table td {
-    padding: 0 8px;
-
-    font-size: 9px;
-  }
-
-}
-
-
-/* ================================
-   VERY SMALL MOBILE
-================================ */
-
-@media (max-width: 400px) {
-
-  .balance-sheet-page {
-    padding: 10px 7px;
+    font-size: 13px;
   }
 
   .balance-card-header {
-    padding: 0 8px;
+    padding: 10px;
   }
-
-  .balance-card-header h3 {
-    font-size: 11px;
-  }
-
-  .balance-select {
-    width: 105px;
-  }
-
 }

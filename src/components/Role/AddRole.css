@@ -22,8 +22,13 @@
   margin-bottom: 8px;
 }
 .breadcrumb-link{
+<<<<<<< HEAD
 color: #697386;
 text-decoration: none;
+=======
+   color: #697386;
+   text-decoration: none;
+>>>>>>> 0eaec86641d26a70aa58c1bc35e043a2c58b2c9b
 }
 
 /* =========================================

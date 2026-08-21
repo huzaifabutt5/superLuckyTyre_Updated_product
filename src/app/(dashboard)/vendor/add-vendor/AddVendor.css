@@ -3,8 +3,8 @@
 ========================================= */
 
 .add-vendor-page {
-    width: 106%;
-    margin-left: -3%;
+    width: 100%;
+    margin-left: 0;
     min-height: calc(100vh - 50px);
 
     padding: 7px 12px 75px 12px;
@@ -30,7 +30,10 @@
 
     line-height: 14px;
 }
-
+.breadcrumb-link{
+      color: #747b88;
+      text-decoration: none;
+}
 
 /* =========================================
    PAGE TITLE
@@ -331,6 +334,17 @@
    RESPONSIVE
 ========================================= */
 
+/* Tablet landscape */
+@media (max-width: 992px) {
+
+    .vendor-form-content {
+        column-gap: 8px;
+    }
+
+}
+
+
+/* Tablet portrait / large phone */
 @media (max-width: 700px) {
 
     .vendor-form-content {
@@ -345,9 +359,14 @@
         justify-content: flex-end;
     }
 
+    .add-vendor-title {
+        font-size: 20px;
+    }
+
 }
 
 
+/* Small phone */
 @media (max-width: 450px) {
 
     .add-vendor-page {
@@ -362,6 +381,14 @@
 
     .vendor-form-actions {
         flex-wrap: wrap;
+        justify-content: stretch;
+    }
+
+    .cancel-vendor-button,
+    .add-vendor-button {
+        flex: 1;
+
+        min-width: 0;
     }
 
 }

@@ -4,23 +4,25 @@ import "./CostumerStep.css";
 
 export default function CustomerStep({
   cartProducts,
+  setCartProducts,
   onBack,
   onContinue,
 }) {
   return (
     <div className="customer-step-page">
-
+ {/* BREADCRUMB */}
+      <div className="order-confirm-breadcrumb">
+        Tyre Shop &gt; Sale/Purchase Management &gt; Sale
+      </div>
 
       {/* HEADING */}
       <div className="order-confirm-heading">
-        <h1>Sale Product</h1>
+        <h1>Confirm Order &amp; Pay</h1>
 
-         <button className="sale-return-btn">
+        <button className="sale-return-btn">
           ↶ Sale Return
-        </button> 
+        </button>
       </div>
-      
-      {/* STEP BAR */}
       <div className="sale-steps">
 
         <button
@@ -30,7 +32,7 @@ export default function CustomerStep({
         >
           <span>Step 1:</span>
           Select Product
-          <b>✓</b>
+          <b className="step-dot-green">●</b>
         </button>
 
         <button
@@ -39,7 +41,7 @@ export default function CustomerStep({
         >
           <span>Step 2:</span>
           Select Customer
-          <b>●</b>
+          <b className="step-dot-green">●</b>
         </button>
 
         <button
@@ -48,11 +50,10 @@ export default function CustomerStep({
         >
           <span>Step 3:</span>
           Confirm Order & Pay
-          <b>●</b>
+          <span>⊙</span>
         </button>
 
       </div>
-
 
       {/* CONTENT */}
       <div className="customer-layout">
@@ -123,6 +124,7 @@ export default function CustomerStep({
         {/* RIGHT CART */}
         <CartDetail
           cartProducts={cartProducts}
+          setCartProducts={setCartProducts}
           onContinue={onContinue}
         />
 
@@ -139,6 +141,7 @@ export default function CustomerStep({
 
 function CartDetail({
   cartProducts = [],
+  setCartProducts,
   onContinue,
 }) {
 
@@ -148,58 +151,54 @@ function CartDetail({
       <h3>Cart Detail</h3>
 
 
-      {/* CART PRODUCTS */}
-      <div className="customer-cart-products">
+      {/* CART PRODUCT */}
+      
+      
+              <div className="cart-products">
 
-        {cartProducts.map((product, index) => (
+                {cartProducts.map((product) => (
 
-          <div
-            className="customer-cart-product"
-            key={product.id || index}
-          >
+                  <div
+                    className="cart-product"
+                    key={product.id}
+                  >
 
-            <div>
+                    <div className="cart-product-info">
 
-              <strong>
-                {product.name}
-              </strong>
+                      <div className="cart-product-name">
+                        {product.name}
+                      </div>
 
-              <small>
-                {product.size}
-              </small>
+                      <div className="cart-product-size">
+                        {product.size}
+                      </div>
 
-              <small>
-                {product.quantity} X{" "}
-                {product.price?.toLocaleString()}
-              </small>
+                      <div className="cart-product-qty">
+                        {product.quantity} X{" "}
+                        {product.price.toLocaleString()}
+                      </div>
 
-            </div>
+                    </div>
 
+                    <button className="cart-delete" onClick={() => {
+                      setCartProducts(prev => prev.filter(p => p.id !== product.id || p.batch !== product.batch));
+                    }}>
+                      🗑
+                    </button>
 
-            <div className="cart-price">
+                    <div className="cart-product-total">
+                       ≈ {" "}
+                      {(
+                        product.quantity *
+                        product.price
+                      ).toLocaleString()}
+                    </div>
 
-              <button
-                type="button"
-                className="cart-delete"
-              >
-                🗑
-              </button>
+                  </div>
 
-              <span>
-                Rs.{" "}
-                {(
-                  product.price *
-                  product.quantity
-                ).toLocaleString()}
-              </span>
+                ))}
 
-            </div>
-
-          </div>
-
-        ))}
-
-      </div>
+              </div>
 
 
       {/* SUMMARY */}

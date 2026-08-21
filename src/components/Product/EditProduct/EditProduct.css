@@ -3,8 +3,8 @@
 ================================= */
 
 .edit-product-page {
-  width: 106%;
-  margin-left: -3%;
+  width: 100%;
+  margin-left: 0;
   min-height: calc(100vh - 60px);
 
   padding: 12px 15px;
@@ -266,11 +266,31 @@
 @media (max-width: 450px) {
 
   .edit-product-button-card {
-    justify-content: center;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 8px;
+  }
+
+  .edit-cancel-product-btn,
+  .update-product-btn {
+    width: 100%;
   }
 
   .edit-product-title {
     font-size: 19px;
+  }
+
+}
+
+
+@media (max-width: 380px) {
+
+  .edit-product-page {
+    padding: 10px;
+  }
+
+  .edit-product-card-title {
+    font-size: 10px;
   }
 
 }

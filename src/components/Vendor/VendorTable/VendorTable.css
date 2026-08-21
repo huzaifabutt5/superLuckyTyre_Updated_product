@@ -4,7 +4,7 @@
 
 .vendor-table-card {
     width: 100%;
-    margin-left: -1%;
+    margin-left: 0;
     background: #ffffff;
     border-radius: 6px;
     padding: 0;
@@ -132,25 +132,21 @@
     overflow-x: auto;
     overflow-y: hidden;
 
-    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+
+    /* Hide scrollbar but keep content scrollable */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 
 /* Chrome / Edge / Safari */
+/* Scrollbar hidden (content still scrolls) */
 
 .vendor-table-wrapper::-webkit-scrollbar {
-    height: 6px;
-}
-
-
-.vendor-table-wrapper::-webkit-scrollbar-track {
-    background: #f4f5f7;
-}
-
-
-.vendor-table-wrapper::-webkit-scrollbar-thumb {
-    background: #c7ccd5;
-    border-radius: 10px;
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 
@@ -507,6 +503,30 @@ font-family: "Inter", sans-serif;
    RESPONSIVE
 ========================================= */
 
+/* Large desktop / small laptop */
+@media (max-width: 1200px) {
+
+    .vendor-table thead th,
+    .vendor-table tbody td {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+}
+
+
+/* Tablet landscape */
+@media (max-width: 992px) {
+
+    .vendor-table thead th,
+    .vendor-table tbody td {
+        padding: 0 9px;
+    }
+
+}
+
+
+/* Tablet portrait */
 @media (max-width: 768px) {
 
     .vendor-table-top {
@@ -514,6 +534,11 @@ font-family: "Inter", sans-serif;
         align-items: flex-start;
 
         gap: 12px;
+    }
+
+
+    .entries-section {
+        width: 100%;
     }
 
 
@@ -532,6 +557,71 @@ font-family: "Inter", sans-serif;
         align-items: flex-start;
 
         gap: 12px;
+    }
+
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* Large phone */
+@media (max-width: 576px) {
+
+    .vendor-table thead th,
+    .vendor-table tbody td {
+        font-size: 12px;
+        padding: 0 8px;
+    }
+
+
+    .vendor-actions {
+        gap: 4px;
+    }
+
+
+    .action-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .entries-info {
+        font-size: 9px;
+    }
+
+}
+
+
+/* Small phone */
+@media (max-width: 420px) {
+
+    .vendor-table-card {
+        border-radius: 4px;
+    }
+
+
+    .vendor-table thead th,
+    .vendor-table tbody td {
+        font-size: 11px;
+        padding: 0 7px;
+    }
+
+
+    .pagination {
+        gap: 2px;
+    }
+
+
+    .pagination button {
+        min-width: 24px;
+        height: 24px;
+
+        padding: 0 5px;
+
+        font-size: 9px;
     }
 
 }

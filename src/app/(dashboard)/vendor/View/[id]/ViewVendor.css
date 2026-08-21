@@ -28,7 +28,9 @@
 
     line-height: 14px;
 }
-
+.breadcrumb-link{
+    color: #747b88;
+}
 
 /* =========================================
    PAGE TITLE
@@ -452,31 +454,21 @@
     overflow-x: auto;
     overflow-y: hidden;
 
-    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+
+    /* Hide scrollbar but keep content scrollable */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 
-/* Chrome / Edge / Safari scrollbar */
+/* Chrome / Edge / Safari */
+/* Scrollbar hidden (content still scrolls) */
 
 .invoice-table-wrapper::-webkit-scrollbar {
-    height: 6px;
-}
-
-
-.invoice-table-wrapper::-webkit-scrollbar-track {
-    background: #f4f5f7;
-}
-
-
-.invoice-table-wrapper::-webkit-scrollbar-thumb {
-    background: #c7ccd5;
-
-    border-radius: 10px;
-}
-
-
-.invoice-table-wrapper::-webkit-scrollbar-thumb:hover {
-    background: #aeb4bf;
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 
@@ -851,6 +843,7 @@
    RESPONSIVE
 ========================================= */
 
+/* Tablet landscape */
 @media (max-width: 900px) {
 
     .vendor-summary-area {
@@ -868,21 +861,95 @@
         width: 100%;
     }
 
+    .invoice-controls {
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
 }
 
 
+/* Tablet portrait */
 @media (max-width: 700px) {
 
     .vendor-summary-cards {
         grid-template-columns: 1fr;
     }
 
-    .invoice-controls {
+    .invoice-search {
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+    .invoice-search input {
+        width: 100%;
+    }
+
+}
+
+
+/* Large phone */
+@media (max-width: 600px) {
+
+    .vendor-payment-buttons {
+        width: 100%;
+    }
+
+    .date-filter-button {
+        width: 100%;
+    }
+
+    .date-filter-button span {
+        overflow: hidden;
+
+        white-space: nowrap;
+
+        text-overflow: ellipsis;
+    }
+
+    .invoice-entry-info {
+        font-size: 8px;
+    }
+
+}
+
+
+/* Small phone */
+@media (max-width: 480px) {
+
+    .view-vendor-breadcrumb {
+        font-size: 7px;
+    }
+
+    .view-vendor-title {
+        font-size: 15px;
+    }
+
+    .invoice-table-footer {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .invoice-pagination {
         flex-wrap: wrap;
     }
 
-    .invoice-search {
-        margin-left: 0;
+}
+
+
+/* Extra small phone */
+@media (max-width: 400px) {
+
+    .invoice-controls {
+        padding: 8px;
+    }
+
+    .payment-modal {
+        width: 92%;
     }
 
 }
